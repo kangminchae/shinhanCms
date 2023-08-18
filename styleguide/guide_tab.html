@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>빈용기지급관리시스템 UI Guide</title>
+  <link rel="stylesheet" type="text/css" href="../dummy/css/style.css"><!--퍼블 가이드 css-->
+  <link rel="stylesheet" type="text/css" href="css/common.css"><!--퍼블 가이드 css-->
+  <script src="js/jquery.1.11.0.min.js"></script>
+  <script src="js/jquery.ui.1.11.4.min.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.cache.js"></script>
+  <script type="text/javascript" src="js/guide.js"></script>
+  <script type="text/javascript" src="../dummy/js/common.js"></script>
+
+
+	<script>
+	$(document).ready(function(){
+		snbMarkup();
+	});
+	</script>
+	</head>
+  <body>
+  <div id="wrap">
+  	<!-- aside -->
+  	<div id="aside">
+  		<!-- # 좌측컨텐츠 # -->
+  		<div class="wrap-aside">
+  			<!-- 사용자정보영역 -->
+  			<div class="box-info">
+  			</div>
+  			<!-- 네비게이션 : SNB -->
+  			<div class="nav-snb"></div>
+  		</div>
+  		<!-- # 컨트롤 # -->
+  		<div class="area-control">
+  			<a href="#none">좌측영역 펼침/닫기</a>
+  		</div>
+  	</div>
+  	<!-- //aside -->
+
+  	<div class="content">
+  	<!-- # 페이지타이틀 # -->
+  	<div class="tit-page">
+  		<h1>마크업가이드 - TAB</h1>
+  	</div>
+
+  	<!-- # 페이지타이틀 -->
+  	<h2 class="tit-guide">TAB STYLE</h2>
+
+    <h3 class="tit-guide">subMenu Tab</h3>
+  	<div class="guide-code">
+  	<pre class="syntax brush-css">
+		&lt;div class="tabWrap subCon_tabWrap"&gt;
+			&lt;div class="tabHeader"&gt;
+				&lt;ul class="tabMenu"&gt;
+					&lt;li rel="subTabMenu1"&gt;
+						&lt;a href="#none" role="tab"&gt;거래처관리&lt;/a&gt;
+						&lt;button type="button" class="btnDel" title="탭 닫기"&gt;&lt;span class="blind"&gt;탭 닫기&lt;/span&gt;&lt;/button&gt;
+					&lt;/li&gt;
+					&lt;li rel="subTabMenu2"&gt;
+						&lt;a href="#none" role="tab"&gt;회수처리&lt;/a&gt;
+						&lt;button type="button" class="btnDel" title="탭 닫기"&gt;&lt;span class="blind"&gt;탭 닫기&lt;/span&gt;&lt;/button&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+			&lt;div class="tabContainer"&gt;
+				&lt;div class="tabContent" id="subTabMenu1"&gt;
+					&lt;a href="#"&gt;&lt;h3 class="blind"&gt;거래처 관리 탭 상세&lt;/h3&gt;&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+  	</pre>
+  	</div>
+
+  	<!-- Sample -->
+    <div class="tabWrap subCon_tabWrap">
+		<div class="tabHeader">
+			<ul class="tabMenu">
+				<li rel="subTabMenu1">
+					<a href="#none" role="tab">거래처관리</a>
+					<button type="button" class="btnDel" title="탭 닫기"><span class="blind">탭 닫기</span></button>
+				</li>
+				<li rel="subTabMenu2">
+					<a href="#none" role="tab">회수처리</a>
+					<button type="button" class="btnDel" title="탭 닫기"><span class="blind">탭 닫기</span></button>
+				</li>
+			</ul>
+		</div>
+		<div class="tabContainer">
+			<div class="tabContent" id="subTabMenu1">
+				<a href="#"><h3 class="blind">거래처 관리 탭 상세</h3></a>
+				<div class="full_height_wrap">
+					거래처관리 상세내용
+				</div>
+			</div>
+		</div>
+	</div>
+  	<!-- //Sample -->
+
+	  <h3 class="tit-guide">popup > menu Tab</h3>
+  	<div class="guide-code">
+  	<pre class="syntax brush-css">
+		&lt;div class="tabWrap"&gt;
+			&lt;ul class="tabMenu"&gt;
+				&lt;li rel="tabMenu1"&gt;&lt;a href="#none" role="tab"&gt;사용자정보&lt;/a&gt;&lt;/li&gt;
+				&lt;li rel="tabMenu2"&gt;&lt;a href="#none" role="tab"&gt;사업자정보&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;div class="tabContainer"&gt;
+				&lt;div class="tabcontents" id="tabMenu1"&gt;
+					&lt;a href="#"&gt;&lt;h3 class="blind"&gt;사용자정보 상세&lt;/h3&gt;&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+  	</pre>
+  	</div>
+
+  	<!-- Sample -->
+	<div class="tabWrap">
+		<ul class="tabMenu">
+			<li rel="tabMenu1"><a href="#none" role="tab">사용자정보</a></li>
+			<li rel="tabMenu2"><a href="#none" role="tab">사업자정보</a></li>
+		</ul>
+		<div class="tabContainer">
+			<div class="tabcontents" id="tabMenu1">
+				<a href="#none"><h3 class="blind">사용자정보 상세</h3></a>
+				사용자정보 상세 contents 영역
+			</div>
+		</div>
+	</div>
+  	<!-- //Sample -->
+
+  </div>
+
+  </div>
+  <script type="text/javascript">
+  //<!--
+  	$.syntax({ theme: 'grey', layout: 'fixed', replace: true});
+  //-->
+  </script>
+  </body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>빈용기지급관리시스템 UI Guide</title>
+  <link rel="stylesheet" type="text/css" href="../dummy/css/style.css"><!--퍼블 가이드 css-->
+  <link rel="stylesheet" type="text/css" href="css/common.css"><!--퍼블 가이드 css-->
+  <script src="js/jquery.1.11.0.min.js"></script>
+  <script src="js/jquery.ui.1.11.4.min.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.cache.js"></script>
+  <script type="text/javascript" src="js/guide.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<!-- aside -->
+	<div id="aside">
+		<!-- # 좌측컨텐츠 # -->
+		<div class="wrap-aside">
+			<!-- 사용자정보영역 -->
+			<div class="box-info">
+			</div>
+			<!-- 네비게이션 : SNB -->
+			<div class="nav-snb">
+				<ul>
+					<li><a href="#M0" data-target="M0">기본정책</a></li>
+					<li><a href="#M1" data-target="M1">네이밍 규칙</a></li>
+					<li><a href="#M2" data-target="M2">HTML 코드 작성 규칙</a></li>
+					<li><a href="#" data-target="M3">HTML 엘리먼트 작성 규칙</a></li>
+					<li><a href="#" data-target="M4">CSS 코드 작성 규칙</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- # 컨트롤 # -->
+		<div class="area-control">
+			<a href="#none">좌측영역 펼침/닫기</a>
+		</div>
+	</div>
+	<!-- //aside -->
+
+<div class="content page-guide">
+	<!-- 페이지타이틀 -->
+	<div class="tit-page">
+		<h1>작업규칙</h1>
+	</div>
+
+	<!-- 기본정책 -->
+	<h2 class="tit-guide toggle open" id="M0">기본정책</h2>
+	<ul class="desc-guide">
+		<li>문서 및 버전 : HTML5, CSS3</li>
+		<li>인코딩 : utf-8</li>
+		<li>웹표준, 웹접근성, 시맨틱(Semantic) 마크업을 준수하여 작업한다.</li>
+	</ul>
+
+	<!-- 공통 규칙 -->
+	<h2 class="tit-guide toggle open" id="M1">네이밍 규칙</h2>
+
+	<h3 class="tit-guide">파일 및 폴더</h3>
+	<ul class="desc-guide">
+		<li>개발과 기획에서 정의된 디렉토리 구조도 및 화면 아이디가 정의가 되어있다면 그에 준한 규칙에 따라 파일 및 폴더의 이름을 사용한다.</li>
+	</ul>
+
+	<h4 class="tit-sub1">파일 및 폴더 네이밍 규칙 예</h4>
+	<div class="tbl-data1 guide">
+		<table>
+			<caption>파일 및 폴더 네이밍 규칙 예</caption>
+			<colgroup><col span="3" style="width:15%;"/><col /></colgroup>
+			<thead>
+				<tr>
+					<th colspan="2">경로/폴더</th>
+					<th>파일</th>
+					<th>설명</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan="14">dummy</td>
+					<td>html</td>
+					<td>**.html</td>
+					<td>1차카테고리 업무별 html</td>
+				</tr>
+				<tr>
+					<td rowspan="4">css</td>
+					<td>reset.css</td>
+					<td>초기화,공통 css (Grid, font, color, margin, padding, float등) css</td>
+				</tr>
+				<tr>
+					<td>content.css</td>
+					<td>컨텐츠관련 css</td>
+				</tr>
+				<tr>
+					<td>layout.css</td>
+					<td>layout관련 css</td>
+				</tr>
+				<tr>
+					<td>**.css</td>
+					<td>그 외 Element관련 css</td>
+				</tr>
+				<tr>
+					<td rowspan="2">js</td>
+					<td>common_ui.js</td>
+					<td>ui 관련 스크립트</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<h3 class="tit-guide">아이디(id) 및 클래스(class)</h3>
+
+	<h4 class="tit-sub1">아이디 및 클래스 네이밍 규칙 예</h4>
+	<div class="tbl-data1 guide">
+		<table>
+			<caption>아이디 및 클래스 네이밍 규칙 예</caption>
+			<thead>
+				<tr>
+					<th>잘못된 예</th>
+					<th>올바른 예</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>error_Mesage</td>
+					<td>errorMesage</td>
+				</tr>
+				<tr>
+					<td>control_center</td>
+					<td>controlCenter</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<ul class="desc-guide">
+		<li>시작의 이름은 영문 소문자를 사용하되 두 번째 단어부터 첫 번째 문자를 대문자로 처리하는 기법(<strong>카멜 케이스</strong>)을 사용한다.</li>
+		<li>동일한 이름의 id는 문서에서 한번만 사용이 가능하다.</li>
+		<li>지정된 레이아웃 및 폼객체를 제외한 스타일 지정을 위하여 id를 사용하지 않는다.</li>
+		<li>앵커로서 사용되는 엘리먼트는 id 지정이 가능하다.</li>
+		<li>User Interface 동작을 위하여 DOM 선택자로서의 id 지정은 가능하다.</li>
+		<li>예약어가 있는 경우 예약어를 사용한다.</li>
+	</ul>
+
+	<h4 class="tit-sub1">예약어</h4>
+	<div class="tbl-data1 guide">
+		<table>
+			<caption>예약어</caption>
+			<colgroup><col span="2" style="width:25%;"/><col /></colgroup>
+			<thead>
+				<tr>
+					<th>구분</th>
+					<th>예약어</th>
+					<th>설명</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan="6">레이아웃</td>
+					<td>#wrapper</td>
+					<td>페이지 전체 영역 그룹핑</td>
+				</tr>
+				<tr>
+					<td>#header</td>
+					<td>사이트 상단</td>
+				</tr>
+				<tr>
+					<td>#container</td>
+					<td>본문영역</td>
+				</tr>
+				<tr>
+					<td>#footer</td>
+					<td>하단 footer영역</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<!-- HTML 코드 작성 규칙 -->
+	<h2 class="tit-guide toggle open" id="M2">HTML 코드 작성 규칙</h2>
+
+	<h3 class="tit-guide">파일의 경로</h3>
+	<ul class="desc-guide">
+		<li>유지보수의 편의를 및 HTML 작업자의 퍼포먼스를 위하여 <strong>상대 경로</strong>로 작업한다. 작업이 완료된 HTML 파일은 로컬 브라우저와 다양한 OS에서 확인이 가능하여야 한다.</li>
+		<li>개발에서 개발환경에 맞게 절대경로로 수정하여 사용</li>
+	</ul>
+	<div class="guide-code">
+<pre class="syntax brush-html">
+&lt;!-- 공통 css --&gt;
+&lt;link href="css/base.css" rel="stylesheet"&gt;
+&lt;link href="css/content.css" rel="stylesheet"&gt;
+
+&lt;!-- ui script --&gt;
+&lt;script src="js/common_ui.js" type="text/javascript"&gt;&lt;/script&gt;
+...
+&lt;!-- 이미지 파일 경로 --&gt;
+&lt;img src="images/*.png" alt="대체텍스트"&gt;</pre>
+	</div>
+
+	<h3 class="tit-guide">표준 문법의 사용</h3>
+	<ul class="desc-guide">
+		<li>HTML은 해당 DTD의 명세에 맞게 작성한다.</li>
+		<li>DTD를 제외한 모든 엘리먼트와 애트리뷰트는 소문자로 작성한다.</li>
+		<li>애트리뷰트의 값은 큰따움표("")로 묶는다.</li>
+	</ul>
+
+	<h4 class="tit-sub1">주의 해야할 특수기호 Entity name</h4>
+	<div class="tbl-data1 guide">
+		<table>
+			<caption>주의 해야할 특수기호</caption>
+			<tbody>
+				<tr>
+					<th>Character</th>
+					<td>&#8361;</td>
+					<td>"</td>
+					<td>&amp;</td>
+					<td>&lt;</td>
+					<td>&gt;</td>
+					<td>&nbsp;</td>
+					<td>&middot;</td>
+				</tr>
+				<tr>
+					<th>Entity Name</th>
+					<td>&amp;#8361;</td>
+					<td>&amp;quot;</td>
+					<td>&amp;amp;</td>
+					<td>&amp;lt;</td>
+					<td>&amp;gt;</td>
+					<td>&amp;nbsp;</td>
+					<td>&amp;middot;</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<p class="txt-guide1"> * 참고 : <a href="http://www.w3schools.com/html/html_entities.asp" target="_blank" title="새창">HTML Entities</a></p>
+
+	<h3 class="tit-guide">파일의 인코딩</h3>
+	<p>*.html, *.css, *.js의 파일의 저장 방식을 utf-8로 설정한다. 반드시 개발과 협의가 필요하다.</p>
+	<div class="tbl-data1 guide">
+		<table>
+			<caption>문자셋(charset)별 인코딩</caption>
+			<thead>
+			<tr>
+				<th>문자셋(charset)</th>
+				<th>기본 인코딩</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>charset=utf-8</td>
+				<td>utf-8</td>
+			</tr>
+			<tr>
+				<td>charset=euc-kr</td>
+				<td>ANSI</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<h3 class="tit-guide">코드 들여쓰기</h3>
+	<p>코드의 가독성을 높이고 전체 HTML 구조를 쉽게 파악하기 위하여 들여쓰기 규칙을 준수한다. 마크업의 중첩이 깊어질 때마다 자식 엘리먼트는 1탭 들여 쓰고, 1탭의 크기는 공백 4칸으로 설정한다.</p>
+
+	<h4 class="tit-sub1">들여쓰기를 하지 않는 경우</h4>
+	<div class="guide-code">
+<pre class="syntax brush-html">
+&lt;!doctype html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="wrap"&gt;
+
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+	</div>
+	<ul class="desc-guide">
+		<li>html의 자식 엘리먼트인 head, body</li>
+		<li>body의 자식 첫 번째 엘리먼트 div="wrap"</li>
+	</ul>
+
+	<!-- HTML 엘리먼트 작성 규칙 -->
+	<h2 class="tit-guide toggle open" id="M3">HTML 엘리먼트 작성 규칙</h2>
+
+	<h3 class="tit-guide">문서형(Document Type Definition) 선언</h3>
+	<p>문서형을 선언하지 않으면 브라우저 호환성 확보하지 못함. 문서형을 선언하는 것은 상호 운용성을 보장하기 위함이다.</p>
+	<div class="guide-code">
+<pre class="syntax brush-html">
+&lt;!doctype html&gt;</pre>
+	</div>
+
+	<h3 class="tit-guide">언어 / 문자셋(charset) 지정</h3>
+	<ul class="desc-guide">
+		<li>lang 애트리뷰트는 User Agent가 언어를 올바로 해석할 수 있게 도와주며, 검색과 음성 장치에 활용된다.</li>
+		<li>utf-8 인코딩 기본. DB의 인코딩 방식과도 관련이 있으므로 개발자와 협의하여 결정.</li>
+	</ul>
+	<div class="guide-code">
+<pre class="syntax brush-html">
+&lt;html lang="ko"&gt;
+&lt;meta charset="utf-8"&gt;</pre>
+	</div>
+	<p class="txt-guide1">* 참고 : <a href="http://www.w3schools.com/tags/ref_language_codes.asp" target="_blank">ISO Language Codes</a></p>
+
+
+	<h3 class="tit-guide">구조, 표현, 동작의 분리</h3>
+	<p>문서의 구조(HTML)와 표현(CSS), 동작(script) 언어를 본래의 목적에 맞게 최대한 분리한다.</p>
+
+	<h4 class="tit-sub1">예외사항</h4>
+	<div class="guide-code">
+<pre class="syntax brush-html">
+&lt;input type="text" id="formMyClass" class="my-class" style="width:80%;" /&gt;</pre>
+	</div>
+	<ul class="desc-guide">
+		<li>특정 엘리먼트에 id, class, style을 선언할 때에 선언 순서는 엘리먼트의 기본 애트리뷰트 지정후 마지막에 id, class와 style을 선언한다.</li>
+		<li>테이블 셀의 경우 다양한 너비의 고정폭을 지닐 수 있는데 이것을 모두 CSS로 지정하는 것은 기대했던 효과에 대한 이점이 없으므로 예외의 경우를 허용함</li>
+		<li>input[text], select 엘리먼트의 경우 너비의 고정폭 지정 허용함</li>
+	</ul>
+
+	<h3 class="tit-guide">엘리먼트의 기본 애트리뷰트 지정 순서</h3>
+	<p>User Interface 의 동작이 요구되면 id 애트리 뷰트를 선택적으로 사용할 수 있으며 위치는 기본 애트리뷰트의 지정후 다음에 위치한다. class 애트리뷰트는 가장 마지막에 작성한다. id와 class의 사용여부는 선택 사항이다.</p>
+
+	<h4 class="tit-sub1">Img 엘리먼트</h4>
+	<div class="guide-code">
+		<pre class="syntax brush-html">&lt;img src="img.png" alt="대체텍스트"/&gt;</pre>
+	</div>
+	<ul class="desc-guide">
+		<li>alt 애트리뷰트는 반드시 제공되어야 하며 빈 값을 사용하지 않는다.(의미가 없는 이미지에 한하여 부분허용)</li>
+		<li>유지보수의 편의성을 위하여 width, height 애트리뷰트는 사용하지 않는다.</li>
+		<li>이미지 맵 사용을 지양하며 포지셔닝 방법을 사용한다.</li>
+	</ul>
+
+	<h4 class="tit-sub1">Flid관련 엘리먼트</h4>
+	<div class="guide-code">
+		<pre class="syntax brush-html">
+			&lt;label for="id">아이디&lt;/label&gt;
+			&lt;input type="text" id="id" name="ID" placeholder="아이디를 입력하세요"&gt;
+
+			&lt;label for="chkbox"&gt;&lt;span class="blind"&gt;체크&lt;/span&gt;&lt;/label&gt;
+			&lt;input type="checkbox" id="chkbox" name="chk"&gt;
+		</pre>
+	</div>
+	<ul class="desc-guide">
+		<li>fild(input, select, checkbox, radio 등)관련 엘리먼트 작성시 id값과 for값을 사용한다.</li>
+		<li>체크박스 및 라디오 버튼의 경우 텍스트 없이 이미지로 이루어질 경우 상태값에 hidden class를 사용한다.</li>
+	</ul>
+
+	<!-- CSS 코드 작성 규칙 -->
+	<h2 class="tit-guide toggle open" id="M4">CSS 코드 작성 규칙</h2>
+
+	<h3 class="tit-guide">기본 규칙</h3>
+	<p>문서의 첫 줄에 인코딩을 선언하며 인코딩은 HTML과 동일한 인코딩을 지정한다.</p>
+
+	<h4 class="tit-sub1">작업 정보</h4>
+	<div class="guide-code">
+<pre class="syntax brush-css">
+@charset "utf-8";
+
+</pre>
+	</div>
+
+	<h4 class="tit-sub1">모든 속성은 영문 소문자로만 작성</h4>
+	<div class="guide-code">
+<pre class="syntax brush-css">
+/* 잘못된 예 */
+.className {color:#FFF;}
+
+/* 올바른 예 */
+.className {color:#fff;}</pre>
+	</div>
+
+	<h4 class="tit-sub1">작은 따옴표('') 사용 범위</h4>
+	<p>폰트의 선언, filter, content에 작은 따옴표('')를 사용한다. 그 외의 경우는 사용하지 않는다.</p>
+	<div class="guide-code">
+<pre class="syntax brush-css">
+.className {font-family:'dotum';}
+.filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img.png', sizingMethod='scale';}
+.className:after{content:'.'}
+.className {background:url(img.gif) no-repeat}</pre>
+
+	<h4 class="tit-sub1">세미콜론(;)</h4>
+	<p>마지막 선언된 속성에도 세미콜론(;)을 사용한다.</p>
+	<div class="guide-code">
+<pre class="syntax brush-css">
+/* 잘못된 예 */
+.className {margin-left:0;padding-left:10px}
+
+/* 올바른 예 */
+.className {margin-left:0;padding-left:10px;}</pre>
+	</div>
+
+	<h4 class="tit-sub1">공백의 사용</h4>
+	<p>선택자 간, 중괄호간 한칸의 공백을 사용한다, 중괄호 안쪽 좌우에는 공백은 사용하지 않는다.</p>
+	<div class="guide-code">
+<pre class="syntax brush-css">
+/* 잘못된 예 */
+.className, .className .childClass{background:url(../img/img.gif) no-repeat}
+.className {padding:0; margin:0}
+.className { padding:0;margin:0 }
+
+/* 올바른 예 */
+.className,
+.className .childClass {background:url(../img/img.gif) no-repeat;}
+.className {padding:0;margin:0;}
+.className {padding:0;margin:0;}</pre>
+	</div>
+
+	<h3 class="tit-guide">들여쓰기/줄 바꿈</h3>
+	<p>CSS 코드 작성시 들여쓰기는 허용하지 않는다.</p>
+	<p>공통으로 사용되는 속성의 선택자간의 줄 바꿈은 허용하며 이 외의 줄바꿈은 허용하지 않는다.</p>
+	<div class="guide-code">
+<pre class="syntax brush-css">
+/* 잘못된 예 */
+h4.className {
+	font-size:15px;
+	letter-spacing:-1px;
+	margin:10px 0 0 0;
+}
+
+/* 올바른 예 */
+h4.className {font-size:15px;letter-spacing:-1px;margin:10px 0 0 0;}
+
+.className,
+.className .childClass {background:url(../img/img.gif) no-repeat;}</pre>
+	</div>
+
+	<h3 class="tit-guide">주석 / 빈줄</h3>
+	<ul class="desc-guide">
+		<li>CSS 주석 처리는 시작 주석을 작성하며 종료 주석은 작성하지 않는다. 종료코드 이후에 오는 요소에 한 칸 띄어 쓰기를 허용한다.</li>
+		<li>객체를 구분하기 위하여 코드 그룹 간 1줄의 빈 줄을 허용한다. 빈 줄의 1줄을 초과하지 않는다.</li>
+	</ul>
+	<div class="guide-code">
+<pre class="syntax brush-css">
+/* title */
+.title-type1 {margin:30px 0 10px 0;}
+
+/* description */
+.desc1 {padding:2px 0 0 15px;font-size:0.917em;}</pre>
+	</div>
+
+	<h3 class="tit-guide">속성의 축약/약식 속성 사용</h3>
+	<p>CSS 최적화를 위해 속성값을 축약 한다.</p>
+	<div class="tbl-data1 guide">
+		<table>
+			<caption>CSS 축약/약식 속성</caption>
+			<colgroup><col span="2" style="width:25%;"/><col/></colgroup>
+			<thead>
+				<tr>
+					<th>축약 전</th>
+					<th>축약 후</th>
+					<th>설명</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>#ffffff</td>
+					<td>#fff</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>background-position:left center</td>
+					<td>background-position:0 50%</td>
+					<td>문자로 표현은 지양하며 숫자 사용을 지향한다.</td>
+				</tr>
+				<tr>
+					<td>top:0px</td>
+					<td>top:0</td>
+					<td>속성의 값이 0일 경우 단위를 표시하지 않는다.</td>
+				</tr>
+				<tr>
+					<td>margin:15px 15px 15px 15px</td>
+					<td>margin:15px</td>
+					<td rowspan="3">속성의 값이 동일한 경우 top, right, bottom, left 순서대로 축약한다.</td>
+				</tr>
+				<tr>
+					<td>margin:0 auto 0 auto</td>
+					<td>margin:0 auto</td>
+				</tr>
+				<tr>
+					<td>margin:25px 15px 30px 15px</td>
+					<td>margin:25px 15px 30px</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<h4 class="tit-sub1">Background 약식 속성</h4>
+	<p>배경 이미지의 속성의 초기 선언시 반드시 background 단일 속성을 사용하며, 이후 배경적인 부분의 속성이 변경될 경우 background 관련 속성을 사용하여 제 선언 한다. 선언 순서는 background-attachment, background-color, background-image, background-repeat, background-position 이다.</p>
+	<div class="guide-code">
+<pre class="syntax brush-css">
+.className {border:1px solid #ccc;}
+.className .child-bg-1 {background-position:0 -18px;}
+.className .child-bg-2 {background-position:0 -36px;}</pre>
+	</div>
+
+	<h4 class="tit-sub1">Border 약식 속성</h4>
+	<p>테두리의 스타일이 동일할 경우 반드시 border 단일 속성을 사용하고 동일하지 않을 경우 부분적 border 속성을 사용할 수 있다.속성의 값의 선언 순서는 border-width, border-style, border-color의 순서이다.</p>
+	<div class="guide-code">
+<pre class="syntax brush-css">
+.className {border:1px solid #ccc;}
+.className .topBorder {border-top:2px solid #000;}
+.className .leftBorder {border-left-width:0;}</pre>
+	</div>
+
+	<h3 class="tit-guide">미디어타입 및 미디어쿼리</h3>
+	<ul class="desc-guide">
+		<li>미디어 타입은 CSS 파일의 가장 아랫 부분, 또는 별도파일로 분리하여 선언한다. 또한 미디어 타입의 코드 작성시 1탭의 들여쓰기는 허용한다.</li>
+	</ul>
+	<div class="guide-code">
+<pre class="syntax brush-css">
+/* header */
+#header {}
+
+/* footer */
+#footer {}
+...
+
+@media all and (max-width:320px){
+  #header {}
+}
+
+@media all and (min-width:768px){
+  #header {}
+}
+
+</pre>
+	</div>
+</div>
+
+</div>
+
+<script type="text/javascript">
+//<!--
+	$.syntax({ theme: 'grey', layout: 'fixed', replace: true});
+//-->
+</script>
+
+
+</body>
+</html>

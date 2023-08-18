@@ -1,0 +1,563 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>빈용기지급관리시스템 UI Guide</title>
+  <link rel="stylesheet" type="text/css" href="../dummy/css/style.css"><!--퍼블 가이드 css-->
+  <link rel="stylesheet" type="text/css" href="css/common.css"><!--퍼블 가이드 css-->
+  <script src="js/jquery.1.11.0.min.js"></script>
+  <script src="js/jquery.ui.1.11.4.min.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.cache.js"></script>
+  <script type="text/javascript" src="js/guide.js"></script>
+	<script>
+	$(document).ready(function(){
+		snbMarkup();
+	});
+	</script>
+	</head>
+  <body>
+  <div id="wrap">
+  	<!-- aside -->
+  	<div id="aside">
+  		<!-- # 좌측컨텐츠 # -->
+  		<div class="wrap-aside">
+  			<!-- 사용자정보영역 -->
+  			<div class="box-info">
+  			</div>
+  			<!-- 네비게이션 : SNB -->
+  			<div class="nav-snb"></div>
+  		</div>
+  		<!-- # 컨트롤 # -->
+  		<div class="area-control">
+  			<a href="#none">좌측영역 펼침/닫기</a>
+  		</div>
+  	</div>
+  	<!-- //aside -->
+
+  	<div class="content">
+  	<!-- # 페이지타이틀 # -->
+  	<div class="tit-page">
+  		<h1>마크업가이드 - TABLE</h1>
+  	</div>
+
+  	<!-- # 페이지타이틀 -->
+  	<h2 class="tit-guide">TABLE STYLE</h2>
+
+  	<h3 class="tit-guide">기본 - 세로형 : .tableWrap </h3>
+  	<div class="guide-code">
+  	<pre class="syntax brush-css">
+
+		&lt;div class="tableWrap"&gt;
+			&lt;div class="titleBox"&gt;
+				&lt;strong class="tableTitle"&gt;소속사업자&lt;/strong&gt;
+			&lt;/div&gt;
+			&lt;div class="tableGrid"&gt;
+				&lt;table class="tableCol"&gt;
+					&lt;caption&gt;소속사업자 정보 테이블&lt;/caption&gt;
+					&lt;colgroup&gt;
+						&lt;col width=""&gt;
+						&lt;col width="*"&gt;
+					&lt;/colgroup&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;th class="title"&gt;사업자상호&lt;/th&gt;
+							&lt;td class="info"&gt;(주)에이온티수집&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;th class="title"&gt;사업자등록번호&lt;/th&gt;
+							&lt;td class="info"&gt;114-01-55515&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;th class="title"&gt;브랜드&lt;/th&gt;
+							&lt;td class="info"&gt;해당없음&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;th class="title"&gt;지점&lt;/th&gt;
+							&lt;td class="info"&gt;(주)에이온티수집 본사&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+  	</pre>
+  	</div>
+
+  	<!-- Sample -->
+  	<div class="tableWrap">
+		<div class="titleBox">
+			<strong class="tableTitle">소속사업자</strong>
+		</div>
+		<div class="tableGrid">
+			<table class="tableCol">
+				<caption>소속사업자 정보 테이블</caption>
+				<colgroup>
+					<col width="">
+					<col width="*">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="title">사업자상호</th>
+						<td class="info">(주)에이온티수집</td>
+					</tr>
+					<tr>
+						<th class="title">사업자등록번호</th>
+						<td class="info">114-01-55515</td>
+					</tr>
+					<tr>
+						<th class="title">브랜드</th>
+						<td class="info">해당없음</td>
+					</tr>
+					<tr>
+						<th class="title">지점</th>
+						<td class="info">(주)에이온티수집 본사</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+  	<!-- //Sample -->
+	<h3 class="tit-guide">기본 - 가로형 : html table </h3>
+	<!-- Sample -->
+  	<div class="tableWrap">
+		<div class="titleBox">
+			<strong class="tableTitle">납부정보</strong>
+		</div>
+		<div class="tableGrid">
+			<table class="tableRow">
+				<caption>납부정보 테이블</caption>
+				<colgroup>
+					<col width="">
+					<col width="">
+					<col width="">
+					<col width="">
+					<col width="">
+					<col width="">
+				</colgroup>
+				<thead>
+					<tr>
+						<th rowspan="2">구분</th>
+						<th colspan="3">납부금액</th>
+						<th rowspan="2">납부기한</th>
+						<th rowspan="2">납부여부</th>
+					</tr>
+					<tr>
+						<th>공급가</th>
+						<th>부가세</th>
+						<th>합계</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="alLeft"><span>라벨비</span></td>
+						<td class="alRight"><span class="num">3</span>원</td>
+						<td class="alRight"><span class="num">-</span>원</td>
+						<td class="alRight"><span class="num">3</span>원</td>
+						<td class="alRight"><span class="num">2023-06-20</span></td>
+						<td>
+							<span>N</span>
+							<button type="button" class="btn btn_solid color_sub3"><span>고지서인쇄</span></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="alLeft"><span>보증금</span></td>
+						<td class="alRight"><span class="num">900,000</span>원</td>
+						<td class="alRight"><span class="num">-</span>원</td>
+						<td class="alRight"><span class="num">900,000</span>원</td>
+						<td class="alRight"><span class="num">2023-08-08</span></td>
+						<td>
+							<span>N</span>
+							<button type="button" class="btn btn_solid color_sub3"><span>고지서인쇄</span></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="alLeft"><span>처리지원금</span></td>
+						<td class="alRight"><span class="num">8,000</span>원</td>
+						<td class="alRight"><span class="num">0</span>원</td>
+						<td class="alRight"><span class="num">8,000</span>원</td>
+						<td class="alRight"><span class="num">2023-06-20</span></td>
+						<td>
+							<span>N</span>
+							<button type="button" class="btn btn_solid color_sub3"><span>고지서인쇄</span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+  	<!-- //Sample -->
+
+    <h3 class="tit-guide">기본 - 가로형 : rMategrid 사용 </h3>
+  	<div class="guide-code">
+  	<pre class="syntax brush-css">
+		&lt;link rel="stylesheet" type="text/css" href="../rMateGridH5/Assets/rMateH5.css"/&gt; &lt;!-- rMateGridH5 css --&gt;
+		&lt;script type="text/javascript" src="../LicenseKey/rMateGridH5License.js"&gt;&lt;/script&gt;	&lt;!-- rMateGridH5 라이센스 --&gt;
+		&lt;script type="text/javascript" src="../rMateGridH5/JS/rMateGridH5.js"&gt;&lt;/script&gt;		&lt;!-- rMateGridH5 라이브러리 --&gt;
+		&lt;script type="text/javascript" src="../rMateGridH5/JS/jszip.min.js"&gt;&lt;/script&gt;
+
+		// ----------------------- 그리드 설정 시작 -------------------------------------
+ 
+		var jsVars = "rMateOnLoadCallFunction=gridReadyHandler";
+
+		rMateGridH5.create("grid1", "gridHolder", jsVars, "100%", "100%");
+
+		function gridReadyHandler(id) {
+			// rMateGrid 관련 객체
+			gridApp = document.getElementById(id);  // 그리드를 포함하는 div 객체
+			gridRoot = gridApp.getRoot();   // 데이터와 그리드를 포함하는 객체
+		
+			gridApp.setLayout(layoutStr);
+			gridApp.setData(gridData);
+		
+			// CheckBox가 변경될 경우 실행될 함수입니다.
+			var selectorColumnChangeHandler = function(event) {
+				collection = gridRoot.getCollection();
+				var rowIndex = event.rowIndex;
+				var columnIndex = event.columnIndex;
+				if (selectorColumn.getSelectedIndices().length > 0)
+					checked = true;
+				else
+					checked = false;
+		
+				// Footer의 재계산을 위하여 collection을 refresh 합니다.
+				collection.refresh();
+			}
+		
+			var dataCompleteHandler = function(event) {
+				dataGrid = gridRoot.getDataGrid();  // 그리드 객체
+				columns = dataGrid.getColumns();
+				selectorColumn = gridRoot.getObjectById("selector");
+				// CheckBox가 변경될 경우 실행될 이벤트 함수를 지정합니다.
+				selectorColumn.addEventListener("change",   selectorColumnChangeHandler);
+			}
+		
+			gridRoot.addEventListener("dataComplete", dataCompleteHandler);
+		}
+		
+		var gridApp, gridRoot, dataGrid, collection, columns, selectorColumn;
+		
+		// 체크박스가 체크 되었는지 확인용 변수, false일 경우 전체 데이터를 footer에 표시함.
+		var checked;
+	
+		var layoutStr = 
+		'&lt;?xml version="1.0" encoding="utf-8"?&gt;\
+		&lt;rMateGrid&gt;\
+			&lt;NumberFormatter id="numfmt" useThousandsSeparator="true"/&gt;\
+			&lt;DataGrid id="dg3" horizontalScrollPolicy="on" variableRowHeight="true" verticalAlign="middle" sortableColumns="true" textAlign="center" rowHeight="40" headerHorizontalSeparatorColor="#c6c9d0" headerSeparatorColor="#c6c9d0" alternatingItemColors="[#ffffff,#ffffff]" headerColors="#e4e7eb"&gt;\
+				&lt;groupedColumns height="32"&gt;\
+					&lt;DataGridSelectorColumn dataField="선택" id="selector" width="40" textAlign="center"/&gt;\
+					&lt;DataGridColumn dataField="순번" width="80" textAlign="center"/&gt;\
+					&lt;DataGridColumnGroup headerText="사업자정보"&gt;\
+						&lt;DataGridColumn dataField="사업자유형" width="150" textAlign="center"/&gt;\
+						&lt;DataGridColumn dataField="사업자상호" width="250" textAlign="left" /&gt;\
+						&lt;DataGridColumn dataField="사업자등록번호" width="150" textAlign="center"/&gt;\
+						&lt;DataGridColumn dataField="사업자상태" textAlign="left"/&gt;\
+						&lt;DataGridColumn dataField="활동상태" textAlign="center"/&gt;\
+						&lt;DataGridColumn dataField="브랜드명" textAlign="left"/&gt;\
+						&lt;DataGridColumn dataField="지점" textAlign="left"/&gt;\
+						&lt;DataGridColumn dataField="사업장위치" textAlign="left" /&gt;\
+					&lt;/DataGridColumnGroup&gt;\
+					&lt;DataGridColumnGroup headerText="거래처정보"&gt;\
+						&lt;DataGridColumn dataField="거래처구분" width="150" fontWeight="bold" itemEditor="ComboBoxEditor" editorDataField="selectedDataField" textAlign="center"/&gt;\
+						&lt;DataGridColumn dataField="거래처상호" width="250" textAlign="left"/&gt;\
+						&lt;DataGridColumn dataField="사업자등록번호" width="150" textAlign="center"/&gt;\
+						&lt;DataGridColumn dataField="사업자상태" textAlign="center"/&gt;\
+						&lt;DataGridColumn dataField="활동상태" textAlign="center"/&gt;\
+						&lt;DataGridColumn dataField="거래상태" textAlign="center"/&gt;\
+					&lt;/DataGridColumnGroup&gt;\
+				&lt;/groupedColumns&gt;\
+				&lt;footers&gt;\
+					&lt;DataGridFooter height="35" backgroundColor="#4a535e" color="#ffffff"&gt;\
+						&lt;DataGridFooterColumn textAlign="center"/&gt;\
+						&lt;DataGridFooterColumn labelJsFunction="writeCount1" textAlign="center"/&gt;\
+						&lt;DataGridFooterColumn labelJsFunction="writeCount2" textAlign="center"/&gt;\
+						&lt;DataGridFooterColumn textAlign="center"/&gt;\
+					&lt;/DataGridFooter&gt;\
+				&lt;/footers&gt;\
+			&lt;/DataGrid&gt;\
+		&lt;/rMateGrid&gt;';
+	
+		var gridData = [
+		{"Selected":false, "순번":"1", "사업자유형":"가맹본부", "사업자상호":"인스플래닛(주)", "사업자등록번호":"승인", "사업자상태":"승인완료", "활동상태":"활동", "브랜드명":"메가커피", "지점":"본사", "사업장위치":"강원도 고성군", "거래처구분":"회수", "거래처상호":"(주)에이온티수집[수집.운반사업자]", "사업자등록번호":"123-45-12345", "활동상태":"활동", "거래상태":"거래"}
+		];
+		
+		function writeCount1(column, data) {
+			if (checked)
+				return "선택"
+			else
+				return "전체";
+		}
+		
+		function writeCount2(column, data) {
+			if (!collection && gridRoot)
+				collection = gridRoot.getCollection();
+			if (collection)
+				if (checked)
+					return selectorColumn.getSelectedIndices().length + "건";
+				else
+					return collection.getLength() + "건";
+			else
+				return "";
+		}
+		
+		function writeCount3(column, data) {
+			if (checked)
+				return "선택합계";
+			else
+				return "";
+		}
+		
+		function writeCount4(column, data) {
+			if (checked) {
+				var checkSum = 0;
+				cLength = selectorColumn.getSelectedIndices().length;
+				sData = collection.getSource();
+				for ( var i = 0 ; i < cLength ; i++ ) {
+					var selectedIndex = selectorColumn.getSelectedIndices();
+					selectedIndex.sort();
+					checkSum += parseFloat(sData[selectedIndex[i]]["Length"]);
+				}
+				return checkSum;
+			} else {
+				return data;
+			}
+		}
+		
+		function writeCount5(column, data) {
+			if (checked) {
+				var checkSum = 0;
+				cLength = selectorColumn.getSelectedIndices().length;
+				sData = collection.getSource();
+				for ( var i = 0 ; i < cLength ; i++ ) {
+					var selectedIndex = selectorColumn.getSelectedIndices();
+					selectedIndex.sort();
+					checkSum += parseFloat(sData[selectedIndex[i]]["AttachCount"]);
+				}
+				return checkSum;
+			} else {
+				return data;
+			}
+		}
+		
+	//----------------------- 그리드 설정 끝 -----------------------
+
+	&lt;div class="grid_body"&gt;
+		&lt;!--grid 영역--&gt;
+		&lt;div class="grid0"&gt;
+			&lt;div id="gridHolder"  style="height:300px;"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+  	</pre>
+  	</div>
+
+	<link rel="stylesheet" type="text/css" href="../rMateGridH5/Assets/rMateH5.css"/>
+    <script type="text/javascript" src="../LicenseKey/rMateGridH5License.js"></script>	<!-- rMateGridH5 라이센스 -->
+    <script type="text/javascript" src="../rMateGridH5/JS/rMateGridH5.js"></script>		<!-- rMateGridH5 라이브러리 -->
+    <script type="text/javascript" src="../rMateGridH5/JS/jszip.min.js"></script>
+	  <script type="text/javascript">
+		// ----------------------- 그리드 설정 시작 -------------------------------------
+ 
+			// rMateGridH5에서 그리드 생성 준비가 완료될 경우 호출할 함수를 지정합니다.
+			var jsVars = "rMateOnLoadCallFunction=gridReadyHandler";
+			
+			// rMateDataGrid 를 생성합니다.
+			// 파라메터 (순서대로)
+			//  1. 그리드의 id ( 임의로 지정하십시오. )
+			//  2. 그리드가 위치할 div 의 id (즉, 그리드의 부모 div 의 id 입니다.)
+			//  3. 그리드 생성 시 필요한 환경 변수들의 묶음인 jsVars
+			//  4. 그리드의 가로 사이즈 (생략 가능, 생략 시 100%)
+			//  5. 그리드의 세로 사이즈 (생략 가능, 생략 시 100%)
+			rMateGridH5.create("grid1", "gridHolder", jsVars, "100%", "100%");
+			
+			// 그리드의 속성인 rMateOnLoadCallFunction 으로 설정된 함수.
+			// rMate 그리드의 준비가 완료된 경우 이 함수가 호출됩니다.
+			// 이 함수를 통해 그리드에 레이아웃과 데이터를 삽입합니다.
+			// 파라메터 : id - rMateGridH5.create() 사용 시 사용자가 지정한 id 입니다.
+			function gridReadyHandler(id) {
+				// rMateGrid 관련 객체
+				gridApp = document.getElementById(id);  // 그리드를 포함하는 div 객체
+				gridRoot = gridApp.getRoot();   // 데이터와 그리드를 포함하는 객체
+			
+				gridApp.setLayout(layoutStr);
+				gridApp.setData(gridData);
+			
+				// CheckBox가 변경될 경우 실행될 함수입니다.
+				var selectorColumnChangeHandler = function(event) {
+					collection = gridRoot.getCollection();
+					var rowIndex = event.rowIndex;
+					var columnIndex = event.columnIndex;
+					if (selectorColumn.getSelectedIndices().length > 0)
+						checked = true;
+					else
+						checked = false;
+			
+					// Footer의 재계산을 위하여 collection을 refresh 합니다.
+					collection.refresh();
+				}
+			
+				var dataCompleteHandler = function(event) {
+					dataGrid = gridRoot.getDataGrid();  // 그리드 객체
+					columns = dataGrid.getColumns();
+					selectorColumn = gridRoot.getObjectById("selector");
+					// CheckBox가 변경될 경우 실행될 이벤트 함수를 지정합니다.
+					selectorColumn.addEventListener("change",   selectorColumnChangeHandler);
+				}
+			
+				gridRoot.addEventListener("dataComplete", dataCompleteHandler);
+			}
+			
+			var gridApp, gridRoot, dataGrid, collection, columns, selectorColumn;
+			
+			// 체크박스가 체크 되었는지 확인용 변수, false일 경우 전체 데이터를 footer에 표시함.
+			var checked;
+
+			var layoutStr = 
+			'<?xml version="1.0" encoding="utf-8"?>\
+			<rMateGrid>\
+				<NumberFormatter id="numfmt" useThousandsSeparator="true"/>\
+				<DataGrid id="dg3" horizontalScrollPolicy="on" variableRowHeight="true" verticalAlign="middle" sortableColumns="true" textAlign="center" rowHeight="40" headerHorizontalSeparatorColor="#c6c9d0" headerSeparatorColor="#c6c9d0" alternatingItemColors="[#ffffff,#ffffff]" headerColors="#e4e7eb">\
+					<groupedColumns height="32">\
+						<DataGridSelectorColumn dataField="선택" id="selector" width="40" textAlign="center"/>\
+						<DataGridColumn dataField="순번" width="80" textAlign="center"/>\
+						<DataGridColumnGroup headerText="사업자정보">\
+							<DataGridColumn dataField="사업자유형" width="150" textAlign="center"/>\
+							<DataGridColumn dataField="사업자상호" width="250" textAlign="left" />\
+							<DataGridColumn dataField="사업자등록번호" width="150" textAlign="center"/>\
+							<DataGridColumn dataField="사업자상태" textAlign="left"/>\
+							<DataGridColumn dataField="활동상태" textAlign="center"/>\
+							<DataGridColumn dataField="브랜드명" textAlign="left"/>\
+							<DataGridColumn dataField="지점" textAlign="left"/>\
+							<DataGridColumn dataField="사업장위치" textAlign="left" />\
+						</DataGridColumnGroup>\
+						<DataGridColumnGroup headerText="거래처정보">\
+							<DataGridColumn dataField="거래처구분" width="150" fontWeight="bold" itemEditor="ComboBoxEditor" editorDataField="selectedDataField" textAlign="center"/>\
+							<DataGridColumn dataField="거래처상호" width="250" textAlign="left"/>\
+							<DataGridColumn dataField="사업자등록번호" width="150" textAlign="center"/>\
+							<DataGridColumn dataField="사업자상태" textAlign="center"/>\
+							<DataGridColumn dataField="활동상태" textAlign="center"/>\
+							<DataGridColumn dataField="거래상태" textAlign="center"/>\
+						</DataGridColumnGroup>\
+					</groupedColumns>\
+					<footers>\
+						<DataGridFooter height="35" backgroundColor="#4a535e" color="#ffffff">\
+							<DataGridFooterColumn textAlign="center"/>\
+							<DataGridFooterColumn labelJsFunction="writeCount1" textAlign="center"/>\
+							<DataGridFooterColumn labelJsFunction="writeCount2" textAlign="center"/>\
+							<DataGridFooterColumn textAlign="center"/>\
+						</DataGridFooter>\
+					</footers>\
+				</DataGrid>\
+			</rMateGrid>';
+
+			var gridData = [
+			{"Selected":false, "순번":"1", "사업자유형":"가맹본부", "사업자상호":"인스플래닛(주)", "사업자등록번호":"승인", "사업자상태":"승인완료", "활동상태":"활동", "브랜드명":"메가커피", "지점":"본사", "사업장위치":"강원도 고성군", "거래처구분":"회수", "거래처상호":"(주)에이온티수집[수집.운반사업자]", "사업자등록번호":"123-45-12345", "활동상태":"활동", "거래상태":"거래"},
+			{"Selected":false, "순번":"2", "사업자유형":"가맹본부", "사업자상호":"인스플래닛(주)", "사업자등록번호":"승인", "사업자상태":"승인완료", "활동상태":"활동", "브랜드명":"메가커피", "지점":"본사", "사업장위치":"강원도 고성군", "거래처구분":"회수", "거래처상호":"(주)에이온티수집[수집.운반사업자]", "사업자등록번호":"123-45-12345", "활동상태":"활동", "거래상태":"거래"},
+			{"Selected":false, "순번":"3", "사업자유형":"가맹본부", "사업자상호":"인스플래닛(주)", "사업자등록번호":"승인", "사업자상태":"승인완료", "활동상태":"활동", "브랜드명":"메가커피", "지점":"본사", "사업장위치":"강원도 고성군", "거래처구분":"회수", "거래처상호":"(주)에이온티수집[수집.운반사업자]", "사업자등록번호":"123-45-12345", "활동상태":"활동", "거래상태":"거래"},
+			];
+			
+			// labelJsFunctin 기능을 이용하여 푸터 컬럼에 전체라는 문구와 건수를 넣어줍니다.
+			// labelJsFunction 함수의 파라메터는 다음과 같습니다.
+			// function labelJsFunction(column:Column, data:Object)
+			//      column : 해당 셀의 열을 정의한 DataGridFooterColumn 객체
+			//      data : 해당 셀의 값 - 합산등의 연산일 경우
+			//
+			function writeCount1(column, data) {
+				if (checked)
+					return "선택"
+				else
+					return "전체";
+			}
+			
+			function writeCount2(column, data) {
+				if (!collection && gridRoot)
+					collection = gridRoot.getCollection();
+				if (collection)
+					if (checked)
+						return selectorColumn.getSelectedIndices().length + "건";
+					else
+						return collection.getLength() + "건";
+				else
+					return "";
+			}
+			
+			function writeCount3(column, data) {
+				if (checked)
+					return "선택합계";
+				else
+					return "";
+			}
+			
+			function writeCount4(column, data) {
+				if (checked) {
+					var checkSum = 0;
+					cLength = selectorColumn.getSelectedIndices().length;
+					sData = collection.getSource();
+					for ( var i = 0 ; i < cLength ; i++ ) {
+						var selectedIndex = selectorColumn.getSelectedIndices();
+						selectedIndex.sort();
+						checkSum += parseFloat(sData[selectedIndex[i]]["Length"]);
+					}
+					return checkSum;
+				} else {
+					return data;
+				}
+			}
+			
+			function writeCount5(column, data) {
+				if (checked) {
+					var checkSum = 0;
+					cLength = selectorColumn.getSelectedIndices().length;
+					sData = collection.getSource();
+					for ( var i = 0 ; i < cLength ; i++ ) {
+						var selectedIndex = selectorColumn.getSelectedIndices();
+						selectedIndex.sort();
+						checkSum += parseFloat(sData[selectedIndex[i]]["AttachCount"]);
+					}
+					return checkSum;
+				} else {
+					return data;
+				}
+			}
+			
+		//----------------------- 그리드 설정 끝 -----------------------
+	  </script>
+  	<!-- Sample -->
+	<div class="grid_wrap">
+		<div class="grid_head">
+			<div class="left_con">
+				<h3 class="grid_title">라벨정보</h3>
+			</div>
+			<div class="right_con">
+				<div class="grid_info">
+					<button type="button" class="btn warning_btn" title="경고버튼"><span class="blind">주의</span></button>
+					<p class="msg">
+						<span class="primary">행추가 버튼</span>을 클릭하여 다른 용기를 선택해주세요.
+					</p>
+				</div>
+				<button type="button" class="btn btn_img icon_row_delete" title="행삭제 버튼"><span class="blind">행삭제</span></button>
+				<button type="button" class="btn btn_img icon_row_add" title="행추가 버튼"><span class="blind">행추가</span></button>
+				<div class="grid_cnt_con">
+					<span class="current">총 <em>1</em>건</span>
+				</div>
+			</div>
+		</div>
+		  <div class="grid_body">
+			<!--grid 영역-->
+			<div class="grid0">
+				<div id="gridHolder"  style="height:300px;"></div>
+			</div>
+		</div>
+	</div>
+  	<!-- //Sample -->
+  </div>
+
+  </div>
+  <script type="text/javascript">
+  //<!--
+  	$.syntax({ theme: 'grey', layout: 'fixed', replace: true});
+  //-->
+  </script>
+  </body>
+</html>

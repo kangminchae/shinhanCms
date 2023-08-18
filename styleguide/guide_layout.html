@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>빈용기지급관리시스템 UI Guide</title>
+  <link rel="stylesheet" type="text/css" href="../dummy/css/style.css"><!--퍼블 가이드 css-->
+  <link rel="stylesheet" type="text/css" href="css/common.css"><!--퍼블 가이드 css-->
+  <script src="js/jquery.1.11.0.min.js"></script>
+  <script src="js/jquery.ui.1.11.4.min.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.cache.js"></script>
+	<script type="text/javascript" src="js/guide.js"></script>
+	<script>
+	$(document).ready(function(){
+		snbMarkup();
+	});
+	</script>
+	</head>
+	<body>
+	<div id="wrap">
+		
+		<!-- aside -->
+		<div id="aside">
+			<!-- # 좌측컨텐츠 # -->
+			<div class="wrap-aside">
+				<!-- 사용자정보영역 -->
+				<div class="box-info">
+				</div>
+				<!-- 네비게이션 : SNB -->
+				<div class="nav-snb"></div>
+			</div>
+			<!-- # 컨트롤 # -->
+			<div class="area-control">
+				<a href="#none">좌측영역 펼침/닫기</a>
+			</div>
+		</div>
+		<!-- //aside -->
+
+	<div class="content">
+		<!-- # 페이지타이틀 # -->
+		<div class="tit-page">
+			<h1>기본구조 - 레이아웃</h1>
+		</div>
+
+		<!-- # 기본구조 --------------------------------------------------------------------------------->
+		<h2 class="tit-guide">구조</h2>
+
+		<!-- html -->
+		<fieldset class="guide">
+			<legend>html</legend>
+			<!-- head -->
+			<fieldset class="guide">
+				<legend>head</legend>
+	<pre class="syntax brush-css">
+		&lt;meta charset="UTF-8"&gt;
+		&lt;meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover"&gt;
+		&lt;title&gt;모바일웹&lt;/title&gt;
+		&lt;link rel="stylesheet" type="text/css" href="../css/style.css" /&gt;
+		&lt;script type="text/javascript" src="../js/jquery-3.7.0.min.js">&lt;/script&gt;
+		&lt;script type="text/javascript" src="../js/common.js">&lt;/script&gt;
+	</pre>
+			</fieldset>
+			<!-- body -->
+			<fieldset class="guide">
+				<legend>body</legend>
+				<!-- div#wrapper -->
+				<fieldset class="guide">
+					<legend>div.layout_wrap</legend>
+					<!-- ### layout : skipnav ### -->
+					<fieldset class="guide">
+						<legend>div.skip_nav</legend>
+					</fieldset>
+					<!-- ### layout : layout_con ### -->
+					<fieldset class="guide guide2">
+						<legend>div.layout_con</legend>
+						<!-- ### layout : aside ### -->
+						<fieldset class="guide leftGuide">
+							<legend>div.left_con : 왼쪽 메뉴</legend>
+						</fieldset>
+
+						<!-- ### layout : container ### -->
+						<fieldset class="guide rightGuide">
+							<legend>div.right_con : 본문영역</legend>
+
+							<!-- ### footer ### -->
+							<fieldset class="guide">
+								<legend>#footer</legend>
+							</fieldset>
+						</fieldset>
+					</fieldset>
+					</pre>
+					</fieldset>
+					<!-- ### 기타 ### -->
+					<fieldset class="guide">
+						<legend>팝업마크업위치</legend>
+					</fieldset>
+				</fieldset>
+			</fieldset>
+		</fieldset>
+
+	</div>
+	</div>
+	<script type="text/javascript">
+	//<!--
+		$.syntax({ theme: 'grey', layout: 'fixed', replace: true});
+	//-->
+	</script>
+	</body>
+	</html>

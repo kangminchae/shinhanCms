@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+/*************************************************
+	가이드용 임시
+*************************************************/
+
+.mt20 {margin-top:20px;}
+.mb20 {margin-bottom:20px;}
+.mb40 {margin-bottom:40px;}
+/* 레이아웃 수정 */
+#header .logo {text-align:center;line-height:40px;height:100%;padding-left:30px;}
+#header .logo > span {display:inline-block;font-size:0;height:17px;vertical-align:middle;}
+#header .logo > span::before {content:"";display:inline-block;background:url(../../images/logo.png) no-repeat;background-size:132px 21px;width:132px;height:21px;}
+
+/* GNB */
+.nav-gnb {display:inline-block;vertical-align:middle;height:50px;line-height:48px;margin-left:50px;}
+.nav-gnb ul {overflow:hidden;}
+.nav-gnb ul > li {float:left;}
+.nav-gnb ul > li a {position:relative;display:block;padding:10px 15px;font-size:14px;color:#000; line-height:30px;font-family:Tahoma,"맑은 고딕", "Malgun Gothic", Arial, sans-serif;font-weight:bold;text-decoration:none;}
+.nav-gnb ul > li a:hover, .nav-gnb ul > li a:focus {color:#3472c5;text-decoration:none;}
+.nav-gnb ul > li.active a {color:#3472c5;}
+.nav-gnb ul > li.active > a::before {content:"";display:block;width:100%;position:absolute;bottom:0;left:0;border-bottom:2px #3472c5 solid;}
+.nav-gnb ul > li.active a:after {content:'';position:absolute;left:50%;bottom:0;margin:0 0 0 -5px;width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:6px solid #3472c5;}
+
+#wrap #container .content {padding-left:0;}
+#container .content {position:absolute;top:50px;left:0;width:100%;overflow:hidden;}
+.content iframe {width:100%;height:100vh;}
+
+.util-area {position:absolute;top:15px;right:15px;}
+.util-area a {}
+.util-area img {max-height:100%;}
+
+
+/* 상단으로 이동 */
+.btn-top {display:block;position:fixed;right:0;bottom:10px;padding:0 8px;background:#00a1e0;font-size:11px;line-height:26px;text-align:center;}
+.btn-top a {color:#fff !important;text-decoration:none;}
+
+/* 색상샘플 */
+.guide-color {display:inline-block;line-height:20px;text-align:center;color:#fff;width:80px;border-radius:5px;padding:10px 5px;}
+.red {color: #990000;}
+.green {color: #090;}
+.blue {color: #06C;}
+
+/* 가이드용 타이틀 */
+.tit-guide {position:relative;margin:45px 0 10px;padding:5px 0 7px 10px;background:#565a5f;color:#fff;font-weight:normal;}
+.tit-guide span {position:absolute;right:10px;top:6px;}
+.tit-guide span:before {content:'[ ';}
+.tit-guide span:after {content:' ]';}
+h3.tit-guide {margin:50px 0 10px;background:#ddd;color:#000;border-top:1px solid #666;font-weight:bold;}
+.tit-guide + h3.tit-guide {margin-top:10px;}
+div.tit-page + .tit-guide {margin-top:0;}
+#content > h1 + .tit-guide {margin-top:0;}
+
+/* ---------------------------------------------------------
+	CONTENT 공통 : 타이틀 및 텍스트/문구
+--------------------------------------------------------- */
+/* 페이지타이틀 */
+div.tit-page {position:relative;margin:15px 20px 15px 0;height:22px; padding:0 0 0 12px; color:#333; text-align:left;}
+div.tit-page h1 {display:inline-block;font-size:16px;line-height:22px;vertical-align:top;}
+div.tit-page h1 span:before {content:'(';}
+div.tit-page h1 span:after {content:')';}
+div.tit-page:before, div.tit-page:after {content:'';position:absolute;left:0;top:2px;}
+div.tit-page:before {width:8px;height:19px;background:#3472c5;}
+div.tit-page:after {width:5px;height:16px;margin:0 0 1px 1px;}
+div.tit-page .sub {position:absolute;right:0;bottom:0;}
+div.tit-page .label-star {margin-top:-1px;vertical-align:top;}
+
+/* 서브타이틀1 */
+.tit-sub1 {position:relative;margin:10px 0 5px;}
+.tit-sub1:not(div), .tit-sub1 h2, .tit-sub1 h3, .tit-sub1 h4, .tit-sub1 h5 {display:inline-block;font-size:14px;line-height:20px;}
+.tit-sub1:not(div):before, .tit-sub1 h2:before, .tit-sub1 h3:before, .tit-sub1 h4:before, .tit-sub1 h5:before {content:'';display:inline-block;width:4px;height:12px;margin:0 6px 0 0;background:#00a1e0;vertical-align:-1px;}
+.tit-sub1:not(div) {display:block;}
+.tit-sub1 > .info {display:inline-block;}
+.tit-sub1 > .info.addform > dt {padding:0 10px;}
+.tit-sub1 > .info.label-form {margin:-2px 0 0 10px;}
+.tit-sub1 > .sub {position:absolute;right:0;bottom:0;}
+div.tit-page + .tit-sub1, .content > .tit-sub1:first-child {margin-top:0;}
+div.tit-page + .btn-area1 + .tit-sub1 {margin-top:-20px;}
+
+/* 서브타이틀1 */
+.tit-sub2 {position:relative;margin:10px 0 5px;}
+.tit-sub2:not(div), .tit-sub2 h2, .tit-sub2 h3, .tit-sub2 h4, .tit-sub2 h5 {display:inline-block;font-size:13px;line-height:20px;}
+.tit-sub2:not(div) {display:block;}
+.tit-sub2 > .sub {position:absolute;right:0;bottom:0;}
+
+/* 필수항목 */
+.txt-required {position:relative;display:inline-block;overflow:hidden;padding:0 0 0 6px;width:0;white-space:nowrap;vertical-align:top;}
+.txt-required:before {position:absolute;left:0;top:0;content:'*';color:#c30136;}
+
+/* 숫자출력 */
+.txt-cnt {text-align:right;line-height:20px;}
+.txt-cnt span:first-child {font-weight:bold;}
+
+/* 소스코드 출력영역 */
+.guide-code {margin:10px 0;font-size:12px;}
+.tit-guide + .guide-code {margin-top:-5px;}
+
+/* 가이드설명 텍스트스타일 */
+p.desc-guide, .desc-guide > li {position:relative;padding:0 0 0 10px;}
+p.desc-guide:before, .desc-guide > li:before {content:'';position:absolute;left:0;top:9px;display:block;width:2px;height:2px;background:#000;border-radius:50%;}
+
+.txt-guide1 {text-align:right;}
+.txt-guide1 a {text-decoration:underline;}
+
+.txt-guide2 {margin:10px 0;}
+.txt-guide2 span {display:inline-block;color:#fff;background:#669900;padding:0 10px;line-height:30px;}
+
+.txt-temp {padding:20px;line-height:100px;border:1px solid #797979;}
+
+/* 탭 */
+.tab-guide {margin:20px 0;padding:2px 0;overflow:hidden;width: 100%;border-top:1px solid #333;border-bottom:1px solid #333;}
+.tab-guide > li {box-sizing:border-box;display:block;float:left;margin-bottom:1px;padding:0 1px 0 0;width:25%;}
+.tab-guide > li a {position:relative;display:block;line-height:2;text-indent:0.5em;color:#333;background:#f2f2f2;text-decoration:none;}
+
+@media only screen and (max-width:768px) {
+	.tab-guide > li {width:50%;}
+}
+
+/* ---------------------------------------------------------
+	CONTENT 공통 : 테이블유형1
+--------------------------------------------------------- */
+/* 기본  */
+.tbl-data1 {overflow:hidden;width:100%;margin:5px 0 0;border:1px solid #a7a7a7;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.tbl-data1 table {width:100%;table-layout:fixed;}
+.tbl-data1 table th, .tbl-data1 table td {border-top:1px solid #dbdbdb;vertical-align:middle;text-align:left;line-height:13px;background:#fff;}
+.tbl-data1 table th {position:relative;height:26px;padding:0 5px;background-color:#f6f6f6;text-align:right;font-size:12px;line-height:13px;}
+.tbl-data1 table th .sub {position:absolute;left:7px;top:4px;}
+.tbl-data1 table th .sub.label-form {top:50%;margin-top:-12px;}
+.tbl-data1 table td {height:20px;padding:3px 6px;}
+/*.tbl-data1 table td + td {border-left:1px solid #dbdbdb;}*/
+.tbl-data1 table thead th, .tbl-data1 table thead ~ tbody th, .tbl-data1 table thead ~ tbody td {text-align:center;border-left:0;border-right:1px solid #dbdbdb;}
+.tbl-data1 table tr th:last-child, .tbl-data1 table tr td:last-child {border-right:0;}
+.tbl-data1 table thead th {text-align:center;}
+.tbl-data1 > table > thead tr:first-child > th, .tbl-data1 > table > tbody > tr:first-child > th, .tbl-data1 > table > tbody > tr:first-child > td {border-top:0;}
+.tbl-data1 > table > thead ~ tbody > tr:first-child > th, .tbl-data1 > table > thead ~ tbody > tr:first-child > td {border-top:1px solid #dbdbdb;}
+
+.page-list .tbl-data1 table tr:nth-child(even) {background-color:#ddd;}
+
+.tbl-data1 td.depth1 {
+	font-weight: bold;
+}
+.tbl-data1 td.type {
+	text-align: left;
+}
+.tbl-data1 td.deg {
+	text-align: center;
+}
+.tbl-data1 td.pub {
+	text-align: center;
+}
+.tbl-data1 td.dev {
+	text-align: center;
+}
+.tbl-data1 td.filename {
+	text-align: left;
+}
+.tbl-data1 td.task {
+	font-weight: bold;
+	text-align: center;
+}
+.tbl-data1 td.done {
+	color: #090;
+}
+.tbl-data1 td.undone {
+	color: #900;
+}
+.tbl-data1 td.check {
+	font-weight: bold;
+	text-align: center;
+	color:#909;
+}
+.tbl-data1 td.memo {
+	color: #000;
+}
+
+/* 가이드용 테이블 예외스타일 */
+.tbl-data1.sorttable > table td {text-align:left;}
+.tbl-data1.sorttable table th, .tbl-data1.sorttable table td {height:18px;padding:4px 10px;font-size:12px;}
+.tbl-data1.sorttable > table > tbody > tr > td:first-child,
+.tbl-data1.sorttable > table td.end, .tbl-data1.sorttable > table td.modify {text-align:center;}
+.tbl-data1.sorttable .tbl-data1 td {width:80px;}
+.tbl-data1.sorttable .tbl-data1 td + td {width:auto;}
+.tbl-data1.sorttable td a {color:#214c9c;text-decoration:underline;}
+.tbl-data1.sorttable td.modify .content {display:none;}
+.tbl-data1.sorttable tr.delete td {text-decoration:line-through;color:#999;}
+.tbl-data1.sorttable tr.waiting td {background-color:#ffe8c4;}
+.tbl-data1.sorttable tr.line td {border-top:2px solid #dbdbdb;}
+.tbl-data1.guide table th, .tbl-data1.guide table td {height:35px;padding:5px 10px;font-size:15px;}
+
+.count {margin-bottom:10px; text-align:right; font-size:11px;}
+.count span {margin-left:8px;}
+.count span em {font-size:18px; font-weight:bold;}
+.count span.progress em {color:#ee4048;}
+tr.del td {opacity:.5;text-decoration:line-through;}
+tr.del td:last-child {opacity:1;text-decoration:none;}
+.status-guide {position:absolute; left: -48px;width: 196px; font-size:11px; text-align: center;z-index: 10;}
+.status-guide em {padding:0 3px; }
+
+
+@media only screen and (max-width:680px) {
+	.tbl-data1.sorttable {table-layout:auto;}
+	.tbl-data1.sorttable table colgroup {display:none;}
+	.tbl-data1.sorttable table th, .tbl-data1.sorttable table td {width:auto;}
+}
+
+/* fieldset : 폼 그룹핑이 아닌 그리드 설명용으로 사용됨 */
+fieldset.guide {border:1px solid #333;margin:20px 0;padding:10px;font-size:12px;line-height:20px;letter-spacing:0;}
+fieldset.guide fieldset.guide {margin:5px;}
+fieldset.guide fieldset {margin:5px 0 0;}
+fieldset.guide legend {position:static !important;left:0 !important;top:0 !important;width:auto !important;height:auto !important;padding:0 4px !important;visibility:visible !important;font-size:12px !important;line-height:20px !important;text-indent:0 !important;font-weight:bold;}
+.guide2 {display:flex;}
+.guide2 .leftGuide {width:200px;}
+
+/* 가이드 컨텐츠용 수정스타일 */
+.page-guide .tit-sub1 {font-size:12px;}
+
+.pop-modal1.guide {width:400px;height:auto;}
+.pop-modal1.guide.open {margin:0 0 0 -200px !important;}
+.pop-modal1.guide .tbl-data1 table th, .pop-modal1.guide .tbl-data1 td {height:18px;padding:4px 14px;font-size:12px;text-align:left;}
+.pop-modal1.guide .tbl-data1 table tr td:first-child, .pop-modal1.guide .tbl-data1 table tr th:first-child {width:20%;}
+
+.tbl-data2 table {width:100%;table-layout:fixed;margin-bottom:50px;}
+.tbl-data2 table thead th {position:relative; padding:10px 0 20px 0; border-top:2px solid #888; border-bottom:1px solid #ddd; text-align:center; background-color:#fff;}
+.tbl-data2 table tbody {border-bottom:2px solid #888;}
+.tbl-data2 table tbody th {padding:7px 30px; border-bottom:1px solid #ddd; color:#111; font-weight:bold; background-color:#f7f7f7;text-align: left;}
+.tbl-data2 table td {padding:7px 10px; border-bottom:1px solid #ddd; font-size:12px; word-break: break-word;}
+.tbl-data2 table tr:hover td {background:#f9f9f9;}
+.tbl-data2 table td:nth-child(5) {text-align:center;}
+.tbl-data2 table td:nth-child(7),
+.tbl-data2 table td:nth-child(8) {text-align:center;}
+.tbl-data2 table td:nth-child(9) {width:300px;}
+.tbl-data2 table td:last-child {text-align:left;}
+.tbl-data2 table td a:hover {text-decoration:underline;}
+.url {}
+
+@media (max-width: 768px) {
+	.count {text-align:left;}
+	colgroup {display:none;}
+	thead {display:none;}
+
+	.tbl-data2 table {display:block; overflow:hidden; width:100%; table-layout:inherit;}
+	.tbl-data2 table tr, .tbl-data2 table th {display:block; float:left; width:100%;}
+	.tbl-data2 table thead {display:none;}
+	.tbl-data2 table tbody,
+	.tbl-data2 table tbody tr {display:block; width:100%; border:0px;}
+
+	.tbl-data2 table td {float: left; min-height:33px;}
+	.tbl-data2 table td:nth-child(1) {display:none;}
+	.tbl-data2 table td:nth-child(2) {width:20%;font-weight:bold;border-bottom:0;}
+	.tbl-data2 table td:nth-child(3) {width:70%;}
+	.tbl-data2 table td:nth-child(4) {clear: left;width:100%;padding-left:20%;border-bottom:1px solid #333;}
+	.tbl-data2 table td:nth-child(5) {display:none;width:10%;}
+	.tbl-data2 table td:nth-child(5) ~ td {display:none;width:10%;}
+	.tbl-data2 table td:nth-child(6) {display:none;width:10%;}
+}

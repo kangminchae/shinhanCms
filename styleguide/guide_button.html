@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>빈용기지급관리시스템 UI Guide</title>
+  <link rel="stylesheet" type="text/css" href="../dummy/css/style.css"><!--퍼블 가이드 css-->
+  <link rel="stylesheet" type="text/css" href="css/common.css"><!--퍼블 가이드 css-->
+  <script src="js/jquery.1.11.0.min.js"></script>
+  <script src="js/jquery.ui.1.11.4.min.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.cache.js"></script>
+	<script type="text/javascript" src="js/guide.js"></script>
+	<script type="text/javascript" src="../dummy/js/common.js"></script>
+	<script>
+	$(document).ready(function(){
+		snbMarkup();
+	});
+	</script>
+	</head>
+  <body>
+  <div id="wrap">
+  	<!-- aside -->
+  	<div id="aside">
+  		<!-- # 좌측컨텐츠 # -->
+  		<div class="wrap-aside">
+  			<!-- 사용자정보영역 -->
+  			<div class="box-info">
+  			</div>
+  			<!-- 네비게이션 : SNB -->
+  			<div class="nav-snb"></div>
+  		</div>
+  		<!-- # 컨트롤 # -->
+  		<div class="area-control">
+  			<a href="#none">좌측영역 펼침/닫기</a>
+  		</div>
+  	</div>
+  	<!-- //aside -->
+
+  	<div class="content">
+  	<!-- # 페이지타이틀 # -->
+  	<div class="tit-page">
+  		<h1>마크업가이드 - BUTTON</h1>
+  	</div>
+
+  	<!-- # 기본버튼(업무버튼) # -->
+  	<h2 class="tit-guide">BUTTON : .btn</h2>
+	<p>button.css : [class*="w2trigger"] -> [class*="btn"]일관 변경 함(20230516 주석처리)</p>
+
+	<!--  기본 -->
+	<h3 class="tit-guide">Square button : .btn_solid</h3>
+	  <div class="mb20 ipt03">
+		<button type="button" class="btn btn_solid large"><span>확인</span></button>
+		<button type="button" class="btn btn_solid large color_sub3"><span>변경</span></button>
+		<button type="button" class="btn btn_solid large color_sub0"><span>취소</span></button>
+	  </div>
+
+	  <div class="mb20 ipt03">
+		<button type="button" class="btn btn_solid medium"><span>확인</span></button>
+		<button type="button" class="btn btn_solid medium color_sub3"><span>변경</span></button>
+		<button type="button" class="btn btn_solid medium color_sub0"><span>취소</span></button>
+	  </div>
+
+	  <div class="mb40 ipt03">
+		<button type="button" class="btn btn_solid"><span>거래죵료</span></button>
+		<button type="button" class="btn btn_solid color_main1"><span>재활용거래처등록</span></button>
+		<button type="button" class="btn btn_solid color_sub3"><span>거래종료</span></button>
+	  </div>
+
+  	<div class="guide-code">
+		<pre class="syntax brush-css">
+		//lagre Type 
+		&lt;button class="btn btn_solid large"&gt;&lt;span&gt;확인&lt;/span&gt;&lt;/button&gt;
+		&lt;button class="btn btn_solid large color_sub3"&gt;&lt;span&gt;변경&lt;/span&gt;&lt;/button&gt;
+		&lt;button class="btn btn_solid large color_sub0"&gt;&lt;span&gt;취소&lt;/span&gt;&lt;/button&gt;
+
+		//medium Type
+		&lt;button class="btn btn_solid medium"&gt;&lt;span&gt;확인&lt;/span&gt;&lt;/button&gt;
+		&lt;button class="btn btn_solid medium color_sub3"&gt;&lt;span&gt;변경&lt;/span&gt;&lt;/button&gt;
+		&lt;button class="btn btn_solid medium color_sub0"&gt;&lt;span&gt;취소&lt;/span&gt;&lt;/button&gt;
+
+		//small Type
+		&lt;button class="btn btn_solid "&gt;&lt;span&gt;거래죵료&lt;/span&gt;&lt;/button&gt;
+		&lt;button class="btn btn_solid color_main1"&gt;&lt;span&gt;재활용거래처등록&lt;/span&gt;&lt;/button&gt;
+
+		</pre>
+  	</div>
+
+	<h3 class="tit-guide">Text button : .btn_text</h3>
+	<div class="mb20 ipt02">
+		<button class="btn btn_text icon_arrow"><span>더보기</span></button>
+		<button class="btn btn_text icon_down"><span>양식다운로드</span></button>
+	</div>
+	<div class="mb40 ipt02">
+		<button class="btn btn_text underline color_main0"><span>확인</span></button>
+	</div>
+
+	<div class="guide-code">
+		<pre class="syntax brush-css">
+
+		//Text button
+		&lt;button class="btn btn_text icon_arrow"&gt;&lt;span&gt;더보기&lt;/span&gt;&lt;/button&gt;
+		&lt;button class="btn btn_text underline color_main0"&gt;&lt;span&gt;확인&lt;/span&gt;&lt;/button&gt;
+
+		</pre>
+  	</div>
+
+	  <h3 class="tit-guide">Icon button : .btn_img</h3>
+	  <div class="mb40 ipt02">
+		  <button class="btn btn_img icon_setting" title="설정"><span class="blind">설정</span></button>
+		  <button class="btn btn_img icon_filter" title="필터"><span class="blind">필터</span></button>
+		  <button class="btn btn_img icon_grid_down" title="엑셀다운로드"><span class="blind">엑셀다운로드</span></button>
+		  <button class="btn btn_img icon_row_add" title="셀추가"><span class="blind">셀추가</span></button>
+		  <button class="btn btn_img icon_row_delete" title="셀삭제"><span class="blind">셀삭제</span></button>
+		  <button class="btn btn_img icon_excel_upload" title="엑셀업로드"><span class="blind">엑셀업로드</span></button>
+		  <button class="btn btn_img icon_upload" title="다운로드"><span class="blind">다운로드</span></button>
+		  <button class="btn btn_img icon_refresh" title="페이지 새로고침"><span class="blind">페이지 새로고침</span></button>
+		  <button class="btn btn_img icon_print" title="프린트"><span class="blind">프린트</span></button>
+	  </div>
+  
+	  <div class="guide-code">
+		  <pre class="syntax brush-css">
+  
+		  //Icon button
+		  &lt;button class="btn btn_img icon_grid_down" title="엑셀다운로드"&gt;&lt;span class="blind"&gt;엑셀다운로드&lt;/span&gt;&lt;/button&gt;
+		  &lt;button class="btn btn_img icon_refresh" title="페이지 새로고침"&gt;&lt;span class="blind"&gt;새로고침&lt;/span&gt;&lt;/button&gt;
+
+		  </pre>
+	  </div>
+
+	  <h3 class="tit-guide">Tooltip button : .btn_tooltip</h3>
+	  <div class="mb40 ipt02">
+		<div class="tooltip_wrap">
+			<button type="button" class="btn btn_tooltip hover" title="도움말"><span class="blind">도움말</span></button>
+			<div class="tooltip_con">
+				<p class="msg_con">센터 연간정산 여부를 대상으로 선택한 경우 해당 정산기간에는 사업자가 정산정보를 등록할 수 없습니다</p>
+			</div>
+		</div>
+
+		<div class="tooltip_wrap">
+			<button type="button" class="btn btn_tooltip click" title="도움말"><span class="blind">도움말</span></button>
+			<div class="tooltip_con">
+				<p class="msg_con">
+					업무별 정산대상정보의 기준기간을 설정합니다.<br><br>
+					현금반환 - 반환일자<br>
+					회수 - 회수확인일자<br>
+					재활용 인수/인계 - 인수/인계등록일자
+				</p>
+				<button type="button" class="btn close_btn" title="닫기"><span class="blind">닫기</span></button>
+			</div>
+		</div>
+	  </div>
+  </div>
+
+  </div>
+  <script type="text/javascript">
+  //<!--
+  	$.syntax({ theme: 'grey', layout: 'fixed', replace: true});
+  //-->
+  </script>
+  </body>
+  </html>

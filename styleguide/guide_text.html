@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>빈용기지급관리시스템 UI Guide</title>
+  <link rel="stylesheet" type="text/css" href="../dummy/css/style.css"><!--퍼블 가이드 css-->
+  <link rel="stylesheet" type="text/css" href="css/common.css"><!--퍼블 가이드 css-->
+  <script src="js/jquery.1.11.0.min.js"></script>
+  <script src="js/jquery.ui.1.11.4.min.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.cache.js"></script>
+	<script type="text/javascript" src="js/guide.js"></script>
+	<script>
+	$(document).ready(function(){
+		snbMarkup();
+	});
+	</script>
+	<style>
+		/* font - 스포카 한 산스 네오 font-family: 'Spoqa Han Sans Neo'; */
+		@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
+
+		/* font - 에스코어드림 font-family: 'SCoreDream'; */
+		@import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
+
+		.spoqa {font-family:'Spoqa Han Sans Neo';font-size:15px;}
+		.score {font-family:'SCoreDream';font-size:15px;}
+	</style>
+	</head>
+	<body>
+<div id="wrap">
+	<!-- aside -->
+	<div id="aside">
+		<!-- # 좌측컨텐츠 # -->
+		<div class="wrap-aside">
+			<!-- 사용자정보영역 -->
+			<div class="box-info">
+			</div>
+			<!-- 네비게이션 : SNB -->
+			<div class="nav-snb"></div>
+		</div>
+		<!-- # 컨트롤 # -->
+		<div class="area-control">
+			<a href="#none">좌측영역 펼침/닫기</a>
+		</div>
+	</div>
+	<!-- //aside -->
+
+	<div class="content">
+	<!-- # 페이지타이틀 # -->
+	<div class="tit-page">
+		<h1>마크업가이드 - TEXT</h1>
+	</div>
+
+	<!-- # 기본버튼(업무버튼) # -->
+	<h2 class="tit-guide">TEXT 및 COLOR</h2>
+
+	<!--font-->
+	<h3 class="tit-guide">Font Style</h3>
+	<div class="tbl-data1 guide">
+		<table>
+			<caption>기본정보</caption>
+			<colgroup>
+				<col style="width:15%"/>
+				<col/>
+				<col/>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>Typeface</th>
+					<td><strong class="spoqa" style="font-size:20px">스포카 한 산스 네오</strong> / 'Spoqa Han Sans Neo'</td>
+					<td><strong class="score" style="font-size:20px">에스코어드림</strong> / 'SCoreDream'</td>
+				</tr>
+				<tr>
+					<th rowspan="3">font-weight</th>
+					<td><strong class="spoqa" style="font-weight:400">스포카 Regualr</strong></td>
+					<td><strong class="score" style="font-weight:400">에스코어드림 Regualr</strong></td>
+				</tr>
+				<tr>
+					<td><strong class="spoqa" style="font-weight:500">스포카 Medium</strong></td>
+					<td><strong class="score" style="font-weight:500">에스코어드림 Medium</strong></td>
+				</tr>
+				<tr>
+					<td><strong class="spoqa" style="font-weight:600">스포카 Bold</strong></td>
+					<td><strong class="score" style="font-weight:600">에스코어드림 Bold</strong></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!--//font-->
+
+	<!--color-->
+	<h3 class="tit-guide">Color Style : font 기준</h3>
+	<div class="tbl-data1 guide">
+		<table>
+			<caption>기본정보</caption>
+			<colgroup>
+				<col style="width:15%"/>
+				<col/>
+				<col/>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>Primary</th>
+					<td><span class="guide-color" style="background:#262626;">#262626</span></td>
+					<td><span class="color_gray7">.color_gray7</span></td>
+				</tr>
+				<tr>
+					<th>Secondary</th>
+					<td> 
+						<span class="guide-color" style="background:#737373;">#737373</span>
+						<span class="guide-color" style="background:#4D4D4D;">#4D4D4D</span> 
+					</td>
+					<td>
+						<span class="color_gray5">.color_gray5</span>
+						<span class="color_gray6">.color_gray6</span>
+					</td>
+				</tr>
+				<tr>
+					<th>Point</th>
+					<td> 
+						<span class="guide-color" style="background:#00856A; width:200px">#00856A<br>bg, button</span>
+						<span class="guide-color" style="background:#00755D; width:150px">#00755D<br>font</span>
+						<span class="guide-color" style="background:#47EBC4; width:150px;color:#262626">#47EBC4<br>Darkbg font</span>
+					</td>
+					<td>
+						<span class="color_point1">.color_point1</span>
+						<span class="color_point0">.color_point0</span>
+						<span class=""></span>
+					</td>
+				</tr>
+				<tr>
+					<th>Common</th>
+					<td>
+						<span class="guide-color" style="background:#DC3636; width:150px">error /#DC3636</span>
+						<span class="guide-color" style="background:#FA6400;">#FA6400</span>
+					</td>
+					<td>
+						<span class="color_error">.color_error</span>
+						<span class="color_main1">.color_main1</span>
+					</td>
+				</tr>
+				<tr>
+					<th rowspan="2">Grayscale</th>
+					<td>
+						<span class="guide-color" style="background:#f7f8fa; color:#000">#F7F8FaA</span> 
+						<span class="guide-color" style="background:#E4E7EB; color:#000">#E4E7EB</span> 
+						<span class="guide-color" style="background:#CFD3D8; color:#000">#CFD3D8</span>
+						<span class="guide-color" style="background:#5D6773;">#5D6773</span> 
+						<span class="guide-color" style="background:#38404A;">#38404A</span>
+						<span class="guide-color" style="background:#1A1C1F;">#1A1C1F</span>
+					</td>
+					<td>
+						<span class="color_sub4">.color_gray0</span>
+						<span class="color_sub4">.color_sub0 ~ .color_sub4</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="guide-color" style="background:#EDEDED; color:#000">#EDEDED</span>
+						<span class="guide-color" style="background:#D9D9D9;">#D9D9D9</span> 
+						<span class="guide-color" style="background:#BFBFBF;">#BFBFBF</span>
+						<span class="guide-color" style="background:#999;">#999</span>
+						<span class="guide-color mt8" style="background:#737373;">#737373</span>
+						<span class="guide-color" style="background:#4D4D4D;">#4D4D4D</span> 
+						<span class="guide-color" style="background:#262626;">#262626</span>
+						<span class="guide-color" style="background:#000;">#000</span>
+					</td>
+					<td>
+						<span class="color_gray8">.color_gray1 ~ .color_gray8</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!--//color-->
+
+	<!-- # 페이지타이틀 -->
+	<h2 class="tit-guide">참고 : color style</h2>
+	<div class="mb20 ipt02">
+		<span>css 변수 속성을 사용하여 작업시 컬러 변경에 용의</span>
+	</div>
+	<div class="guide-code">
+		<pre class="syntax brush-css">
+			/*color*/
+			:root {
+				--color_point1:#00856A;
+				--color_gray6:#4d4d4d;
+				--color_error:#DC3636;
+			}
+
+			//사용방법
+			.color_point1 {color:var(--color_point1);}
+			.title {color:var(--color_gray6); font-size:15px;}
+			.color_error {color:var(--color_error);background-color:var(--color_gray6)}
+		</pre>
+	</div>
+</div>
+
+</div>
+<script type="text/javascript">
+//<!--
+	$.syntax({ theme: 'grey', layout: 'fixed', replace: true});
+//-->
+</script>
+</body>
+</html>

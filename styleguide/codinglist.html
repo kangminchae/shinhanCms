@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>빈용기지급관리시스템 UI Guide</title>
+  <link rel="stylesheet" type="text/css" href="../dummy/css/style.css"><!--퍼블 가이드 css-->
+  <link rel="stylesheet" type="text/css" href="css/common.css"><!--퍼블 가이드 css-->
+  <script src="js/jquery.1.11.0.min.js"></script>
+  <script src="js/jquery.ui.1.11.4.min.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.cache.js"></script>
+  <script type="text/javascript" src="js/guide.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<!-- aside -->
+	<div id="aside">
+		<!-- #  # -->
+		<div class="wrap-aside">
+			<!--  -->
+			<div class="box-info">
+			</div>
+			<!--  : SNB -->
+			<div class="nav-snb">
+        <ul>
+					<li><a href="#" data-target="M0">layout</a></li>
+					<!-- <li><a href="#" data-target="M1"></a></li>
+					<li><a href="#" data-target="M2"></a></li>
+					<li><a href="#" data-target="M3"></a></li>
+					<li><a href="#" data-target="M4"></a></li>
+					<li><a href="#" data-target="M5"></a></li>
+					<li><a href="#" data-target="M6"></a></li>
+					<li><a href="#" data-target="M7"></a></li>
+          <li><a href="#" data-target="M8"></a></li>
+          <li><a href="#" data-target="M9"></a></li> -->
+				</ul>
+
+			</div>
+		</div>
+		<!-- #  # -->
+		<div class="area-control">
+			<a href="#none"> /</a>
+		</div>
+	</div>
+	<!-- //aside -->
+
+  <div class="content page-list">
+    <div class="tbl-data2">
+				<table id="pagelist">
+					<colgroup>
+						<col style="width:150px">
+            <col style="width:15%">
+						<col style="width:20%">
+						<col style="width:*">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">1Depth</th>
+							<th scope="col">2Depth</th>
+              <th scope="col">3Depth</th>
+							<th scope="col">File Name </th>
+						</tr>
+					</thead>
+          <tbody id="M0">
+            <tr>
+              <th class="category" colspan="4">layout</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="dep2">login</th>
+              <td class="dep3"> </td>
+              <td class="url"><span>../dummy/html/login.html</span></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="dep2">main</th>
+              <td class="dep3"></td>
+              <td class="url"><span>../dummy/html/main.html</span></td>
+            </tr>
+            <tr>
+              <td>sub</td>
+              <td class="dep2">layout Type</th>
+              <td class="dep3">jqGrid 적용</td>
+              <td class="url"><span>../dummy/html/subLayout.html</span></td>
+            </tr>
+            <tr>
+              <td>sub</td>
+              <td class="dep2">layout Type</th>
+              <td class="dep3">rMateGrid 적용</td>
+              <td class="url"><span>../dummy/html/subLayout2.html</span></td>
+            </tr>
+            <tr>
+              <td>sub</td>
+              <td class="dep2">layout Type</th>
+              <td class="dep3">FusionCharts 적용</td>
+              <td class="url"><span>../dummy/html/subLayout_chart.html</span></td>
+            </tr>
+          </tbody>
+				</table>
+      </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+//<!--
+	$.syntax({ theme: 'grey', layout: 'fixed', replace: true});
+//-->
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+  $('.url span').each(function(){
+    var link = $(this).text(),
+      str = "";
+    if(link != null && link !=""){
+      str += "<a href=\"" + link + "\" target=\"_blank\">" + link + "</a>";
+      $(this).empty().html(str);
+    }
+  });
+
+  var now=new Date();
+  var year=now.getFullYear();
+  var month=now.getMonth()+1;
+  if (month<10) {
+    month="0"+month;
+  }
+  var date=now.getDate();
+  if (date<10) {
+    date="0"+date;
+  }
+  $('.date').each(function() {
+    var $date = $('> span', this),
+      str = "";
+    str += "<strong>" + $date.filter(':last').text() + "</strong>";
+    $date.filter(':not(:last)').each(function() {
+      str += "<a data-date=\"" + $(this).text() + "\"></a>";
+    });
+    $date.filter(':last').each(function() {
+      str += "<a data-date=\"" + $(this).text() + "\"></a>";
+    });
+    if($date.filter(':first').text() != "") {
+      $(this).empty().html(str);
+    }
+    var chkDay=$date.filter(':last').text().split(" ");
+    var chkDay2=chkDay[0].split("-");
+    if ((chkDay2[0]==year)&&(chkDay2[1]==month)&&(chkDay2[2]==date)) {
+      $(this).parent().addClass('today');
+    }
+  });
+
+  $('tr > td').hover(function(){
+    $(this).parent().addClass('on');
+  }, function(){
+    $(this).parent().removeClass('on');
+  });
+  $('.date a').live('mouseenter', function(){
+    $(this).parent().find('strong').text($(this).attr('data-date'));
+  }).live('mouseleave', function(){
+    $(this).parent().find('strong').text($(this).parent().find('a:last').attr('data-date'));
+  });
+  $('.txt li').each(function(){
+    if (!$(this).text()=="") {
+      $(this).parent().addClass('on');
+    }
+  });
+
+  $('.total').each(function(){
+    var sum=0;
+    var sumG=0;
+    var sumMinus=0;
+    var sumMinusG=0;
+    var count=0;
+    var countG=0;
+    $('#contents').find('.url').each(function(){
+      if ($(this).find('span').html()!="") {
+        sum++;
+      } else {
+        sumMinus++;
+      }
+    });
+    $('#contents .guide').find('.url').each(function(){
+      if ($(this).find('span').html()!="") {
+        sumG++;
+      } else {
+        sumMinusG++;
+      }
+    });
+    $('#contents').find('.check').each(function(){
+      if ($(this).text()!="") {
+        count++;
+      }
+    });
+    $('#contents .guide').find('.check').each(function(){
+      if ($(this).text()!="") {
+        countG++;
+      }
+    });
+    count=(sum-sumG)+(sumMinus-sumMinusG)-(count-countG);
+    sum=(sum-sumG);
+    str = "";
+    str += "<span>"+count+"/"+sum+"pages"+"</span>"+"<em>"+"("+parseInt(count/sum*100)+"%"+")"+"</em>";
+    $(this).find('> span').html(str);
+  });
+
+});
+</script>
+
+
+</body>
+</html>

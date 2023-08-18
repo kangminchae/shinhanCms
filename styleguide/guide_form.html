@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>빈용기지급관리시스템 UI Guide</title>
+  <link rel="stylesheet" type="text/css" href="../dummy/css/style.css"><!--퍼블 가이드 css-->
+  <link rel="stylesheet" type="text/css" href="css/common.css"><!--퍼블 가이드 css-->
+  <script src="js/jquery.1.11.0.min.js"></script>
+  <script src="js/jquery.ui.1.11.4.min.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.js"></script>
+  <script src="js/jquery.syntax/jquery.syntax.cache.js"></script>
+  <script type="text/javascript" src="js/guide.js"></script>
+  
+	<script>
+	$(document).ready(function(){
+		snbMarkup();
+	});
+	</script>
+	</head>
+  <body>
+  <div id="wrap">
+  	<!-- aside -->
+  	<div id="aside">
+  		<!-- # 좌측컨텐츠 # -->
+  		<div class="wrap-aside">
+  			<!-- 사용자정보영역 -->
+  			<div class="box-info">
+  			</div>
+  			<!-- 네비게이션 : SNB -->
+  			<div class="nav-snb"></div>
+  		</div>
+  		<!-- # 컨트롤 # -->
+  		<div class="area-control">
+  			<a href="#none">좌측영역 펼침/닫기</a>
+  		</div>
+  	</div>
+  	<!-- //aside -->
+
+  	<div class="content">
+  	<!-- # 페이지타이틀 # -->
+  	<div class="tit-page">
+  		<h1>마크업가이드 - FORM</h1>
+  	</div>
+
+  	<!-- # 페이지타이틀 -->
+  	<h2 class="tit-guide">FORM STYLE</h2>
+
+  	<h3 class="tit-guide">Element - select : .selectType .selectbox_label_con</h3>
+  	<div class="guide-code">
+  	<pre class="syntax brush-css">
+    &lt;div class="filter_wrap"&gt;
+        &lt;div class="filter_con"&gt;
+            //disabled 일 경우
+            &lt;div class="selectbox_label_con filter_required selectType readonly"&gt;
+                &lt;div class="label_con"&gt;
+                    &lt;label class="label_con" for="fild1"&gt;회수처리사업자&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="w2selectbox w2selectbox_mandatory" &gt;
+                    &lt;select class="selectBox" id="fild1" name="fild" disabled&gt;
+                        &lt;option&gt;(주)에이온티수집[수집·운반 사업자]&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            //default
+            &lt;div class="selectbox_label_con filter_required selectType"&gt;
+                &lt;div class="label_con"&gt;
+                    &lt;label class="label" for="fild2"&gt;인계구분&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="w2selectbox w2selectbox_mandatory"&gt;
+                    &lt;select class="selectBox" id="fild2"&gt;
+                        &lt;option&gt;전체&lt;/option&gt;
+                        &lt;option&gt;관리시스템&lt;/option&gt;
+                        &lt;option&gt;무인회수기&lt;/option&gt;
+                        &lt;option&gt;판매사업자앱&lt;/option&gt;
+                        &lt;option&gt;회수사업자앱&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            //auto select : 자동완성
+            &lt;div class="auto_label_con filter_required selectType"&gt;
+                &lt;div class="label_con"&gt;
+                    &lt;label class="label" for="location"&gt;인계지역&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="autoCompleteWrap"&gt;
+                    &lt;input type="text" class="w2autoComplete" id="location" name="location" placeholder="전체"&gt;
+                    &lt;button type="button" class="btn_search_forn" title="전체리스트"&gt;&lt;span class="blind"&gt;전체검색&lt;/span&gt;&lt;/button&gt;
+                    &lt;!--자동search--&gt;
+                    &lt;div class="autoFrame"&gt;
+                        &lt;ul class="autoFrameList"&gt;
+                            &lt;li&gt;&lt;a href="#none"&gt;강원도 강릉시&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#none"&gt;강원도 고성군&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#none"&gt;강원도 동해시&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#none"&gt;강원도 삼척시&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#none"&gt;강원도 속초시&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#none"&gt;강원도 양구군&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#none"&gt;강원도 양양군&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#none"&gt;강원도 영월군&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#none"&gt;강원도 원주시&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#none"&gt;강원도 원주시&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#none"&gt;강원도 원주시&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#none"&gt;강원도 원주시&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#none"&gt;강원도 원주시&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;!--//자동search--&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  	</pre>
+  	</div>
+
+  	<!-- Sample -->
+    <script type="text/javascript" src="../dummy/js/common.js"></script>
+    <script type="text/javascript" src="../dummy/js/jquery-ui.js"></script>
+    <script>
+      //datepicker
+      $.datepicker.setDefaults({
+        showOn: "button",
+        buttonImage: "../dummy/img/btn_calendar_input.svg",
+        buttonImageOnly: true,
+        buttonText: "날짜선택",
+        dateFormat: 'yy-mm-dd',
+        prevText: '이전 달',
+        nextText: '다음 달',
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        showMonthAfterYear: true,
+        showOtherMonths: true, //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+        yearSuffix: '년'
+        });
+
+        $(function() {
+            $( "#firstDate" ).datepicker();
+            $( "#endDate" ).datepicker();
+        });
+    </script>
+    <style>
+      .filter_wrap select {border:0;}
+    </style>
+
+  	<div class="filter_wrap">
+      <div class="filter_con">
+          <div class="selectbox_label_con filter_required selectType readonly">
+              <div class="label_con">
+                  <label class="label_con" for="fild1">회수처리사업자</label>
+              </div>
+              <div class="w2selectbox w2selectbox_mandatory" >
+                  <select class="selectBox" id="fild1" name="fild" disabled>
+                      <option>(주)에이온티수집[수집·운반 사업자]</option>
+                  </select>
+              </div>
+          </div>
+          <div class="selectbox_label_con filter_required selectType">
+              <div class="label_con">
+                  <label class="label" for="fild2">인계구분</label>
+              </div>
+              <div class="w2selectbox w2selectbox_mandatory">
+                  <select class="selectBox" id="fild2">
+                      <option>전체</option>
+                      <option>관리시스템</option>
+                      <option>무인회수기</option>
+                      <option>판매사업자앱</option>
+                      <option>회수사업자앱</option>
+                  </select>
+              </div>
+          </div>
+          <div class="auto_label_con filter_required selectType">
+              <div class="label_con">
+                  <label class="label" for="location">인계지역</label>
+              </div>
+              <div class="autoCompleteWrap">
+                  <input type="text" class="w2autoComplete" id="location" name="location" placeholder="전체">
+                  <button type="button" class="btn_search_forn" title="전체리스트"><span class="blind">전체검색</span></button>
+                  <!--자동search-->
+                  <div class="autoFrame">
+                      <ul class="autoFrameList">
+                          <li><a href="#none">강원도 강릉시</a></li>
+                          <li><a href="#none">강원도 고성군</a></li>
+                          <li><a href="#none">강원도 동해시</a></li>
+                          <li><a href="#none">강원도 삼척시</a></li>
+                          <li><a href="#none">강원도 속초시</a></li>
+                          <li><a href="#none">강원도 양구군</a></li>
+                          <li><a href="#none">강원도 양양군</a></li>
+                          <li><a href="#none">강원도 영월군</a></li>
+                          <li><a href="#none">강원도 원주시</a></li>
+                          <li><a href="#none">강원도 원주시</a></li>
+                          <li><a href="#none">강원도 원주시</a></li>
+                          <li><a href="#none">강원도 원주시</a></li>
+                          <li><a href="#none">강원도 원주시</a></li>
+                      </ul>
+                  </div>
+                  <!--//자동search-->
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="tableWrap">
+        <div class="autoCompleteWrap">
+            <input type="text" class="w2autoComplete" id="company" name="company" placeholder="브랜드선택">
+            <button type="button" class="btn_search_forn" title="브랜드전체리스트"><span class="blind">전체검색</span></button>
+            <!--자동search-->
+            <div class="autoFrame" style="display: none;">
+                <ul class="autoFrameList">
+                    <li><span>ANGELINUS</span></li>
+                    <li><span>HOLLYS</span></li>
+                    <li><span>KFC</span></li>
+                    <li><span>LOTTERIA</span></li>
+                    <li><span>감성커피</span></li>
+                </ul>
+            </div>
+            <!--//자동search-->
+        </div>
+
+        <div class="input_btn_con w210">
+            <input type="text" class="w2input" title="입력하세요">
+            <button type="button" class="btn btn_solid"><span>확인</span></button>
+        </div>
+
+        <ul class="address_con">
+            <li>
+                <div class="input_btn_con readonly w210">
+                    <button type="button" class="btn btn_solid"><span>주소검색</span></button>
+                    <input type="text" class="w2input w2input_readonly readonly" title="우편번호" readonly="">
+                </div>
+            </li>
+            <li>
+                <input type="text" class="w2input w2input_readonly readonly" title="주소" readonly="">
+            </li>
+            <li>
+                <input type="text" class="w2input" title="상세주소" placeholder="상세주소입력">
+            </li>
+        </ul>
+    </div>
+
+    <div class="mb20">
+        <div class="input_unit_con w210">
+            <input class="w2input" type="text" placeholder="금액입력">
+            <span class="w2span unit">원</span>
+        </div>
+    </div>
+
+    <div class="file_con added">
+        <div class="w2upload">
+            <input type="text" class="w2upload_input" readonly>
+            <span class="w2upload_image">
+                <input type="file" class="w2upload_fakeInput" style="opacity:0;" title="파일첨부">
+            </span>
+        </div>
+    </div>
+  	<!-- //Sample -->
+
+    <h3 class="tit-guide">Element - Datepicker : .selectType .period_con</h3>
+  	<div class="guide-code">
+      <pre class="syntax brush-css">
+        &lt;div class="filter_wrap"&gt;
+          &lt;div class="filter_con"&gt;
+              &lt;div class="period_con filter_required selectType"&gt;
+                  &lt;div class="label_con"&gt;
+                      &lt;label class="label" for="fild4"&gt;조회구분&lt;/label&gt;
+                  &lt;/div&gt;
+                  &lt;div class="w2selectbox w2selectbox_mandatory"&gt;
+                      &lt;select class="selectBox" id="fild4"&gt;
+                          &lt;option&gt;인계일자&lt;/option&gt;
+                      &lt;/select&gt;
+                  &lt;/div&gt;
+                  &lt;div class="w2inputCalendar_div"&gt;
+                      &lt;div class="w2inputCalendar_div_input"&gt;
+                          &lt;input type="text" class="w2inputCalendar_divInput" id="firstDate" value="2023-04-22" title="날짜선택"&gt;
+                      &lt;/div&gt;
+                      &lt;span class=""&gt;~&lt;/span&gt;
+                      &lt;div class="w2inputCalendar_div_input"&gt;
+                          &lt;input type="text" class="w2inputCalendar_divInput" id="endDate" value="2023-05-22" title="날짜선택"&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      </pre>
+  	</div>
+
+  	<!-- Sample -->
+  	<div class="filter_wrap">
+      <div class="filter_con">
+          <div class="period_con filter_required selectType">
+              <div class="label_con">
+                  <label class="label" for="fild4">조회구분</label>
+              </div>
+              <div class="w2selectbox w2selectbox_mandatory">
+                  <select class="selectBox" id="fild4">
+                      <option>인계일자</option>
+                  </select>
+              </div>
+              <div class="w2inputCalendar_div">
+                  <div class="w2inputCalendar_div_input">
+                      <input type="text" class="w2inputCalendar_divInput" id="firstDate" value="2023-04-22" title="날짜선택">
+                  </div>
+                  <span class="">~</span>
+                  <div class="w2inputCalendar_div_input">
+                      <input type="text" class="w2inputCalendar_divInput" id="endDate" value="2023-05-22" title="날짜선택">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  	<!-- //Sample -->
+
+    <h3 class="tit-guide">Element - Input : .selectType .input_label_con</h3>
+  	<div class="guide-code">
+      <pre class="syntax brush-css">
+        &lt;div class="filter_wrap"&gt;
+          &lt;div class="filter_con"&gt;
+            &lt;div class="input_label_con filter_required selectType"&gt;
+              &lt;div class="label_con"&gt;
+                  &lt;label class="label" for="textfild1"&gt;거래처활동상태&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class="w2searchbox w260"&gt;
+                  &lt;input type="text" class="w2input" id="textfild1" placeholder="입력"&gt;
+                  &lt;button type="button" class="btn_reset" title="삭제"&gt;&lt;span class="blind"&gt;삭제&lt;/span&gt;&lt;/button&gt;
+              &lt;/div&gt;
+           &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      </pre>
+  	</div>
+
+  	<!-- Sample -->
+  	<div class="filter_wrap">
+      <div class="filter_con">
+        <div class="input_label_con filter_required selectType">
+          <div class="label_con">
+              <label class="label" for="textfild1">거래처활동상태</label>
+          </div>
+          <div class="w2searchbox w260">
+              <input type="text" class="w2input" id="textfild1" placeholder="입력">
+              <button type="button" class="btn_reset" title="삭제"><span class="blind">삭제</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter_con">
+        <div class="input_label_con filter_required selectType">
+          <div class="w2searchbox w260">
+              <input type="text" class="w2input" id="textfild1" placeholder="입력">
+              <button type="button" class="btn_reset" title="삭제"><span class="blind">삭제</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w2searchbox">
+        <input type="text" class="w2input" id="textfild1" placeholder="입력">
+        <button type="button" class="btn_reset" title="삭제"><span class="blind">삭제</span></button>
+      </div>
+    </div>
+  	<!-- //Sample -->
+
+    <h3 class="tit-guide">Element - radio : </h3>
+  	
+  	<!-- Sample -->
+  	<div class="w2radio">
+        <div class="w2radio_item">
+            <input type="radio" id="item1" name="label" checked="" disabled="">
+            <label class="w2radio_label w2radio_disabled" for="item1"><span>해제못함</span></label>
+        </div>
+
+        <div class="w2radio_item">
+            <input type="radio" id="item2" name="label" disabled="">
+            <label class="w2radio_label" for="item2"><span>선택못함</span></label>
+        </div>
+
+        <div class="w2radio_item">
+            <input type="radio" id="item3" name="label">
+            <label class="w2radio_label" for="item3"><span>선택가능</span></label>
+        </div>
+    </div>
+  	<!-- //Sample -->
+
+      <h3 class="tit-guide">Element - radio : btn Type</h3>
+  	
+  	<!-- Sample -->
+  	<div class="radio_btn_con">
+        <div class="w2radio">
+            <div class="w2radio_item">
+                <input type="radio" id="radio_btn1" name="radio_btn">
+                <label class="w2radio_label w2radio_disabled" for="radio_btn1"><span>옵션명1</span></label>
+            </div>
+    
+            <div class="w2radio_item">
+                <input type="radio" id="radio_btn2" name="radio_btn">
+                <label class="w2radio_label" for="radio_btn2"><span>옵션명2</span></label>
+            </div>
+    
+            <div class="w2radio_item">
+                <input type="radio" id="radio_btn3" name="radio_btn">
+                <label class="w2radio_label" for="radio_btn3"><span>옵션명3</span></label>
+            </div>
+        </div>
+    </div>
+  	<!-- //Sample -->
+
+      <h3 class="tit-guide">Element - check : </h3>
+  	
+  	<!-- Sample -->
+  	<div class="w2checkbox">
+        <div class="w2checkbox_item">
+            <input type="checkbox" id="check1" name="label1" disabled="">
+            <label class="w2checkbox_label w2radio_disabled" for="check1"><span>체크못함</span></label>
+        </div>
+        <div class="w2checkbox_item">
+            <input type="checkbox" id="check2" name="label1" disabled="" checked="">
+            <label class="w2checkbox_label w2radio_disabled" for="check2"><span>체크해제못함</span></label>
+        </div>
+        <div class="w2checkbox_item">
+            <input type="checkbox" id="check3" name="label1" checked="">
+            <label class="w2checkbox_label" for="check3"><span>체크됨</span></label>
+        </div>
+
+        <div class="w2checkbox_item">
+            <input type="checkbox" id="check4" name="label1" class="part_select">
+            <label class="w2checkbox_label" for="check4"><span>일부체크됨</span></label>
+        </div>
+    </div>
+  	<!-- //Sample -->
+  </div>
+  </div>
+  <script type="text/javascript">
+  //<!--
+  	$.syntax({ theme: 'grey', layout: 'fixed', replace: true});
+  //-->
+  </script>
+  </body>
+</html>
