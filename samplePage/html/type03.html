@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>콘텐츠관리시스템(CMS)</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.css">
+    <script src="../js/jquery-3.7.0.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/common_ui.js"></script>
+</head>
+<body>
+    <div class="skipNav">
+        <a href="#container">본문바로가기</a>
+    </div>
+    <div id="wrap">
+        <!--header-->
+        <header id="header">
+            <div class="subMenuWrap"></div><!--[D]상세페이지 일 경우 타이틀 생략 : 영역은 확보해 두어야함-->
+            <div class="rightBox">
+                <button type="button" class="btn_share"><i class="blind">공유하기</i></button>
+                <button type="button" class="btn_iconMenu"><i class="blind">메뉴보기</i></button>
+            </div>
+        </header>
+        <!--//header-->
+        <!--container-->
+        <div id="container">
+            <div class="contentsDetailWrap scroll">
+                <div class="listArea contHeader">
+                    <strong class="categoryName">Category명</strong>
+                    <dl class="listInner">
+                        <dt class="title">콘텐츠 제목이 구성되는 영역이며 1행이 초과되는 경우라도 말줄임표 없이 모두 출력합니다.</dt>
+                        <dd class="text">콘텐츠 부가설명이 구성되며 1행이 초과되는 경우라도 말줄임표 없이 모두 출력합니다.</dd>
+                        <dd class="add">
+                            <div class="info">
+                                <span class="date">2023.08.01</span>
+                                <span class="name">임하연</span>
+                            </div>
+                            <div class="btnWrap">
+                                <button type="button" class="btn sm line" onclick="fnShowPop('pop_detail')"><span>자세히보기</span></button>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="contDetail">
+                    <strong class="text">
+                        2023 잠정 영업손실 126억원 기대치 부합 주요 영업지표 개선 중, 방향성에 대한 의구심 제한적 목표 주가 64,000원, 투자의견 ‘매수’ 유지
+                    </strong>
+                    <span class="text">
+                        2023 잠정 연결 매출액 1,489억원(+5.2%, 이하) 영업손실 126억원으로 당사 추정치(영업손실 122억원)에 부합하는 양호한 실적을 기록했다. 2023 잠정 연결 매출액 1,489억원(+5.2%, 이하) 영업손실 126억원으로 당사 추정치(영업손실 122억원)에 부합하는 양호한 실적을 기록했다.
+                    </span>
+                    <span class="text">
+                        2023 잠정 연결 매출액 1,489억원(+5.2%, 이하) 영업손실 126억원으로 당사 추정치(영업손실 122억원)에 부합하는 양호한 실적을 기록했다. 2023 잠정 연결 매출액 1,489억원(+5.2%, 이하) 영업손실 126억원으로 당사 추정치(영업손실 122억원)에 부합하는 양호한 실적을 기록했다.
+                    </span>
+                    <span class="text">
+                        2023 잠정 연결 매출액 1,489억원(+5.2%, 이하) 영업손실 126억원으로 당사 추정치(영업손실 122억원)에 부합하는 양호한 실적을 기록했다. 2023 잠정 연결 매출액 1,489억원(+5.2%, 이하) 영업손실 126억원으로 당사 추정치(영업손실 122억원)에 부합하는 양호한 실적을 기록했다.
+                    </span>
+                </div>
+                <div class="btnWrap float">
+                    <button type="button" class="btn line"><span>목록</span></button>
+                </div>
+            </div>
+        </div>
+        <!--//container-->
+    </div>
+    <!--[Full 팝업]자세히보기-->
+    <div class="popWrap popFull" id="pop_detail">
+        <div class="popInner">
+            <div class="popHeader">
+                <h2 class="popTitle">팝업 타이틀<br>말 줄임표없이 적용</h2>
+            </div>
+            <div class="popContent">
+                <div class="img">
+                    <img src="../images/thunb/img_thumb01.jpg" alt="이미지">
+                </div>
+            </div>
+            <div class="btnWrap float">
+                <button type="button" class="btn line"><span>확인</span></button>
+            </div>
+        </div>
+        <button type="button" class="btn_popBottomClose"><i class="blind">팝업닫기</i></button>
+    </div>
+    <!--//[Full 팝업]자세히보기-->
+</body>
+</html>

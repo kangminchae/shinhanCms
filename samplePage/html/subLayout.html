@@ -1,0 +1,240 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>콘텐츠관리시스템(CMS)</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.css">
+    <script src="../js/jquery-3.7.0.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/common_ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--header-->
+        <header id="header">
+            <div class="subMenuWrap">
+                <select name="depth2Menu" class="select_menuList" tabindex="-1" id="selectMenu">
+                    <option value="menu1" selected>지수/환율/시장지표</option>
+                    <option value="menu2">자녀 계좌개설</option>
+                    <option value="menu3">계좌번호 찾기</option>
+                </select>
+            </div>
+            <div class="rightBox">
+                <button type="button" class="btn_iconMenu" onclick="fnShowPop('asideMenu')"><i class="">메뉴보기</i></button>
+            </div>
+        </header>
+        <!--//header-->
+
+        <!--aside-->
+        <aside class="asideMenuWrap" id="asideMenu">
+            <div class="menuInner">
+                <div class="menuHeader">
+                    <div class="userInfo">
+                        <strong class="name">홍길동</strong>
+                        <button type="button" class="btn_iconLogout"><span>로그아웃</span></button>
+                    </div>
+                    <div class="utilArea">
+                        <button type="button" class="btn_iconHome"><i class="blind">홈으로</i></button>
+                        <button type="button" class="btn_iconSearch"><i class="blind">검색</i></button>
+                        <button type="button" class="btn_iconClose"><i class="blind">닫기</i></button>
+                    </div>
+                </div>
+                <div class="menuCont">
+                    <div class="kyeMenu">
+                        <ul class="kyeMenuList">
+                            <li><a href="#" title=""></a></li>
+                            <li><a href="#" title=""></a></li>
+                            <li><a href="#" title=""></a></li>
+                            <li><a href="#" title=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="naviArea">
+                        <div class="depth1Area">
+                            <ul class="menuList">
+                                <li><a href="#" title=""></a></li>
+                                <li><a href="#" title=""></a></li>
+                                <li><a href="#" title=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="depth2Area">
+                            <ul class="menuList">
+                                <li>
+                                    <a href="#" class="depth2Title depth3"></a>
+                                    <ul class="depth3List">
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" title=""></a></li>
+                                <li><a href="#" title=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btnClose" onclick="fnHidePop('asideMenu')"><i class="">닫기</i></button>
+            </div>
+        </aside>
+        <!--//aside-->
+
+        <!--container-->
+        <div id="container">
+            <div class="tabWrap">
+                <div class="tabMenu">
+                    <ul class="tabMenuList">
+                      <li class="active"><a rel="tab1" role="tablist">지수</a></li>
+                      <li><a rel="tab2" role="tablist">환율</a></li>
+                      <li><a>금리</a></li>
+                      <li><a>원자재</a></li>
+                      <li><a>메뉴5</a></li>
+                      <li><a>메뉴6</a></li>
+                      <li><a>메뉴7</a></li>
+                      <li><a>메뉴8</a></li>
+                      <li><a>메뉴9</a></li>
+                    </ul>
+                </div>
+                <div class="tabContainer">
+                    <div class="tabcontents" id="tab1">
+                        tab1
+                    </div>
+                    <div class="tabcontents">
+                        tab2
+                    </div>
+                    <div class="tabcontents">
+                        tab3
+                    </div>
+                    <div class="tabcontents">
+                        tab4
+                    </div>
+                    <div class="tabcontents">
+                        tab5
+                    </div>
+                    <div class="tabcontents">
+                        tab6
+                    </div>
+                    <div class="tabcontents">
+                        tab7
+                    </div>
+                    <div class="tabcontents">
+                        tab8
+                    </div>
+                    <div class="tabcontents">
+                        tab9
+                    </div>
+                </div>
+            </div>
+            
+            <div class="selectWrap">
+                <select name="select1" class="selectBox" tabindex="-1" id="select1">
+                    <option value="menu1" selected>123-4567-89</option>
+                    <option value="menu2">4568-89-874523</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="fnShowPop('pop_bottom')" title="bottomSheetType" style="height: 50px;"><span>popUpType - bottomSheet</span></button><br>
+            <button type="button" onclick="fnShowPop('pop_search')" title="bottomSheetType" style="height: 50px;"><span>popUpType - Full</span></button><br>
+            <button type="button" onclick="fnShowPop('pop_confirm')" title="bottomSheetType" style="height: 50px;"><span>popUpType - Confirm/Alert</span></button>
+
+            <!-- Slider main container -->
+            <div class="cardSwiperWrap swiper">
+                <div class="swiper-wrapper swiperInner">
+                    <div class="swiper-slide cardList">
+                        <dl>
+                            <dt class="title">미국주식,<br>낮에도 밤에도 거래 가능!</dt>
+                            <dd class="tag">
+                                <span>#온라인매매수수료0%</span>
+                                <span>#지원금즉시제공5만원</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="swiper-slide">
+                        <dl>
+                            <dt class="title">미국주식,<br>낮에도 밤에도 거래 가능!2</dt>
+                            <dd class="tag">
+                                <span>#온라인매매수수료0%</span>
+                                <span>#지원금즉시제공5만원</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="swiper-slide">
+                        <dl>
+                            <dt class="title">미국주식,<br>낮에도 밤에도 거래 가능!3</dt>
+                            <dd class="tag">
+                                <span>#온라인매매수수료0%</span>
+                                <span>#지원금즉시제공5만원</span>
+                            </dd>
+                        </dl>
+                    </div>
+                </div> 
+                <div class="swiper-pagination"></div>
+            </div>
+            <script>
+                const cardSwiper = new Swiper('.cardSwiperWrap', {
+                  // Optional parameters
+                  direction: 'horizontal',
+                  loop: true,
+            
+                  // If we need pagination
+                  pagination: {
+                    el: '.swiper-pagination',
+                  }
+                });
+            
+            </script>
+        </div>
+        <!--//container-->
+        <footer id="footerWrap">
+            
+        </footer>
+    </div>
+    <!--[Full 팝업] : 검색 및 Full-->
+    <div class="popWrap popFull" id="pop_search">
+        <div class="popInner">
+            <div class="popHeader">
+                <button type="button" class="btn_iconBack"><span class="blind">뒤로가기</span></button>
+                <input type="text" class="inputText" placeholder="검색어입력">
+            </div>
+            <div class="popContent">
+                <div class="searchBox"></div>
+            </div>
+        </div>
+        <button type="button" class="btn_popBottomClose"><i class="">팝업닫기</i></button>
+    </div>
+    <!--//[Full 팝업] : 검색 및 Full-->
+
+    <!--[Modal 팝업] : bottomSheet-->
+    <div class="popWrap popBottom" id="pop_bottom">
+        <div class="popInner">
+            <div class="popHeader">
+                <h2 class="popTitle">팝업타이틀</h2>
+            </div>
+            <div class="popContent">
+                팝업내용
+            </div>
+            <button type="button" class="btn_popBottomClose"><i class="">팝업닫기</i></button>
+        </div>
+    </div>
+    <!--//[Modal 팝업] : bottomSheet-->
+
+    <!--[Alert 팝업] : confirm , alert-->
+    <div class="popWrap popConfirm" id="pop_confirm">
+        <div class="popInner">
+            <div class="popHeader">
+                <h2 class="popTitle">팝업타이틀</h2>
+            </div>
+            <div class="popContent">
+                팝업내용
+            </div>
+            <div class="btnWrap">
+                <button type="button" class="btn btnGeneral" onclick="fnHidePop('pop_confirm')"><span>취소</span></button>
+                <button type="button" class="btn btnPoint">확인</button>
+            </div>
+        </div>
+    </div>
+    <!--//[Alert 팝업] : confirm , alert-->
+</body>
+</html>

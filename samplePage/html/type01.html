@@ -1,0 +1,376 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>콘텐츠관리시스템(CMS)</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.css">
+    <script src="../js/jquery-3.7.0.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/common_ui.js"></script>
+</head>
+<body>
+    <div class="skipNav">
+        <a href="#container">본문바로가기</a>
+    </div>
+    <div id="wrap">
+        <!--header-->
+        <header id="header">
+            <div class="subMenuWrap">
+                <select name="depth2Menu" class="select_menuList" tabindex="-1" id="selectMenu">
+                    <option value="menu1" selected>지수/환율/시장지표</option>
+                    <option value="menu2">자녀 계좌개설</option>
+                    <option value="menu3">계좌번호 찾기</option>
+                </select>
+            </div>
+            <div class="rightBox">
+                <button type="button" class="btn_iconMenu" onclick="fnShowPop('asideMenu')"><i class="blind">메뉴보기</i></button>
+            </div>
+        </header>
+        <!--//header-->
+
+        <!--aside-->
+        <aside class="asideMenuWrap" id="asideMenu">
+            <div class="menuInner">
+                <div class="menuHeader">
+                    <div class="userInfo">
+                        <strong class="name">홍길동</strong>
+                        <button type="button" class="btn_iconLogout"><span>로그아웃</span></button>
+                    </div>
+                    <div class="utilArea">
+                        <button type="button" class="btn_iconHome"><i class="blind">홈으로</i></button>
+                        <button type="button" class="btn_iconSearch"><i class="blind">검색</i></button>
+                        <button type="button" class="btn_iconClose"><i class="blind">닫기</i></button>
+                    </div>
+                </div>
+                <div class="menuCont">
+                    <div class="kyeMenu">
+                        <ul class="kyeMenuList">
+                            <li><a href="#" title=""></a></li>
+                            <li><a href="#" title=""></a></li>
+                            <li><a href="#" title=""></a></li>
+                            <li><a href="#" title=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="naviArea">
+                        <div class="depth1Area">
+                            <ul class="menuList">
+                                <li><a href="#" title=""></a></li>
+                                <li><a href="#" title=""></a></li>
+                                <li><a href="#" title=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="depth2Area">
+                            <ul class="menuList">
+                                <li>
+                                    <a href="#" class="depth2Title depth3"></a>
+                                    <ul class="depth3List">
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" title=""></a></li>
+                                <li><a href="#" title=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btnClose" onclick="fnHidePop('asideMenu')"><span class="">닫기</span></button>
+            </div>
+        </aside>
+        <!--//aside-->
+
+        <!--container-->
+        <div id="container">
+            <div class="tabWrap">
+                <div class="tabMenu">
+                    <ul class="tabMenuList">
+                      <li class="active"><a rel="tab1" role="tablist">지수</a></li>
+                      <li><a rel="tab2" role="tablist">환율</a></li>
+                      <li><a>금리</a></li>
+                      <li><a>원자재</a></li>
+                    </ul>
+                </div>
+                <div class="tabContainer">
+                    <!-- tabcontents : tab1 -->
+                    <div class="tabcontents" id="tab1">
+                        <div class="section">
+                            <div class="sectionHeader">
+                                <div class="selectListWrap">
+                                    <select name="select2" class="selectBox_list" tabindex="-1" id="select2">
+                                        <option value="menu1" selected>국내지수</option>
+                                        <option value="menu2">미국지수</option>
+                                        <option value="menu2">아시아지수</option>
+                                        <option value="menu2">유럽/북남비 지수</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="btnInfo" title="시세안내팝업"><span>시세안내</span></button>
+                            </div>
+                            <!--boxAccordion-->
+                            <ul class="accordionList_box">
+                                <li class="list">
+                                    <a href="#">
+                                        <strong class="stockName">코스피</strong>
+                                        <div class="stockInfo">
+                                            <dl>
+                                                <dt class="stockCode">종합주가지수(KOSPI)</dt>
+                                                <dd class="stockPrice">2,616.47</dd>
+                                            </dl>
+                                            <div class="stockGap fall">
+                                                <span class="gap">2.6161.47</span>
+                                                <span class="num"><em class="bul">-</em>1.90</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="stockDetail">
+                                        <div class="stockDetailInner">
+                                            <ul class="stockInfoList">
+                                                <li>
+                                                    <span class="key">시가</span>
+                                                    <span class="value">2,580.60</span>
+                                                </li>
+                                                <li>
+                                                    <span class="key">고가</span>
+                                                    <span class="value">2,602.35</span>
+                                                </li>
+                                                <li>
+                                                    <span class="key">저가</span>
+                                                    <span class="value">2,576.21</span>
+                                                </li>
+                                                <li>
+                                                    <span class="key">거래량(천)</span>
+                                                    <span class="value">263,799</span>
+                                                </li>
+                                            </ul>
+                                            <div class="graphArea">
+                                                그래프영역
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn sm line"><span>지수비교</span></button>
+                                    </div>
+                                </li>
+                                <li class="list">
+                                    <a href="#">
+                                        <strong class="stockName">코스닥</strong>
+                                        <div class="stockInfo">
+                                            <dl>
+                                                <dt class="stockCode">종합주가지수(KOSDAQ)</dt>
+                                                <dd class="stockPrice">895.60</dd>
+                                            </dl>
+                                            <div class="stockGap grow">
+                                                <span class="gap">50.60</span>
+                                                <span class="num"><em class="bul">+</em>3.18</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="stockDetail">
+                                        <div class="stockDetailInner">
+                                            <ul class="stockInfoList">
+                                                <li>
+                                                    <span class="key">시가</span>
+                                                    <span class="value">901.76</span>
+                                                </li>
+                                                <li>
+                                                    <span class="key">고가</span>
+                                                    <span class="value">903.78</span>
+                                                </li>
+                                                <li>
+                                                    <span class="key">저가</span>
+                                                    <span class="value">889.84</span>
+                                                </li>
+                                                <li>
+                                                    <span class="key">거래량(천)</span>
+                                                    <span class="value">171.164</span>
+                                                </li>
+                                            </ul>
+                                            <div class="graphArea">
+                                                그래프영역
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn sm line"><span>지수비교</span></button>
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                            <!--//boxAccordion-->
+                        </div>
+
+                        <div class="section">
+                            <h3 class="title">업종지수</h3>
+                            <div class="sortingWrap">
+                                <div class="tabRadioBox">
+                                    <span class="tabRadio">
+                                        <input type="radio" name="period" id="today">
+                                        <label for="today">당일</label>
+                                    </span>
+                                    <span class="tabRadio">
+                                        <input type="radio" name="period" id="1week">
+                                        <label for="1week">1주일</label>
+                                    </span>
+                                    <span class="tabRadio">
+                                        <input type="radio" name="period" id="1month">
+                                        <label for="1month">1개월</label>
+                                    </span>
+                                    <span class="tabRadio">
+                                        <input type="radio" name="period" id="3month">
+                                        <label for="3month">3개월</label>
+                                    </span>
+                                </div>
+                                <div class="tabRadioBox">
+                                    <span class="tabRadio_text">
+                                        <input type="radio" name="stockName" id="kospi">
+                                        <label for="kospi">코스피</label>
+                                    </span>
+                                    <span class="tabRadio_text">
+                                        <input type="radio" name="stockName" id="kosdaq">
+                                        <label for="kosdaq">코스탁</label>
+                                    </span>
+                                </div>
+                            </div>
+                            <!--boxAccordion-->
+                            <ul class="accordionList_box">
+                                <li class="list">
+                                    <a href="#">
+                                        <strong class="stockName">코스피</strong>
+                                        <div class="stockInfo">
+                                            <dl>
+                                                <dt class="stockCode">종합주가지수(KOSPI)</dt>
+                                                <dd class="stockPrice">2,616.47</dd>
+                                            </dl>
+                                            <div class="stockGap fall">
+                                                <span class="gap">50.60</span>
+                                                <span class="num"><em class="bul">-</em>1.90</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="stockDetail">
+                                        <div class="stockDetailInner">
+                                            <ul class="stockInfoList">
+                                                <li>
+                                                    <span class="key">시가</span>
+                                                    <span class="value">2,580.60</span>
+                                                </li>
+                                                <li>
+                                                    <span class="key">고가</span>
+                                                    <span class="value">2,602.35</span>
+                                                </li>
+                                                <li>
+                                                    <span class="key">저가</span>
+                                                    <span class="value">2,576.21</span>
+                                                </li>
+                                                <li>
+                                                    <span class="key">거래량(천)</span>
+                                                    <span class="value">263,799</span>
+                                                </li>
+                                            </ul>
+                                            <div class="graphArea">
+                                                그래프영역
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn sm line"><span>지수비교</span></button>
+                                    </div>
+                                </li>
+                                <li class="list">
+                                    <a href="#">
+                                        <strong class="stockName">코스닥</strong>
+                                        <div class="stockInfo">
+                                            <dl>
+                                                <dt class="stockCode">종합주가지수(KOSDAQ)</dt>
+                                                <dd class="stockPrice">895.60</dd>
+                                            </dl>
+                                            <div class="stockGap grow">
+                                                <span class="gap">50.60</span>
+                                                <span class="num"><em class="bul">+</em>1.90</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="stockDetail">
+                                        <div class="stockDetailInner">
+                                            <ul class="stockInfoList">
+                                                <li>
+                                                    <span class="key">시가</span>
+                                                    <span class="value">901.76</span>
+                                                </li>
+                                                <li>
+                                                    <span class="key">고가</span>
+                                                    <span class="value">903.78</span>
+                                                </li>
+                                                <li>
+                                                    <span class="key">저가</span>
+                                                    <span class="value">889.84</span>
+                                                </li>
+                                                <li>
+                                                    <span class="key">거래량(천)</span>
+                                                    <span class="value">171.164</span>
+                                                </li>
+                                            </ul>
+                                            <div class="graphArea">
+                                                그래프영역
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn sm line"><span>지수비교</span></button>
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                            <!--//boxAccordion-->
+                        </div>
+                    </div>
+                    <!-- //tabcontents : tab1 -->
+                    <div class="tabcontents">
+                        tab2
+                    </div>
+                    <div class="tabcontents">
+                        tab3
+                    </div>
+                    <div class="tabcontents">
+                        tab4
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//container-->
+
+        <!--footer-->
+        <footer id="footerWrap">
+            <div class="footInfoArea">
+                <div class="corpArea">
+                    <a href="#" title=""><span>회사소개</span></a>
+                    <a href="#" title=""><span>지점안내</span></a>
+                    <a href="#" title=""><span>소비자보호포털</span></a>
+                </div>
+                <div class="agreeBox">
+                    <a href="#" title=""><strong>개인정보처리방침</strong></a>
+                    <a href="#" title=""><span>신용정보활용체제</span></a>
+                </div>
+                <div class="snsBox">
+                    <a href="#" class="icon_youtube" title=""><span class="blind">유투브바로가기</span></a>
+                    <a href="#" class="icon_blog" title=""><span class="blind">네이버블로그바로가기</span></a>
+                    <a href="#" class="icon_kakakotalk" title=""><span class="blind">카카오톡바로가기</span></a>
+                    <a href="#" class="icon_facebook" title=""><span class="blind">페이스북바로가기</span></a>
+                    <a href="#" class="icon_instagram" title=""><span class="blind">인스타그램바로가기</span></a>
+                </div>
+            </div>
+            <div class="copyrightArea">
+                <div class="btnWrap">
+                    <a href="tel:1588-0365" class="btnCustom"><span>고객지원센터 <em>연결하기</em></span><strong class="tel">1588-0365</strong></a>
+                    <a href="#" role="link"><span>자주하는 질문</span></a>
+                    <a href="#" role="link"><span>1:1 상담</span></a>
+                </div>
+                <div class="adressArea">
+                    <span>대표이사 김상태</span>
+                    <address>서울특별시 영등포구 여의대로 70 (신한투자증권 타워)</address>
+                    <span>사업자등록번호 116-81-36684</span>
+                </div>
+                <span class="copyright">&copy;2023 SHINHAN SECURITIES CO.,LTD.</span>
+                <i class="icon_shinhan"><em class="blind">원신한</em></i>
+            </div>
+        </footer>
+        <!--//footer-->
+    </div>
+</body>
+</html>

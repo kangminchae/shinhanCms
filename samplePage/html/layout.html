@@ -1,0 +1,181 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>콘텐츠관리시스템(CMS)</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.css">
+    <script src="../js/jquery-3.7.0.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/common_ui.js"></script>
+</head>
+<body>
+    <div class="skipNav">
+        <a href="#container">본문바로가기</a>
+    </div>
+    <div id="wrap">
+        <!--header-->
+        <header id="header">
+            <div class="subMenuWrap">
+                <select name="depth2Menu" class="select_menuList" tabindex="-1" id="selectMenu">
+                    <option value="menu1" selected>지수/환율/시장지표</option>
+                    <option value="menu2">자녀 계좌개설</option>
+                    <option value="menu3">계좌번호 찾기</option>
+                </select>
+            </div>
+            <div class="rightBox">
+                <button type="button" class="btn_iconMenu" onclick="fnShowPop('asideMenu')"><i class="blind">메뉴보기</i></button>
+            </div>
+        </header>
+        <!--//header-->
+
+        <!--aside-->
+        <aside class="asideMenuWrap" id="asideMenu">
+            <div class="menuInner">
+                <div class="menuHeader">
+                    <div class="userInfo">
+                        <strong class="name">홍길동</strong>
+                        <button type="button" class="btn_iconLogout"><span>로그아웃</span></button>
+                    </div>
+                    <div class="utilArea">
+                        <button type="button" class="btn_iconHome"><i class="blind">홈으로</i></button>
+                        <button type="button" class="btn_iconSearch"><i class="blind">검색</i></button>
+                        <button type="button" class="btn_iconClose"><i class="blind">닫기</i></button>
+                    </div>
+                </div>
+                <div class="menuCont">
+                    <div class="kyeMenu">
+                        <ul class="kyeMenuList">
+                            <li><a href="#" title=""></a></li>
+                            <li><a href="#" title=""></a></li>
+                            <li><a href="#" title=""></a></li>
+                            <li><a href="#" title=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="naviArea">
+                        <div class="depth1Area">
+                            <ul class="menuList">
+                                <li><a href="#" title=""></a></li>
+                                <li><a href="#" title=""></a></li>
+                                <li><a href="#" title=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="depth2Area">
+                            <ul class="menuList">
+                                <li>
+                                    <a href="#" class="depth2Title depth3"></a>
+                                    <ul class="depth3List">
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" title=""></a></li>
+                                <li><a href="#" title=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btnClose" onclick="fnHidePop('asideMenu')"><i class="">닫기</i></button>
+            </div>
+        </aside>
+        <!--//aside-->
+
+        <!--container-->
+        <div id="container">
+
+            <button type="button" onclick="fnShowPop('pop_bottom')" title="bottomSheetType" style="height: 50px;"><span>popUpType - bottomSheet</span></button><br>
+            <button type="button" onclick="fnShowPop('pop_search')" title="bottomSheetType" style="height: 50px;"><span>popUpType - Full</span></button><br>
+            <button type="button" onclick="fnShowPop('pop_confirm')" title="bottomSheetType" style="height: 50px;"><span>popUpType - Confirm/Alert</span></button>
+
+        </div>
+        <!--//container-->
+
+        <!--footer-->
+        <footer id="footerWrap">
+            <div class="footInfoArea">
+                <div class="corpArea">
+                    <a href="#" title=""><span>회사소개</span></a>
+                    <a href="#" title=""><span>지점안내</span></a>
+                    <a href="#" title=""><span>소비자보호포털</span></a>
+                </div>
+                <div class="agreeBox">
+                    <a href="#" title=""><strong>개인정보처리방침</strong></a>
+                    <a href="#" title=""><span>신용정보활용체제</span></a>
+                </div>
+                <div class="snsBox">
+                    <a href="#" class="icon_youtube" title=""><span class="blind">유투브바로가기</span></a>
+                    <a href="#" class="icon_blog" title=""><span class="blind">네이버블로그바로가기</span></a>
+                    <a href="#" class="icon_kakakotalk" title=""><span class="blind">카카오톡바로가기</span></a>
+                    <a href="#" class="icon_facebook" title=""><span class="blind">페이스북바로가기</span></a>
+                    <a href="#" class="icon_instagram" title=""><span class="blind">인스타그램바로가기</span></a>
+                </div>
+            </div>
+            <div class="copyrightArea">
+                <div class="btnWrap">
+                    <a href="tel:1588-0365" class="btnCustom"><span>고객지원센터 <em>연결하기</em></span><strong class="tel">1588-0365</strong></a>
+                    <a href="#" role="link"><span>자주하는 질문</span></a>
+                    <a href="#" role="link"><span>1:1 상담</span></a>
+                </div>
+                <div class="adressArea">
+                    <span>대표이사 김상태</span>
+                    <address>서울특별시 영등포구 여의대로 70 (신한투자증권 타워)</address>
+                    <span>사업자등록번호 116-81-36684</span>
+                </div>
+                <span class="copyright">&copy;2023 SHINHAN SECURITIES CO.,LTD.</span>
+                <i class="icon_shinhan"><em class="blind">원신한</em></i>
+            </div>
+        </footer>
+        <!--//footer-->
+    </div>
+
+    <!--[Full 팝업] : 검색 및 Full-->
+    <div class="popWrap popFull" id="pop_search">
+        <div class="popInner">
+            <div class="popHeader">
+                <button type="button" class="btn_iconBack"><span class="blind">뒤로가기</span></button>
+                <input type="text" class="inputText" placeholder="검색어입력">
+            </div>
+            <div class="popContent">
+                <div class="searchBox"></div>
+            </div>
+        </div>
+        <button type="button" class="btn_popBottomClose"><i class="blind">팝업닫기</i></button>
+    </div>
+    <!--//[Full 팝업] : 검색 및 Full-->
+
+    <!--[Modal 팝업] : bottomSheet-->
+    <div class="popWrap popBottom" id="pop_bottom">
+        <div class="popInner">
+            <div class="popHeader">
+                <h2 class="popTitle">팝업타이틀</h2>
+            </div>
+            <div class="popContent">
+                팝업내용
+            </div>
+            <button type="button" class="btn_popBottomClose"><i class="blind">팝업닫기</i></button>
+        </div>
+    </div>
+    <!--//[Modal 팝업] : bottomSheet-->
+
+    <!--[Alert 팝업] : confirm , alert-->
+    <div class="popWrap popConfirm" id="pop_confirm">
+        <div class="popInner">
+            <div class="popHeader">
+                <h2 class="popTitle">팝업타이틀</h2>
+            </div>
+            <div class="popContent">
+                팝업내용
+            </div>
+            <div class="btnWrap">
+                <button type="button" class="btn btnGeneral" onclick="fnHidePop('pop_confirm')"><span>취소</span></button>
+                <button type="button" class="btn btnPoint">확인</button>
+            </div>
+        </div>
+    </div>
+    <!--//[Alert 팝업] : confirm , alert-->
+</body>
+</html>
