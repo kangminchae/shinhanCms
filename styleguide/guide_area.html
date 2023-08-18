@@ -3,8 +3,8 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <title>빈용기지급관리시스템 UI Guide</title>
-  <link rel="stylesheet" type="text/css" href="../dummy/css/style.css"><!--퍼블 가이드 css-->
+  <title>모바일웹,콘텐츠관리시스템(CMS) UI Guide</title>
+  <link rel="stylesheet" type="text/css" href="../asset/css/style.css">
   <link rel="stylesheet" type="text/css" href="css/common.css"><!--퍼블 가이드 css-->
   <script src="js/jquery.1.11.0.min.js"></script>
   <script src="js/jquery.ui.1.11.4.min.js"></script>
@@ -38,478 +38,177 @@
   	<!-- //aside -->
 
   	<div class="content">
-  	<!-- # 페이지타이틀 # -->
-  	<div class="tit-page">
-  		<h1>마크업가이드 - Area</h1>
-  	</div>
+		<!-- # 페이지타이틀 # -->
+		<div class="tit-page">
+			<h1>마크업가이드 - Area</h1>
+		</div>
 
-  	<!-- # 영역# -->
-  	<h2 class="tit-guide">Left Area</h2>
+		<!-- # 영역# -->
+		<h2 class="tit-guide">Header</h2>
 
-  	<!--  왼쪽 메뉴 -->
-  	<h3 class="tit-guide">왼쪽 메뉴 : .left_con</h3>
-  	<div class="guide-code">
-  	<pre class="syntax brush-css">
+		<!--  Header -->
+		<h3 class="tit-guide">sub Header : #header</h3>
 
-		&lt;!--left Area--&gt;
-		&lt;div class="left_con"&gt;
-			&lt;div class="control_wrap"&gt;
-				&lt;!--전체메뉴 및 logo--&gt;
-				&lt;div class="control_head"&gt;
-					&lt;button type="button" class="btn_total_menu" title="전체메뉴"&gt;&lt;span class="blind"&gt;전체메뉴&lt;/span&gt;&lt;/button&gt;
-					&lt;h1 class="logo"&gt;
-						&lt;a href="#" title="자원순환보증금"&gt;&lt;span class="blind">자원순환보증금&lt;/span&gt;&lt;/a&gt;
-					&lt;/h1&gt;
-				&lt;/div&gt;
-				&lt;!--//전체메뉴 및 logo--&gt;
-
-				&lt;!--leftMenu--&gt;
-				&lt;div class="menu_wrap"&gt;
-					&lt;div class="nav_wrap"&gt;
-						&lt;ul class="menuList"&gt;
-							&lt;li rel="tab1" class="quick_menu"&gt;&lt;a href="#none" role="tab" class="inner"&gt;&lt;span&gt;빠른메뉴&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-							&lt;li rel="tab2" class="active"&gt;&lt;a href="#none" role="tab" class="inner"&gt;&lt;span&gt;라벨&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-							&lt;li rel="tab3"&gt;&lt;a href="#none" role="tab" class="inner"&gt;&lt;span&gt;회수&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-							&lt;li rel="tab4"&gt;&lt;a href="#none" role="tab" class="inner"&gt;&lt;span&gt;정보&lt;br /&gt;관리&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-							&lt;li rel="tab5"&gt;&lt;a href="#none" role="tab" class="inner"&gt;&lt;span&gt;통계&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-							&lt;li rel="tab6"&gt;&lt;a href="#none" role="tab" class="inner"&gt;&lt;span&gt;고객&lt;br /&gt;지원&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-						&lt;/ul&gt;
-						&lt;div class="menuContant"&gt;
-							&lt;div id="tab1" class="menuCon quick_menu"&gt;
-								&lt;h2 class="menuTitle"&gt;빠른메뉴&lt;/h2&gt;
-								&lt;ul class="menuConList menu_con"&gt;
-									&lt;li class="quick_return_detail"&gt;&lt;a href="#" class="w2anchor2"&gt;반환내역&lt;/a&gt;&lt;/li&gt;
-									&lt;li class="quick_return_searchlabel"&gt;&lt;a href="#" class="w2anchor2"&gt;회수번호 조회&lt;/a&gt;&lt;/li&gt;
-									&lt;li class="quick_stats_board"&gt;&lt;a href="#" class="w2anchor2"&gt;현황판&lt;/a&gt;&lt;/li&gt;
-									&lt;li class="quick_label_apply"&gt;&lt;a href="#" class="w2anchor2"&gt;라벨신청&lt;/a&gt;&lt;/li&gt;
-								&lt;/ul&gt;
-							&lt;/div&gt;
-							&lt;div id="tab2" class="menuCon"&gt;
-								&lt;h2 class="menuTitle"&gt;라벨&lt;/h2&gt;
-								&lt;ul class="menuConList"&gt;
-									&lt;!--[D]해당페이지 활성화시 li class=active 추가--&gt;
-									&lt;li class="active"&gt;&lt;a href="#"&gt;라벨번호조회&lt;/a&gt;&lt;/li&gt;
-								&lt;/ul&gt;
-							&lt;/div&gt;
-							&lt;div id="tab3" class="menuCon"&gt;
-								&lt;h2 class="menuTitle"&gt;회수&lt;/h2&gt;
-								&lt;ul class="menuConList"&gt;
-									&lt;li&gt;&lt;a href="#"&gt;반환내역&lt;/a&gt;&lt;/li&gt;
-									&lt;li&gt;&lt;a href="#"&gt;회수처리&lt;/a&gt;&lt;/li&gt;
-									&lt;li&gt;&lt;a href="#"&gt;재활용인수/인계&lt;/a&gt;&lt;/li&gt;
-									&lt;li&gt;&lt;a href="#"&gt;재활용실적정정&lt;/a&gt;&lt;/li&gt;
-									&lt;li&gt;&lt;a href="#"&gt;회수번호조회&lt;/a&gt;&lt;/li&gt;
-								&lt;/ul&gt;
-							&lt;/div&gt;
-							&lt;div id="tab4" class="menuCon"&gt;
-								&lt;h2 class="menuTitle"&gt;정보관리&lt;/h2&gt;
-								&lt;ul class="menuConList"&gt;
-									&lt;li&gt;&lt;a href="#"&gt;거래처관리&lt;/a&gt;&lt;/li&gt;
-									&lt;li&gt;&lt;a href="#"&gt;무인회수기관리&lt;/a&gt;&lt;/li&gt;
-								&lt;/ul&gt;
-							&lt;/div&gt;
-							&lt;div id="tab5" class="menuCon"&gt;
-								&lt;h2 class="menuTitle"&gt;통계&lt;/h2&gt;
-								&lt;ul class="menuConList"&gt;
-									&lt;li&gt;&lt;a href="#"&gt;현황판&lt;/a&gt;&lt;/li&gt;
-									&lt;li&gt;&lt;a href="#"&gt;반환현황&lt;/a&gt;&lt;/li&gt;
-									&lt;li&gt;&lt;a href="#"&gt;회수현황&lt;/a&gt;&lt;/li&gt;
-									&lt;li&gt;&lt;a href="#"&gt;재활용현황&lt;/a&gt;&lt;/li&gt;
-								&lt;/ul&gt;
-							&lt;/div&gt;
-							&lt;div id="tab6" class="menuCon"&gt;
-								&lt;h2 class="menuTitle"&gt;고객지원&lt;/h2&gt;
-								&lt;ul class="menuConList"&gt;
-									&lt;li&gt;&lt;a href="#"&gt;공지사항&lt;/a&gt;&lt;/li&gt;
-									&lt;li&gt;&lt;a href="#"&gt;도움말&lt;/a&gt;&lt;/li&gt;
-									&lt;li&gt;&lt;a href="#"&gt;문의하기&lt;/a&gt;&lt;/li&gt;
-									&lt;li&gt;&lt;a href="#"&gt;서비스이용약관&lt;/a&gt;&lt;/li&gt;
-									&lt;li&gt;&lt;a href="#"&gt;위치기반서비스이용약관&lt;/a&gt;&lt;/li&gt;
-									&lt;li&gt;&lt;a href="#"&gt;개인정보처리방침&lt;/a&gt;&lt;/li&gt;
-								&lt;/ul&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-				&lt;/div&gt;
-				&lt;!--//leftMenu--&gt;
-
-				&lt;!--utilMenu--&gt;
-				&lt;div class="util_wrap"&gt;
-					&lt;div class="util_con"&gt;
-						&lt;a href="#none" class="myinfo" title="내정보" onclick="fnShowPop('mypageInfo')"&gt;내정보&lt;/a&gt;
-						&lt;a href="#none" class="inquiry" title="문의내역"&gt;문의내역&lt;/a&gt;
-						&lt;a href="#none" class="push has_notice" title="알림"&gt;알림&lt;/a&gt;
-						&lt;a href="#none" class="logout" title="로그아웃"&gt;로그아웃&lt;/a&gt;
-					&lt;/div&gt;
-				&lt;/div&gt;
-				&lt;!--//utilMenu--&gt;
-			&lt;/div&gt;
-			&lt;!--전체메뉴 팝업--&gt;
-			&lt;div class="total_menu_wrap"&gt;
-				&lt;div class="menu_head"&gt;
-					&lt;div class="logo_wrap"&gt;
-						&lt;img src="../img/logo_short_wh.png" alt="자원순환보증금 로고"&gt;
-						&lt;span class="title_category"&gt;수집·운반사업자&lt;/span&gt;
-					&lt;/div&gt;
-					&lt;div class="util_wrap"&gt;
-						&lt;div class="util_con"&gt;
-							&lt;a href="#none" class="myinfo" title="내정보" onclick="fnShowPop('mypageInfo')"&gt;내정보&lt;/a&gt;
-							&lt;a href="#none" class="inquiry" title="문의내역"&gt;문의내역&lt;/a&gt;
-							&lt;a href="#none" class="push has_notice" title="알림"&gt;알림&lt;/a&gt;
-							&lt;a href="#none" class="logout" title="로그아웃"&gt;로그아웃&lt;/a&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-				&lt;/div&gt;
-				&lt;div class="menu_body"&gt;
-					&lt;div class="total_menu_con"&gt;
-						&lt;strong class="menu_title"&gt;라벨&lt;/strong&gt;
-						&lt;ul class="menu_con"&gt;
-							&lt;li&gt;&lt;a href="#"&gt;라벨번호조회&lt;/a&gt;&lt;/li&gt;
-						&lt;/ul&gt;
-					&lt;/div&gt;
-					&lt;div class="total_menu_con"&gt;
-						&lt;strong class="menu_title"&gt;회수&lt;/strong&gt;
-						&lt;ul class="menu_con"&gt;
-							&lt;li&gt;&lt;a href="#"&gt;반환내역&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="#"&gt;회수처리&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="#"&gt;재활용인수/인계&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="#"&gt;재활용실적정정&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="#"&gt;회수번호조회&lt;/a&gt;&lt;/li&gt;
-						&lt;/ul&gt;
-					&lt;/div&gt;
-					&lt;div class="total_menu_con"&gt;
-						&lt;strong class="menu_title"&gt;정보관리&lt;/strong&gt;
-						&lt;ul class="menu_con"&gt;
-							&lt;li&gt;&lt;a href="#"&gt;거래처관리&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="#"&gt;무인회수기관리&lt;/a&gt;&lt;/li&gt;
-						&lt;/ul&gt;
-					&lt;/div&gt;
-					&lt;div class="total_menu_con"&gt;
-						&lt;strong class="menu_title"&gt;통계&lt;/strong&gt;
-						&lt;ul class="menu_con"&gt;
-							&lt;li&gt;&lt;a href="#"&gt;현황판&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="#"&gt;반환현황&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="#"&gt;회수현황&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="#"&gt;재활용현황&lt;/a&gt;&lt;/li&gt;
-						&lt;/ul&gt;
-					&lt;/div&gt;
-					&lt;div class="total_menu_con"&gt;
-						&lt;strong class="menu_title"&gt;고객지원&lt;/strong&gt;
-						&lt;ul class="menu_con"&gt;
-							&lt;li&gt;&lt;a href="#"&gt;공지사항&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="#"&gt;도움말&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="#"&gt;문의하기&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="#"&gt;서비스이용약관&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="#"&gt;위치기반서비스이용약관&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href="#"&gt;개인정보처리방침&lt;/a&gt;&lt;/li&gt;
-						&lt;/ul&gt;
-					&lt;/div&gt;
-				&lt;/div&gt;
-				&lt;button type="button" class="close_btn" title="전체메뉴팝업 닫기"&gt;&lt;span class="blind"&gt;닫기&lt;/span&gt;&lt;/button&gt;
-			&lt;/div&gt;
-			&lt;!--//전체메뉴 팝업--&gt;
-		&lt;/div&gt;
-		&lt;!--//left Area---&gt;
-
-  	</pre>
-  	</div>
-  	<!-- Sample -->
-	  <script type="text/javascript" src="../dummy/js/common.js"></script>
-	  <style>
-		.sampleArea {position:relative;}
-		.sampleArea .total_menu_wrap,
-		.util_wrap {position:absolute !important;}
-	  </style>
-	  <div class="sampleArea">
+		<!-- Sample -->
+		<script type="text/javascript" src="../asset/js/common_ui.js"></script>
+		<style>
+		#wrap .sampleArea #header {position:relative;padding:0;height:54px;border-bottom:0; }
+		.sampleArea .dropdown-container {position:absolute;}
+		.subMenuWrap .dropdown-container .dim {top:22rem;}
+		</style>
+		<div class="sampleArea">
 		<div class="layout_con">
-			<!--left Area-->
-			<div class="left_con">
-				<div class="control_wrap">
-					<!--전체메뉴 및 logo-->
-					<div class="control_head">
-						<button type="button" class="btn_total_menu" title="전체메뉴"><span class="blind">전체메뉴</span></button>
-						<h1 class="logo">
-							<a href="#" title="자원순환보증금"><span class="blind">자원순환보증금</span></a>
-						</h1>
-					</div>
-					<!--//전체메뉴 및 logo-->
-	
-					<!--leftMenu-->
-					<div class="menu_wrap">
-						<div class="nav_wrap">
-							<ul class="menuList">
-								<li rel="tab1" class="quick_menu"><a href="#none" role="tab" class="inner"><span>빠른메뉴</span></a></li>
-								<li rel="tab2" class="active"><a href="#none" role="tab" class="inner"><span>라벨</span></a></li>
-								<li rel="tab3"><a href="#none" role="tab" class="inner"><span>회수</span></a></li>
-								<li rel="tab4"><a href="#none" role="tab" class="inner"><span>정보<br />관리</span></a></li>
-								<li rel="tab5"><a href="#none" role="tab" class="inner"><span>통계</span></a></li>
-								<li rel="tab6"><a href="#none" role="tab" class="inner"><span>고객<br />지원</span></a></li>
-							</ul>
-							<div class="menuContant">
-								<div id="tab1" class="menuCon quick_menu">
-									<h2 class="menuTitle">빠른메뉴</h2>
-									<ul class="menuConList menu_con">
-										<li class="quick_return_detail"><a href="#" class="w2anchor2">반환내역</a></li>
-										<li class="quick_return_searchlabel"><a href="#" class="w2anchor2">회수번호 조회</a></li>
-										<li class="quick_stats_board"><a href="#" class="w2anchor2">현황판</a></li>
-										<li class="quick_label_apply"><a href="#" class="w2anchor2">라벨신청</a></li>
-									</ul>
-								</div>
-								<div id="tab2" class="menuCon">
-									<h2 class="menuTitle">라벨</h2>
-									<ul class="menuConList">
-										<!--[D]해당페이지 활성화시 li class=active 추가-->
-										<li class="active"><a href="#">라벨번호조회</a></li>
-									</ul>
-								</div>
-								<div id="tab3" class="menuCon">
-									<h2 class="menuTitle">회수</h2>
-									<ul class="menuConList">
-										<li><a href="#">반환내역</a></li>
-										<li><a href="#">회수처리</a></li>
-										<li><a href="#">재활용인수/인계</a></li>
-										<li><a href="#">재활용실적정정</a></li>
-										<li><a href="#">회수번호조회</a></li>
-									</ul>
-								</div>
-								<div id="tab4" class="menuCon">
-									<h2 class="menuTitle">정보관리</h2>
-									<ul class="menuConList">
-										<li><a href="#">거래처관리</a></li>
-										<li><a href="#">무인회수기관리</a></li>
-									</ul>
-								</div>
-								<div id="tab5" class="menuCon">
-									<h2 class="menuTitle">통계</h2>
-									<ul class="menuConList">
-										<li><a href="#">현황판</a></li>
-										<li><a href="#">반환현황</a></li>
-										<li><a href="#">회수현황</a></li>
-										<li><a href="#">재활용현황</a></li>
-									</ul>
-								</div>
-								<div id="tab6" class="menuCon">
-									<h2 class="menuTitle">고객지원</h2>
-									<ul class="menuConList">
-										<li><a href="#">공지사항</a></li>
-										<li><a href="#">도움말</a></li>
-										<li><a href="#">문의하기</a></li>
-										<li><a href="#">서비스이용약관</a></li>
-										<li><a href="#">위치기반서비스이용약관</a></li>
-										<li><a href="#">개인정보처리방침</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--//leftMenu-->
-	
-					<!--utilMenu-->
-					<div class="util_wrap">
-						<div class="util_con">
-							<a href="#none" class="myinfo" title="내정보" onclick="fnShowPop('mypageInfo')">내정보</a>
-							<a href="#none" class="inquiry" title="문의내역">문의내역</a>
-							<a href="#none" class="push has_notice" title="알림">알림</a>
-							<a href="#none" class="logout" title="로그아웃">로그아웃</a>
-						</div>
-					</div>
-					<!--//utilMenu-->
+			<!--header-->
+			<header id="header">
+				<div class="subMenuWrap">
+					<select name="depth2Menu" class="select_menuList" tabindex="-1" id="selectMenu">
+						<option value="menu1" selected>지수/환율/시장지표</option>
+						<option value="menu2">자녀 계좌개설</option>
+						<option value="menu3">계좌번호 찾기</option>
+					</select>
 				</div>
-				<!--전체메뉴 팝업-->
-				<div class="total_menu_wrap">
-					<div class="menu_head">
-						<div class="logo_wrap">
-							<img src="../dummy/img/logo_short_wh.png" alt="자원순환보증금 로고">
-							<span class="title_category">수집·운반사업자</span>
-						</div>
-						<div class="util_wrap">
-							<div class="util_con">
-								<a href="#none" class="myinfo" title="내정보" onclick="fnShowPop('mypageInfo')">내정보</a>
-								<a href="#none" class="inquiry" title="문의내역">문의내역</a>
-								<a href="#none" class="push has_notice" title="알림">알림</a>
-								<a href="#none" class="logout" title="로그아웃">로그아웃</a>
-							</div>
-						</div>
-					</div>
-					<div class="menu_body">
-						<div class="total_menu_con">
-							<strong class="menu_title">라벨</strong>
-							<ul class="menu_con">
-								<li><a href="#">라벨번호조회</a></li>
-							</ul>
-						</div>
-						<div class="total_menu_con">
-							<strong class="menu_title">회수</strong>
-							<ul class="menu_con">
-								<li><a href="#">반환내역</a></li>
-								<li><a href="#">회수처리</a></li>
-								<li><a href="#">재활용인수/인계</a></li>
-								<li><a href="#">재활용실적정정</a></li>
-								<li><a href="#">회수번호조회</a></li>
-							</ul>
-						</div>
-						<div class="total_menu_con">
-							<strong class="menu_title">정보관리</strong>
-							<ul class="menu_con">
-								<li><a href="#">거래처관리</a></li>
-								<li><a href="#">무인회수기관리</a></li>
-							</ul>
-						</div>
-						<div class="total_menu_con">
-							<strong class="menu_title">통계</strong>
-							<ul class="menu_con">
-								<li><a href="#">현황판</a></li>
-								<li><a href="#">반환현황</a></li>
-								<li><a href="#">회수현황</a></li>
-								<li><a href="#">재활용현황</a></li>
-							</ul>
-						</div>
-						<div class="total_menu_con">
-							<strong class="menu_title">고객지원</strong>
-							<ul class="menu_con">
-								<li><a href="#">공지사항</a></li>
-								<li><a href="#">도움말</a></li>
-								<li><a href="#">문의하기</a></li>
-								<li><a href="#">서비스이용약관</a></li>
-								<li><a href="#">위치기반서비스이용약관</a></li>
-								<li><a href="#">개인정보처리방침</a></li>
-							</ul>
-						</div>
-					</div>
-					<button type="button" class="close_btn" title="전체메뉴팝업 닫기"><span class="blind">닫기</span></button>
+				<div class="rightBox">
+					<button type="button" class="btn_iconMenu" onclick="fnShowPop('asideMenu')"><i class="blind">메뉴보기</i></button>
 				</div>
-				<!--//전체메뉴 팝업-->
-			</div>
-			<!--//left Area--->
-		  </div>
-	  </div>
-	  
-  	<!-- //Sample -->
-
-    <!-- 오른쪽 메뉴 -->
-  	<h3 class="tit-guide">오른쪽 Contents 영역 : .rightAside.aside</h3>
-  	<div class="guide-code">
-		<pre class="syntax brush-css">
-
-			&lt;!--right Area--&gt;
-			&lt;div class="right_con" id="skip_contents"&gt;
-				&lt;div class="contents_wrap"&gt;
-					&lt;div class="contents_con"&gt;
-						&lt;!--main contents Area--&gt;
-						&lt;div class="main_wrap"&gt;
-							main contents 영역
-						&lt;/div&gt;
-
-						&lt;!--sub contents Area--&gt;
-						&lt;div class="tabWrap subCon_tabWrap"&gt;
-							sub tabMenu contents 영역
-						&lt;/div&gt;
-					&lt;/div&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-			&lt;!--//right Area--&gt;
-		</pre>
-  	</div>
-
-	<!-- footer -->
-	<h2 class="tit-guide">Footer style</h2>
-	<h3 class="tit-guide">로그인화면 Footer</h3>
-	<!--sampleArea-->
-	<div class="sampleArea">
-		<div class="login_wrap" style="min-height:auto"><!--[D]페이지 적용시 style 삭제-->
-			<div class="login_foot">
-				 <!--footer-->
-				 <div class="btm_con">
-					<div class="cont_left">
-						<div class="foot_logo">
-							<img src="../dummy/img/logo_cosmo.svg" alt="cosmo logo">
-						</div>
-						<div class="foot_info">
-							<span class="copyright">© COSMO.OR.KR ALL RIGHT RESERVED.</span>
-							<a href="#" title="서비스이용약관">서비스이용약관</a>
-							<a href="#" title="위치기반서비스 이용약관">위치기반서비스 이용약관</a>
-							<a href="#" title="개인정보처리방침">개인정보처리방침</a>
-						</div>
-					</div>
-					<div class="cont_right">
-						<div class="aword_logo">
-							<img src="../dummy/img/logo_aa.png" alt="2022 웹어워드코리아 공공서비스분야 대상">
-						</div>
-					</div>
-				</div>
-				<!--//footer-->
+			</header>
+			<!--//header-->
 			</div>
 		</div>
-	</div>
-	<!--//sampleArea-->
+		<!-- //Sample -->
+		<!--codeView-->
+		<div class="guide-code">
+			<pre class="syntax brush-css">
 
-	<h3 class="tit-guide">메인 및 sub 화면</h3>
-	<!--sampleArea-->
-	<div class="sampleArea">
-		<div class="right_con">
-			<footer>
-				<div class="footer_con">
-					<div class="text_con">
-						<div class="left_con">
-							<span class="copy">ⓒ COSMO.OR.KR  ALL RIGHT RESERVED.</span>
-							<a href="#" class="btn_terms"><span>서비스 이용약관</span></a>
-							<a href="#" class="btn_terms_Location"><span>위치기반서비스 이용약관</span></a>
-							<a href="#" class="btn_privacy"><span>개인정보취급방침</span></a>
-						</div>
-						<div class="right_con">
-							<dl>
-								<dt>전화문의</dt>
-								<dd>1522-0082 (평일 및 주말 9시~18시)</dd>
-								<dt>이메일문의</dt>
-								<dd>판매자 cup-biz@cosmo.or.kr / 회수재활용 cup-recycle@cosmo.or.kr</dd>
-							</dl>
-						</div>
+				&lt;!--header--&gt;
+				&lt;header id="header"&gt;
+					&lt;div class="subMenuWrap"&gt;
+						&lt;select name="depth2Menu" class="select_menuList" tabindex="-1" id="selectMenu"&gt;
+							&lt;option value="menu1" selected&gt;지수/환율/시장지표&lt;/option&gt;
+							&lt;option value="menu2"&gt;자녀 계좌개설&lt;/option&gt;
+							&lt;option value="menu3"&gt;계좌번호 찾기&lt;/option&gt;
+						&lt;/select&gt;
+					&lt;/div&gt;
+					&lt;div class="rightBox"&gt;
+						&lt;button type="button" class="btn_iconMenu" onclick="fnShowPop('asideMenu')"&gt;&lt;i class="blind"&gt;메뉴보기&lt;/i&gt;&lt;/button&gt;
+					&lt;/div&gt;
+				&lt;/header&gt;
+				&lt;!--//header--&gt;
+
+			</pre>
+		</div>
+		<!--//codeView-->
+
+		<!-- 오른쪽 메뉴 -->
+		<h3 class="tit-guide">전체메뉴 : .asideMenuWrap</h3>
+		<div class="guide-code">
+			<pre class="syntax brush-css">
+
+				&lt;!--right Area--&gt;
+				&lt;div class="right_con" id="skip_contents"&gt;
+					&lt;div class="contents_wrap"&gt;
+						&lt;div class="contents_con"&gt;
+							&lt;!--main contents Area--&gt;
+							&lt;div class="main_wrap"&gt;
+								main contents 영역
+							&lt;/div&gt;
+
+							&lt;!--sub contents Area--&gt;
+							&lt;div class="tabWrap subCon_tabWrap"&gt;
+								sub tabMenu contents 영역
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;!--//right Area--&gt;
+			</pre>
+		</div>
+
+		<!-- footer -->
+		<h3 class="tit-guide">Footer</h3>
+		<!--sampleArea-->
+		<div class="sampleArea">
+			<!--footer-->
+			<footer id="footerWrap">
+				<div class="footInfoArea">
+					<div class="corpArea">
+						<a href="#" title=""><span>회사소개</span></a>
+						<a href="#" title=""><span>지점안내</span></a>
+						<a href="#" title=""><span>소비자보호포털</span></a>
 					</div>
-					<div class="btn_con">
-						<a href="#" class="btn_cs"><span>문의하기</span></a>
-						<a href="#" class="btn_help"><span>도움말</span></a>
+					<div class="agreeBox">
+						<a href="#" title=""><strong>개인정보처리방침</strong></a>
+						<a href="#" title=""><span>신용정보활용체제</span></a>
 					</div>
+					<div class="snsBox">
+						<a href="#" class="icon_youtube" title=""><span class="blind">유투브바로가기</span></a>
+						<a href="#" class="icon_blog" title=""><span class="blind">네이버블로그바로가기</span></a>
+						<a href="#" class="icon_kakakotalk" title=""><span class="blind">카카오톡바로가기</span></a>
+						<a href="#" class="icon_facebook" title=""><span class="blind">페이스북바로가기</span></a>
+						<a href="#" class="icon_instagram" title=""><span class="blind">인스타그램바로가기</span></a>
+					</div>
+				</div>
+				<div class="copyrightArea">
+					<div class="btnWrap">
+						<a href="tel:1588-0365" class="btnCustom"><span>고객지원센터 <em>연결하기</em></span><strong class="tel">1588-0365</strong></a>
+						<a href="#" role="link"><span>자주하는 질문</span></a>
+						<a href="#" role="link"><span>1:1 상담</span></a>
+					</div>
+					<div class="adressArea">
+						<span>대표이사 김상태</span>
+						<address>서울특별시 영등포구 여의대로 70 (신한투자증권 타워)</address>
+						<span>사업자등록번호 116-81-36684</span>
+					</div>
+					<span class="copyright">&copy;2023 SHINHAN SECURITIES CO.,LTD.</span>
+					<i class="icon_shinhan"><em class="blind">원신한</em></i>
 				</div>
 			</footer>
+			<!--//footer-->
 		</div>
-	</div>
-	<!--//sampleArea-->
+		<!--//sampleArea-->
+		<div class="guide-code">
+			<pre class="syntax brush-css">
 
-	<h3 class="tit-guide">대체페이지 및 회원가입</h3>
-	<!--sampleArea-->
-	<div class="sampleArea">
-		<div class="footer_wrap replace" style="width:100%;display:flex;align-items:center;justify-content:center;"><!--[D]페이지 적용시 style 삭제-->
-			<div class="footer_con">
-				<div class="left_con">
-					<img src="../dummy/img/logo_cosmo.svg">
-					<p class="copy">ⓒ COSMO.OR.KR  ALL RIGHT RESERVED.</p>
-				</div>
-				<div class="right_con">
-					<dl class="cs_info">
-						<dt><span>고객문의</span>&nbsp;</dt>
-						<dd>
-							<span>1522-0082</span>
-							<span>(평일 및 주말 9시~18시)</span>
-						</dd>
-					</dl>
-					<dl class="cs_info">
-						<dt><span>이메일 문의 판매자</span>&nbsp;</dt>
-						<dd>
-							<span>cup-biz@cosmo.or.kr</span>
-						</dd>
-					</dl>
-					<dl class="cs_info">
-						<dt><span>/ 회수재활용</span></dt>
-						<dd>
-							<span>cup-recycle@cosmo.or.kr</span>
-						</dd>
-					</dl>
-				</div>
-			</div>
+				&lt;!--footer--&gt;
+				&lt;footer id="footerWrap"&gt;
+					&lt;div class="footInfoArea"&gt;
+						&lt;div class="corpArea"&gt;
+							&lt;a href="#" title=""&gt;&lt;span&gt;회사소개&lt;/span&gt;&lt;/a&gt;
+							&lt;a href="#" title=""&gt;&lt;span&gt;지점안내&lt;/span&gt;&lt;/a&gt;
+							&lt;a href="#" title=""&gt;&lt;span&gt;소비자보호포털&lt;/span&gt;&lt;/a&gt;
+						&lt;/div&gt;
+						&lt;div class="agreeBox"&gt;
+							&lt;a href="#" title=""&gt;&lt;strong&gt;개인정보처리방침&lt;/strong&gt;&lt;/a&gt;
+							&lt;a href="#" title=""&gt;&lt;span&gt;신용정보활용체제&lt;/span&gt;&lt;/a&gt;
+						&lt;/div&gt;
+						&lt;div class="snsBox"&gt;
+							&lt;a href="#" class="icon_youtube" title=""&gt;&lt;span class="blind"&gt;유투브바로가기&lt;/span&gt;&lt;/a&gt;
+							&lt;a href="#" class="icon_blog" title=""&gt;&lt;span class="blind"&gt;네이버블로그바로가기&lt;/span&gt;&lt;/a&gt;
+							&lt;a href="#" class="icon_kakakotalk" title=""&gt;&lt;span class="blind"&gt;카카오톡바로가기&lt;/span&gt;&lt;/a&gt;
+							&lt;a href="#" class="icon_facebook" title=""&gt;&lt;span class="blind"&gt;페이스북바로가기&lt;/span&gt;&lt;/a&gt;
+							&lt;a href="#" class="icon_instagram" title=""&gt;&lt;span class="blind"&gt;인스타그램바로가기&lt;/span&gt;&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class="copyrightArea"&gt;
+						&lt;div class="btnWrap"&gt;
+							&lt;a href="tel:1588-0365" class="btnCustom"&gt;&lt;span&gt;고객지원센터 &lt;em&gt;연결하기&lt;/em&gt;&lt;/span&gt;&lt;strong class="tel"&gt;1588-0365&lt;/strong&gt;&lt;/a&gt;
+							&lt;a href="#" role="link"&gt;&lt;span&gt;자주하는 질문&lt;/span&gt;&lt;/a&gt;
+							&lt;a href="#" role="link"&gt;&lt;span&gt;1:1 상담&lt;/span&gt;&lt;/a&gt;
+						&lt;/div&gt;
+						&lt;!--tablet시 노출--&gt;
+						&lt;div class="adressArea"&gt;
+							&lt;span&gt;대표이사 김상태&lt;/span&gt;
+							&lt;address&gt;서울특별시 영등포구 여의대로 70 (신한투자증권 타워)&lt;/address&gt;
+							&lt;span&gt;사업자등록번호 116-81-36684&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;!--//tablet시 노출--&gt;
+						&lt;span class="copyright"&gt;&copy;2023 SHINHAN SECURITIES CO.,LTD.&lt;/span&gt;
+						&lt;i class="icon_shinhan"&gt;&lt;em class="blind"&gt;원신한&lt;/em&gt;&lt;/i&gt;
+					&lt;/div&gt;
+				&lt;/footer&gt;
+				&lt;!--//footer--&gt;
+			</pre>
 		</div>
-	</div>
-	<!--//sampleArea-->
-
+		<!-- //footer -->
 	</div>
   </div>
   <script type="text/javascript">

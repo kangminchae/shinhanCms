@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="ko">
 <head>
-	<title>콘텐츠관리시스템(CMS)</title>
+	<title>모바일웹,콘텐츠관리시스템(CMS)</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -35,6 +35,7 @@
         <aside class="asideMenuWrap" id="asideMenu">
             <div class="menuInner">
                 <div class="menuHeader">
+                    <h1 class="logo"><span class="blind">신한투자증권</span></h1>
                     <div class="userInfo">
                         <strong class="name">홍길동</strong>
                         <button type="button" class="btn_iconLogout"><span>로그아웃</span></button>
@@ -42,40 +43,67 @@
                     <div class="utilArea">
                         <button type="button" class="btn_iconHome"><i class="blind">홈으로</i></button>
                         <button type="button" class="btn_iconSearch"><i class="blind">검색</i></button>
-                        <button type="button" class="btn_iconClose"><i class="blind">닫기</i></button>
                     </div>
                 </div>
                 <div class="menuCont">
                     <div class="kyeMenu">
                         <ul class="kyeMenuList">
-                            <li><a href="#" title=""></a></li>
-                            <li><a href="#" title=""></a></li>
-                            <li><a href="#" title=""></a></li>
-                            <li><a href="#" title=""></a></li>
+                            <li><a href="#">계좌개설</a></li>
+                            <li><a href="#">퇴직연금</a></li>
+                            <li><a href="#">알파TV</a></li>
                         </ul>
                     </div>
                     <div class="naviArea">
                         <div class="depth1Area">
                             <ul class="menuList">
-                                <li><a href="#" title=""></a></li>
-                                <li><a href="#" title=""></a></li>
-                                <li><a href="#" title=""></a></li>
+                                <li><a href="#">공모주/청약</a></li>
+                                <li><a href="#">계좌개설</a></li>
+                                <li class="active"><a href="#">투자정보</a></li>
+                                <li><a href="#">증시동향</a></li>
+                                <li><a href="#">금융상품</a></li>
+                                <li><a href="#">안내/서비스</a></li>
+                                <li><a href="#">공지/이벤트</a></li>
+                                <li><a href="#">소비자 보호포털</a></li>
                             </ul>
                         </div>
                         <div class="depth2Area">
-                            <ul class="menuList">
-                                <li>
-                                    <a href="#" class="depth2Title depth3"></a>
-                                    <ul class="depth3List">
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#" title=""></a></li>
-                                <li><a href="#" title=""></a></li>
-                            </ul>
+                            <div class="menuListBox">
+                                <strong class="title">공모주/청약</strong>
+                                <ul class="menuList">
+                                    <li><a href="#">공모주청약 일정</a></li>
+                                    <li class="selected"><a href="#">공모주청약 가이드</a></li>
+                                </ul>
+                            </div>
+                            <div class="menuListBox">
+                                <strong class="title">계좌개설</strong>
+                                <ul class="menuList">
+                                    <li><a href="#" target="_blank">계좌개설</a></li>
+                                    <li><a href="#">자녀 계좌개설</a></li>
+                                    <li><a href="#">계좌번호 찾기</a></li>
+                                </ul>
+                            </div>
+                            <div class="menuListBox">
+                                <strong class="title">투자정보</strong>
+                                <ul class="menuList">
+                                    <li><a href="#">돈이되는 이야기</a></li>
+                                    <li>
+                                        <a href="#" class="depth2Title depth3">신한 리서치</a>
+                                        <ul class="depth3List">
+                                            <li><a href="#">애널리스트 소개</a></li>
+                                            <li><a href="#">신한 리포트</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="#">쉬운 투자</a>
+                                        <ul class="depth3List">
+                                            <li><a href="#">애널리스트 소개</a></li>
+                                            <li><a href="#">신한 리포트</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">계좌번호 찾기</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -89,7 +117,8 @@
 
             <button type="button" onclick="fnShowPop('pop_bottom')" title="bottomSheetType" style="height: 50px;"><span>popUpType - bottomSheet</span></button><br>
             <button type="button" onclick="fnShowPop('pop_search')" title="bottomSheetType" style="height: 50px;"><span>popUpType - Full</span></button><br>
-            <button type="button" onclick="fnShowPop('pop_confirm')" title="bottomSheetType" style="height: 50px;"><span>popUpType - Confirm/Alert</span></button>
+            <button type="button" onclick="fnShowPop('pop_confirm')" title="bottomSheetType" style="height: 50px;"><span>popUpType - Confirm</span></button>
+            <button type="button" onclick="fnShowPop('pop_alert')" title="bottomSheetType" style="height: 50px;"><span>popUpType - Alert</span></button>
 
         </div>
         <!--//container-->
@@ -161,18 +190,34 @@
     </div>
     <!--//[Modal 팝업] : bottomSheet-->
 
-    <!--[Alert 팝업] : confirm , alert-->
+    <!--[Confirm 팝업] : confirm , alert-->
     <div class="popWrap popConfirm" id="pop_confirm">
         <div class="popInner">
             <div class="popHeader">
-                <h2 class="popTitle">팝업타이틀</h2>
+                <h2 class="popTitle">삭제하시겠어요?</h2>
             </div>
             <div class="popContent">
-                팝업내용
+                <span class="text">삭제된 데이터는 복구되지 않습니다.</span>
+            </div>
+            <div class="btnWrap group">
+                <button type="button" class="btn mi sec" onclick="fnHidePop('pop_confirm')"><span>아니오</span></button>
+                <button type="button" class="btn mi pri">네</button>
+            </div>
+        </div>
+    </div>
+    <!--//[Confirm 팝업] : confirm , alert-->
+
+    <!--[Alert 팝업] : confirm , alert-->
+    <div class="popWrap popConfirm" id="pop_alert">
+        <div class="popInner">
+            <div class="popHeader">
+                <h2 class="popTitle">확인해 주세요.</h2>
+            </div>
+            <div class="popContent">
+                <span class="text">관리자 승인 후 로그인 할 수 있습니다.</span>
             </div>
             <div class="btnWrap">
-                <button type="button" class="btn btnGeneral" onclick="fnHidePop('pop_confirm')"><span>취소</span></button>
-                <button type="button" class="btn btnPoint">확인</button>
+                <button type="button" class="btn mi pri">확인</button>
             </div>
         </div>
     </div>
