@@ -4,13 +4,13 @@
 	# 초기화
 ---------------------------------------------------------- */
 body {/*background:#f1f1f1;*/}
-#wrap {position:relative;width:100%; height:100%; min-height:100%;}
+#wrap {position:relative;width:100%; height:100%; min-height:100%;flex-direction:row;}
 
 /* ----------------------------------------------------------
 	HEADER
 ---------------------------------------------------------- */
 /* 헤더영역 */
-#wrap #header {position:fixed;left:0;right:0;top:0;width:100%;height:60px;padding:12px 0 0 200px;border-bottom:2px solid #00a1e0;background:#fff;z-index:500;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+#wrap #header {position:fixed;left:0;right:0;top:0;width:100%;height:60px;padding:12px 0 0 200px;border-bottom:2px solid #00a1e0;background:#fff;z-index:3;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 #wrap #header .logo {overflow:hidden;position:absolute;left:0;top:0;}
 
 /* GNB */
@@ -56,7 +56,7 @@ body {/*background:#f1f1f1;*/}
 	ASIDE
 ---------------------------------------------------------- */
 /* 좌측영역 기본 / 개인화영역 */
-#aside {position:fixed;left:-195px;top:0;bottom:0;width:200px;margin:0;background:#757a80;color:#fff;z-index:500;}
+#aside {position:relative;left:0;top:0;bottom:0;width:5px;margin:0;background:#757a80;color:#fff;display:flex;flex-direction:column;flex-shrink:0;}
 #aside .wrap-aside {overflow:hidden;width:100%;height:100%;}
 #aside .wrap-aside .box-info {display:none;height:96px;padding:14px 0 0;background:#565a5f;text-align:center;}
 #aside .wrap-aside .box-info:before {content:'';display:block;width:64px;height:64px;margin:0 auto;background:#fff url(../../img/com/img_set1.png) no-repeat -536px 0;border-radius:50%;}
@@ -70,7 +70,8 @@ body {/*background:#f1f1f1;*/}
 #aside .wrap-aside .area-search button:after {right:7px;bottom:1px;width:2px;height:7px;background:#b5b5b5;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);transform:rotate(-45deg);}
 
 /* 펼침/닫기 */
-#aside .area-control {position:absolute;width:100%;left:200px;top:50%;width:11px;}
+#aside .area-control {position:absolute;width:100%;left:5px;top:50%;width:11px;}
+.open-aside #aside .area-control {left:200px}
 #aside .area-control a {position:relative;display:block;overflow:hidden;width:9px;height:0;padding:33px 0 0;border:1px solid #5d6063;background:#757a80;border-radius:0 3px 3px 0;}
 #aside .area-control a:after {content:'';position:absolute;left:50%;top:50%;width:4px;height:4px;margin:-3px 0 0 -4px;border-left:1px solid #c8cacc;border-bottom:1px solid #c8cacc;-webkit-transform:rotate(-135deg);-moz-transform:rotate(-135deg);transform:rotate(-135deg);}
 
@@ -83,7 +84,8 @@ body {/*background:#f1f1f1;*/}
 .area-nav .tab > li.ui-tabs-active a {background:#757a80;padding:0 0 1px;border-color:#4b4e52;color:#fff;}
 
 /* 메뉴 리스트 */
-.nav-snb {padding-bottom:20px;}
+.nav-snb {padding-bottom:20px;opacity:0;}
+.open-aside .nav-snb {opacity:1;}
 .nav-snb > ul > li a {position:relative;display:block;padding:3px 20px 4px;font-size:12px;line-height:18px;color:#fff;text-decoration:none;}
 .nav-snb > ul li.open > a:not(:only-child):after {content:'';position:absolute;top:50%;width:0;height:0;margin:-2px 0 0 -5px;}
 .nav-snb > ul > li.open > a:not(:only-child):after {right:20px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #fff;}
@@ -108,7 +110,7 @@ body {/*background:#f1f1f1;*/}
 /* ----------------------------------------------------------
 	CONTAINER
 ---------------------------------------------------------- */
-.content {width:100%;padding:15px 20px 100px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all 0.3s ease;-moz-transition:all 0.3s ease;-o-transition:all 0.3s ease;transition:all 0.3s ease;}
+.content {width:100%;padding:15px 20px 100px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all 0.3s ease;-moz-transition:all 0.3s ease;-o-transition:all 0.3s ease;transition:all 0.3s ease;overflow-y:auto;}
 /* .content iframe {width:100%;height:100%;} */
 
 #container .content {position:absolute;left:0;right:0;padding:0;}
@@ -133,12 +135,12 @@ iframe {border:0;}
 #wrap #aside .area-control {-webkit-transition:all 0.3s ease;-moz-transition:all 0.3s ease;-o-transition:all 0.3s ease;transition:all 0.3s ease;}
 
 /* 좌측메뉴 닫힌경우  */
-#wrap.open-aside #aside {left:0;}
+#wrap.open-aside #aside {width:200px;}
 #wrap.open-aside #aside ~ #container {margin-left:200px;}
 #wrap.open-aside #footer {padding-left:230px;}
 #wrap.open-aside #aside .area-control a:after {margin:-3px 0 0 -2px;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);transform:rotate(45deg);}
 
-#wrap.open-aside .content {padding-left:220px;}
+#wrap.open-aside .content {padding-left:40px;}
 
 @media only screen and (max-width:1400px){
 	#wrap.minwidth #aside ~ #container {width:100%;}

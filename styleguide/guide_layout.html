@@ -2,24 +2,25 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <title>빈용기지급관리시스템 UI Guide</title>
-  <link rel="stylesheet" type="text/css" href="../dummy/css/style.css"><!--퍼블 가이드 css-->
-  <link rel="stylesheet" type="text/css" href="css/common.css"><!--퍼블 가이드 css-->
-  <script src="js/jquery.1.11.0.min.js"></script>
-  <script src="js/jquery.ui.1.11.4.min.js"></script>
-  <script src="js/jquery.syntax/jquery.syntax.js"></script>
-  <script src="js/jquery.syntax/jquery.syntax.cache.js"></script>
+	<meta charset="utf-8">
+	<title>모바일웹,콘텐츠관리시스템(CMS) UI Guide</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="../asset/css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script src="js/jquery.1.11.0.min.js"></script>
+	<script src="js/jquery.ui.1.11.4.min.js"></script>
+	<script src="js/jquery.syntax/jquery.syntax.js"></script>
+	<script src="js/jquery.syntax/jquery.syntax.cache.js"></script>
 	<script type="text/javascript" src="js/guide.js"></script>
+  
 	<script>
 	$(document).ready(function(){
 		snbMarkup();
 	});
 	</script>
-	</head>
-	<body>
+</head>
+<body>
 	<div id="wrap">
-		
 		<!-- aside -->
 		<div id="aside">
 			<!-- # 좌측컨텐츠 # -->
@@ -40,7 +41,7 @@
 	<div class="content">
 		<!-- # 페이지타이틀 # -->
 		<div class="tit-page">
-			<h1>기본구조 - 레이아웃</h1>
+			<h1>기본구조 - Layout</h1>
 		</div>
 
 		<!-- # 기본구조 --------------------------------------------------------------------------------->
@@ -52,42 +53,55 @@
 			<!-- head -->
 			<fieldset class="guide">
 				<legend>head</legend>
-	<pre class="syntax brush-css">
-		&lt;meta charset="UTF-8"&gt;
-		&lt;meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover"&gt;
-		&lt;title&gt;모바일웹&lt;/title&gt;
-		&lt;link rel="stylesheet" type="text/css" href="../css/style.css" /&gt;
-		&lt;script type="text/javascript" src="../js/jquery-3.7.0.min.js">&lt;/script&gt;
-		&lt;script type="text/javascript" src="../js/common.js">&lt;/script&gt;
-	</pre>
+<pre class="syntax brush-css">
+
+	&lt;meta charset="UTF-8"&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no"&gt;
+	&lt;title&gt;모바일웹,콘텐츠관리시스템(CMS)&lt;/title&gt;
+	&lt;link rel="stylesheet" type="text/css" href="../../asset/css/style.css"&gt;
+	&lt;link rel="stylesheet" type="text/css" href="../../asset/css/swiper.css"&gt;
+	&lt;script src="../../asset/js/jquery-3.7.0.min.js"&gt;&lt;/script&gt;
+	&lt;script src="../../asset/js/swiper.min.js"&gt;&lt;/script&gt;
+	&lt;script src="../../asset/js/common_ui.js"&gt;&lt;/script&gt;
+	
+</pre>
 			</fieldset>
 			<!-- body -->
 			<fieldset class="guide">
 				<legend>body</legend>
 				<!-- div#wrapper -->
 				<fieldset class="guide">
-					<legend>div.layout_wrap</legend>
-					<!-- ### layout : skipnav ### -->
+					<legend>div#wrap</legend>
+					<!-- ### layout : header ### -->
 					<fieldset class="guide">
-						<legend>div.skip_nav</legend>
+						<legend>header#header</legend>
 					</fieldset>
-					<!-- ### layout : layout_con ### -->
-					<fieldset class="guide guide2">
-						<legend>div.layout_con</legend>
-						<!-- ### layout : aside ### -->
-						<fieldset class="guide leftGuide">
-							<legend>div.left_con : 왼쪽 메뉴</legend>
+					<!-- ### layout : asideMenuWrap ### -->
+					<fieldset class="guide">
+						<legend>div.asideMenuWrap</legend>
+					</fieldset>
+					<!-- ### layout : container ### -->
+					<fieldset class="guide">
+						<legend>div#container</legend>
+						<!-- ### layout : contents ### -->
+						<fieldset class="guide">
+							<legend>div.contents : 기본 영역</legend>
 						</fieldset>
 
-						<!-- ### layout : container ### -->
-						<fieldset class="guide rightGuide">
-							<legend>div.right_con : 본문영역</legend>
-
-							<!-- ### footer ### -->
-							<fieldset class="guide">
-								<legend>#footer</legend>
-							</fieldset>
+						<!-- ### layout : tabWrap ### -->
+						<fieldset class="guide">
+							<legend>div.tabWrap : 탭 메뉴일 경우</legend>
 						</fieldset>
+
+						<!-- ### layout : contentsDetailWrap ### -->
+						<fieldset class="guide">
+							<legend>div.contentsDetailWrap : 상세페이지일 경우</legend>
+						</fieldset>
+
+					</fieldset>
+					<!-- ### footer ### -->
+					<fieldset class="guide">
+						<legend>#footer</legend>
 					</fieldset>
 					</pre>
 					</fieldset>
@@ -98,7 +112,6 @@
 				</fieldset>
 			</fieldset>
 		</fieldset>
-
 	</div>
 	</div>
 	<script type="text/javascript">

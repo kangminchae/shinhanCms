@@ -1,14 +1,14 @@
+
 var snbMarkup = function(){
 	var snbMarkup = '';
 		snbMarkup += '<ul>';
 		snbMarkup += '<li><a href="guide_layout.html">기본구조</a></li>';
+		snbMarkup += '<li><a href="guide_area.html">AREA</a></li>';
 		snbMarkup += '<li><a href="guide_text.html">TEXT / COLOR</a></li>';
 		snbMarkup += '<li><a href="guide_button.html">BUTTON</a></li>';
-		snbMarkup += '<li><a href="guide_area.html">영역</a></li>';
 		snbMarkup += '<li><a href="guide_table.html">TABLE</a></li>';
 		snbMarkup += '<li><a href="guide_form.html">FORM : ELEMENT </a></li>'; // : ELEMENT
 		snbMarkup += '<li><a href="guide_tab.html">TAB</a></li>';
-
 		snbMarkup += '</ul>';
 
 	$('.nav-snb').append(snbMarkup);

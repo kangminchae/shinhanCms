@@ -1,15 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <title>빈용기지급관리시스템 UI Guide</title>
-  <link rel="stylesheet" type="text/css" href="../dummy/css/style.css"><!--퍼블 가이드 css-->
-  <link rel="stylesheet" type="text/css" href="css/common.css"><!--퍼블 가이드 css-->
-  <script src="js/jquery.1.11.0.min.js"></script>
-  <script src="js/jquery.ui.1.11.4.min.js"></script>
-  <script src="js/jquery.syntax/jquery.syntax.js"></script>
-  <script src="js/jquery.syntax/jquery.syntax.cache.js"></script>
+	<meta charset="utf-8">
+	<title>모바일웹,콘텐츠관리시스템(CMS) UI Guide</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="../asset/css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script src="js/jquery.1.11.0.min.js"></script>
+	<script src="js/jquery.ui.1.11.4.min.js"></script>
+	<script src="js/jquery.syntax/jquery.syntax.js"></script>
+	<script src="js/jquery.syntax/jquery.syntax.cache.js"></script>
 	<script type="text/javascript" src="js/guide.js"></script>
 	<script>
 	$(document).ready(function(){
@@ -19,12 +19,9 @@
 	<style>
 		/* font - 스포카 한 산스 네오 font-family: 'Spoqa Han Sans Neo'; */
 		@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
-
-		/* font - 에스코어드림 font-family: 'SCoreDream'; */
-		@import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
-
 		.spoqa {font-family:'Spoqa Han Sans Neo';font-size:15px;}
-		.score {font-family:'SCoreDream';font-size:15px;}
+
+		table td {line-height:1.7;}
 	</style>
 	</head>
 	<body>
@@ -49,40 +46,96 @@
 	<div class="content">
 	<!-- # 페이지타이틀 # -->
 	<div class="tit-page">
-		<h1>마크업가이드 - TEXT</h1>
+		<h1>마크업가이드 - TEXT / COLOR</h1>
 	</div>
 
 	<!-- # 기본버튼(업무버튼) # -->
-	<h2 class="tit-guide">TEXT 및 COLOR</h2>
+	<h2 class="tit-guide">TYPOGRAPHY</h2>
 
 	<!--font-->
-	<h3 class="tit-guide">Font Style</h3>
+	<h3 class="tit-guide">Font Type</h3>
 	<div class="tbl-data1 guide">
 		<table>
 			<caption>기본정보</caption>
 			<colgroup>
 				<col style="width:15%"/>
 				<col/>
+				<col style="width:15%"/>
 				<col/>
 			</colgroup>
 			<tbody>
 				<tr>
-					<th>Typeface</th>
-					<td><strong class="spoqa" style="font-size:20px">스포카 한 산스 네오</strong> / 'Spoqa Han Sans Neo'</td>
-					<td><strong class="score" style="font-size:20px">에스코어드림</strong> / 'SCoreDream'</td>
-				</tr>
-				<tr>
+					<th rowspan="3">Typeface</th>
+					<td rowspan="3"><strong class="spoqa" style="font-size:20px">Spoqa Han Sans Neo</strong></td>
 					<th rowspan="3">font-weight</th>
-					<td><strong class="spoqa" style="font-weight:400">스포카 Regualr</strong></td>
-					<td><strong class="score" style="font-weight:400">에스코어드림 Regualr</strong></td>
+					<td><strong class="spoqa" style="font-weight:400">Spoqa Regualr : 400</strong></td>
 				</tr>
 				<tr>
-					<td><strong class="spoqa" style="font-weight:500">스포카 Medium</strong></td>
-					<td><strong class="score" style="font-weight:500">에스코어드림 Medium</strong></td>
+					<td><strong class="spoqa" style="font-weight:500">Spoqa Medium : 500</strong></td>
 				</tr>
 				<tr>
-					<td><strong class="spoqa" style="font-weight:600">스포카 Bold</strong></td>
-					<td><strong class="score" style="font-weight:600">에스코어드림 Bold</strong></td>
+					<td><strong class="spoqa" style="font-weight:600">Spoqa Bold : 700</strong></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<h3 class="tit-guide">Text Style</h3>
+	<div class="tbl-data1 guide">
+		<table>
+			<caption>기본정보</caption>
+			<colgroup>
+				<col style="width:20%"/>
+				<col/>
+				<col/>
+			</colgroup>
+			<thead>
+				<tr>
+					<th></th>
+					<th>Mobile</th>
+					<th>Tablet</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="font-size:24px;font-weight:700;">Heading1</td>
+					<td style="font-size:24px;font-weight:700;">H1 / 2.4rem / Bold</td>
+					<td style="font-size:28px;font-weight:700;">H1 / 2.8rem / Bold</td>
+				</tr>
+				<tr>
+					<td style="font-size:20px;font-weight:700;">Heading2(subTitle)</td>
+					<td style="font-size:20px;font-weight:700;">H2 / 2.0rem / Bold, medium</td>
+					<td style="font-size:24px;font-weight:700;">H2 / 2.4rem / Bold, medium</td>
+				</tr>
+				<tr>
+					<td style="font-size:18px;font-weight:500;">Heading3</td>
+					<td style="font-size:18px;font-weight:500;">H3 / 1.8rem / Regular, medium, Bold</td>
+					<td style="font-size:20px;font-weight:500;">H3 / 2.0rem / Regular, medium, Bold</td>
+				</tr>
+				<tr>
+					<td style="font-size:16px;font-weight:500;">Body1</td>
+					<td style="font-size:16px;font-weight:500;">Body1 / 1.6rem / Regular, medium, Bold</td>
+					<td style="font-size:18px;font-weight:500;">Body1 / 1.8rem / Regular, medium, Bold</td>
+				</tr>
+				<tr>
+					<td style="font-size:15px;font-weight:400;">Body2</td>
+					<td style="font-size:15px;font-weight:400;">Body2 / 1.5rem / Regular, medium, Bold</td>
+					<td style="font-size:16px;font-weight:400;">Body2 / 1.6rem / Regular, medium, Bold</td>
+				</tr>
+				<tr>
+					<td>Body3</td>
+					<td style="font-size:13px;font-weight:400;">Body3 / 1.3rem / Regular, medium, Bold</td>
+					<td style="font-size:14px;font-weight:400;">Body3 / 1.4rem / Regular, medium, Bold</td>
+				</tr>
+				<tr>
+					<td>Body4</td>
+					<td style="font-size:12px;font-weight:400;">Body4 / 1.2rem / Regular, medium, Bold</td>
+					<td style="font-size:12px;font-weight:400;">Body4 / 1.2rem / Regular, medium, Bold</td>
+				</tr>
+				<tr>
+					<td>flag</td>
+					<td style="font-size:10px;font-weight:400;">flag / 1.0rem / Regular, medium, Bold</td>
+					<td style="font-size:10px;font-weight:400;">flag / 1.0rem / Regular, medium, Bold</td>
 				</tr>
 			</tbody>
 		</table>
@@ -90,111 +143,120 @@
 	<!--//font-->
 
 	<!--color-->
-	<h3 class="tit-guide">Color Style : font 기준</h3>
+	<h2 class="tit-guide">COLOR</h2>
+
+	<!-- <h3 class="tit-guide">Color Style</h3> -->
 	<div class="tbl-data1 guide">
 		<table>
 			<caption>기본정보</caption>
 			<colgroup>
 				<col style="width:15%"/>
 				<col/>
-				<col/>
 			</colgroup>
 			<tbody>
 				<tr>
-					<th>Primary</th>
-					<td><span class="guide-color" style="background:#262626;">#262626</span></td>
-					<td><span class="color_gray7">.color_gray7</span></td>
-				</tr>
-				<tr>
-					<th>Secondary</th>
-					<td> 
-						<span class="guide-color" style="background:#737373;">#737373</span>
-						<span class="guide-color" style="background:#4D4D4D;">#4D4D4D</span> 
-					</td>
-					<td>
-						<span class="color_gray5">.color_gray5</span>
-						<span class="color_gray6">.color_gray6</span>
-					</td>
-				</tr>
-				<tr>
 					<th>Point</th>
-					<td> 
-						<span class="guide-color" style="background:#00856A; width:200px">#00856A<br>bg, button</span>
-						<span class="guide-color" style="background:#00755D; width:150px">#00755D<br>font</span>
-						<span class="guide-color" style="background:#47EBC4; width:150px;color:#262626">#47EBC4<br>Darkbg font</span>
-					</td>
 					<td>
-						<span class="color_point1">.color_point1</span>
-						<span class="color_point0">.color_point0</span>
-						<span class=""></span>
-					</td>
-				</tr>
-				<tr>
-					<th>Common</th>
-					<td>
-						<span class="guide-color" style="background:#DC3636; width:150px">error /#DC3636</span>
-						<span class="guide-color" style="background:#FA6400;">#FA6400</span>
-					</td>
-					<td>
-						<span class="color_error">.color_error</span>
-						<span class="color_main1">.color_main1</span>
+						<div class="colorBox">
+							<span class="guide-color" style="background:#2A3FEC;">
+								SH_blue<br>#2A3FEC
+							</span>
+						</div>
 					</td>
 				</tr>
 				<tr>
 					<th rowspan="2">Grayscale</th>
-					<td>
-						<span class="guide-color" style="background:#f7f8fa; color:#000">#F7F8FaA</span> 
-						<span class="guide-color" style="background:#E4E7EB; color:#000">#E4E7EB</span> 
-						<span class="guide-color" style="background:#CFD3D8; color:#000">#CFD3D8</span>
-						<span class="guide-color" style="background:#5D6773;">#5D6773</span> 
-						<span class="guide-color" style="background:#38404A;">#38404A</span>
-						<span class="guide-color" style="background:#1A1C1F;">#1A1C1F</span>
-					</td>
-					<td>
-						<span class="color_sub4">.color_gray0</span>
-						<span class="color_sub4">.color_sub0 ~ .color_sub4</span>
+					<td> 
+						<strong class="title">Text</strong>
+						<div class="colorBox">
+							<span class="guide-color" style="background:#111;">
+								SH_Gr_01<br>#111
+							</span>
+							<span class="guide-color" style="background:#3b3b41;">
+								SH_Gr_02<br>#3b3b41
+							</span>
+							<span class="guide-color" style="background:#474759;">
+								SH_Gr_03<br>#474759
+							</span>
+							<span class="guide-color" style="background:#6d6d73;">
+								SH_Gr_04<br>#6d6d73
+							</span>
+							<span class="guide-color" style="background:#91919C;">
+								SH_Gr_05<br>#91919C
+							</span>
+							<span class="guide-color" style="background:#b5b5bc;">
+								SH_Gr_06<br>#b5b5bc
+							</span>
+						</div>
 					</td>
 				</tr>
 				<tr>
-					<td>
-						<span class="guide-color" style="background:#EDEDED; color:#000">#EDEDED</span>
-						<span class="guide-color" style="background:#D9D9D9;">#D9D9D9</span> 
-						<span class="guide-color" style="background:#BFBFBF;">#BFBFBF</span>
-						<span class="guide-color" style="background:#999;">#999</span>
-						<span class="guide-color mt8" style="background:#737373;">#737373</span>
-						<span class="guide-color" style="background:#4D4D4D;">#4D4D4D</span> 
-						<span class="guide-color" style="background:#262626;">#262626</span>
-						<span class="guide-color" style="background:#000;">#000</span>
+					<td> 
+						<strong class="title">Line & BG</strong>
+						<div class="colorBox">
+							<span class="guide-color" style="background:#D9D9E0;color:#111">
+								SH_Gr_07<br>#D9D9E0
+							</span>
+							<span class="guide-color" style="background:#D6DBE8;color:#111">
+								SH_Gr_08<br>#D6DBE8
+							</span>
+							<span class="guide-color" style="background:#ECF0FB;color:#111">
+								SH_Gr_09<br>#ECF0FB
+							</span>
+							<span class="guide-color" style="background:#F1F3F8;color:#111">
+								SH_Gr_10<br>#F1F3F8
+							</span>
+							<span class="guide-color" style="background:#fff;color:#111;border:1px #D7D7D7 solid">
+								SH_Gr_11<br>#
+							</span>
+							<span class="guide-color" style="background:#fff;color:#111;border:1px #D7D7D7 solid">
+								SH_Gr_12<br>#FFF
+							</span>
+						</div>
 					</td>
-					<td>
-						<span class="color_gray8">.color_gray1 ~ .color_gray8</span>
+				</tr>
+				<tr>
+					<th>Flag<br>(bg)</th>
+					<td> 
+						<div class="colorBox">
+							<span class="guide-color" style="background:#39C236;">
+								SH_flag_01<br>#39C236<br>채권
+							</span>
+							<span class="guide-color" style="background:#5191FF;">
+								SH_flag_02<br>#5191FF<br>국내
+							</span>
+							<span class="guide-color" style="background:#6F55EB;">
+								SH_flag_03<br>#6F55EB<br>Daily
+							</span>
+							<span class="guide-color" style="background:#F57230;">
+								SH_flag_04<br>#F57230<br>기타
+							</span>
+							<!-- <span class="guide-color" style="background:#91919C;">
+								SH_flag_05<br>#91919C<br>
+							</span>
+							<span class="guide-color" style="background:#b5b5bc;">
+								SH_flag_06<br>#b5b5bc<br>
+							</span> -->
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>Semantic<br>(text, bg)</th>
+					<td> 
+						<div class="colorBox">
+							<span class="guide-color" style="background:#E11A1A;">
+								SH_Smt_01<br>#E11A1A<br>상승
+							</span>
+							<span class="guide-color" style="background:#2D78FA;">
+								SH_Smt_02<br>#2D78FA<br>하락
+							</span>
+						</div>
 					</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 	<!--//color-->
-
-	<!-- # 페이지타이틀 -->
-	<h2 class="tit-guide">참고 : color style</h2>
-	<div class="mb20 ipt02">
-		<span>css 변수 속성을 사용하여 작업시 컬러 변경에 용의</span>
-	</div>
-	<div class="guide-code">
-		<pre class="syntax brush-css">
-			/*color*/
-			:root {
-				--color_point1:#00856A;
-				--color_gray6:#4d4d4d;
-				--color_error:#DC3636;
-			}
-
-			//사용방법
-			.color_point1 {color:var(--color_point1);}
-			.title {color:var(--color_gray6); font-size:15px;}
-			.color_error {color:var(--color_error);background-color:var(--color_gray6)}
-		</pre>
-	</div>
 </div>
 
 </div>

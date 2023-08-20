@@ -1,76 +1,88 @@
 $(document).ready(function(){
 	deviceChk();
 
+	asideMenu();
+	
     //popClose
-  $('.btnClose').click(function(){
-    var $layerPop = $(this).closest('.popWrap'),
-        $dim = $(this).closest('.popWrap').find('.dim');
+	$('.btnClose').click(function(){
+		var $layerPop = $(this).closest('.popWrap'),
+			$dim = $(this).closest('.popWrap').find('.dim');
 
-    $layerPop.removeClass('active');
-    $dim.remove();
+		$layerPop.removeClass('active');
+		$dim.remove();
 
-    $('body').css('overflow','visible');
-    $('body').focus();
-  });
+		$('body').css('overflow','visible');
+		$('body').focus();
+	});
+  
+  	//asideMenu
+	$('.depth3').on('click',function(){
+		$(this).toggleClass('active');
+		$(this).next().slideToggle('active');
+	});
 
-  //scrollTab
-  $('.tabcontents:first-child, .subTabcontents:first-child').show();
+  	//scrollTab
+  	$('.tabcontents:first-child, .subTabcontents:first-child').show();
 
-  $('.tabMenuList li a').on('click', function(){
-	var menuSelect = $(this);
-		
-	menuSelect.closest('li').siblings().removeClass('active');
-	menuSelect.closest('li').addClass('active');
-	menuSelect.closest('li').parents('.tabMenu').next().children().eq($(this).closest('li').index()).show().siblings().hide();
-	menuSelect.parents('.tabWrap').removeClass ('active');
-	menuSelect.parents('.tabWrap').find('.dim').remove();
-	var left = $('.tabMenuList li.active').offset().left,
-		curLeft = $('.tabMenu').scrollLeft();
+  	$('.tabMenuList li a').on('click', function(){
+		var menuSelect = $(this);
+			
+		menuSelect.closest('li').siblings().removeClass('active');
+		menuSelect.closest('li').addClass('active');
+		menuSelect.closest('li').parents('.tabMenu').next().children().eq($(this).closest('li').index()).show().siblings().hide();
+		menuSelect.parents('.tabWrap').removeClass ('active');
+		menuSelect.parents('.tabWrap').find('.dim').remove();
+		var left = $('.tabMenuList li.active').offset().left,
+			curLeft = $('.tabMenu').scrollLeft();
 
-	$('.tabMenu').animate({scrollLeft : curLeft+left}, 400);
-  });
+		$('.tabMenu').animate({scrollLeft : curLeft+left}, 400);
+  	});
 
-  $('.subTabMenu .tabMenuList li a').on('click', function(){
-	var menuSelect = $(this);
-		
-	menuSelect.closest('li').siblings().removeClass('active');
-	menuSelect.closest('li').addClass('active');
-	menuSelect.closest('li').parents('.subTabMenu').next().children().eq($(this).closest('li').index()).show().siblings().hide();
-	var left = $('.subTabMenu .tabMenuList li.active').offset().left - 18,
-		curLeft = $('.subTabMenu').scrollLeft();
+  	$('.subTabMenu .tabMenuList li a').on('click', function(){
+		var menuSelect = $(this);
+			
+		menuSelect.closest('li').siblings().removeClass('active');
+		menuSelect.closest('li').addClass('active');
+		menuSelect.closest('li').parents('.subTabMenu').next().children().eq($(this).closest('li').index()).show().siblings().hide();
+		var left = $('.subTabMenu .tabMenuList li.active').offset().left - 18,
+			curLeft = $('.subTabMenu').scrollLeft();
 
-	$('.subTabMenu').animate({scrollLeft : curLeft+left}, 400);
+		$('.subTabMenu').animate({scrollLeft : curLeft+left}, 400);
 
-  });
+  	});
 
-  $('.moreArea').each(function(){
-	if($(this).hasClass('on')){
-		$(this).closest('.tabMenu').find('.tabMenuList li:last-child').css('padding-right','7.5rem');
-	}
-  });
+  	$('.moreArea').each(function(){
+		if($(this).hasClass('on')){
+			$(this).closest('.tabMenu').find('.tabMenuList li:last-child').css('padding-right','7.5rem');
+		}
+  	});
 
-  $('.btnMenu_more').on('click', function(){
-	$(this).toggleClass('active');
-	$(this).parents('.tabWrap').toggleClass('active');
-	$(this).parents('.tabWrap').append('<div class="dim"></div>');
+  	$('.btnMenu_more').on('click', function(){
+		$(this).toggleClass('active');
+		$(this).parents('.tabWrap').toggleClass('active');
+		$(this).parents('.tabWrap').append('<div class="dim"></div>');
 
-	if(!$('.tabWrap').hasClass('active')) {
-		$(this).parents('.tabWrap').find('.dim').remove();
-	}
+		if(!$('.tabWrap').hasClass('active')) {
+			$(this).parents('.tabWrap').find('.dim').remove();
+		}
 
-	var left = $('.tabMenuList li.active').offset().left,
-		curLeft = $('.tabMenu').scrollLeft();
+		var left = $('.tabMenuList li.active').offset().left,
+			curLeft = $('.tabMenu').scrollLeft();
 
-	$('.tabMenu').animate({scrollLeft : curLeft+left}, 400);
-  });
+		$('.tabMenu').animate({scrollLeft : curLeft+left}, 400);
+  	});
 
 
-  //page contents scroll
-  $('.scroll .contDetail').each(function(){
-	var height = $('.scroll').height() - $('.contHeader').height() - 20;
-	$(this).css('height', height);
-  });
+  	//page contents scroll
+	$('.scroll .contDetail').each(function(){
+		var height = $('.scroll').height() - $('.contHeader').height() - 20;
+		$(this).css('height', height);
+	});
 });
+
+$(window).resize(function() {
+	asideMenu();
+ });
 
 $(window).on('load', function(){
 	//subMenu
@@ -284,4 +296,43 @@ function fnHidePop(sGetName){
 };
 
 
+function asideMenu(){
+	$(document).each(function(){
+		var depth3 = $('.depth2Area .menuList li').children('ul');
+		if(depth3.hasClass('depth3List')) {
+			depth3.prev().addClass('depth3');
+		}
+	});
 
+	var windowWidth = $(window).width();
+	if(windowWidth < 900) {
+		$(document).each(function(){
+			var depth3 = $('.depth2Area .menuList li').children('ul');
+			if(depth3.hasClass('depth3List')) {
+				depth3.prev().addClass('active');
+				depth3.show();
+			}
+	
+			var Height = $(window).innerHeight() - $('.menuHeader').innerHeight() - $('.kyeMenu').innerHeight() - $('.menuListBox .title').innerHeight();
+			$('.depth2Area .menuList').css('height', Height);
+	
+		});
+	
+		$('.depth1Area .menuList li a').on('click', function(){
+			$(this).closest('li').addClass('active').siblings('li').removeClass('active');
+			$(this).closest('li').parents('.depth1Area').next().children().eq($(this).closest('li').index()).css('display','flex').siblings().hide();
+		});
+	} else {
+		$(document).each(function(){
+			var depth3 = $('.depth2Area .menuList li').children('ul');
+			if(depth3.hasClass('depth3List')) {
+				depth3.prev().removeClass('active');
+				depth3.hide();
+			}
+	
+			$('.depth2Area .menuList').css('height', 'auto');
+	
+		});
+	}
+	
+}

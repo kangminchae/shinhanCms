@@ -5,11 +5,11 @@
 	<title>모바일웹,콘텐츠관리시스템(CMS)</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/swiper.css">
-    <script src="../js/jquery-3.7.0.min.js"></script>
-    <script src="../js/swiper.min.js"></script>
-    <script src="../js/common_ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../asset/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../asset/css/swiper.css">
+    <script src="../../asset/js/jquery-3.7.0.min.js"></script>
+    <script src="../../asset/js/swiper.min.js"></script>
+    <script src="../../asset/js/common_ui.js"></script>
 </head>
 <body>
     <div class="skipNav">
@@ -38,7 +38,8 @@
                     <h1 class="logo"><span class="blind">신한투자증권</span></h1>
                     <div class="userInfo">
                         <strong class="name">홍길동</strong>
-                        <button type="button" class="btn_iconLogout"><span>로그아웃</span></button>
+                        <span class="subText">활기찬 하루 시작하세요.</span>
+                        <button type="button" class="btn_textLogout"><span>로그아웃</span></button>
                     </div>
                     <div class="utilArea">
                         <button type="button" class="btn_iconHome"><i class="blind">홈으로</i></button>
@@ -48,17 +49,43 @@
                 <div class="menuCont">
                     <div class="kyeMenu">
                         <ul class="kyeMenuList">
-                            <li><a href="#">계좌개설</a></li>
-                            <li><a href="#">퇴직연금</a></li>
-                            <li><a href="#">알파TV</a></li>
+                            <li class="key01">
+                                <a href="#">
+                                    <span class="txt">혜택 가득한</span>
+                                    <strong class="tit">계좌개설</strong>
+                                </a>
+                            </li>
+                            <li class="key02">
+                                <a href="#">
+                                    <span class="txt">든든한 노후보장</span>
+                                    <strong class="tit">퇴직연금</strong>
+                                </a>
+                            </li>
+                            <li class="key03">
+                                <a href="#">
+                                    <span class="txt">재미있는 투자</span>
+                                    <strong class="tit">알파TV</strong>
+                                </a>
+                            </li>
                         </ul>
                     </div>
+                    
                     <div class="naviArea">
+                        <!--태플릿일 경우 : 검색-->
+                        <div class="searchWrap">
+                            <label for="search" class="blind">검색</label>
+                            <span class="searchForm">
+                                <input type="text" id="search" placeholder="검색어를 입력해주세요">
+                                <button type="button" class="btn_iconSearch"><i class="blind">검색</i></button>
+                            </span>
+                        </div>
+                        <!--//태플릿일 경우 : 검색-->
+
                         <div class="depth1Area">
                             <ul class="menuList">
-                                <li><a href="#">공모주/청약</a></li>
+                                <li class="active"><a href="#">공모주/청약</a></li>
                                 <li><a href="#">계좌개설</a></li>
-                                <li class="active"><a href="#">투자정보</a></li>
+                                <li><a href="#">투자정보</a></li>
                                 <li><a href="#">증시동향</a></li>
                                 <li><a href="#">금융상품</a></li>
                                 <li><a href="#">안내/서비스</a></li>
@@ -70,44 +97,137 @@
                             <div class="menuListBox">
                                 <strong class="title">공모주/청약</strong>
                                 <ul class="menuList">
-                                    <li><a href="#">공모주청약 일정</a></li>
-                                    <li class="selected"><a href="#">공모주청약 가이드</a></li>
+                                    <li><a href="#" class="depth2Title">공모주청약 일정</a></li>
+                                    <li class="selected"><a href="#" class="depth2Title">공모주청약 가이드</a></li>
                                 </ul>
                             </div>
                             <div class="menuListBox">
                                 <strong class="title">계좌개설</strong>
                                 <ul class="menuList">
-                                    <li><a href="#" target="_blank">계좌개설</a></li>
-                                    <li><a href="#">자녀 계좌개설</a></li>
-                                    <li><a href="#">계좌번호 찾기</a></li>
+                                    <li><a href="#" class="depth2Title" target="_blank">계좌개설</a></li>
+                                    <li><a href="#" class="depth2Title">자녀 계좌개설</a></li>
+                                    <li><a href="#" class="depth2Title">계좌번호 찾기</a></li>
                                 </ul>
                             </div>
                             <div class="menuListBox">
                                 <strong class="title">투자정보</strong>
                                 <ul class="menuList">
-                                    <li><a href="#">돈이되는 이야기</a></li>
+                                    <li><a href="#" class="depth2Title">돈이되는 이야기</a></li>
                                     <li>
-                                        <a href="#" class="depth2Title depth3">신한 리서치</a>
+                                        <a href="#" class="depth2Title active">신한 리서치</a>
                                         <ul class="depth3List">
                                             <li><a href="#">애널리스트 소개</a></li>
-                                            <li><a href="#">신한 리포트</a></li>
+                                            <li class="selected"><a href="#">신한 리포트</a></li>
                                         </ul>
                                     </li>
-                                    
                                     <li>
-                                        <a href="#">쉬운 투자</a>
+                                        <a href="#" class="depth2Title">쉬운 투자</a>
                                         <ul class="depth3List">
-                                            <li><a href="#">애널리스트 소개</a></li>
-                                            <li><a href="#">신한 리포트</a></li>
+                                            <li><a href="#">주식용어 가이드</a></li>
+                                            <li><a href="#">POLL&TALK</a></li>
+                                            <li><a href="#">알파TV</a></li>
+                                            <li><a href="#">소수점투자</a></li>
+                                            <li><a href="#">정기투자</a></li>
+                                            <li><a href="#">콤보왕</a></li>
+                                            <li><a href="#">토론방</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">계좌번호 찾기</a></li>
+                                    <li><a href="#" class="depth2Title">투자플러스</a></li>
+                                </ul>
+                            </div>
+                            <div class="menuListBox">
+                                <strong class="title">증시동향</strong>
+                                <ul class="menuList">
+                                    <li><a href="#" class="depth2Title">지수/환율/시장지표</a></li>
+                                </ul>
+                            </div>
+                            <div class="menuListBox">
+                                <strong class="title">금융상품</strong>
+                                <ul class="menuList">
+                                    <li>
+                                        <a href="#" class="depth2Title">채권</a>
+                                        <ul class="depth3List">
+                                            <li><a href="#">채권 투자하기</a></li>
+                                            <li><a href="#">채권 가이드</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="depth2Title">펀드</a>
+                                        <ul class="depth3List">
+                                            <li><a href="#">펀드 투자하기</a></li>
+                                            <li><a href="#">펀드 가이드</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="depth2Title">ELS/DLS</a>
+                                        <ul class="depth3List">
+                                            <li><a href="#">ELS/DLS 투자하기</a></li>
+                                            <li><a href="#">ELS/DLS 가이드</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="depth2Title">랩</a>
+                                        <ul class="depth3List">
+                                            <li><a href="#">랩 투자하기</a></li>
+                                            <li><a href="#">랩 가이드</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="depth2Title">연금</a>
+                                        <ul class="depth3List">
+                                            <li><a href="#">연금저축 투자하기</a></li>
+                                            <li><a href="#">연금저축 가이드</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="depth2Title">ISA</a>
+                                        <ul class="depth3List">
+                                            <li><a href="#">ISA투자 가이드</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="menuListBox">
+                                <strong class="title">안내/서비스</strong>
+                                <ul class="menuList">
+                                    <li><a href="#" class="depth2Title">고객상담안내</a></li>
+                                    <li><a href="#" class="depth2Title">영업점안내</a></li>
+                                    <li><a href="#" class="depth2Title">업무시간안내</a></li>
+                                    <li><a href="#" class="depth2Title">수수료안내</a></li>
+                                    <li><a href="#" class="depth2Title">트레이딩채널 안내</a></li>
+                                    <li><a href="#" class="depth2Title">신한그룹 서비스 안내</a></li>
+                                    <li>
+                                        <a href="#" class="depth2Title">거래 유의사항 안내</a>
+                                        <ul class="depth3List">
+                                            <li><a href="#">모바일거래 유의사항</a></li>
+                                            <li><a href="#">해외주식 유의사항</a></li>
+                                            <li><a href="#">해외주식 시장안내</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#" class="depth2Title">자주하는 질문</a></li>
+                                </ul>
+                            </div>
+                            <div class="menuListBox">
+                                <strong class="title">공지/이벤트 </strong>
+                                <ul class="menuList">
+                                    <li><a href="#" class="depth2Title">공지사항</a></li>
+                                    <li><a href="#" class="depth2Title">이벤트</a></li>
+                                </ul>
+                            </div>
+                            <div class="menuListBox">
+                                <strong class="title">소비자 보호포털</strong>
+                                <ul class="menuList">
+                                    <li><a href="#" class="depth2Title">금융소비자보호 체계</a></li>
+                                    <li><a href="#" class="depth2Title">소비자보호제도</a></li>
+                                    <li><a href="#" class="depth2Title">민원공시</a></li>
+                                    <li><a href="#" class="depth2Title">금융투자상품 유의사항</a></li>
+                                    <li><a href="#" class="depth2Title">보이스피싱 피해 예방</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btnClose" onclick="fnHidePop('asideMenu')"><i class="">닫기</i></button>
+                <button type="button" class="btn_popBottomClose" onclick="fnHidePop('asideMenu')"><i class="blind">닫기</i></button>
             </div>
         </aside>
         <!--//aside-->

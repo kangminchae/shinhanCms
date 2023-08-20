@@ -8,9 +8,9 @@
 .mb20 {margin-bottom:20px;}
 .mb40 {margin-bottom:40px;}
 /* 레이아웃 수정 */
-#header .logo {text-align:center;line-height:40px;height:100%;padding-left:30px;}
+#header .logo {display:flex;text-align:center;line-height:40px;height:100%;padding-left:30px;align-items:center;justify-content:center;}
 #header .logo > span {display:inline-block;font-size:0;height:17px;vertical-align:middle;}
-#header .logo > span::before {content:"";display:inline-block;background:url(../../images/logo.png) no-repeat;background-size:132px 21px;width:132px;height:21px;}
+#header .logo > span::before {content:"";display:inline-block;background:url(../../asset/images/common/logo.svg) no-repeat;background-size:132px 21px;width:132px;height:21px;}
 
 /* GNB */
 .nav-gnb {display:inline-block;vertical-align:middle;height:50px;line-height:48px;margin-left:50px;}
@@ -36,7 +36,7 @@
 .btn-top a {color:#fff !important;text-decoration:none;}
 
 /* 색상샘플 */
-.guide-color {display:inline-block;line-height:20px;text-align:center;color:#fff;width:80px;border-radius:5px;padding:10px 5px;}
+.guide-color {display:flex;width:120px;height:120px;line-height:20px;color:#fff;border-radius:5px;padding:10px 5px;align-items:center;justify-content:center;text-align:center;font-size:14px;font-weight:400;}
 .red {color: #990000;}
 .green {color: #090;}
 .blue {color: #06C;}
@@ -50,6 +50,10 @@ h3.tit-guide {margin:50px 0 10px;background:#ddd;color:#000;border-top:1px solid
 .tit-guide + h3.tit-guide {margin-top:10px;}
 div.tit-page + .tit-guide {margin-top:0;}
 #content > h1 + .tit-guide {margin-top:0;}
+
+.colorBox {display:flex;flex-flow:wrap;}
+.colorBox .guide-color {margin:0 16px 16px 0}
+.title {display:block;font-size:20px;font-weight:700;color:#111;margin-bottom:15px;}
 
 /* ---------------------------------------------------------
 	CONTENT 공통 : 타이틀 및 텍스트/문구
@@ -120,19 +124,19 @@ p.desc-guide:before, .desc-guide > li:before {content:'';position:absolute;left:
 	CONTENT 공통 : 테이블유형1
 --------------------------------------------------------- */
 /* 기본  */
-.tbl-data1 {overflow:hidden;width:100%;margin:5px 0 0;border:1px solid #a7a7a7;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.tbl-data1 {overflow:hidden;width:100%;margin:15px 0 0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}/*border:1px solid #a7a7a7;*/
 .tbl-data1 table {width:100%;table-layout:fixed;}
 .tbl-data1 table th, .tbl-data1 table td {border-top:1px solid #dbdbdb;vertical-align:middle;text-align:left;line-height:13px;background:#fff;}
-.tbl-data1 table th {position:relative;height:26px;padding:0 5px;background-color:#f6f6f6;text-align:right;font-size:12px;line-height:13px;}
+.tbl-data1 table th {position:relative;height:26px;padding:0 5px;background-color:#f6f6f6;text-align:center;font-size:12px;line-height:13px;}
 .tbl-data1 table th .sub {position:absolute;left:7px;top:4px;}
 .tbl-data1 table th .sub.label-form {top:50%;margin-top:-12px;}
 .tbl-data1 table td {height:20px;padding:3px 6px;}
 /*.tbl-data1 table td + td {border-left:1px solid #dbdbdb;}*/
-.tbl-data1 table thead th, .tbl-data1 table thead ~ tbody th, .tbl-data1 table thead ~ tbody td {text-align:center;border-left:0;border-right:1px solid #dbdbdb;}
+/* .tbl-data1 table thead th, .tbl-data1 table thead ~ tbody th, .tbl-data1 table thead ~ tbody td {text-align:center;border-left:0;border-right:1px solid #dbdbdb;} */
 .tbl-data1 table tr th:last-child, .tbl-data1 table tr td:last-child {border-right:0;}
-.tbl-data1 table thead th {text-align:center;}
+.tbl-data1 table thead th {text-align:left;font-size:18px !important;font-weight:bold;}
 .tbl-data1 > table > thead tr:first-child > th, .tbl-data1 > table > tbody > tr:first-child > th, .tbl-data1 > table > tbody > tr:first-child > td {border-top:0;}
-.tbl-data1 > table > thead ~ tbody > tr:first-child > th, .tbl-data1 > table > thead ~ tbody > tr:first-child > td {border-top:1px solid #dbdbdb;}
+/* .tbl-data1 > table > thead ~ tbody > tr:first-child > th, .tbl-data1 > table > thead ~ tbody > tr:first-child > td {border-top:1px solid #dbdbdb;} */
 
 .page-list .tbl-data1 table tr:nth-child(even) {background-color:#ddd;}
 
@@ -185,7 +189,7 @@ p.desc-guide:before, .desc-guide > li:before {content:'';position:absolute;left:
 .tbl-data1.sorttable tr.delete td {text-decoration:line-through;color:#999;}
 .tbl-data1.sorttable tr.waiting td {background-color:#ffe8c4;}
 .tbl-data1.sorttable tr.line td {border-top:2px solid #dbdbdb;}
-.tbl-data1.guide table th, .tbl-data1.guide table td {height:35px;padding:5px 10px;font-size:15px;}
+.tbl-data1.guide table th, .tbl-data1.guide table td {height:55px;padding:20px;font-size:18px;line-height:1.7;font-weight:500;}
 
 .count {margin-bottom:10px; text-align:right; font-size:11px;}
 .count span {margin-left:8px;}
@@ -207,7 +211,7 @@ tr.del td:last-child {opacity:1;text-decoration:none;}
 fieldset.guide {border:1px solid #333;margin:20px 0;padding:10px;font-size:12px;line-height:20px;letter-spacing:0;}
 fieldset.guide fieldset.guide {margin:5px;}
 fieldset.guide fieldset {margin:5px 0 0;}
-fieldset.guide legend {position:static !important;left:0 !important;top:0 !important;width:auto !important;height:auto !important;padding:0 4px !important;visibility:visible !important;font-size:12px !important;line-height:20px !important;text-indent:0 !important;font-weight:bold;}
+fieldset.guide legend {position:static !important;left:0 !important;top:0 !important;width:auto !important;height:auto !important;padding:0 4px !important;visibility:visible !important;font-size:14px !important;line-height:20px !important;text-indent:0 !important;font-weight:500;}
 .guide2 {display:flex;}
 .guide2 .leftGuide {width:200px;}
 
