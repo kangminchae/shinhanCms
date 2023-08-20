@@ -19,8 +19,8 @@
 .nav-gnb ul > li a {position:relative;display:block;padding:10px 15px;font-size:14px;color:#000; line-height:30px;font-family:Tahoma,"맑은 고딕", "Malgun Gothic", Arial, sans-serif;font-weight:bold;text-decoration:none;}
 .nav-gnb ul > li a:hover, .nav-gnb ul > li a:focus {color:#3472c5;text-decoration:none;}
 .nav-gnb ul > li.active a {color:#3472c5;}
-.nav-gnb ul > li.active > a::before {content:"";display:block;width:100%;position:absolute;bottom:0;left:0;border-bottom:2px #3472c5 solid;}
-.nav-gnb ul > li.active a:after {content:'';position:absolute;left:50%;bottom:0;margin:0 0 0 -5px;width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:6px solid #3472c5;}
+/* .nav-gnb ul > li.active > a::before {content:"";display:block;width:100%;position:absolute;bottom:0;left:0;border-bottom:2px #3472c5 solid;}
+.nav-gnb ul > li.active a:after {content:'';position:absolute;left:50%;bottom:0;margin:0 0 0 -5px;width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:6px solid #3472c5;} */
 
 #wrap #container .content {padding-left:0;}
 #container .content {position:absolute;top:50px;left:0;width:100%;overflow:hidden;}
@@ -42,13 +42,12 @@
 .blue {color: #06C;}
 
 /* 가이드용 타이틀 */
-.tit-guide {position:relative;margin:45px 0 10px;padding:5px 0 7px 10px;background:#565a5f;color:#fff;font-weight:normal;}
+.tit-guide {position:relative;margin:45px 0 10px;padding:5px 0 7px 0;background:#565a5f;color:#fff;font-weight:normal;}
 .tit-guide span {position:absolute;right:10px;top:6px;}
 .tit-guide span:before {content:'[ ';}
 .tit-guide span:after {content:' ]';}
-h3.tit-guide {margin:50px 0 10px;background:#ddd;color:#000;border-top:1px solid #666;font-weight:bold;}
+h3.tit-guide {margin:50px 0 10px;background:transparent;color:#3B3B41;;font-weight:500;}
 .tit-guide + h3.tit-guide {margin-top:10px;}
-div.tit-page + .tit-guide {margin-top:0;}
 #content > h1 + .tit-guide {margin-top:0;}
 
 .colorBox {display:flex;flex-flow:wrap;}
@@ -59,13 +58,16 @@ div.tit-page + .tit-guide {margin-top:0;}
 	CONTENT 공통 : 타이틀 및 텍스트/문구
 --------------------------------------------------------- */
 /* 페이지타이틀 */
-div.tit-page {position:relative;margin:15px 20px 15px 0;height:22px; padding:0 0 0 12px; color:#333; text-align:left;}
-div.tit-page h1 {display:inline-block;font-size:16px;line-height:22px;vertical-align:top;}
-div.tit-page h1 span:before {content:'(';}
+div.tit-page {position:relative;margin:15px 20px 30px 0; color:#333; text-align:left;}
+div.tit-page ~ div.tit-page {margin-top:80px}
+div.tit-page h1 {display:flex;flex-direction:column;font-size:20px;font-weight:700;line-height:22px;vertical-align:top;}
+div.tit-page h1::after {content:'';width:25px;height:3px;background-color:#2A3FEC;margin-top:8px}
+
+/* div.tit-page h1 span:before {content:'(';}
 div.tit-page h1 span:after {content:')';}
 div.tit-page:before, div.tit-page:after {content:'';position:absolute;left:0;top:2px;}
 div.tit-page:before {width:8px;height:19px;background:#3472c5;}
-div.tit-page:after {width:5px;height:16px;margin:0 0 1px 1px;}
+div.tit-page:after {width:5px;height:16px;margin:0 0 1px 1px;} */
 div.tit-page .sub {position:absolute;right:0;bottom:0;}
 div.tit-page .label-star {margin-top:-1px;vertical-align:top;}
 
@@ -189,7 +191,7 @@ p.desc-guide:before, .desc-guide > li:before {content:'';position:absolute;left:
 .tbl-data1.sorttable tr.delete td {text-decoration:line-through;color:#999;}
 .tbl-data1.sorttable tr.waiting td {background-color:#ffe8c4;}
 .tbl-data1.sorttable tr.line td {border-top:2px solid #dbdbdb;}
-.tbl-data1.guide table th, .tbl-data1.guide table td {height:55px;padding:20px;font-size:18px;line-height:1.7;font-weight:500;}
+.tbl-data1.guide table th, .tbl-data1.guide table td {height:55px;padding:20px;font-size:16px;line-height:1.7;font-weight:500;}
 
 .count {margin-bottom:10px; text-align:right; font-size:11px;}
 .count span {margin-left:8px;}

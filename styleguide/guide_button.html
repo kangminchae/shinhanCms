@@ -25,7 +25,7 @@
         .tbl-data1 table tbody th {font-weight:400;color:#666}
         .tbl-data1 table td {border-bottom:1px solid #ebebeb;}
 		table td {line-height:1.7;}
-        .list li {display:flex;height:80px;align-items:center;padding:15px 0;}
+        .list li {display:flex;height:68px;align-items:center;padding:10px 0;}
         .list.Size li {align-items:flex-start;}
         table .title {font-size:16px;font-weight:500;}
         .list button {width:50%;}
@@ -51,16 +51,37 @@
 	<!-- //aside -->
 
 	<div class="content">
-	<!-- # 페이지타이틀 # -->
-	<div class="tit-page">
-		<h1>마크업가이드 - BUTTON</h1>
-	</div>
-
 	<!-- # 기본버튼(업무버튼) # -->
-	<h2 class="tit-guide">BUTTON</h2>
-
+	<div class="tit-page">
+		<h1>Buttons</h1>
+	</div>
 	<!--기본-->
-	<!-- <h3 class="tit-guide">Button : Default</h3> -->
+
+	<!--codeView-->
+    <h3 class="tit-guide">작성순서 - btn + Hierarchy(pri or sec or line) + Size(mi or sm)</h3>
+	<div class="guide-code mt20">
+		<pre class="syntax brush-css">
+
+            &lt;!--Large--&gt;
+			&lt;button type="button" class="btn pri"&gt;&lt;span&gt;확인&lt;/span&gt;&lt;/button&gt;
+            &lt;button type="button" class="btn sec"&gt;&lt;span&gt;확인&lt;/span&gt;&lt;/button&gt;
+            &lt;button type="button" class="btn line"&gt;&lt;span&gt;확인&lt;/span&gt;&lt;/button&gt;
+
+            &lt;!--Medium--&gt;
+			&lt;button type="button" class="btn pri mi"&gt;&lt;span&gt;확인&lt;/span&gt;&lt;/button&gt;
+            &lt;button type="button" class="btn sec mi"&gt;&lt;span&gt;확인&lt;/span&gt;&lt;/button&gt;
+            &lt;button type="button" class="btn line mi"&gt;&lt;span&gt;확인&lt;/span&gt;&lt;/button&gt;
+
+            &lt;!--Small--&gt;
+			&lt;button type="button" class="btn pri sm"&gt;&lt;span&gt;확인&lt;/span&gt;&lt;/button&gt;
+            &lt;button type="button" class="btn sec sm"&gt;&lt;span&gt;확인&lt;/span&gt;&lt;/button&gt;
+            &lt;button type="button" class="btn line sm"&gt;&lt;span&gt;확인&lt;/span&gt;&lt;/button&gt;
+
+		</pre>
+	</div>
+	<!--//codeView-->
+
+    <h3 class="tit-guide">Button Style</h3>
     <div class="tbl-data1 guide">
 		<table>
 			<caption>기본정보</caption>
@@ -84,7 +105,7 @@
 					<th>
                         <strong class="title">&nbsp;</strong>
 						<ul class="list state">
-                            <li>default</li>
+                            <li>Default</li>
                             <li>Hover/pressed</li>
                             <li>Disabled</li>
                         </ul>
@@ -138,7 +159,7 @@
 					<th>
                         <strong class="title">&nbsp;</strong>
 						<ul class="list state">
-                            <li>default</li>
+                            <li>Default</li>
                             <li>Hover/pressed</li>
                             <li>Disabled</li>
                         </ul>
@@ -192,7 +213,7 @@
 					<th>
                         <strong class="title">&nbsp;</strong>
 						<ul class="list state">
-                            <li>default</li>
+                            <li>Default</li>
                             <li>Hover/pressed</li>
                             <li>Disabled</li>
                         </ul>

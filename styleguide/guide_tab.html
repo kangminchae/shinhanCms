@@ -11,131 +11,145 @@
 	<script src="js/jquery.syntax/jquery.syntax.js"></script>
 	<script src="js/jquery.syntax/jquery.syntax.cache.js"></script>
 	<script type="text/javascript" src="js/guide.js"></script>
-
-
 	<script>
 	$(document).ready(function(){
 		snbMarkup();
 	});
 	</script>
+	<style>
+		.sampleArea .tabMenu,
+		.sampleArea .subTabMenu {position:relative;top:0;}
+		.sampleArea .tabMenu .moreArea.on {position:absolute;top:10px}
+	</style>
 	</head>
-  <body>
-  <div id="wrap">
-  	<!-- aside -->
-  	<div id="aside">
-  		<!-- # 좌측컨텐츠 # -->
-  		<div class="wrap-aside">
-  			<!-- 사용자정보영역 -->
-  			<div class="box-info">
-  			</div>
-  			<!-- 네비게이션 : SNB -->
-  			<div class="nav-snb"></div>
-  		</div>
-  		<!-- # 컨트롤 # -->
-  		<div class="area-control">
-  			<a href="#none">좌측영역 펼침/닫기</a>
-  		</div>
-  	</div>
-  	<!-- //aside -->
+	<body>
+<div id="wrap">
+	<!-- aside -->
+	<div id="aside">
+		<!-- # 좌측컨텐츠 # -->
+		<div class="wrap-aside">
+			<!-- 사용자정보영역 -->
+			<div class="box-info">
+			</div>
+			<!-- 네비게이션 : SNB -->
+			<div class="nav-snb"></div>
+		</div>
+		<!-- # 컨트롤 # -->
+		<div class="area-control">
+			<a href="#none">좌측영역 펼침/닫기</a>
+		</div>
+	</div>
+	<!-- //aside -->
 
-  	<div class="content">
-  	<!-- # 페이지타이틀 # -->
-  	<div class="tit-page">
-  		<h1>마크업가이드 - TAB</h1>
-  	</div>
+	<div class="content">
+	<!-- # 페이지타이틀 # -->
+	<script type="text/javascript" src="../asset/js/common_ui.js"></script>
 
-  	<!-- # 페이지타이틀 -->
-  	<h2 class="tit-guide">TAB STYLE</h2>
+	<!--기본-->
+	<div class="tit-page">
+		<h1>Tabs</h1>
+	</div>
+	<h3 class="tit-guide">Menu Tab</h3>
+    <div class="sampleArea">
+		<div class="tabWrap">
+			<div class="tabMenu">
+				<div class="menuFullArea">
+					<strong class="title">탭메뉴 전체보기</strong>
+					<div class="moreArea on">
+						<button type="button" class="btnMenu_more"><i class="blind">메뉴더보기</i></button>
+					</div>
+				</div>
+				<ul class="tabMenuList">
+				  <li class="active"><a role="tablist">국내</a></li>
+				  <li><a role="tablist">해외</a></li>
+				  <li><a role="tablist">휴장일</a></li>
+				  <li><a role="tablist">원자재</a></li>
+				  <li><a role="tablist">Menu5</a></li>
+				  <li><a role="tablist">Menu6</a></li>
+				  <li><a role="tablist">Menu7</a></li>
+				  <li><a role="tablist">Menu8</a></li>
+				  <li><a role="tablist">Menu9</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-    <h3 class="tit-guide">subMenu Tab</h3>
-  	<div class="guide-code">
-  	<pre class="syntax brush-css">
-		&lt;div class="tabWrap subCon_tabWrap"&gt;
-			&lt;div class="tabHeader"&gt;
-				&lt;ul class="tabMenu"&gt;
-					&lt;li rel="subTabMenu1"&gt;
-						&lt;a href="#none" role="tab"&gt;거래처관리&lt;/a&gt;
-						&lt;button type="button" class="btnDel" title="탭 닫기"&gt;&lt;span class="blind"&gt;탭 닫기&lt;/span&gt;&lt;/button&gt;
-					&lt;/li&gt;
-					&lt;li rel="subTabMenu2"&gt;
-						&lt;a href="#none" role="tab"&gt;회수처리&lt;/a&gt;
-						&lt;button type="button" class="btnDel" title="탭 닫기"&gt;&lt;span class="blind"&gt;탭 닫기&lt;/span&gt;&lt;/button&gt;
-					&lt;/li&gt;
+	<!--codeView-->
+	<div class="guide-code mt20">
+		<pre class="syntax brush-css">
+
+			&lt;div class="tabMenu"&gt;
+				&lt;div class="menuFullArea"&gt;
+					&lt;strong class="title"&gt;탭메뉴 전체보기&lt;/strong&gt;
+					&lt;div class="moreArea on"&gt;
+						&lt;button type="button" class="btnMenu_more"&gt;&lt;i class="blind"&gt;메뉴더보기&lt;/i&gt;&lt;/button&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;ul class="tabMenuList"&gt;
+				  &lt;li class="active"&gt;&lt;a role="tablist"&gt;국내&lt;/a&gt;&lt;/li&gt;
+				  &lt;li&gt;&lt;a role="tablist"&gt;해외&lt;/a&gt;&lt;/li&gt;
+				  &lt;li&gt;&lt;a role="tablist"&gt;휴장일&lt;/a&gt;&lt;/li&gt;
+				  &lt;li&gt;&lt;a role="tablist"&gt;원자재&lt;/a&gt;&lt;/li&gt;
+				  &lt;li&gt;&lt;a role="tablist"&gt;Menu5&lt;/a&gt;&lt;/li&gt;
+				  &lt;li&gt;&lt;a role="tablist"&gt;Menu6&lt;/a&gt;&lt;/li&gt;
+				  &lt;li&gt;&lt;a role="tablist"&gt;Menu7&lt;/a&gt;&lt;/li&gt;
+				  &lt;li&gt;&lt;a role="tablist"&gt;Menu8&lt;/a&gt;&lt;/li&gt;
+				  &lt;li&gt;&lt;a role="tablist"&gt;Menu9&lt;/a&gt;&lt;/li&gt;
 				&lt;/ul&gt;
 			&lt;/div&gt;
-			&lt;div class="tabContainer"&gt;
-				&lt;div class="tabContent" id="subTabMenu1"&gt;
-					&lt;a href="#"&gt;&lt;h3 class="blind"&gt;거래처 관리 탭 상세&lt;/h3&gt;&lt;/a&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-  	</pre>
-  	</div>
 
-  	<!-- Sample -->
-    <div class="tabWrap subCon_tabWrap">
-		<div class="tabHeader">
-			<ul class="tabMenu">
-				<li rel="subTabMenu1">
-					<a href="#none" role="tab">거래처관리</a>
-					<button type="button" class="btnDel" title="탭 닫기"><span class="blind">탭 닫기</span></button>
-				</li>
-				<li rel="subTabMenu2">
-					<a href="#none" role="tab">회수처리</a>
-					<button type="button" class="btnDel" title="탭 닫기"><span class="blind">탭 닫기</span></button>
-				</li>
-			</ul>
-		</div>
-		<div class="tabContainer">
-			<div class="tabContent" id="subTabMenu1">
-				<a href="#"><h3 class="blind">거래처 관리 탭 상세</h3></a>
-				<div class="full_height_wrap">
-					거래처관리 상세내용
-				</div>
+		</pre>
+	</div>
+	<!--//codeView-->
+	<!--//기본-->
+
+	<!--기본-->
+	<h3 class="tit-guide">SubTab - 이중 tab일 경우</h3>
+    <div class="sampleArea">
+		<div class="tabWrap">
+			<!--subTab-->
+			<div class="subTabMenu">
+				<ul class="tabMenuList">
+					<li class="active"><a role="tablist">이슈</a></li>
+					<li><a role="tablist">지표</a></li>
+					<li><a role="tablist">신규상장/공모청약</a></li>
+					<li><a role="tablist">실적발표</a></li>
+					<li><a role="tablist">종목이슈</a></li>
+				</ul>
 			</div>
+			<!--//subTab-->
 		</div>
 	</div>
-  	<!-- //Sample -->
 
-	  <h3 class="tit-guide">popup > menu Tab</h3>
-  	<div class="guide-code">
-  	<pre class="syntax brush-css">
-		&lt;div class="tabWrap"&gt;
-			&lt;ul class="tabMenu"&gt;
-				&lt;li rel="tabMenu1"&gt;&lt;a href="#none" role="tab"&gt;사용자정보&lt;/a&gt;&lt;/li&gt;
-				&lt;li rel="tabMenu2"&gt;&lt;a href="#none" role="tab"&gt;사업자정보&lt;/a&gt;&lt;/li&gt;
-			&lt;/ul&gt;
-			&lt;div class="tabContainer"&gt;
-				&lt;div class="tabcontents" id="tabMenu1"&gt;
-					&lt;a href="#"&gt;&lt;h3 class="blind"&gt;사용자정보 상세&lt;/h3&gt;&lt;/a&gt;
-				&lt;/div&gt;
+	<!--codeView-->
+	<div class="guide-code mt20">
+		<pre class="syntax brush-css">
+
+			&lt;!--subTab--&gt;
+			&lt;div class="subTabMenu"&gt;
+				&lt;ul class="tabMenuList"&gt;
+					&lt;li class="active"&gt;&lt;a role="tablist"&gt;이슈&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a role="tablist"&gt;지표&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a role="tablist"&gt;신규상장/공모청약&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a role="tablist"&gt;실적발표&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a role="tablist"&gt;종목이슈&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
 			&lt;/div&gt;
-		&lt;/div&gt;
-  	</pre>
-  	</div>
+			&lt;!--//subTab--&gt;
 
-  	<!-- Sample -->
-	<div class="tabWrap">
-		<ul class="tabMenu">
-			<li rel="tabMenu1"><a href="#none" role="tab">사용자정보</a></li>
-			<li rel="tabMenu2"><a href="#none" role="tab">사업자정보</a></li>
-		</ul>
-		<div class="tabContainer">
-			<div class="tabcontents" id="tabMenu1">
-				<a href="#none"><h3 class="blind">사용자정보 상세</h3></a>
-				사용자정보 상세 contents 영역
-			</div>
-		</div>
+		</pre>
 	</div>
-  	<!-- //Sample -->
+	<!--//codeView-->
+	<!--//기본-->
 
-  </div>
 
-  </div>
-  <script type="text/javascript">
-  //<!--
-  	$.syntax({ theme: 'grey', layout: 'fixed', replace: true});
-  //-->
-  </script>
-  </body>
+</div>
+
+</div>
+<script type="text/javascript">
+//<!--
+	$.syntax({ theme: 'grey', layout: 'fixed', replace: true});
+//-->
+</script>
+</body>
 </html>

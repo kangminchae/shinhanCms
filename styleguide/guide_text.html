@@ -22,6 +22,8 @@
 		.spoqa {font-family:'Spoqa Han Sans Neo';font-size:15px;}
 
 		table td {line-height:1.7;}
+		.flex {display:flex;align-items:flex-start;}
+		.flex > strong {margin-right:60px;}
 	</style>
 	</head>
 	<body>
@@ -45,12 +47,12 @@
 
 	<div class="content">
 	<!-- # 페이지타이틀 # -->
-	<div class="tit-page">
-		<h1>마크업가이드 - TEXT / COLOR</h1>
-	</div>
+	
 
 	<!-- # 기본버튼(업무버튼) # -->
-	<h2 class="tit-guide">TYPOGRAPHY</h2>
+	<div class="tit-page">
+		<h1>Typography - Spoqa Han Sans Neo</h1>
+	</div>
 
 	<!--font-->
 	<h3 class="tit-guide">Font Type</h3>
@@ -60,21 +62,23 @@
 			<colgroup>
 				<col style="width:15%"/>
 				<col/>
-				<col style="width:15%"/>
-				<col/>
 			</colgroup>
 			<tbody>
 				<tr>
-					<th rowspan="3">Typeface</th>
-					<td rowspan="3"><strong class="spoqa" style="font-size:20px">Spoqa Han Sans Neo</strong></td>
-					<th rowspan="3">font-weight</th>
-					<td><strong class="spoqa" style="font-weight:400">Spoqa Regualr : 400</strong></td>
+					<th>Font Family</th>
+					<td>
+						<strong class="spoqa">Spoqa Han Sans Neo</strong>
+					</td>
 				</tr>
 				<tr>
-					<td><strong class="spoqa" style="font-weight:500">Spoqa Medium : 500</strong></td>
-				</tr>
-				<tr>
-					<td><strong class="spoqa" style="font-weight:600">Spoqa Bold : 700</strong></td>
+					<th>Font Weight</th>
+					<td>
+						<div class="flex">
+							<strong class="spoqa" style="font-weight:400">Regualr(400)<br>Spoqa Han Sans Neo</strong>
+							<strong class="spoqa" style="font-weight:500">Medium(500)<br>Spoqa Han Sans Neo Medium</strong>
+							<strong class="spoqa" style="font-weight:600">Bold(700)<br>Spoqa Han Sans Neo Bold</strong>
+						</div>
+					</td>
 				</tr>
 			</tbody>
 		</table>
@@ -143,7 +147,9 @@
 	<!--//font-->
 
 	<!--color-->
-	<h2 class="tit-guide">COLOR</h2>
+	<div class="tit-page">
+		<h1>Colors</h1>
+	</div>
 
 	<!-- <h3 class="tit-guide">Color Style</h3> -->
 	<div class="tbl-data1 guide">

@@ -188,8 +188,8 @@ select {display:none}
 .active .dim {opacity:1;visibility:visible;}
 
 /*select : listType*/
-.selectListWrap .dropdown-container {position:absolute;top:4.8rem;left:0;}
-.selectListWrap .dropdown-container.active {display:inline-flex;}
+.selectListWrap .dropdown-container {position:absolute;top:5.2rem;left:0;}
+.selectListWrap .dropdown-container.active {width:auto;}
 .selectListWrap .dropdown-select {font-size:1.5rem}
 .selectListWrap .dropdown-container .dropdown-select-ul {padding:0.8rem;border:1px #111 solid;border-radius:10px;box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.20);}
 .selectListWrap .dropdown-container .dropdown-select-ul li {padding:0.4rem 0.8rem;font-size:1.5rem;color:#B5B5BC;background-color:#fff;border-radius:5px;}
@@ -204,7 +204,7 @@ select {display:none}
 
 /*scrolltab*/
 .tabMenu,
-.subTabMenu {position:fixed;width:100%;overflow-x:auto;padding-top:2rem;background-color:#fff;z-index:1;transition:all 0.3s ease-in-out;top:5.2rem;border-bottom:1px #D6DBE8 solid;}
+.subTabMenu {position:fixed;top:5.2rem;width:100%;overflow-x:auto;padding-top:2rem;background-color:#fff;border-bottom:1px #D6DBE8 solid;transition:all 0.3s ease-in-out;z-index:1;}
 .tabMenu .moreArea {display:none;}
 .tabMenuList {display:flex;white-space:nowrap;}
 .tabMenuList li {height:3.6rem;padding:0 0 0 2rem;}
@@ -214,9 +214,9 @@ select {display:none}
 .tabMenuList li.active a:after {width:100%;}
 
 /*scrolltab : 메뉴전체보기*/
-.tabWrap.active .tabMenu {padding:2rem 1.8rem;transition:none;z-index:3;}
+.tabWrap.active .tabMenu {right:0;padding:2rem 1.8rem;transition:none;z-index:3;}
 .tabWrap.active .menuFullArea {display:flex;align-items:center;}
-.menuFullArea .title{display:none;}
+.menuFullArea .title {display:none;}
 .tabWrap.active .menuFullArea .title {display:flex;font-size:1.5rem;font-weight:500;}
 .tabMenu .moreArea.on {position:fixed;top:6.2rem;right:0;display:flex;height:4.2rem;padding:0 1.8rem 0 2.4rem;background:linear-gradient(to right,rgba(255,255,255,0),#fff 30%);align-items:center;justify-content:center;z-index:2;}
 .btnMenu_more {width:3.2rem;height:3.2rem;background:#fff url(../images/common/icon_tabMore.svg) no-repeat 50% 50%;background-size:2.4rem;border:1px #D6DBE8 solid;border-radius:4px;}
