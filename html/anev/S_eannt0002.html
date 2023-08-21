@@ -18,7 +18,7 @@
     <div id="wrap">
         <!--header-->
         <header id="header">
-            <div class="subMenuWrap"></div><!--[D]상세페이지 일 경우 타이틀 생략 : 영역은 확보해 두어야함-->
+            <div class="subMenuWrap"><h2 class="title">공지사항</h2></div>
             <div class="rightBox">
                 <button type="button" class="btn_share"><i class="blind">공유하기</i></button>
                 <button type="button" class="btn_iconMenu"><i class="blind">메뉴보기</i></button>
@@ -27,19 +27,21 @@
         <!--//header-->
         <!--container-->
         <div id="container">
-            <div class="contentsDetailWrap scroll">
+            <div class="contentsDetailWrap">
                 <div class="listArea contHeader">
-                    <strong class="categoryName">Category명</strong>
                     <dl class="listInner">
-                        <dt class="title">콘텐츠 제목이 구성되는 영역이며 1행이 초과되는 경우라도 말줄임표 없이 모두 출력합니다.</dt>
-                        <dd class="text">콘텐츠 부가설명이 구성되며 1행이 초과되는 경우라도 말줄임표 없이 모두 출력합니다.</dd>
+                        <dt class="title">[금융감독원 소비자경보]고수익보장, 특별저가매수기회 등 투자자 현혹하는 투자사기 주의</dt>
                         <dd class="add">
                             <div class="info">
                                 <span class="date">2023.08.01</span>
-                                <span class="name">임하연</span>
                             </div>
-                            <div class="btnWrap">
-                                <button type="button" class="btn sm line" onclick="fnShowPop('pop_detail')"><span>자세히보기</span></button>
+                            <button type="button" class="file arrow"><span>첨부파일</span></button>
+                            <div class="layerPop fileArea">
+                                <div class="fileList">
+                                    <a href="#" class="ellipsis">신한 Econ Check-UP.PDF</a>
+                                    <a href="#" class="ellipsis">의결권행사일정통지조회 - 20230821.xls</a>
+                                </div>
+                                <button class="btnClose"><span class="blind">첨부파일닫기</span></button>
                             </div>
                         </dd>
                     </dl>
@@ -65,23 +67,5 @@
         </div>
         <!--//container-->
     </div>
-    <!--[Full 팝업]자세히보기-->
-    <div class="popWrap popFull" id="pop_detail">
-        <div class="popInner">
-            <div class="popHeader">
-                <h2 class="popTitle">팝업 타이틀<br>말 줄임표없이 적용</h2>
-            </div>
-            <div class="popContent">
-                <div class="img">
-                    <img src="../images/thunb/img_thumb01.jpg" alt="이미지">
-                </div>
-            </div>
-            <div class="btnWrap float">
-                <button type="button" class="btn line"><span>확인</span></button>
-            </div>
-        </div>
-        <button type="button" class="btn_popBottomClose"><i class="blind">팝업닫기</i></button>
-    </div>
-    <!--//[Full 팝업]자세히보기-->
 </body>
 </html>

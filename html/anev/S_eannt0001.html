@@ -1,0 +1,272 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>모바일웹,콘텐츠관리시스템(CMS)</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../../asset/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../asset/css/swiper.css">
+    <script src="../../asset/js/jquery-3.7.0.min.js"></script>
+    <script src="../../asset/js/swiper.min.js"></script>
+    <script src="../../asset/js/common_ui.js"></script>
+</head>
+<body>
+    <div class="skipNav">
+        <a href="#container">본문바로가기</a>
+    </div>
+    <div id="wrap">
+        <!--header-->
+        <header id="header">
+            <div class="subMenuWrap">
+                <select name="depth2Menu" class="select_menuList" tabindex="-1" id="selectMenu">
+                    <option value="menu1" selected>공지사항</option>
+                    <option value="menu2">이벤트</option>
+                </select>
+            </div>
+            <div class="rightBox">
+                <button type="button" class="btn_iconMenu"><i class="blind">메뉴보기</i></button>
+            </div>
+        </header>
+        <!--//header-->
+
+        <!--container-->
+        <div id="container" class="scroll">
+            <div class="tabWrap">
+                <div class="tabMenu">
+                    <div class="menuFullArea">
+                        <strong class="title">탭메뉴 전체보기</strong>
+                        <div class="moreArea"><!--[D]tab목록 메뉴명이 길 경우 or 4개 이상일 경우 class="on"-->
+                            <button type="button" class="btnMenu_more"><i class="blind">메뉴더보기</i></button>
+                        </div>
+                    </div>
+                    <ul class="tabMenuList">
+                      <li class="active"><a role="tablist">공지</a></li>
+                      <li><a role="tablist">해외공지</a></li>
+                      <li><a role="tablist">상품공지</a></li>
+                      <li><a role="tablist">퇴직연금공지</a></li>
+                    </ul>
+                </div>
+                <div class="tabContainer">
+                    <!-- tabcontents : tab1 -->
+                    <div class="tabcontents" id="tab1">
+                        <div class="section">
+                            <!--list-->
+                            <ul class="generalList">
+                                <li class="arrowR">
+                                    <a href="#" class="listArea">
+                                        <dl class="listInner">
+                                            <dt class="title newA"><!--[D]최신공지 일 경우 class="newA" 추가-->
+                                                <span class="ellipsis">KB증권 업무 일시중단 안내</span>
+                                            </dt>
+                                            <dd class="add">
+                                                <div class="info">
+                                                    <span class="date">2023.08.10</span>
+                                                    <span class="product">청약</span>
+                                                </div>
+                                                <button type="button" class="file" disabled><span>첨부파일</span></button>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li class="arrowR">
+                                    <a href="#" class="listArea">
+                                        <dl class="listInner">
+                                            <dt class="title newS"><!--[D]최신공지 일 경우 class="newS" 추가-->
+                                                <span class="ellipsis">우리은행 업무 일시중단 안내</span>
+                                            </dt>
+                                            <dd class="add">
+                                                <div class="info">
+                                                    <span class="date">2023.08.01</span>
+                                                    <span class="product">조기상환</span>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li class="arrowR">
+                                    <a href="#" class="listArea">
+                                        <dl class="listInner">
+                                            <dt class="title">
+                                                <span class="ellipsis">운전면허증 진위확인 서비스 일시 중단 안내(8.13~14)</span>
+                                            </dt>
+                                            <dd class="add">
+                                                <div class="info">
+                                                    <span class="date">2023.08.01</span>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li class="arrowR">
+                                    <a href="#" class="listArea">
+                                        <dl class="listInner">
+                                            <dt class="title">
+                                                <span class="ellipsis">[금융감독원 소비자경보]고수익보장, 특별저가매수기회 등 투자자 현혹하는 투자사기 주의</span>
+                                            </dt>
+                                            <dd class="add">
+                                                <div class="info">
+                                                    <span class="date">2023.08.01</span>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li class="arrowR">
+                                    <a href="#" class="listArea">
+                                        <dl class="listInner">
+                                            <dt class="title">
+                                                <span class="ellipsis">운전면허증 진위확인 서비스 일시 중단 안내(8.13~14)</span>
+                                            </dt>
+                                            <dd class="add">
+                                                <div class="info">
+                                                    <span class="date">2023.08.01</span>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li class="arrowR">
+                                    <a href="#" class="listArea">
+                                        <dl class="listInner">
+                                            <dt class="title">
+                                                <span class="ellipsis">[금융감독원 소비자경보]고수익보장, 특별저가매수기회 등 투자자 현혹하는 투자사기 주의</span>
+                                            </dt>
+                                            <dd class="add">
+                                                <div class="info">
+                                                    <span class="date">2023.08.01</span>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li class="arrowR">
+                                    <a href="#" class="listArea">
+                                        <dl class="listInner">
+                                            <dt class="title">
+                                                <span class="ellipsis">운전면허증 진위확인 서비스 일시 중단 안내(8.13~14)</span>
+                                            </dt>
+                                            <dd class="add">
+                                                <div class="info">
+                                                    <span class="date">2023.08.01</span>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li class="arrowR">
+                                    <a href="#" class="listArea">
+                                        <dl class="listInner">
+                                            <dt class="title">
+                                                <span class="ellipsis">[금융감독원 소비자경보]고수익보장, 특별저가매수기회 등 투자자 현혹하는 투자사기 주의</span>
+                                            </dt>
+                                            <dd class="add">
+                                                <div class="info">
+                                                    <span class="date">2023.08.01</span>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //tabcontents : tab1 -->
+                    <div class="tabcontents">
+                        tab2
+                    </div>
+                    <div class="tabcontents">
+                        <!--[D]subTab 있을 경우-->
+                        <!--subTab : 상품공지 일 경우 노출-->
+                        <div class="subTabMenu">
+                            <ul class="tabMenuList">
+                                <li class="active"><a role="tablist">펀드</a></li>
+                                <li><a role="tablist">ELS</a></li>
+                                <li><a role="tablist">DLS</a></li>
+                                <li><a role="tablist">ISA</a></li>
+                            </ul>
+                        </div>
+                        <!--//subTab-->
+                        <!--subTab Contents-->
+                        <div class="subTabcontainer">
+                            <div class="subTabcontents">
+                                <div class="section">
+                                    <!--list-->
+                                    <ul class="generalList">
+                                        <li class="arrowR">
+                                            <a href="#" class="listArea">
+                                                <dl class="listInner">
+                                                    <dt class="title newA">
+                                                        <span class="ellipsis">KB증권 업무 일시중단 안내</span>
+                                                    </dt>
+                                                    <dd class="add">
+                                                        <div class="info">
+                                                            <span class="date">2023.08.10</span>
+                                                            <span class="file"><em class="blind">첨부파일</em></span>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                            </a>
+                                        </li>
+                                        <li class="arrowR">
+                                            <a href="#" class="listArea">
+                                                <dl class="listInner">
+                                                    <dt class="title newS"><!--[D]최신공지-->
+                                                        <span class="ellipsis">우리은행 업무 일시중단 안내</span>
+                                                    </dt>
+                                                    <dd class="add">
+                                                        <div class="info">
+                                                            <span class="date">2023.08.01</span>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                            </a>
+                                        </li>
+                                        <li class="arrowR">
+                                            <a href="#" class="listArea">
+                                                <dl class="listInner">
+                                                    <dt class="title">
+                                                        <span class="ellipsis">운전면허증 진위확인 서비스 일시 중단 안내(8.13~14)</span>
+                                                    </dt>
+                                                    <dd class="add">
+                                                        <div class="info">
+                                                            <span class="date">2023.08.01</span>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                            </a>
+                                        </li>
+                                        <li class="arrowR">
+                                            <a href="#" class="listArea">
+                                                <dl class="listInner">
+                                                    <dt class="title newS">
+                                                        <span class="ellipsis">[금융감독원 소비자경보]고수익보장, 특별저가매수기회 등 투자자 현혹하는 투자사기 주의</span>
+                                                    </dt>
+                                                    <dd class="add">
+                                                        <div class="info">
+                                                            <span class="date">2023.08.01</span>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="subTabcontents">
+                                subTab2
+                            </div>
+                        </div>
+                        <!--//subTab Contents-->
+                        <!--//[D]subTab 있을 경우-->
+                    </div>
+                    <div class="tabcontents">
+                        tab4
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//container-->
+    </div>
+</body>
+</html>

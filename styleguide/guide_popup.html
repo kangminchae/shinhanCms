@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>모바일웹,콘텐츠관리시스템(CMS) UI Guide</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="../asset/css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script src="js/jquery.1.11.0.min.js"></script>
+	<script src="js/jquery.ui.1.11.4.min.js"></script>
+	<script src="js/jquery.syntax/jquery.syntax.js"></script>
+	<script src="js/jquery.syntax/jquery.syntax.cache.js"></script>
+	<script type="text/javascript" src="js/guide.js"></script>
+	<script>
+	$(document).ready(function(){
+		snbMarkup();
+	});
+	</script>
+    <style>
+        .sampleArea .btn {width:30%}
+    </style>
+	</head>
+	<body>
+<div id="wrap">
+	<!-- aside -->
+	<div id="aside">
+		<!-- # 좌측컨텐츠 # -->
+		<div class="wrap-aside">
+			<!-- 사용자정보영역 -->
+			<div class="box-info">
+			</div>
+			<!-- 네비게이션 : SNB -->
+			<div class="nav-snb"></div>
+		</div>
+		<!-- # 컨트롤 # -->
+		<div class="area-control">
+			<a href="#none">좌측영역 펼침/닫기</a>
+		</div>
+	</div>
+	<!-- //aside -->
+
+	<div class="content">
+	<!-- # 페이지타이틀 # -->
+	<script type="text/javascript" src="../asset/js/common_ui.js"></script>
+    <div class="tit-page">
+		<h1>PopUp</h1>
+	</div>
+
+	<!--Full-->
+	<h3 class="tit-guide">Full</h3>
+    <div class="sampleArea">
+        <button type="button" class="btn pri" onclick="fnShowPop('pop_full')"><span>Full popUp</span></button>
+		<div class="popWrap popFull" id="pop_full">
+            <div class="popInner">
+                <div class="popHeader">
+                    <h2 class="popTitle">팝업 타이틀<br>말 줄임표없이 적용</h2>
+                </div>
+                <div class="popContent">
+                    <div class="img">
+                        <img src="../images/thunb/img_thumb01.jpg" alt="이미지">
+                    </div>
+                </div>
+                <div class="btnWrap float">
+                    <button type="button" class="btn line"><span>확인</span></button>
+                </div>
+            </div>
+            <button type="button" class="btn_popBottomClose"><i class="blind">팝업닫기</i></button>
+        </div>
+	</div>
+
+	<!--codeView-->
+	<div class="guide-code mt20">
+		<pre class="syntax brush-css">
+
+			
+
+		</pre>
+	</div>
+	<!--//codeView-->
+	<!--//Full-->
+
+	<!--BottomSheet-->
+	<h3 class="tit-guide">BottomSheet</h3>
+    <div class="sampleArea">
+		
+	</div>
+
+	<!--codeView-->
+	<div class="guide-code mt20">
+		<pre class="syntax brush-css">
+
+			
+
+		</pre>
+	</div>
+	<!--//codeView-->
+	<!--//BottomSheet-->
+
+    <!--BottomSheet-->
+    <h3 class="tit-guide">Confirm, Alert</h3>
+    <div class="sampleArea">
+        <div class="btnWrap group">
+            <button type="button" class="btn sec" onclick="fnShowPop('pop_confirm')"><span>Confirm</span></button>
+            <button type="button" class="btn pri" onclick="fnShowPop('pop_alert')"><span>Alert</span></button>
+        </div>
+        
+        <div class="popWrap popConfirm" id="pop_confirm">
+            <div class="popInner">
+                <div class="popHeader">
+                    <h2 class="popTitle">삭제하시겠어요?</h2>
+                </div>
+                <div class="popContent">
+                    <span class="text">삭제된 데이터는 복구되지 않습니다.</span>
+                </div>
+                <div class="btnWrap group">
+                    <button type="button" class="btn mi sec" onclick="fnHidePop('pop_confirm')"><span>아니오</span></button>
+                    <button type="button" class="btn mi pri">네</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="popWrap popConfirm" id="pop_alert">
+            <div class="popInner">
+                <div class="popHeader">
+                    <h2 class="popTitle">확인해 주세요.</h2>
+                </div>
+                <div class="popContent">
+                    <span class="text">관리자 승인 후 로그인 할 수 있습니다.</span>
+                </div>
+                <div class="btnWrap">
+                    <button type="button" class="btn mi pri">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--codeView-->
+    <div class="guide-code mt20">
+        <pre class="syntax brush-css">
+
+            
+
+        </pre>
+    </div>
+    <!--//codeView-->
+    <!--//BottomSheet-->
+</div>
+
+</div>
+<script type="text/javascript">
+//<!--
+	$.syntax({ theme: 'grey', layout: 'fixed', replace: true});
+//-->
+</script>
+</body>
+</html>

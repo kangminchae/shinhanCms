@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.tabcontents > .section > .generalList {padding-top:2.4rem;}
+.sectionHeader + .generalList {margin:1.6rem -1.8rem 0;border-top:1px #D9D9E0 solid;padding:0 1.8rem}
+.generalList li {padding:1.6rem 0;border-bottom:1px #ECF0FB solid;}
+.arrowR .listArea {max-width:calc(100% - 2.4rem);padding-right:1.2rem} 
+
+.newA,
+.newS {display:flex;align-items:center;}
+.newA::after {content:'N';display:flex;width:16px;height:16px;background-color:#D6EBFF;border-radius:50%;font-size:1rem;color:#2A3FEC;justify-content:center;margin-left:4px;flex-shrink:0;}
+.newS::after {content:'N';display:flex;width:16px;height:16px;background-color:#D6EBFF;border-radius:4px;font-size:1rem;color:#2A3FEC;justify-content:center;margin-left:4px;flex-shrink:0;}
+
+/* 테블릿 가로 (해상도 900px이상)*/
+@media all and (min-width:900px){ 
+
+}
+
+/* 모바일 가로 & 테블릿 세로 (600px ~ 899px)*/ 
+@media all and (min-width:600px) and (max-width:899px) {
+
+} 

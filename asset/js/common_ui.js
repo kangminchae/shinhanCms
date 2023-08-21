@@ -3,16 +3,11 @@ $(document).ready(function(){
 
 	asideMenu();
 	
-    //popClose
+    //layerPopClose
 	$('.btnClose').click(function(){
-		var $layerPop = $(this).closest('.popWrap'),
-			$dim = $(this).closest('.popWrap').find('.dim');
+		var $layerPop = $(this).closest('.layerPop');
 
-		$layerPop.removeClass('active');
-		$dim.remove();
-
-		$('body').css('overflow','visible');
-		$('body').focus();
+		$layerPop.prev('.file').removeClass('active');
 	});
   
   	//asideMenu
@@ -21,6 +16,11 @@ $(document).ready(function(){
 		$(this).next().slideToggle('active');
 	});
 
+	//본문 공통 : arrow
+	$('.arrow').on('click', function(){
+		$(this).toggleClass('active');
+	});
+	
   	//scrollTab
   	$('.tabcontents:first-child, .subTabcontents:first-child').show();
 
@@ -73,15 +73,17 @@ $(document).ready(function(){
   	});
 
 
-  	//page contents scroll
-	$('.scroll .contDetail').each(function(){
-		var height = $('.scroll').height() - $('.contHeader').height() - 20;
-		$(this).css('height', height);
-	});
+  	
 });
 
 $(window).resize(function() {
 	asideMenu();
+
+	//page contents scroll
+	$('.scroll.contDetail').each(function(){
+		var height = $('.contentsDetailWrap').height() - $('.contHeader').height() - 20;
+		$(this).css('height', height);
+	});
  });
 
 $(window).on('load', function(){
@@ -223,6 +225,7 @@ $(window).on('load', function(){
 		listSelectli = $('.selectListWrap .dropdown-select-ul li');
 
 	listSelectdd.on('click',function(){
+		$(this).toggleClass('active');
 		$(this).next('.dropdown-container').toggleClass('active');
 	});
 
