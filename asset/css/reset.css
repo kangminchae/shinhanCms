@@ -70,7 +70,7 @@ a:focus,
 button:focus,
 input:focus,
 textarea:focus,
-select:focus {outline:1px #ddd dashed;box-sizing:border-box;}
+select:focus {outline:none;box-sizing:border-box;}/*outline:1px #ddd dashed;*/
 
 img {width:100%;max-width:100%;object-fit:cover;}
 

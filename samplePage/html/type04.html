@@ -1,0 +1,162 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>모바일웹,콘텐츠관리시스템(CMS)</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../../asset/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../asset/css/swiper.css">
+    <script src="../../asset/js/jquery-3.7.0.min.js"></script>
+    <script src="../../asset/js/swiper.min.js"></script>
+    <script src="../../asset/js/common_ui.js"></script>
+</head>
+<body>
+    <div class="skipNav">
+        <a href="#container">본문바로가기</a>
+    </div>
+    <div id="wrap">
+        <!--header-->
+        <header id="header">
+            <div class="subMenuWrap">
+                <!--[D] depth2Menu  : select Type-->
+                <!-- <select name="depth2Menu" class="select_menuList" tabindex="-1" id="selectMenu">
+                    <option value="menu1">돈이 되는 이야기</option>
+                    <option value="menu2" selected>신한 리서치 리포트</option>
+                    <option value="menu3">계좌번호 찾기</option>
+                </select> -->
+
+                <!--[D] depth3Menu : Text Type-->
+                <h2 class="title">신한 리서치 리포트</h2>
+            </div>
+            <div class="rightBox">
+                <button type="button" class="btn_iconMenu"><i class="blind">메뉴보기</i></button>
+            </div>
+        </header>
+        <!--//header-->
+
+        <!--container-->
+        <div id="container" class="bg"><!--[D]Card 및 Box Type List 형태시 class=bg 추가 -->
+            <div class="tabWrap">
+                <div class="tabMenu">
+                    <ul class="tabMenuList">
+                      <li class="active"><a rel="tab1" role="tablist">최신</a></li>
+                      <li><a rel="tab2" role="tablist">국내</a></li>
+                      <li><a>해외</a></li>
+                      <li><a>시황</a></li>
+                      <li><a>기타</a></li>
+                    </ul>
+                </div>
+                <div class="tabContainer">
+                    <!-- tabcontents : tab1 -->
+                    <div class="tabcontents" id="tab1">
+                        <!--subTab-->
+                        <div class="subTabMenu">
+                            <ul class="tabMenuList">
+                                <li class="active"><a role="tablist">경제/외환</a></li>
+                                <li><a role="tablist">채권</a></li>
+                                <li><a role="tablist">크레딧</a></li>
+                                <li><a role="tablist">파생</a></li>
+                                <li><a role="tablist">대체</a></li>
+                            </ul>
+                        </div>
+                        <!--//subTab-->
+                        <div class="section">
+                            <ul class="cardList">
+                                <li>
+                                    <a href="#" class="listArea">
+                                        <i class="icon_new">NEW</i>
+                                        <span class="flag bond">채권</span>
+                                        <dl class="listInner">
+                                            <dt class="title"><span>해외크레딧</span></dt>
+                                            <dd class="text"><span class="ellipsis">Moody’s의 美은행 신용등급 대량 강등 : 취약업종</span></dd>
+                                            <dd class="add">
+                                                <div class="info">
+                                                    <span class="date">2023.08.01</span>
+                                                    <span class="name">모승규</span>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="listArea">
+                                        <i class="icon_hot">HOT</i>
+                                        <span class="flag daily">Daily</span>
+                                        <dl class="listInner">
+                                            <dt class="title"><span>Global Daily (8월 10일)</span></dt>
+                                            <dd class="text"><span class="ellipsis"></span></dd>
+                                            <dd class="add">
+                                                <div class="info">
+                                                    <span class="date">2023.08.01</span>
+                                                    <span class="name">리서치센터</span>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="listArea">
+                                        <span class="flag stocks">국내종목</span>
+                                        <dl class="listInner">
+                                            <dt class="title"><span>크레프톤</span></dt>
+                                            <dd class="text"><span class="ellipsis">하나로 버티기엔 힘들어진 경쟁 환경</span></dd>
+                                            <dd class="add">
+                                                <div class="info">
+                                                    <span class="date">2023.08.01</span>
+                                                    <span class="name">강석오</span>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="listArea">
+                                        <span class="flag industry">국내업종</span>
+                                        <dl class="listInner">
+                                            <dt class="title"><span>[월보] 글로벌 리츠</span></dt>
+                                            <dd class="text"><span class="ellipsis">(23-08) 안정적 배당주로서의 역할 약화</span></dd>
+                                            <dd class="add">
+                                                <div class="info">
+                                                    <span class="date">2023.08.01</span>
+                                                    <span class="name">김선미</span>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="listArea">
+                                        <span class="flag foreign">해외</span>
+                                        <dl class="listInner">
+                                            <dt class="title"><span>Shinhan China Weekly(8월3주차)</span></dt>
+                                            <dd class="text"><span class="ellipsis">경제지표 부진과 부동산 디폴트 리스크에 변동성 확대</span></dd>
+                                            <dd class="add">
+                                                <div class="info">
+                                                    <span class="date">2023.08.01</span>
+                                                    <span class="name">신승웅</span>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //tabcontents : tab1 -->
+                    <div class="tabcontents">
+                        tab2
+                    </div>
+                    <div class="tabcontents">
+                        tab3
+                    </div>
+                    <div class="tabcontents">
+                        tab4
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//container-->
+    </div>
+</body>
+</html>

@@ -21,6 +21,7 @@ body {height:100vh}
 #wrap {position:relative;display:flex;flex-direction:column;width:100%;height:100%;color:#3B3B41;font-size:62.5%;line-height:1.3;}
 #header {position:fixed;display:flex;width:100%;height:5.2rem;align-items:center;justify-content:space-between;padding:0 1.2rem 0 1.8rem;background-color:#fff;z-index:2;}
 #container {display:flex;flex-direction:column;padding:0;flex:1;overflow-y:auto;}
+#container.bg {background-color:#F1F3F8;}
 #header ~ #container {padding:5rem 0 0;}  
 #footerWrap {display:flex;flex-direction:column;align-items:center;}
 
@@ -153,12 +154,11 @@ body {height:100vh}
 
 /*=====================================================================================================================================================================================*/
 
-/*listType : generalList*/
+/*listType : 공통*/
 .listArea {display:flex;flex-direction:column;width:100%}
-.categoryName {font-size:1.3rem;font-weight:500;margin-bottom:1.6rem;}
 .listArea .listInner {display:flex;flex-direction:column;line-height:1.5;}
 .listArea .listInner .title {color:#3B3B41;font-size:1.8rem;font-weight:500;word-break:keep-all;}
-.listArea .listInner .text {font-size:1.5rem;color:#333950;margin:0.6rem 0;}
+.listArea .listInner .text {font-size:1.5rem;color:#6D6D73;margin:0.6rem 0;}
 .listArea .listInner .add {display:flex;align-items:center;margin-top:0.6rem;}
 .listInner .info {display:flex;color:#B5B5BC;font-size:1.3rem;align-items:center;}
 .listInner .info span {display:flex;align-items:center;}
@@ -172,6 +172,25 @@ body {height:100vh}
 .arrow {display:flex;align-items:center;}
 .arrow::after {content:'';display:flex;width:24px;height:24px;background:url(../images/common/icon_arrow.svg) no-repeat 0 0;background-size:100%;margin-left:5px;transition:all 0.3s ease-in-out;}
 .arrow.active::after {transform:rotate(-180deg);}
+
+/*generalList*/
+.categoryName {font-size:1.3rem;font-weight:500;margin-bottom:1.6rem;}
+
+/*cardList*/
+.cardList li {margin-bottom:1.6rem}
+.cardList .listArea {position:relative;display:block;background-color:#fff;border:1px #fff solid;border-radius:10px;padding:1.8rem;}
+.cardList .listArea .listInner .text {min-height:2.25rem;}
+.cardList .listArea .listInner .add {margin-top:1rem}
+.cardList i {position:absolute;top:1.8rem;right:1.8rem;background-color:#FFE0D6;font-size:1rem;font-weight:500;border-radius:5px;padding:0.3rem 0.4rem;}
+i.icon_new {color:#FF710A;}
+i.icon_hot {color:#FF0A0A;}
+
+.flag {display:inline-block;color:#fff;font-size:1rem;padding:0.1rem 0.4rem;border-radius:5px;margin-bottom:0.8rem;}
+.flag.bond {background-color:#32CFF1;}/*채권*/
+.flag.daily {background-color:#6F55EB;}/*Daily*/
+.flag.stocks {background-color:#5191FF;}/*국내종목*/
+.flag.industry {background-color:#32CFF1;}/*국내업종*/
+.flag.foreign {background-color:#F57230;}/*해외*/
 
 /*상세*/
 .contentsDetailWrap {display:flex;flex-direction:column;overflow:hidden;}
@@ -262,6 +281,7 @@ select {display:none}
 .subTabMenu .tabMenuList li.active a::after {display:none;}
 
 .subTabcontents {display:none;padding-top:5.8rem}
+.subTabMenu + .section {margin-top:14.2rem}
 
 .tabWrap .tabMenu::-webkit-scrollbar,
 .tabWrap .subTabMenu::-webkit-scrollbar  {display:none;}
@@ -410,6 +430,13 @@ input[type="text"] {width:100%;height:2.5rem;font-size:1.6rem}
   /*list*/
   .generalList li {padding:2rem 0;}
   .listArea .listInner .title {font-size:2rem;}
+  .listArea .listInner .text {font-size:1.6rem;}
+  .listArea .listInner .add {font-size:1.4rem;}
+
+  /*cardList*/
+  .cardList {display:flex;flex-flow:wrap;align-items:stretch;}
+  .cardList li {display:flex;flex-basis:calc(50% - 2rem);margin:0 0 2rem 2rem}
+  .cardList .listArea .listInner .add {margin-top:1.4rem}
 
   /*list - 상세*/
   .contentsDetailWrap .listInner .add {flex-direction:column;align-items:flex-start;font-size:1.4rem;}

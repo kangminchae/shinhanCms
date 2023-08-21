@@ -246,8 +246,8 @@ $(window).on('load', function(){
 });
 
 $(window).scroll(function() {
-	if($(document).scrollTop() > $('#header').height() + $('.tabMenu').height()) {
-		var tabHeight = $('#header').height() + $('.tabMenu').height();
+	var tabHeight = $('#header').height() + $('.tabMenu').height();
+	if($(document).scrollTop() > tabHeight) {
 		$('.subTabMenu').addClass('active');
    	} else {
 		$('.subTabMenu').removeClass('active');

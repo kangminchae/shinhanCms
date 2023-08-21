@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.tabcontents > .section > .generalList {padding-top:2.4rem;}
+.tabcontents > .section:first-child {padding-top:2.4rem;}
 .sectionHeader + .generalList {margin:1.6rem -1.8rem 0;border-top:1px #D9D9E0 solid;padding:0 1.8rem}
 .generalList li {padding:1.6rem 0;border-bottom:1px #ECF0FB solid;}
 .arrowR .listArea {max-width:calc(100% - 2.4rem);padding-right:1.2rem} 
