@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- 문서 제목 -->
+<title>신한투자증권 모바일 웹사이트</title>
+<!-- SEO: 검색 엔진 최적화 -->
+<meta name="description" content="">
+<meta name="keywords" content="신한투자증권, 펀드, 적립식펀드, 적립식펀드수익률, 적립식펀드추천, 펀드추천, 펀드비교 펀드투자, 주식, 증권, 증시, 자산관리, CMA, 퇴직연금, 채권">
+<meta name="author" content="신한투자증권">
+<!-- 모바일 -->
+<meta name="viewport" content="width=360">
+<link rel="stylesheet" href="../static/resources/css/style.css">
+<script type="text/javascript" src="../static/resources/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../static/resources/js/select.js"></script>
+<script type="text/javascript" src="https://open.shinhansec.com/phone/common/js/common_airbridge.js"></script>
+<script type="text/javascript" src="../js/account/common.js"></script>
+<script type="text/javascript" src="../js/account/new-account01.js"></script>
+<!-- 가상키보드 -->
+<link type="text/css" rel="stylesheet" href="/raon/transkey_mobile/transkey.css" />
+<script src="/raon/transkey_mobile/transkey.js"></script>
+<script type="text/javascript">
+	var transkey_surl ="/transkeyServlet";
+	var clause_url = "https://open.shinhansec.com/mobilealpha/html/CO/SB0000M01.html";
+	var domain = "shinhansec.com";
+</script>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-104543332-1', 'auto');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WVFVQC2');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body>
+	<div class="wrap newAccount">
+		<!-- header 영역 -->
+		<header class="gnb_nav_title1">
+			<div class="rflex home main3">
+				<h1 class="ord2 flg_1 url">
+					<!-- <img src="../static/resources/images/logo01.png" alt="신한투자증권"> -->
+					<strong class="title">계좌개설</strong>
+				</h1>
+				<button type="button" class="ord1 befo" id="btnPrev" style="display:none"> 이전화면</button>
+			</div>
+		</header>
+		<!-- // header 영역 -->
+
+		<!-- section 영역 -->
+		<div style="display:none">
+			<form method="POST" id="NF6001">
+				<input type="hidden" name="cert_no" id="cert_no" maxlength="20" value="">
+			</form>
+		</div>
+		
+		<form name="form" id="form" method="post" action="">
+			<input type="hidden" name="acctTpCode" id="acctTpCode" value="3">
+			<input type="hidden" name="mobiNo" id="mobiNo">
+			<input type="hidden" name="updateDealObj" id="updateDealObj" value="null">
+			
+			<!-- 티클모아카드 -->
+			<input type="hidden" name="moaCardYn" id="moaCardYn" value="N">
+			
+			<!-- 유치자등록 -->
+			<input type="hidden" name="memNo" id="memNo" value="">
+			
+			<!-- SMS인증 -->
+			<input type="hidden" name="tpCode" id="tpCode" value="">
+			<input type="hidden" name="seq1" id="seq1" value="">
+			<input type="hidden" name="seq2" id="seq2" value="">
+			<input type="hidden" name="seq3" id="seq3" value="">
+			
+			<!-- 주소검색 -->
+			<input type="hidden" name="keyword" id="keyword" value="">
+			<input type="hidden" name="totalCount" id="totalCount" value="">
+			<input type="hidden" name="currentPage" id="currentPage" value="1">
+			<input type="hidden" name="countPerPage" id="countPerPage" value="10">
+			<input type="hidden" name="resultType" id="resultType" value="json">
+			<input type="hidden" name="confmKey" id="confmKey" value="">
+			
+			<!-- 주소검증 -->
+			<input type="hidden" name="zipType" id="zipType" value="1">	<!-- 주소유형 (1:자택, 2:직장) -->
+			<input type="hidden" name="zip" id="zip">					<!-- 우편번호 -->
+			<input type="hidden" name="zipSeq" id="zipSeq">				<!-- 우편번호순번 -->
+			<input type="hidden" name="zipAddr" id="zipAddr">			<!-- 세부주소 -->
+			
+			<!-- 자금 실소유자 여부 -->
+			<input type="hidden" name="realOwner" id="realOwner" value="Y">
+			
+			<!-- 거래목적확인서 여부 -->
+			<input type="hidden" name="yn1" id="yn1" value="N">
+			<input type="hidden" name="yn2" id="yn2" value="N">
+			
+			<!-- 계좌개설단계코드 -->
+			<input type="hidden" name="stepCode" id="stepCode" value="">	
+			
+			<!-- step01 영역 -->
+			<section class="bgf" id="secStep01">
+				<div class="cont mt0">
+					<div class="sum_box rflex top">
+						<div class="img_ac2 ac_01"></div>
+						<div class="mt10 flg_1">
+							본인명의의 휴대폰 정보 입력 후<br><em class="c_blue">인증번호 요청</em>을 해주세요.
+						</div>
+					</div>
+				</div>
+				<div class="top_title">
+					<h2 class="h2">휴대폰 정보 입력 </h2>
+					<!-- 2018-11-30 추가-->
+					<ul class="stepList02 type2" id="stepList01">
+						<li class="recent"><span>현재페이지</span>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+					</ul>
+					<!-- //2018-11-30 추가-->
+				</div>
+				<div class="cont padding">
+					<p class="tit_01">이름</p>
+					<div class="input type_02">
+						<input type="text" title="이름" name="custNm" id="custNm">
+					</div>
+					<!-- 2020-09-18 추가 -->
+					<!-- 2022-12-06 수정 -->
+					<!-- class engnmDiv : 휴대폰 본인인증만 하는경우 영문명 입력받지 않음 (acctTpCode=9999) -->
+					<p class="tit_01 engnmDiv">영문명 (최대21자)</p>
+					<div class="fieldset_box engnmDiv">
+						<div class="flg_1 input type_02">
+							<input type="text" title="영문 성" placeholder="영문 성" id="engnm1" name="engnm1">
+						</div>
+						<div class="flg_2 input type_02">
+							<input type="text" title="영문 이름" placeholder="영문 이름" id="engnm2" name="engnm2">
+						</div>
+					</div>
+					<!-- //2022-12-06 수정 -->
+					<!-- //2020-09-18 추가 -->
+					<p class="tit_01 mt20">주민등록번호</p>
+					<div class="fieldset_box">
+						<div class="flg_1 input type_02">
+							<input type="tel" name="sm1" id="sm1" placeholder="생년월일" maxlength="6">
+						</div>
+						<div class="flg_1 input type_02 hyphen ">
+							<input type="tel" name="sm2" id="sm2" placeholder="" maxlength="7" style="ime-mode:disabled" data-tk-kbdType="number" autocomplete="off" readonly>
+						</div>
+					</div>
+					
+					<div class="perinfo_box  mt20">
+						<div class="top_title bt0">
+							<h2 class="h2"><input type="checkbox" name="agr_00" id="agr_00" onclick="javascript:return false;" ><strong><label for="agr_00" class="ml10">개인(신용)정보 처리 동의서(금융거래)</label></strong></h2>
+							<a href="javascript:window.open(clause_url);" class="ico_set"  id="clause_1"><span>약관보기</span></a>
+						</div>
+					</div>
+					
+					<div class="perinfo_box  mt20">
+						<div class="top_title bt0">
+							<h2 class="h2"><input type="checkbox" name="" id="agr_01"><strong><label for="agr_01" class="ml10">전체동의</label></strong></h2>
+						</div>
+						<ul class="perinfo_list2">
+							<li>휴대폰 본인확인 이용약관 동의<a href="http://open.shinhansec.com/mobilena/html/cs/nacs801303.html" class="ico_set" target="_blank"><span>약관보기</span></a></li>
+							<li>개인정보 이용 및 활용 동의<a href="http://open.shinhansec.com/mobilena/html/cs/nacs801304.html" class="ico_set"  target="_blank"><span>약관보기</span></a></li>
+							<li>고유식별정보 처리 동의<a href="http://open.shinhansec.com/mobilena/html/cs/nacs801305.html" class="ico_set"  target="_blank"><span>약관보기</span></a></li>
+						</ul>
+					</div>
+					
+					<p class="tit_01 mt20">휴대폰번호</p>
+					<div class="fieldset_box">
+						<div>
+							<div id="telcoTpCodeWrap" class="select type_02">
+								<select name="telcoTpCode" id="telcoTpCode">
+									<option value="">통신사</option>
+									<option value="1">SKT</option>
+									<option value="2">KT</option>
+									<option value="3">LGU+</option>
+									<option value="5">SKT(알뜰폰)</option>
+									<option value="6">KT(알뜰폰)</option>
+									<option value="7">LG U+(알뜰폰)</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div id="frstMobiNoWrap" class="fieldset_box">
+						<div>
+							<div class="select type_02">
+								<select id="frstMobiNo">
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+									<option value="0130">0130</option>
+								</select>
+							</div>
+						</div>
+						<div>
+							<div class="flg_1 input type_02">
+								<input type="tel" id="endMobiNo" placeholder="‘-’없이 입력" maxlength="8">
+							</div>
+						</div>
+						<button type="button" class="src_det" style="background-color:#258bda" onclick="smsRequest(this);">인증</button>
+					</div>
+					
+					<div class="psr rflex mt20">
+						<p class="tit_01  flg_1">SMS인증번호 입력</p>
+						<span id="authTimer" class="c_blue"></span>
+					</div>
+					<div class="fieldset_box  rflex">
+						<div class="flg_1 input type_02">
+							<input type="tel" name="smsAuthNo" id="smsAuthNo" maxlength="6" placeholder="" disabled>
+						</div>
+						<!-- <button type="button" class="src_det" onclick="smsRequest();">인증번호 재요청</button> -->
+						<button type="button" class="src_det" style="background-color:#258bda" onclick="nextStep('02');">확인</button>
+					</div>
+				</div>
+				<div class="infoBox">
+					<div class="top_title">
+						<h2 class="h2">유의사항</h2>
+					</div>
+					<div class="cont padding">
+						<h3 class="tit_01">인증번호가 도착하지 않는다면?</h3>
+						<ul class="dot_list">
+							<li>재인증을 시도해주십시오.</li>
+							<li>재인증 실패 시 통신사에 문의하시기 바랍니다. </li>
+							<li>통신사 문의 전 스팸문자함, 메시지함 초과여부,<br>차단설정을 체크해주십시오.</li>
+						</ul>
+					</div>
+				</div>
+				
+	
+				<!-- <div class="btn_area pt0  padding">
+					<button type="button" class="f_blue" onclick="nextStep('02');">확인</button>
+				</div> -->
+			</section>
+			<!-- // step01 영역 -->
+			
+			<!-- confirm 영역 -->
+			<section class="bgf lh_15" id="secConfirm" style="display:none">
+				<div class="cont mt0">
+					<div class="sum_box rflex top">
+						<div class="img_ac3"></div>
+						<div class="flg_3 pt3">
+							전기통신금융사기 피해예방을 위해 금융거래개설 목적을 확인하오니 아래 사항을 기재하여 주시기 바랍니다.
+						</div>
+					</div>
+					<div class="info2">
+						<div class="inner">
+							<span class="c_blue2">‘금융사기예방’ 조치를 위하여 계좌개설일로부터 30일 동안 이체가 제한됩니다.</span><br>(이체 제한 해제는 영업점에서 가능합니다.)
+						</div>
+					</div>
+				</div>
+	
+				<div class="cont padding">
+					<p class="tit_01">금융거래목적</p>
+					<!-- select custom -->
+					<div id="acctEstObjCodeWrap" class="select type_02 mt10">
+						<select name="acctEstObjCode" id="acctEstObjCode">
+							<option value="1">급여 및 생활비</option>
+							<option value="2">저축 및 투자</option>
+							<option value="3">사업상거래</option>
+							<option value="4">공과금등 결제</option>
+							<option value="5">상속 등</option>
+							<option value="6">기타</option>
+						</select>
+					</div>
+					<!--// select custom -->
+					<!-- 기타 선택시 보이기 -->
+					<div class="input type_02 mt10">
+						<input type="text" id="rmk1" name="rmk1" title="기타 목적 직접입력" disabled placeholder="기타 목적 직접입력">
+					</div>
+					<!-- //기타 선택시 보이기 -->
+				</div>
+	
+				<div class="cont padding">
+					<!-- <ul class="dot_list point_02">
+						<li>아래 해당되는 항목에 예/아니오로 선택하시기 바랍니다.</li>
+					</ul> -->
+					<div class="acc_confirm_box">
+						<div class="p15">
+							<p class="txt_nom">1. 타인으로부터 통장/현금카드를 포함한 접근매체 대여 요청을 받은 사실이 있습니까?<br  /> <em class="c_red">통장/현금카드 등을 타인에게 양도하여, 범죄에 이용되는 경우 미성년자여부와 상관없이 민.형사상책임을 질 수 있습니다.</em></p>
+							<div class="btn_area p0 mt15">
+								<button type="button" class="yn1 b_gray">예</button>
+								<button type="button" class="yn1 b_blue">아니요</button>
+							</div>
+						</div>
+						<div class="p15">
+							<p class="txt_nom">2. 타인으로부터 대출, 신용등급상향, 취업 등의 목적으로 통장개설을 요청받은 사실이 있습니까?</p>
+							<div class="btn_area p0 mt15">
+								<button type="button" class="yn2 b_gray">예</button>
+								<button type="button" class="yn2 b_blue">아니요</button>
+							</div>
+						</div>
+					</div>
+					
+					<ul class="dot_list mt20">
+						<li>위 기재사항에 따라 고객님의 보이스피싱 피해예방을 위하여 증빙자료 요청, 비대면 출금(고)거래 또는 계좌개설 제한이 될 수 있습니다.</li>
+						<li class="mt5">전기통신금융사기(보이스피싱) 이용계좌로 등록된 적이 있는 경우 객관적인 증빙자료를 제출하여 개설목적이 명확하다고 당사가 인정한 경우만 신규개설이 가능합니다.</li>
+					</ul>
+					
+					<ul class="input_list bgf7 p010">
+						<li class="rflex">
+							<input type="checkbox" id="check_01">
+							<label for="check_01" class="flg_1 point_02 mr0">
+								본 확인서 내용을 충분히 이해하고 틀림없이 기재하였습니다.
+							</label>
+						</li>
+					</ul>
+	
+					<!-- <ul class="dot_list mt20">
+						<li><em class="c_red">금융거래목적확인서</em>는 2014.10.31 기준으로 전기관에서 단기간(20일) 다수계좌(2개이상)가 개설될 경우, <em class="c_red">거래목적에 대해 확인을 합니다.</em></li>
+						<li class="mt5">고객 기재사항에 따라 증빙자료를 요청 할 수 있어, 비대면 계좌 개설이 불가능하고, 지점방문 계좌개설만 가능할 수 있습니다.</li>
+						<li class="mt5">전기통신금융사기 이용계좌로 등록된 적이 있는 고객의 경우 객관적인 증빙자료를 제출하여 개설목적이 명확하다고 당사가 인정한 경우만 신규가 가능함으로 비대면 계좌개설은 불가능합니다.</li>
+						<li class="mt5  c_red">계좌개설 시 금융감독원 지침에 따라 은행연합회에 바로 통보되어 20일 이내 타금융기관 신규계좌 신청 시 단기다수 계좌 명의인으로 계좌개설이 거부될 수 있습니다.</li>
+					</ul> -->
+				</div>
+	
+				<div class="btn_area  padding">
+					<button type="button" class="b_blue" onclick="nextStep('00');">취소</button>
+					<button type="button" class="f_blue" onclick="nextStep('02');">확인</button>
+				</div>
+			</section>
+			<!-- // confirm 영역 -->
+			
+			<!-- step02 영역 -->
+			<section class="bgf" id="secStep02" style="display:none">
+				<div class="cont mt0">
+					<div class="sum_box rflex top">
+						<div class="img_ac2 ac_02"></div>
+						<div class="mt10 flg_1">
+							금융거래를 위한 <em class="c_blue">기본 정보</em>를<br>입력해주세요.
+						</div>
+					</div>
+				</div>
+				<div class="top_title">
+					<h2 class="h2">기본 정보</h2>
+					<ul class="stepList02 type2">
+						<li class="prev">1</li>
+						<li class="recent"><span>현재페이지</span>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+					</ul>
+				</div>
+				<div class="cont padding">
+					<p class="tit_01">주소</p>
+					<!-- <div class="btn_area p0">
+						<button type="button" class="zipType b_blue">자택</button>
+						<button type="button" class="zipType b_gray">직장</button>
+					</div> -->
+					<div>
+						<div class="addb rflex">
+							<div class="flg_1 input type_02 disabled">
+								<input type="text" id="zipNo" placeholder="" title="우편번호" disabled>
+							</div>
+							<button type="button" id="addrOpen" class="src_det">우편번호</button>
+						</div>
+						<div class="input type_02">
+							<input type="text" id="roadAddr" placeholder="도로명/지번 주소" title="도로명/지번 주소" disabled>
+						</div>
+						<!-- 
+						<div class="input type_02 mt10 ">
+							<input type="text" id="addrDetail" placeholder="상세주소" title="상세주소" disabled>
+						</div> 
+						-->
+					</div>
+	
+					<p class="tit_01 mt20">이메일</p>
+					<div class="input type_02">
+						<input type="text" name="email" id="email" title="이메일">
+					</div>
+	
+					<p class="tit_01 mt20">거래목적</p>
+					<!-- select custom -->
+					<div id="dealObjWrap" class="select type_02 mt10">
+						<select name="dealObj" id="dealObj">
+							<option value="">선택</option>
+							<option value="0">급여 및 생활비</option>
+							<option value="1">저축 및 투자</option>
+							<option value="2">공과금 및 카드대금</option>
+							<option value="3">사업상 거래</option>
+							<option value="4">차입/부채상환</option>
+							<option value="5">상속증여성 거래</option>
+						</select>
+					</div>
+					<!--// select custom -->
+	
+					<p class="tit_01 mt20">자금원천</p>
+					<!-- select custom -->
+					<div id="orgnSourceWrap" class="select type_02 mt10">
+						<select name="orgnSource" id="orgnSource">
+							<option value="">선택</option>
+							<option value="0">근로 및 연금소득</option>
+							<option value="1">사업소득</option>
+							<option value="2">부동산소득</option>
+							<option value="3">금융소득</option>
+							<option value="4">상속증여</option>
+						</select>
+					</div>
+					<!--// select custom -->
+
+					<p class="tit_01 mt20">자금 실소유자 여부</p>
+					<div class="btn_area p0">
+						<button class="realOwner b_blue">예</button>
+						<button class="realOwner b_gray">아니요</button>
+					</div>
+	
+					<p class="tit_01 mt20">직업</p>
+					<!-- select custom -->
+					<div id="occIndcDtlCodeWrap" class="select type_02 mt10 jop_area">
+						<select name="occIndcDtlCode" id="occIndcDtlCode">
+							<option value="">선택</option>
+						</select>
+					</div>
+					<!--// select custom -->
+
+                    <p class="tit_01 mt20">본인 확인서<span class="fz12">(조세 목적상 거주자 확인)</span> <a href="javascript:" id="tax_notice" class="btn_type_02"><span>유의사항</span></a></p>
+                    <div class="fz13">
+                    	<p>
+                    		<label for="tax_1">
+                    			<input type="radio" id="tax_1" name="tax_radio" checked value="Y">
+                    			<span>저는 한국 거주자이며, 한국에만 세금을 냅니다.</span>
+                    		</label>
+                    	</p>
+                    	<p class="mt10">
+                    		<label for="tax_2">
+                    			<input type="radio" id="tax_2" name="tax_radio" value="N">
+                    			<span>저는 한국 외 다른 나라에도 세금을 냅니다.</span>
+                    		</label>
+                    	</p>
+                    </div>
+
+				</div>
+				
+				<div class="btn_area pt0 padding">
+					<button type="button" class="f_blue" onclick="nextStep('03');">다음</button>
+				</div>
+			</section>
+			<!-- // step02 영역 -->
+			
+			<!-- address01 영역 -->
+			<section class="bgf" id="secAddress01" style="display:none">
+				<div class="full_c">
+					<!-- content -->
+					<div>
+						<div class="search_box rflex">
+							<div class="flg_1 input">
+								<input type="text" id="addrSearchKeyword" placeholder="도로명, 건물명, 지번을 입력해 주세요" title="주소검색">
+								<button type="button" class="src" id="btnAddress">검색</button>
+							</div>
+						</div>
+						<!-- 주소리스트 -->
+						<div>
+							<div class="line_list02 adr_a">
+								<ul id="address-list"></ul>
+							</div>
+						</div>
+						<!-- 주소리스트 -->
+					</div><!-- content -->
+				</div>
+				<!-- //본문 -->
+			</section>
+			<!-- // address01 영역 -->
+			
+			<!-- address02 영역 -->
+			<section class="bgf" id="secAddress02" style="display:none">
+				<div class="full_c">
+					<!-- content -->
+					<div>
+						<div class="padding pb10 pt10 bb1">
+							<div class="info mt0 bgn fz13">
+								상세주소를 입력해 주세요.
+							</div>				
+						</div>
+						<!-- 주소리스트 -->
+						<div>
+							<div class="line_list02 adr_a">
+								<ul>
+									<li>
+										<label for="adr_1">
+											<a href="#" class="point_02">
+												<span class="mb5 c_blue" id="zipNoText"></span>
+												<span class="mb5" id="roadAddrText"></span>
+												<span class="mb5" id="jibunAddrText"></span>
+											</a>
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- 주소리스트 -->
+						<div class="fieldset_box padding mt0 pt0 mb30">
+							<div class="input type_02 flg_1">
+								<input type="text" id="addrDetailTemp" placeholder="상세주소" title="상세주소">
+							</div>
+						</div>
+					</div><!-- content -->
+
+				</div>
+				<!-- //본문 -->
+				<div class="btn_area pt0 padding">
+					<button type="button" class="f_blue" id="secAddressNext">다음</button>
+				</div>
+			</section>
+			<!-- // address02 영역 -->
+		</form>
+		<!-- // section 영역 -->
+
+		<button class="icon_poff">닫기</button>
+		
+		<!-- 팝업 영역 -->
+		<script type="text/javascript">
+function confirm(title, content, callback1) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	
+	// 확인버튼 콜백함수 유무
+	if (callback1) {
+		$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+	} else {
+		$('#btnConfirm').attr('onclick', 'popupHide();');
+	}
+	
+	// 취소버튼
+	$('#btnCancel').show();
+	$('#btnCancel').attr('onclick', 'popupHide();');
+}
+
+
+function popup(title, content, callback1, callback2) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	
+	$('#btnConfirm').text("확인");
+	$('#btnCancel').text("취소");
+	if(title != ''){
+		$('#title').show();	
+	}else{
+		$('#title').hide();	
+	}
+	
+	// 확인버튼 콜백함수 유무
+	if (callback1) {
+		$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+	} else {
+		$('#btnConfirm').attr('onclick', 'popupHide();');
+	}
+	
+	// 취소버튼 콜백함수 유무
+	if (callback2) {
+		$('#btnCancel').show();
+		$('#btnCancel').attr('onclick', 'popupHide(' + callback2 + ');');
+	} else {
+		$('#btnCancel').hide();
+		$('#btnCancel').attr('onclick', 'popupHide();');
+	}
+}
+
+//버튼명 설정함수
+function popupBtnTxt(title, content, btnTxt1, btnTxt2, callback1, callback2) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	$('#title').show();	
+	$('#btnConfirm').text(btnTxt1);
+	
+	if(btnTxt2 != ''){
+		if (typeof(btnTxt2) == 'function') {
+			$('#btnConfirm').attr('onclick', 'popupHide(' + btnTxt2 + ');');
+		}else{
+			$('#btnCancel').text(btnTxt2);
+		}
+	}
+	
+	// 확인버튼 콜백함수 유무
+	if(typeof(btnTxt2) != 'function'){
+		if (callback1) {
+			$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+		} else {
+			$('#btnConfirm').attr('onclick', 'popupHide();');
+		}
+	}
+	
+	// 취소버튼 콜백함수 유무
+	if (callback2) {
+		$('#btnCancel').show();
+		$('#btnCancel').attr('onclick', 'popupHide(' + callback2 + ');');
+	} else {
+		$('#btnCancel').hide();
+		$('#btnCancel').attr('onclick', 'popupHide();');
+	}
+
+}
+
+function popupHide(callback) {
+	$('#title').text('');
+	$('#content').text('');
+	$('#popup').hide();
+	
+	if (typeof(callback) == 'function') {
+		callback();
+	}
+}
+
+function returnFunc() {
+	return;
+}
+
+function closeWindow() {
+	var memno = 'null';
+	
+	if (memno != undefined && memno != '' && memno != 'null')  {	// 유치자 개설 
+		window.close();
+	} else {	
+		location.href = 'new-account.jsp'
+	}
+}
+
+function closeFunc() {
+	location.href = 'new-account.jsp';
+	return;
+}
+</script>
+
+<div id="popup" class="popup" style="display:none">
+	<section id="secPop">
+		<h1 class="hidden"></h1>
+		<div class="cont">
+			<div class="pop_tit" id="title" style="display: none;" ></div>
+			<div id="content" class="text type_01"></div>
+			<!-- <p class="tac mt10"></p> -->
+		</div>
+		<div class="btn_area">
+			<button class="popBtn_no" id="btnCancel">취소</button>
+			<button class="popBtn_yes" id="btnConfirm">확인</button>
+		</div>
+	</section>
+</div><!--// 팝업 영역 -->
+		
+		<!-- loading -->
+		<script type="text/javascript">
+function loading(loadingText) {
+	$('#loadingText').text(loadingText);
+	$('#loading').show();
+}
+
+function loadingHide() {
+	$('#loading').hide();
+}
+
+function startLoading(msg, callback, param){
+	loading(msg);
+	
+	if (typeof(callback) == 'function') {
+		setTimeout(function() {
+			//loadingHide();
+			callback(param);
+		},1000);
+	}
+}
+</script>
+
+<div id="loading" class="loading_box" style="display:none">
+	<div class="loading">
+		<img src="../static/resources/images/accouts_loading.gif" alt="하단내용참조" />
+		<!-- <p><span class="c_blue">신분증 심사</span>가 진행중입니다.</p> -->
+		<p id="loadingText"></p>
+	</div>
+</div><!-- //loading -->
+
+		<!-- footer 영역 -->
+		<footer>
+			<div class="copy">
+				<p>신한투자증권 고객지원센터  1588-0365</p>
+				<p><span class="footer_symbol"></span></p>
+			</div>
+		</footer>
+		<!-- // footer 영역 -->
+	</div>
+	<script>
+		var nffaAPI = "https://id.shinhaninvest.com";
+		var curTime = Number("202308221022");
+		var mode = 'real';
+	</script>
+	
+	<script type="text/javascript">
+	</script>
+</body>
+</html>
