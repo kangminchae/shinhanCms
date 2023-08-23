@@ -10196,21 +10196,26 @@ a.faqBtn:first:child{margin-top: 10px;}
   font-style:normal;
   font-weight:700
 }
+
+.c_blue {color:#2A3FEC !important}
 .newAccount * {font-family:'Spoqa Han Sans Neo';}
+.newAccount .sum_box .img_ac2,
+.newAccount .sum_box .img_ac3 {width:50px;height:50px;background:url(../images/img_newSum.png) no-repeat 50% 50%;}
 .newAccount header .home h1.url {height:52px;padding:12px 18px;}
 .newAccount h1 .title {color:#111;font-size:20px;font-weight:500;text-align:left;}
 .newAccount .home.main3 {border-bottom:0;}
-.newAccount .sum_box.top {background-color:#ECF0FB;padding:16px 18px;}
+.newAccount .sum_box.top {background-color:#ECF0FB;padding:16px 18px;font-size:13px;color:#3B3B41;}
+.newAccount .sum_box.top em {color:#3B3B41 !important;font-weight:500;}
 .newAccount .top_title {display:flex;background-color:#fff;border-top:0;border-bottom:1px #ECF0FB solid;padding:16px 18px;align-items:center;justify-content:space-between;}
 .newAccount .top_title .h2 {color:#3B3B41;font-size:15px;font-weight:700;background-color:transparent;padding:0;}
 .newAccount .stepList02.type2 {position:relative;top:0;right:0;}
 .newAccount .stepList02 li {width:22px;height:22px;color:#B5B5BC;font-size:12px;font-weight:500;background-color:#fff;border:1px #D6DBE8 solid;border-radius:50%;margin-left:4px;}
 .newAccount .stepList02 li:before {display:none;}
+.newAccount .stepList02 li.prev {border-color:#2A3FEC;color:#2A3FEC;}
 .newAccount .stepList02 li.recent {background-color:#2A3FEC;border-color:#2A3FEC;color:#fff;}
 .newAccount .cont {border-top:0;}
-.newAccount .cont.padding {padding:32px 18px 60px !important;}
+.newAccount .cont.padding {padding:32px 18px 60px;}
 .newAccount .tit_01 {color:#6D6D73;font-size:12px;font-weight:400;margin-top:28px !important;}
-.newAccount .tit_01:first-child {margin-top:0 !important;}
 .newAccount .input.type_02 {display:flex;border:0;border-bottom:2px #D6DBE8 solid;align-items:center;border-radius:0;}
 .newAccount .tit_01+p, 
 .newAccount .tit_01+div {margin-top:0;}
@@ -10223,9 +10228,9 @@ a.faqBtn:first:child{margin-top: 10px;}
 .newAccount .h2 * {color:#3B3B41}
 .newAccount .perinfo_box .top_title h2 {display:flex;}
 .newAccount .perinfo_box .top_title h2  label {padding-left:0;text-indent:0;}
-.newAccount .perinfo_box .ico_set {display:flex;position:relative;top:0;right:0;flex-shrink:0;border-color:#D9D9E0;padding:2px 10px;}
+.newAccount .perinfo_box .ico_set {display:flex;position:relative;top:0;right:0;flex-shrink:0;border-color:#D9D9E0;padding:2px 10px;font-size:12px;color:#6D6D73;}
 
-.newAccount .perinfo_list2 {border-top:1px #D9D9E0 solid;padding:8px 16px 16px;color:#3B3B41;font-size:13px;}
+.newAccount .perinfo_list2 {border-top:1px #D9D9E0 solid;padding:8px 16px 16px;color:#3B3B41;font-size:13px;background-color:transparent;}
 .newAccount .perinfo_list2 li {display:flex;align-items:center;justify-content:space-between;border-top:0;padding:0;margin-top:8px;}
 .newAccount .perinfo_box .perinfo_list2 li .ico_set {top:0;}
 
@@ -10233,7 +10238,74 @@ a.faqBtn:first:child{margin-top: 10px;}
 .newAccount .select.type_02 div p a {border:0;border-bottom:2px #D6DBE8 solid;border-radius:0;color:#3B3B41}
 
 .newAccount .infoBox {background-color:#F1F3F8;padding:28px 18px 32px;}
-.newAccount .infoBox .top_title {background-color:transparent;padding:0;}
+.newAccount .infoBox .top_title {background-color:transparent;padding:0 0 8px;border-bottom:1px #D6DBE8 solid;margin-bottom:14px;}
 .newAccount .infoBox .top_title .h2 {font-size:13px;}
+.newAccount .infoBox .cont.padding {background-color:transparent;padding:0 !important;}
+.newAccount .infoBox .tit_01 {font-size:13px;font-weight:700;}
+.newAccount .infoBox .dot_list > li {font-size:12px;margin-top:4px;color:#91919C;padding-left:6px;}
+.newAccount .infoBox .dot_list > li:before {width:2px;height:2px;background-color:#91919C;}
 
+.newAccount .src_det {background-color:#fff;border:1px #2A3FEC solid;color:#2A3FEC;font-weight:700;}
+.newAccount input[type="checkbox"] {width:24px;height:24px;border-radius:6px;border:1px #D6DBE8 solid;}
+.newAccount input[type="checkbox"]:checked {background-color:#2A3FEC;}
+.newAccount .disabled input[type="text"], 
+.newAccount input[type="text"][disabled] {background-color:#F7F7F8;}
 .newAccount ::placeholder {color:#B5B5BC;font-size:16px;font-weight:500;}
+
+.newAccount .icon_poff {width:24px;height:24px;background:url(../images/icon_close.png) no-repeat 0 0;}
+.newAccount .info2 {border-bottom:1px #ECF0FB solid;}
+.newAccount .info2 .inner {background-color:transparent;padding:13px 0 0 35px;}
+.newAccount .info2 .inner:before {content:'';width:15px;height:15px;background:url(../images/icon_newtext2.png) no-repeat 0 0;margin-right:7px;}
+.newAccount .acc_confirm_box {border:0;border-radius:0;margin-top:-32px}
+.newAccount .acc_confirm_box > div ~ div {margin-top:50px;}
+.newAccount .txt_nom {display:flex;color:#3B3B41;font-size:15px;font-weight:500;margin-left:0;text-indent:0;flex-direction:column;}
+.newAccount .txt_nom em {color:#E11A1A;font-size:12px;margin-top:6px;line-height:1.3;margin-left:8px;text-indent:-8px;}
+
+.btn_area.group {display:flex;align-items:center;justify-content:space-between;}
+.btn_area.group .btn {width:40%}
+.btn_area.group .btn ~ .btn {margin-left:8px;width:60%}
+.btn {display:flex;align-items:center;justify-content:center;height:48px;border-radius:8px;font-size:16px;font-weight:700;}
+.btn.pri {background-color:#2A3FEC;color:#fff}
+.btn.sec {background-color:#D2D4E1;color:#3B3B41;border:0;}
+.btn.line {background-color:#fff;border:1px #8C949E solid;border-radius:8px;}
+.b_gray {background:#F7F7F8;border-color:#D9D9E0;color:#B5B5BC}
+.b_black {background-color:#fff;border:2px #111 solid;color:#111;}
+
+.newAccount .btn_area a,
+.newAccount .btn_area .chk  {border-radius:6px 0 0 6px;}
+.newAccount .btn_area a + a, 
+.newAccount .btn_area .chk + .chk {margin-left:0;border-radius:0 6px 6px 0;}
+
+.newAccount .bul_list {display:flex;flex-direction:column;margin-top:48px;}
+.newAccount .bul_list li {display:flex;color:#91919C;font-size:12px;}
+.newAccount .bul_list li:before {content:'※';margin-right:6px;}
+.newAccount .bul_list li ~ li {margin-top:4px;}
+.newAccount .input_list li label {font-size:16px;}
+.newAccount .title {color:#3B3B41;font-size:15px;font-weight:500;}
+.newAccount .btn_type_02 {border-color:#D9D9E0;color:#6D6D73;border-radius:4px;}
+
+.newAccount .perinfo_list li {display:flex;align-items:center;justify-content:space-between;}
+
+.newAccount .acc_capture {border:0;}
+.newAccount .acc_capture > * {width:28px;height:28px;border-color:#D9D9E0;}
+.newAccount .acc_capture > *:first-child {border-radius:8px 0 0;}
+.newAccount .acc_capture > *:nth-child(2) {border-radius:0 8px 0 0;}
+.newAccount .acc_capture > *:nth-child(3) {border-radius:0 8px 0;}
+.newAccount .acc_capture > *:last-child {border-radius:0 0 8px 0;}
+.newAccount .capture_bg {background-color:#F7F7F8;border:1px #D9D9E0 solid}
+.newAccount .capture_bg .cap_txt01 {display:flex;flex-direction:column;height:100%;padding-top:0;font-size:0;align-items:center;justify-content:center;}
+.newAccount .capture_bg .cap_txt01:before {position:relative;top:0;left:0;width:50px;height:50px;margin-left:0;background:url(../images/icon_newAcc_camera.png) no-repeat 50%;background-size:32px 32px;}
+.newAccount .caption {font-size:13px;color:#3B3B41;text-align:center;}
+
+.newAccount .para_01 {color:#3B3B41;}
+h3.title + .bul_list {margin-top:8px}
+
+.tableWrap table {width:100%;border-top:1px #D6DBE8 solid;}
+.tableWrap table th {min-height:45px;background-color:#F1F3F8;color:#3B3B41;font-size:15px;font-weight:700;border-bottom:1px #D6DBE8 solid;border-left:1px #D6DBE8 solid;padding:10px 8px;}
+.tableWrap table td {min-height:45px;color:#3B3B41;font-size:15px;font-weight:400;border-bottom:1px #D6DBE8 solid;border-left:1px #D6DBE8 solid;padding:10px 8px;}
+.tableWrap table th:first-child,
+.tableWrap table td:first-child {border-left:0;}
+.tableWrap table td .tit {font-weight:400;}
+.codeBox {display:flex;align-items:center;justify-content:center;}
+.codeBox .acnum_box {display:flex;width:28px;height:36px;border:1px #B5B5BC solid;border-radius:4px;background:url(../images/icon_account.svg) no-repeat 50%;background-size:12px;margin-left:4px;}
+.codeBox .acnum_box em {font-size:0;}

@@ -207,7 +207,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 								<input type="tel" id="endMobiNo" placeholder="‘-’없이 입력" maxlength="8">
 							</div>
 						</div>
-						<button type="button" class="src_det" style="background-color:#258bda" onclick="smsRequest(this);">인증</button>
+						<button type="button" class="src_det" onclick="smsRequest(this);">인증</button>
 					</div>
 					
 					<div class="psr rflex mt20">
@@ -219,7 +219,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<input type="tel" name="smsAuthNo" id="smsAuthNo" maxlength="6" placeholder="" disabled>
 						</div>
 						<!-- <button type="button" class="src_det" onclick="smsRequest();">인증번호 재요청</button> -->
-						<button type="button" class="src_det" style="background-color:#258bda" onclick="nextStep('02');">확인</button>
+						<button type="button" class="src_det" onclick="nextStep('02');">확인</button>
 					</div>
 				</div>
 				<div class="infoBox">
@@ -231,7 +231,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						<ul class="dot_list">
 							<li>재인증을 시도해주십시오.</li>
 							<li>재인증 실패 시 통신사에 문의하시기 바랍니다. </li>
-							<li>통신사 문의 전 스팸문자함, 메시지함 초과여부,<br>차단설정을 체크해주십시오.</li>
+							<li>통신사 문의 전 스팸문자함, 메시지함 초과여부, 차단설정을 체크해주십시오.</li>
 						</ul>
 					</div>
 				</div>
@@ -285,28 +285,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						<li>아래 해당되는 항목에 예/아니오로 선택하시기 바랍니다.</li>
 					</ul> -->
 					<div class="acc_confirm_box">
-						<div class="p15">
-							<p class="txt_nom">1. 타인으로부터 통장/현금카드를 포함한 접근매체 대여 요청을 받은 사실이 있습니까?<br  /> <em class="c_red">통장/현금카드 등을 타인에게 양도하여, 범죄에 이용되는 경우 미성년자여부와 상관없이 민.형사상책임을 질 수 있습니다.</em></p>
+						<div class="">
+							<p class="txt_nom">타인으로부터 통장/현금카드를 포함한 접근매체 대여 요청을 받은 사실이 있습니까?<br  /> <em class="c_red">* 통장/현금카드 등을 타인에게 양도하여, 범죄에 이용되는 경우 미성년자여부와 상관없이 민.형사상책임을 질 수 있습니다.</em></p>
 							<div class="btn_area p0 mt15">
-								<button type="button" class="yn1 b_gray">예</button>
-								<button type="button" class="yn1 b_blue">아니요</button>
+								<button type="button" class="yn1 b_gray chk">예</button>
+								<button type="button" class="yn1 b_black chk">아니요</button>
 							</div>
 						</div>
-						<div class="p15">
-							<p class="txt_nom">2. 타인으로부터 대출, 신용등급상향, 취업 등의 목적으로 통장개설을 요청받은 사실이 있습니까?</p>
+						<div class="">
+							<p class="txt_nom">타인으로부터 대출, 신용등급상향, 취업 등의 목적으로 통장개설을 요청받은 사실이 있습니까?</p>
 							<div class="btn_area p0 mt15">
-								<button type="button" class="yn2 b_gray">예</button>
-								<button type="button" class="yn2 b_blue">아니요</button>
+								<button type="button" class="yn2 b_gray chk">예</button>
+								<button type="button" class="yn2 b_black chk">아니요</button>
 							</div>
 						</div>
 					</div>
 					
-					<ul class="dot_list mt20">
+					<ul class="bul_list">
 						<li>위 기재사항에 따라 고객님의 보이스피싱 피해예방을 위하여 증빙자료 요청, 비대면 출금(고)거래 또는 계좌개설 제한이 될 수 있습니다.</li>
 						<li class="mt5">전기통신금융사기(보이스피싱) 이용계좌로 등록된 적이 있는 경우 객관적인 증빙자료를 제출하여 개설목적이 명확하다고 당사가 인정한 경우만 신규개설이 가능합니다.</li>
 					</ul>
 					
-					<ul class="input_list bgf7 p010">
+					<ul class="input_list p010">
 						<li class="rflex">
 							<input type="checkbox" id="check_01">
 							<label for="check_01" class="flg_1 point_02 mr0">
@@ -323,9 +323,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					</ul> -->
 				</div>
 	
-				<div class="btn_area  padding">
-					<button type="button" class="b_blue" onclick="nextStep('00');">취소</button>
-					<button type="button" class="f_blue" onclick="nextStep('02');">확인</button>
+				<div class="btn_area group padding">
+					<button type="button" class="btn sec b_blue" onclick="nextStep('00');">취소</button>
+					<button type="button" class="btn pri f_blue" onclick="nextStep('02');">확인</button>
 				</div>
 			</section>
 			<!-- // confirm 영역 -->
@@ -407,10 +407,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					</div>
 					<!--// select custom -->
 
-					<p class="tit_01 mt20">자금 실소유자 여부</p>
-					<div class="btn_area p0">
-						<button class="realOwner b_blue">예</button>
-						<button class="realOwner b_gray">아니요</button>
+					<p class="title mt20">자금 실소유자 여부</p>
+					<div class="btn_area p0 mt20">
+						<button class="realOwner b_gray chk">예</button>
+						<button class="realOwner b_black chk">아니요</button>
 					</div>
 	
 					<p class="tit_01 mt20">직업</p>
@@ -422,8 +422,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					</div>
 					<!--// select custom -->
 
-                    <p class="tit_01 mt20">본인 확인서<span class="fz12">(조세 목적상 거주자 확인)</span> <a href="javascript:" id="tax_notice" class="btn_type_02"><span>유의사항</span></a></p>
-                    <div class="fz13">
+                    <p class="title mt20">본인 확인서(조세 목적상 거주자 확인) <a href="javascript:" id="tax_notice" class="btn_type_02"><span>유의사항</span></a></p>
+                    <div class="mt20">
                     	<p>
                     		<label for="tax_1">
                     			<input type="radio" id="tax_1" name="tax_radio" checked value="Y">
@@ -441,7 +441,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				</div>
 				
 				<div class="btn_area pt0 padding">
-					<button type="button" class="f_blue" onclick="nextStep('03');">다음</button>
+					<button type="button" class="btn pri f_blue" onclick="nextStep('03');">다음</button>
 				</div>
 			</section>
 			<!-- // step02 영역 -->
@@ -507,7 +507,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				</div>
 				<!-- //본문 -->
 				<div class="btn_area pt0 padding">
-					<button type="button" class="f_blue" id="secAddressNext">다음</button>
+					<button type="button" class="btn pri f_blue" id="secAddressNext">다음</button>
 				</div>
 			</section>
 			<!-- // address02 영역 -->

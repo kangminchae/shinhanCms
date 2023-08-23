@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- 문서 제목 -->
+<title>신한투자증권 모바일 웹사이트</title>
+<!-- SEO: 검색 엔진 최적화 -->
+<meta name="description" content="">
+<meta name="keywords" content="신한투자증권, 펀드, 적립식펀드, 적립식펀드수익률, 적립식펀드추천, 펀드추천, 펀드비교 펀드투자, 주식, 증권, 증시, 자산관리, CMA, 퇴직연금, 채권">
+<meta name="author" content="신한투자증권">
+<!-- 모바일 -->
+<meta name="viewport" content="width=360">
+<link rel="stylesheet" href="../static/resources/css/style.css">
+<script type="text/javascript" src="../static/resources/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://open.shinhansec.com/phone/common/js/common_airbridge.js"></script>
+<script type="text/javascript" src="../js/account/common.js?ver=202308230122"></script>
+<script type="text/javascript">
+	var domain = "shinhansec.com";
+	var isBanksalad = "false";
+</script>
+<script type="text/javascript" src="../js/account/new-account02.js?ver=202308230122"></script>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-104543332-1', 'auto');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WVFVQC2');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body>
+	<div class="wrap newAccount">
+		<!-- header 영역 -->
+		<header class="gnb_nav_title1">
+			<div class="rflex home main3">
+				<h1 class="ord2 flg_1 url">
+					<!-- <img src="../static/resources/images/logo01.png" alt="신한투자증권"> -->
+                    <strong class="title">계좌개설</strong>
+				</h1>
+				<button type="button" class="ord1 befo" id="btnPrev" style="display:none"> 이전화면</button>
+			</div>
+		</header>
+		<!-- // header 영역 -->
+
+		<!-- section 영역 -->
+
+		<form name="form" id="form" method="post" action="" auto>
+			<input type="hidden" name="acctTpCode" id="acctTpCode" value="">		<!-- 계좌구분코드 -->
+			<input type="hidden" name="custNm" id="custNm" value="">					<!-- 고객명 -->
+			<!-- 티클모아카드 -->
+			<input type="hidden" name="moaCardYn" id="moaCardYn" value="N">
+			<!-- 유치자URL전용 -->
+			<input type="hidden" name="memNo" id="memNo" value="null">
+			<input type="hidden" name="memIndrctYn" id="memIndrctYn" value="">	<!-- 간접취득권유자여부 -->
+		</form>
+		<form name="tempDataForm" id="tempDataForm" method="post" action="">
+			<!-- 멤버쉽 약관 선택동의 값 -->
+			<input type="hidden" name="sms"   id="sms"   value="Y">
+			<input type="hidden" name="email" id="email" value="Y">
+			<input type="hidden" name="phone" id="phone" value="Y">
+			<input type="hidden" name="agr8"  id="agr8"  value="Y">
+			<input type="hidden" name="agr10" id="agr10" value="Y">
+			<!-- 통합증거금 사용통화 범위 -->
+			<input type="hidden" name="margin" id="margin" value="2">
+			<!-- 개인신용정보처리동의 부가서비스 -->
+			<input type="hidden" name="pers_tp"     id=pers_tp     value="2">
+			<input type="hidden" name="pers_I"     id="pers_I"     value="N">
+			<input type="hidden" name="pers_L"     id="pers_L"     value="N">
+			<input type="hidden" name="pers_K"     id="pers_K"     value="N">
+			<input type="hidden" name="pers_L2"    id="pers_L2"    value="N">
+			<input type="hidden" name="pers_tm"    id="pers_tm"    value="N">
+			<input type="hidden" name="pers_sms"   id="pers_sms"   value="N">
+			<input type="hidden" name="pers_sms2"  id="pers_sms2"  value="N">
+			<input type="hidden" name="pers_email" id="pers_email" value="N">
+			<input type="hidden" name="pers_L_tm"  id="pers_L_tm"  value="N">
+			<input type="hidden" name="pers_L_sms" id="pers_L_sms" value="N">
+			<input type="hidden" name="pers_L_sms2"  id="pers_L_sms2"  value="N">
+			<input type="hidden" name="pers_L_email" id="pers_L_email" value="N">
+		</form>
+			<!-- step03 영역 -->
+			<section class="bgf" id="secStep03">
+				<div class="cont mt0">
+					<div class="sum_box rflex top">
+						<div class="img_ac2 ac_03"></div>
+						<div class="mt10 flg_1">
+							계좌개설을 위한 <em class="c_blue">약관동의</em>를<br>진행해주세요.
+						</div>
+					</div>
+				</div>
+				<div class="top_title ">
+					<h2 class="h2">약관동의</h2>
+					<ul class="stepList02 type2">
+						<li class="prev">1</li>
+						<li class="prev">2</li>
+						<li class="recent"><span>현재페이지</span>3</li>
+						<li>4</li>
+						<li>5</li>
+					</ul>
+				</div>
+				<div class="cont padding">
+					<!-- 개인정보 취급방침 안내 -->
+					<div class="perinfo_box">
+						<div class="top_title bt0">
+							<h2 class="h2"><input type="checkbox" name="agr_01" id="agr_01"><strong><label for="agr_01" class="ml10">전체동의</label></strong></h2>
+						</div>
+						<div class="cont bt0">
+							<ul class="perinfo_list ">
+								<li><label for="agr_01_1" class="m0 fz14"><input type="checkbox" name="agrName" id="agr_01_1">계좌거래 약관</label><a href="#" id="link1" class="ico_set arrow"><span>약관보기</span></a></li>
+								<li><label for="agr_01_2" class="m0 fz14"><input type="checkbox" name="agrName" id="agr_01_2">금융거래필수확인서</label><a href="#" id="link2" class="ico_set arrow"><span>약관보기</span></a></li>
+								<li><label for="agr_01_8" class="m0 fz14"><input type="checkbox" name="agrName" id="agr_01_8">해외주식서비스 약관</label><a href="#" id="link8" class="ico_set arrow" ><span>약관보기</span></a></li>
+								<li id="isa_agr1" style="display: none;"><label for="agr_01_9" class="m0 fz14"><input type="checkbox" name="agrName" id="agr_01_9">개인종합자산관리계좌(ISA)약관</label><a href="#" id="link9" class="ico_set arrow" ><span>약관보기</span></a></li>
+								<li><label for="agr_01_3" class="m0 fz14"><input type="checkbox" name="agrName" id="agr_01_3">신한플러스 멤버십 약관</label><a href="#" id="link3" class="ico_set arrow" ><span>약관보기</span></a></li>
+								<li><label for="agr_01_4" class="m0 fz14"><input type="checkbox" name="agrName" id="agr_01_4">개인(신용)정보 등 처리사항</label><a href="#" id="link4" class="ico_set arrow"><span>약관보기</span></a></li>
+								<!-- <li><label for="agr_01_5" class="m0 fz14"><input type="checkbox" name="agrName" id="agr_01_5">개인정보 수집 &middot; 이용 필수 동의서</label><a href="#" id="link5" class="ico_set arrow"><span>약관보기</span></a></li> -->
+								<li><label for="agr_01_10" class="m0 fz14"><input type="checkbox" name="agrName" id="agr_01_10">개인(신용)정보 처리 동의서</label><a href="#" id="link10" class="ico_set arrow" ><span>약관보기</span></a></li>
+								<li><label for="agr_01_7" class="m0 fz14"><input type="checkbox" name="agrName" id="agr_01_7">개인(신용)정보처리 동의서(부가서비스)</label><a href="#" id="link7"  class="ico_set arrow"><span>약관보기</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="memToggleBox" class="tab_toggle" style="display: none;"><!-- on class toggle -->
+						<a href="#none" class="top_title rflex imp">
+							<p class="h2 flg_1">투자권유대행인 제공동의서</p>
+							<span class="btn_more">더보기</span>
+						</a>
+						<div class="cont sum_box" id="btnToggleTab_body" style="display:none">
+							<div class="check rflex">
+								<input type="checkbox" id="memChkBox">
+								<label for="check_01" class="flg_1">아래 내용을 읽고, 정보제공에 동의합니다.</label>
+							</div>
+							<div class="box_line">
+								<ul class="ulist_02">
+									<li>투자권유대행인’은 자본시장과 금융투자업에 관한 법률에 의거 신한투자증권㈜에서 판매하고 있는 금융투자상품에 대한 투자권유 업무를 수행하기 위하여 위탁계약을 체결한 자이며, 신한투자증권의 임직원은 아닙니다.</li>
+									<li>투자권유대행인은 투자자에게 금융투자상품의 투자권유 이외의 업무(계약의 체결, 계좌개설, 자금의 수납 등)에 대하여는 법적 권한이 없습니다. 특히, 계약 체결 및 자금 납입은 회사의 지점 및 온라인 거래를 통해야만 합니다.</li>
+									<li>투자는 본인의 판단과 책임하에 이루어져야 하고, 잔고 및 거래내역은 반드시 확인하시기 바랍니다. 상품가입 시 정확한 상품내용 및 위험에 대해서는 신한투자증권 직원의 설명을 듣고 확인하셔야 합니다.</li>
+									<li>투자권유대행인에게 제공되는 정보 항목은 아래와 같습니다.
+									<ul class="">
+										<li>1)  집합투자증권계좌의 경우 : 예탁자산(보유펀드명, 잔고좌수, 평가액), 수익률, 투자권유대행인이 수취하는 수수료 내역, 만기일, 적립식 투자일 경우 납입횟수, 납입금액 및 최종 납입일, 투자자 연락처</li>
+										<li>2) 주식 위탁계좌, 그 밖의 계좌의 경우 : 예탁자산(보유종목, 평가액 및  예수금), 계좌별 수익률, 투자권유대행인이 수취하는 수수료 내역, 만기일, 투자자 연락처</li>
+									</ul>
+									</li>
+								</ul>
+							</div>
+							<ul class="dot_list">
+								<li>본인은 신한투자증권㈜를 통한 계좌개설 및 금융투자상품가입에 있어, ‘투자권유대행인’에 의하여 수행된 투자권유행위가 법, 규정 및 투자권유준칙 등에서 정하고 있는 절차와 방법에 따라 적정하게 이행되었음을 확인합니다.</li>
+								<li>투자권유대행인으로부터 투자권유대행인의 금지사항에 대하여 설명 들었으며, 위 사항을 읽고 그 내용을 인지하였습니다.</li>
+								<li>투자권유 받은 상품에 대하여 ‘투자권유대행인’에게 원활한 사후관리 서비스를 받기 위하여 상기 투자권유대행인의 유치계좌로 등록하고, 계좌의 정보를 제공하는 것에 동의합니다.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="btn_area p0 mt20">
+						<button type="button" class="btn pri f_blue" onclick="nextStep('04');">다음</button>
+					</div>
+				</div>
+			</section>
+			<!-- // step03 영역 -->
+		<!-- // section 영역 -->
+
+		<button class="icon_poff" onclick="popup('', '계좌개설을 중단하시겠습니까?', 'closeWindow', 'returnFunc')">닫기</button>
+
+		<!-- 팝업 영역 -->
+		<script type="text/javascript">
+function confirm(title, content, callback1) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	
+	// 확인버튼 콜백함수 유무
+	if (callback1) {
+		$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+	} else {
+		$('#btnConfirm').attr('onclick', 'popupHide();');
+	}
+	
+	// 취소버튼
+	$('#btnCancel').show();
+	$('#btnCancel').attr('onclick', 'popupHide();');
+}
+
+
+function popup(title, content, callback1, callback2) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	
+	$('#btnConfirm').text("확인");
+	$('#btnCancel').text("취소");
+	if(title != ''){
+		$('#title').show();	
+	}else{
+		$('#title').hide();	
+	}
+	
+	// 확인버튼 콜백함수 유무
+	if (callback1) {
+		$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+	} else {
+		$('#btnConfirm').attr('onclick', 'popupHide();');
+	}
+	
+	// 취소버튼 콜백함수 유무
+	if (callback2) {
+		$('#btnCancel').show();
+		$('#btnCancel').attr('onclick', 'popupHide(' + callback2 + ');');
+	} else {
+		$('#btnCancel').hide();
+		$('#btnCancel').attr('onclick', 'popupHide();');
+	}
+}
+
+//버튼명 설정함수
+function popupBtnTxt(title, content, btnTxt1, btnTxt2, callback1, callback2) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	$('#title').show();	
+	$('#btnConfirm').text(btnTxt1);
+	
+	if(btnTxt2 != ''){
+		if (typeof(btnTxt2) == 'function') {
+			$('#btnConfirm').attr('onclick', 'popupHide(' + btnTxt2 + ');');
+		}else{
+			$('#btnCancel').text(btnTxt2);
+		}
+	}
+	
+	// 확인버튼 콜백함수 유무
+	if(typeof(btnTxt2) != 'function'){
+		if (callback1) {
+			$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+		} else {
+			$('#btnConfirm').attr('onclick', 'popupHide();');
+		}
+	}
+	
+	// 취소버튼 콜백함수 유무
+	if (callback2) {
+		$('#btnCancel').show();
+		$('#btnCancel').attr('onclick', 'popupHide(' + callback2 + ');');
+	} else {
+		$('#btnCancel').hide();
+		$('#btnCancel').attr('onclick', 'popupHide();');
+	}
+
+}
+
+function popupHide(callback) {
+	$('#title').text('');
+	$('#content').text('');
+	$('#popup').hide();
+	
+	if (typeof(callback) == 'function') {
+		callback();
+	}
+}
+
+function returnFunc() {
+	return;
+}
+
+function closeWindow() {
+	var memno = 'null';
+	
+	if (memno != undefined && memno != '' && memno != 'null')  {	// 유치자 개설 
+		window.close();
+	} else {	
+		location.href = 'new-account.jsp'
+	}
+}
+
+function closeFunc() {
+	location.href = 'new-account.jsp';
+	return;
+}
+</script>
+
+<div id="popup" class="popup" style="display:none">
+	<section id="secPop">
+		<h1 class="hidden"></h1>
+		<div class="cont">
+			<div class="pop_tit" id="title" style="display: none;" ></div>
+			<div id="content" class="text type_01"></div>
+			<!-- <p class="tac mt10"></p> -->
+		</div>
+		<div class="btn_area">
+			<button class="popBtn_no" id="btnCancel">취소</button>
+			<button class="popBtn_yes" id="btnConfirm">확인</button>
+		</div>
+	</section>
+</div><!--// 팝업 영역 -->
+
+		<!-- footer 영역 -->
+		<footer>
+			<div class="copy">
+				<p>신한투자증권 고객지원센터  1588-0365</p>
+				<p><span class="footer_symbol"></span></p>
+			</div>
+		</footer>
+		<!-- // footer 영역 -->
+	</div>
+	<script>
+		var isaOtherBank = 'null';
+	</script>
+	<script type="text/javascript">
+	
+			popup("", "계좌타입을 다시 선택해주세요.", "closeFunc");
+	</script>
+</body>
+</html>

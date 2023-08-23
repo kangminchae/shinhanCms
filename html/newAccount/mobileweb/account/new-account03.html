@@ -1,0 +1,481 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- 문서 제목 -->
+<title>신한투자증권 모바일 웹사이트</title>
+<!-- SEO: 검색 엔진 최적화 -->
+<meta name="description" content="">
+<meta name="keywords" content="신한투자증권, 펀드, 적립식펀드, 적립식펀드수익률, 적립식펀드추천, 펀드추천, 펀드비교 펀드투자, 주식, 증권, 증시, 자산관리, CMA, 퇴직연금, 채권">
+<meta name="author" content="신한투자증권">
+<!-- 모바일 -->
+<meta name="viewport" content="width=360">
+<link rel="stylesheet" href="../static/resources/css/style.css">
+<script type="text/javascript" src="../static/resources/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://open.shinhansec.com/phone/common/js/common_airbridge.js"></script>
+<script type="text/javascript" src="../js/account/common.js?ver=202308230131"></script>
+<script type="text/javascript" src="../js/account/new-account03.js?ver=202308230131"></script>
+<script src="/common/js/rsa/jsbn.js"></script>
+<script src="/common/js/rsa/prng4.js"></script>
+<script src="/common/js/rsa/rng.js"></script>
+<script src="/common/js/rsa/rsa.js"></script>
+<script src="/common/js/crypto/aes.js"></script>
+<script src="/common/js/crypto/sha256.js"></script>
+<script src="/common/js/crypto/pbkdf2.js"></script>
+<script src="/common/js/crypto/core-min.js"></script>
+<script src="/common/js/crypto/pad-zeropadding-min.js"></script>
+<script src="/common/js/crypto/mode-ecb-min.js"></script>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-104543332-1', 'auto');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WVFVQC2');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body>
+	<div class="wrap newAccount">
+		<!-- header 영역 -->
+		<header class="gnb_nav_title1">
+			<div class="rflex home main3">
+				<h1 class="ord2 flg_1 url">
+					<!-- <img src="../static/resources/images/logo01.png" alt="신한투자증권"> -->
+                    <strong class="title">계좌개설</strong>
+				</h1>
+				<button type="button" class="ord1 befo" id="btnPrev" style="display:none"> 이전화면</button>
+			</div>
+		</header>
+		<!-- // header 영역 -->
+		
+		<div style="display:none">
+			<form name="form" id="form" method="post" action="">
+				<input type="hidden" name="acctTpCode" id="acctTpCode" value="">		<!-- 계좌구분코드 -->
+				<input type="hidden" name="custNm"     id="custNm"     value="">			<!-- 고객명 -->
+				<input type="hidden" name="moaCardYn"  id="moaCardYn"  value="N">		<!-- 더모아카드 -->
+			</form>
+			
+			<form method="POST" id="NF6001">
+				<input type="file" onchange="afterTakePicture(this);" accept="image/*" capture="camera" id="noface_picture_data" name="noface_picture_data" class="f-capture-input">
+				<input type="hidden" name="cert_no" id="cert_no" maxlength="20" value="">
+				<input type="hidden" id="sendTr" name="sendTr" value="Y">
+				<input type="hidden" id="rsaPublicKeyExponent" name="rsaPublicKeyExponent" value="">
+				<input type="hidden" id="rsaPublicKeyModulus" name="rsaPublicKeyModulus" value="">
+				<input type="hidden" id="rsaPrivateKey" name="rsaPrivateKey" value="">
+				<input type="hidden" id="seedKey" name="seedKey" value="">
+				<input type="hidden" id="fileName" name="fileName" value="">											<!-- 업로드 파일명 -->
+				<input type="hidden" id="app_type" name="app_type" value="4o">
+				<input type="hidden" id="secured_noface_picture_data" name="secured_noface_picture_data" value="">		<!-- 이미지업로드사진 암호화 값 -->
+				<input type="hidden" id="plain_noface_picture_data" name="plain_noface_picture_data" value="">			<!-- 이미지업로드사진 암호화 값 -->
+			</form>
+			
+			<form name="NF6002" id="NF6002">
+				<input type="text" id="cert_no" name="cert_no" value="">
+				<input type="text" id="id_card_type" name="id_card_type" value="">
+				<input type="text" id="secured_id_issue_dt" name="secured_id_issue_dt" value="">
+				<input type="text" id="secured_drv_no" name="secured_drv_no" value="">
+				<input type="text" id="secured_drv_issued_dt" name="secured_drv_issued_dt" value="">
+				<input type="text" id="app_type" name="app_type" value="4o">
+			</form>
+			
+			<form name="NF6003" id="NF6003">
+				<input type="hidden" name="cert_no" id="cert_no"  value="">
+			</form>
+		</div>
+		
+		<!-- section 영역 -->
+		<!-- step05 영역 -->
+		<section class="bgf" id="secStep05">
+			<div class="cont mt0">
+				<div class="sum_box rflex top">
+					<div class="img_ac2 ac_04"></div>
+					<div class="mt10 flg_1">
+						본인 신분증 <em class="c_blue">(주민등록증 또는 운전면허증)</em>을<br>준비해주세요.
+					</div>
+				</div>
+			</div>
+			<div class="top_title ">
+				<h2 class="h2">신분증 촬영</h2>
+				<ul class="stepList02 type2">
+					<li class="prev">1</li>
+					<li class="prev">2</li>
+					<li class="prev">3</li>
+					<li class="recent"><span>현재페이지</span>4</li>
+					<li>5</li>
+				</ul>
+			</div>
+			<div class="cont padding">
+				<div class="psr">
+					<div class="acc_capture">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="capture_bg">
+						<span class="cap_txt cap_txt01">신분증 이미지 영역</span>
+					</div>
+				</div>
+			</div>
+			<div class="caption">※ 사진촬영 버튼을 누르시면 촬영을 진행합니다.</div>
+			<div class="btn_area padding ">
+				<button type="button" id="btnShoot" class="btn pri f_blue">사진촬영</button>
+			</div>
+            <div class="infoBox">
+                <div class="top_title">
+                    <h2 class="h2">유의사항</h2>
+                </div>
+                <div class="cont padding">
+                    <ul class="dot_list">
+                        <li>휴대폰을 가로로 돌려 네 모서리를 맞춰주세요.</li>
+                        <li>빛 반사가 되지 않도록 촬영해 주세요.</li>
+                        <li>신분증은 운전면허증 또는 주민등록증만 가능합니다.</li>
+                    </ul>
+                </div>
+            </div>
+		</section>
+		<!-- // step05 영역 -->
+		
+		<!-- step06 영역 -->
+		<section class="bgf" id="secStep06" style="display:none">
+			<div class="cont mt0">
+				<div class="sum_box rflex top">
+					<div class="img_ac2 ac_05"></div>
+					<div class="mt10 flg_1">
+						<em class="c_blue">촬영된 신분증</em>을 확인해주세요.<br /> 실제정보와 다른 경우 거래가 제한될 수 있습니다.
+					</div>
+				</div>
+			</div>
+			<div class="top_title ">
+				<h2 class="h2">신분증 촬영</h2>
+				<ul class="stepList02 type2">
+					<li class="prev">1</li>
+					<li class="prev">2</li>
+					<li class="prev">3</li>
+					<li class="recent"><span>현재페이지</span>4</li>
+					<li>5</li>
+				</ul>
+			</div>
+			<div class="cont padding">
+				<div class="psr">
+					<div class="acc_capture">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="capture_bg" id="photo" style="background-size:contain;background-repeat:no-repeat">
+					</div>
+				</div>
+			</div>
+			<div class="caption">주민등록번호 뒤 6자리의 숫자가 마스킹처리가<br>되어있지 않을 경우 재촬영 하시기 바랍니다.</div>
+			<div class="top_title mt20 ">
+				<h2 class="h2">신분증 인식 결과</h2>
+			</div>
+			<div class="cont padding">
+				<p class="tit_01">신분증 유형</p>
+				<div class="input type_02 disabled">
+					<input type="text" title="" id="idtype" readonly>
+				</div>
+				
+				<div id="card_01" style="display: none">
+					<p class="tit_01 mt20">발급일자</p>
+					<div class="input type_02">
+						<input type="tel" name="id_issued_dt" id="id_issued_dt" maxlength="8">
+					</div>
+				</div>
+				
+				<div id="card_02" style="display: none">
+					<p class="tit_01 mt20">면허번호</p>
+					<div class="fieldset_box">
+						<div class="flg_1 input type_02">
+							<input type="text" name="drv_no" id="drv_no" title="" maxlength="12">
+						</div>
+					</div>
+	
+					<p class="tit_01 mt20">발급일자</p>
+					<div class="input type_02">
+						<input type="tel" name="drv_issued_dt" id="drv_issued_dt" maxlength="8">
+					</div>
+				</div>
+				
+                <ul class="bul_list">
+                    <li>신분증 정보 확인 후 잘못 인식된 정보는 직접 수정해 주시기 바랍니다.</li>
+                </ul>
+			</div>
+			<div class="btn_area group padding">
+				<button type="button" class="__btnRetry b_blue btn sec">다시촬영</button>
+				<button type="button" class="__btnConfirmCert f_blue btn pri">사진전송</button>
+			</div>
+		</section>
+		<!-- // step06 영역 -->
+		
+		<!-- step07 영역 -->
+		<section class="bgf" id="secStep07" style="display:none">
+			<div class="top_title ">
+				<h2 class="h2">신분증 진위여부 확인</h2>
+				<ul class="stepList02 type2">
+					<li class="prev">1</li>
+					<li class="prev">2</li>
+					<li class="prev">3</li>
+					<li class="recent"><span>현재페이지</span>4</li>
+					<li>5</li>
+				</ul>
+			</div>
+			<div class="cont padding">
+			<div class="tit_01  tac"><strong>신분증 진위여부를 확인하고 있습니다.</strong><br> 잠시만 기다려주세요.</div>
+				<div class="psr mt20">
+					<div class="acc_capture">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="capture_bg02">
+						<span class="cap_img02"><img src="../static/resources/images/accouts_loading.gif" alt="loding"  class="cap_loding"/></span>
+						<span class="cap_txt02"><em class="c_blue">신분증 심사</em>가 진행중입니다.</span>
+					</div>
+                    <ul class="bul_list">
+                        <li>신분증 진위여부 확인기관의 전산장애 시 수기 확인으로 인해 다소 시간이 지연될 수 있습니다. 넓은 양해 부탁드립니다.</li>
+                    </ul>
+				</div>
+			</div>
+		</section>
+		<!-- // step07 영역 -->
+		
+		<!-- step08 영역 -->
+		<section class="bgf" id="secStep08" style="display:none">
+			<div class="top_title ">
+				<h2 class="h2">신분증 인증 실패</h2>
+				<ul class="stepList02 type2">
+					<li class="prev">1</li>
+					<li class="prev">2</li>
+					<li class="prev">3</li>
+					<li class="recent"><span>현재페이지</span>4</li>
+					<li>5</li>
+				</ul>
+			</div>
+			<div class="cont padding">
+				<div class="psr">
+					<div class="acc_capture">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="capture_bg02">
+						<span class="cap_img02"><img src="../static/resources/images/acc_ico_capimg.png" alt="인식실패 x 아이콘"  class="cap_loding"/></span>
+						<span class="cap_txt02"><em class="c_blue">신분증 인증</em>에 실패하였습니다.</span>
+					</div>
+                    <ul class="bul_list">
+                        <li>본인 신분증을 다시 촬영해주세요.</li>
+                    </ul>
+				</div>
+			</div>
+			<div class="btn_area padding ">
+				<!-- <button type="button" class="b_blue">취소</button> -->
+				<button type="button" class="__btnRetry f_blue btn pri">재촬영</button>
+			</div>
+		</section>
+		<!-- // step08 영역 -->
+		<!-- // section 영역 -->
+		<button class="icon_poff" onclick="popup('', '계좌개설을 중단하시겠습니까?', 'closeWindow', 'returnFunc')">닫기</button>
+		
+		<!-- 팝업 영역 -->
+		<script type="text/javascript">
+function confirm(title, content, callback1) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	
+	// 확인버튼 콜백함수 유무
+	if (callback1) {
+		$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+	} else {
+		$('#btnConfirm').attr('onclick', 'popupHide();');
+	}
+	
+	// 취소버튼
+	$('#btnCancel').show();
+	$('#btnCancel').attr('onclick', 'popupHide();');
+}
+
+
+function popup(title, content, callback1, callback2) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	
+	$('#btnConfirm').text("확인");
+	$('#btnCancel').text("취소");
+	if(title != ''){
+		$('#title').show();	
+	}else{
+		$('#title').hide();	
+	}
+	
+	// 확인버튼 콜백함수 유무
+	if (callback1) {
+		$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+	} else {
+		$('#btnConfirm').attr('onclick', 'popupHide();');
+	}
+	
+	// 취소버튼 콜백함수 유무
+	if (callback2) {
+		$('#btnCancel').show();
+		$('#btnCancel').attr('onclick', 'popupHide(' + callback2 + ');');
+	} else {
+		$('#btnCancel').hide();
+		$('#btnCancel').attr('onclick', 'popupHide();');
+	}
+}
+
+//버튼명 설정함수
+function popupBtnTxt(title, content, btnTxt1, btnTxt2, callback1, callback2) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	$('#title').show();	
+	$('#btnConfirm').text(btnTxt1);
+	
+	if(btnTxt2 != ''){
+		if (typeof(btnTxt2) == 'function') {
+			$('#btnConfirm').attr('onclick', 'popupHide(' + btnTxt2 + ');');
+		}else{
+			$('#btnCancel').text(btnTxt2);
+		}
+	}
+	
+	// 확인버튼 콜백함수 유무
+	if(typeof(btnTxt2) != 'function'){
+		if (callback1) {
+			$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+		} else {
+			$('#btnConfirm').attr('onclick', 'popupHide();');
+		}
+	}
+	
+	// 취소버튼 콜백함수 유무
+	if (callback2) {
+		$('#btnCancel').show();
+		$('#btnCancel').attr('onclick', 'popupHide(' + callback2 + ');');
+	} else {
+		$('#btnCancel').hide();
+		$('#btnCancel').attr('onclick', 'popupHide();');
+	}
+
+}
+
+function popupHide(callback) {
+	$('#title').text('');
+	$('#content').text('');
+	$('#popup').hide();
+	
+	if (typeof(callback) == 'function') {
+		callback();
+	}
+}
+
+function returnFunc() {
+	return;
+}
+
+function closeWindow() {
+	var memno = 'null';
+	
+	if (memno != undefined && memno != '' && memno != 'null')  {	// 유치자 개설 
+		window.close();
+	} else {	
+		location.href = 'new-account.jsp'
+	}
+}
+
+function closeFunc() {
+	location.href = 'new-account.jsp';
+	return;
+}
+</script>
+
+<div id="popup" class="popup" style="display:none">
+	<section id="secPop">
+		<h1 class="hidden"></h1>
+		<div class="cont">
+			<div class="pop_tit" id="title" style="display: none;" ></div>
+			<div id="content" class="text type_01"></div>
+			<!-- <p class="tac mt10"></p> -->
+		</div>
+		<div class="btn_area">
+			<button class="popBtn_no" id="btnCancel">취소</button>
+			<button class="popBtn_yes" id="btnConfirm">확인</button>
+		</div>
+	</section>
+</div><!--// 팝업 영역 -->
+		
+		<!-- loading -->
+		<script type="text/javascript">
+function loading(loadingText) {
+	$('#loadingText').text(loadingText);
+	$('#loading').show();
+}
+
+function loadingHide() {
+	$('#loading').hide();
+}
+
+function startLoading(msg, callback, param){
+	loading(msg);
+	
+	if (typeof(callback) == 'function') {
+		setTimeout(function() {
+			//loadingHide();
+			callback(param);
+		},1000);
+	}
+}
+</script>
+
+<div id="loading" class="loading_box" style="display:none">
+	<div class="loading">
+		<img src="../static/resources/images/accouts_loading.gif" alt="하단내용참조" />
+		<!-- <p><span class="c_blue">신분증 심사</span>가 진행중입니다.</p> -->
+		<p id="loadingText"></p>
+	</div>
+</div><!-- //loading -->
+		
+		<!-- footer 영역 -->
+		<footer>
+			<div class="copy">
+				<p>신한투자증권 고객지원센터  1588-0365</p>
+				<p><span class="footer_symbol"></span></p>
+			</div>
+		</footer>
+		<!-- // footer 영역 -->
+	</div>
+	
+	<script>
+		var nffaAPI = "https://id.shinhaninvest.com";
+	</script>
+	
+	<script type="text/javascript">
+	var stepCode = '';
+	var curTime = Number("202308231331");
+	var mode = 'real';
+	</script>
+	
+	<script type="text/javascript">
+	
+			popup("", "계좌타입을 다시 선택해주세요.", "closeFunc");
+	</script>
+</body>
+</html>

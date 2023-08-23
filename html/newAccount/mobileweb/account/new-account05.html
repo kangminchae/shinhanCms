@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="ko">		
+<head>
+<meta charset="utf-8">
+<!-- 문서 제목 -->
+<title>신한투자증권 모바일 웹사이트</title>
+<!-- SEO: 검색 엔진 최적화 -->
+<meta name="description" content="">
+<meta name="keywords" content="신한투자증권, 펀드, 적립식펀드, 적립식펀드수익률, 적립식펀드추천, 펀드추천, 펀드비교 펀드투자, 주식, 증권, 증시, 자산관리, CMA, 퇴직연금, 채권">
+<meta name="author" content="신한투자증권">
+<!-- 모바일 -->
+<meta name="viewport" content="width=360">
+<link rel="stylesheet" href="../static/resources/css/style.css">
+<script type="text/javascript" src="../static/resources/js/jquery-3.2.1.min.js"></script>
+<script>
+window.addEventListener("airbridge_build", function(){
+	sendAirbridgeEventMobileWeb('open an account_완료', $('#acctTpCode').val());
+})
+</script>
+<script type="text/javascript" src="https://open.shinhansec.com/phone/common/js/common_airbridge.js"></script>
+<script type="text/javascript" src="../js/account/common.js?ver=202308230233"></script>
+<script type="text/javascript" src="../js/account/new-account05.js?ver=202308230233"></script>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-104543332-1', 'auto');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WVFVQC2');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body>
+	<div class="wrap newAccount">
+		<!-- header 영역 -->
+		<header class="gnb_nav_title1">
+			<div class="rflex home main3">
+				<h1 class="ord2 flg_1 url">
+					<!-- <img src="../static/resources/images/logo01.png" alt="신한투자증권"> -->
+                    <strong class="title">계좌개설</strong>
+				</h1>
+				<button type="button" class="ord1 befo" id="btnPrev" style="display:none"> 이전화면</button>
+			</div>
+		</header>
+		<!-- // header 영역 -->
+		
+		<!-- section 영역 -->
+		<form name="form" id="form" method="post" action="">
+			<input type="hidden" name="acctNo" id="acctNo" value=""><!-- 계좌번호 -->
+			<input type="hidden" name="memYn" id="memYn" value=""> <!-- 유치자전용 - 추천직원등록여부 -->
+			<input type="hidden" name="acctTpCode" id="acctTpCode" value=""> 
+			<input type="hidden" name="acctCmaTpCode" id="acctCmaTpCode" value="">
+			<input type="hidden" name="moaCardYn"  id="moaCardYn"  value="N">		<!-- 더모아카드 -->
+
+			<input type="hidden" id="isaRmk"  value="">
+			
+			<!-- step13 영역 -->
+			<section class="bgf" id="secStep13">
+				<div class="cont mt0">
+					<div class="sum_box rflex top">
+						<div class="img_ac2 ac_08"></div>
+						<div class="mt10 flg_1">
+							<em class="c_blue">null 고객님!</em><br>신한투자증권의 소중한 거래 감사드립니다.
+						</div>
+					</div>
+				</div>
+				<div class="top_title ">
+					<h2 class="h2">신규계좌 정보</h2>
+					<ul class="stepList02 type2">
+						<li class="prev">1</li>
+						<li class="prev">2</li>
+						<li class="prev">3</li>
+						<li class="prev">4</li>
+						<li class="recent"><span>현재페이지</span>5</li>
+					</ul>
+				</div>
+				<div class="cont padding" id="acct_case1">
+					<div class="tableWrap row">
+						<table>
+							<colgroup>
+								<col>
+								<col>
+							</colgroup>
+							
+							<tbody>
+								<tr>
+									<th scope="row" class="tal">상품명</th>
+									<td class="tar"></td>
+								</tr>
+								<tr>
+									<th scope="row" class="tal">계좌번호</th>
+									<td class="tar">계좌없음</td>
+								</tr>
+								<tr>
+									<th scope="row" class="tal">개설일</th>
+									<td class="tar">2023.08.23</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="cont padding" id="acct_case2" style="diaplay:none;">
+					<div id="acct_CMA">
+						<h3 class="tit_01">CMA 계좌정보</h3>
+						<div class="tableWrap row mt5">
+							<table>
+								<caption>CMA 계좌정보</caption>
+								<colgroup>
+									<col>
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="tal">계좌번호</th>
+										<td class="tar">계좌없음</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div id="acct_ISA" style="diaplay:none;">
+						<h3 class="tit_01 mt15">ISA 계좌정보</h3>
+						<div class="tableWrap row mt5">
+							<table>
+								<caption>중개형 ISA 계좌정보</caption>
+								<colgroup>
+									<col>
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="tal">계좌번호</th>
+										<td class="tar">계좌없음</td>
+									</tr>
+									<tr>
+										<th scope="row" class="tal">계좌만기일</th>
+										<td class="tar"></td>
+									</tr>
+									<tr>
+										<th scope="row" class="tal">연간납입한도</th>
+										<td class="tar"> 원</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div id="acct_comp" style="diaplay:none;">
+						<h3 class="tit_01 mt15">증권종합 계좌정보</h3>
+						<div class="tableWrap row mt5">
+							<table>
+								<caption>증권종합 계좌정보</caption>
+								<colgroup>
+									<col>
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="tal">계좌번호</th>
+										<td class="tar">계좌없음</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<ul class="bul_list">
+							<li>해당 계좌로 ISA 계좌이동을 신청해주세요.</li>
+							<li>타사에 ISA계좌가 있는 경우 ISA 계좌등록 후 이동 신청해주세요.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="top_title ">
+					<h2 class="h2">추천직원(유치자)</h2>
+				</div>
+				<div class="cont padding" id="urlRecommender" style="display:none">
+					<div class="fieldset_box">
+						<div class="input type_02">
+							<input type="text" value="" placeholder=" ()" readonly>
+						</div>
+					</div>
+				</div>
+				<div class="cont padding" id="inRecommender" style="display:none">
+					<div class="rflex">
+						<!-- <div class="input_list mt0">
+							<input type="checkbox" id="chkRecmn">
+							<label for="chkRecmn" class="flg_1">
+								선택
+							</label>
+						</div> -->
+	
+						<div class="flg_1 input type_02 disabled w50p">
+							<input type="text" id="recmnNm" name="recmnNm" placeholder="" title="" disabled>
+						</div>
+						<button type="button" id="btnChkRecmn" class="src_det" onclick="nextStep('recommender');">조회</button>
+					</div>
+				</div>
+				<!-- <div class="top_title rflex imp">
+					<p class="h2 flg_1">꼭! 확인하세요.</p>
+					<span class="btn_more on">-</span>
+				</div> -->
+				
+				<div class="cont padding" id="info_account">
+					<ul class="bul_list">
+						<li>간편인증서를 발급하면 신한투자증권의 다양한 서비스를 이용하실 수 있습니다.</li>
+						<li><a class="ico_set" href="tel:1588-0365" style="text-align:left">문의사항 : 고객지원센터 1588-0365</a></li>
+						<li>신한알파 앱 을 설치하시면 쉽고 간편하게 자산현황 및 대출서비스, 글로벌투자, 연금자산까지 다채로운 금융서비스를 이용하실 수 있습니다.</li>
+					</ul>
+				</div> 
+				
+				<!-- 2020-11-16 추가 -->
+				<div class="sum_box pt0" id="info_theMore" style="display: none;">
+					<div class="tac fz16 fwb mt15"><span class="c_blue">The More(더모아)</span> 신한투자증권 투자계좌<br />
+					설정이 완료되었습니다.</div>
+					<p class="point_06 tac fz13 mt10">별도 해외주식 투자계좌를 변경하지 않으시면
+					해당계좌로 <span class="c_blue">매월 15일</span> 포인트가 입금됩니다.</p>
+					<ul class="listType1 mt30">
+						<li>문의사항: 고객지원센터 <a href="tel:1588-0365">1588-0365</a></li>
+					</ul>
+				</div>
+				<!-- 2020-11-16 추가 -->
+	
+				<div class="btn_area padding pt0" id="btn_div" style="display:none;"><!-- display:webkit-block;으로 보임 -->
+					<button type="button" class="f_blue btn pri" id="btn_appLink" onclick="appLink();return false;">앱 바로가기</button>
+					<button type="button" class="b_blue btn line" id="btn_loan" style="display:none;">대출서비스 신청</button>
+				</div>
+				
+				<!-- 더모아카드진입 -->
+				<div class="btn_area pt0" id="btn_theMore" style="display:none;"><!-- display:none;으로 감춤 -->
+					<button type="button" class="b_blue btn line" onclick="goTheMoreAccount();">완료</button>
+				</div>
+				
+			</section>
+			<!-- // step13 영역 -->
+			
+			<!-- recommender 영역 -->
+			<section class="bgf" id="secRecommender" style="display:none">
+				<div class="padding pb10 pt10">
+					<div class="info mt0 bgn fz13">찾으시는 직원의 이름을 입력해주세요.</div>				
+				</div>
+				<div class="search_box rflex">
+					<div class="flg_1 input">
+						<input type="text" id="searchNm" name="searchNm" placeholder="직원명 입력" title="추천직원 찾기">
+						<button type="button" class="src" onclick="getRecommender();">검색</button>
+					</div>
+				</div>
+				<div id="recommendList" class="line_list02 line_list03"></div>
+			</section>
+			<!-- // recommender 영역 -->
+			
+			<!-- agreement 영역 -->
+			<section class="bgf" id="secAgreement" style="display:none">
+				<h2 class="hidden">투자권유대행인 투자자 사전고지사항</h2>
+	
+				<div class="notification">
+						<div class="top_title rflex titDep"><p class="h2 flg_1">투자권유대행인 투자자 사전고지사항</p><span class="btn_morenew">-</span></div>
+					<div class="cont">
+						<ul class="noticont padding" style="display:none">
+							<li class="point_02 lh_15">1. 투자권유대행인은 자본시장과 금융투자업에 관한
+									법률에 의거 신한투자증권㈜에서 판매하고 있는 금융
+									투자상품에 대한 투자권유 업무를 수행하기 위하여
+									위탁계약을 체결한 자이며, 신한투자증권의 임직원은
+									아닙니다. 
+							</li>
+							<li class="para_01 point_02 lh_15">2. 투자권유대행인은 투자자에게 금융투자상품의 투자권유 이외의 업무(계약의 체결, 계좌개설, 자금의 수납 등)에 대하여는 법적 권한이 없습니다. 특히, 계약 체결 및 자금 납입은 회사의 지점 및 온라인 거래를 통해야만 합니다. 
+							</li>
+							<li class="para_01 point_02 lh_15">3. 투자는 본인의 판단과 책임하에 이루어져야 하고, 잔고 및 거래내역은 반드시 확인하시기 바랍니다. 상품가입 시 정확한 상품내용 및 위험에 대해서는 신한투자증권 직원의 설명을 듣고 확인하셔야 합니다. </li>
+							<li class="para_01 point_02 lh_15">4. 투자권유대행인에게 제공되는 정보 항목은 아래와 같습니다. 
+								<ul>
+									<li>① 집합투자증권계좌의 경우 : 예탁자산(보유펀드명,잔고좌수, 평가액), 수익률, 투자권유대행인이 수취하는 수수료 내역, 만기일, 적립식 투자일 경우 납입 횟수, 납입금액 및 최종 납입일, 투자자 연락처 </li>
+									<li>② 주식 위탁계좌, 그 밖의 계좌의 경우 : 예탁자산(보유종목, 평가액 및 예수금), 계좌별 수익률,투자권유대행인이 수취하는 수수료 내역, 만기일,투자자 연락처
+										<ul class="dot_list">
+											<li>본인은 신한투자증권㈜를 통한 계좌개설 및 금융투자상품가입에 있어, ‘투자권유대행인’에 의하여 수행된 투자권유행위가 법, 규정 및 투자권유준칙 등에서 정하고 있는 절차와 방법에 따라 적정하게 이행되었음을 확인합니다.</li>
+											<li>투자권유대행인으로부터 투자권유대행인의 금지사항에 대하여 설명 들었으며, 위 사항을 읽고 그 내용을 인지하였습니다. </li>
+											<li>투자권유 받은 상품에 대하여 ‘투자권유대행인’에게 원활한 사후관리 서비스를 받기 위하여 상기 투자권유대행인의 유치계좌로 등록하고, 계좌의 정보를 제공하는 것에 동의합니다.</li>
+										</ul>
+									</li>
+								</ul>		
+							</li>
+						</ul>
+					</div>
+				</div>
+	
+				<div class="cont padding pb40">
+					<ul class="dot_list">
+						<li>본인은 신한투자증권㈜를 통한 계좌개설 및 금융투자상품가입에 있어, ‘투자권유대행인’에 의하여 수행된 투자권유행위가 법, 규정 및 투자권유준칙 등에서 정하고 있는 절차와 방법에 따라 적정하게 이행되었음을 확인합니다.</li>
+						<li>투자권유대행인으로부터 투자권유대행인의 금지사항에 대하여 설명 들었으며, 위 사항을 읽고 그 내용을 인지하였습니다. </li>
+						<li>투자권유 받은 상품에 대하여 ‘투자권유대행인’에게 원활한 사후관리 서비스를 받기 위하여 상기 투자권유대행인의 유치계좌로 등록하고, 계좌의 정보를 제공하는 것에 동의합니다.</li>				
+					</ul>
+				</div>
+	
+				<ul class="input_list padding pt0">
+					<li class="rflex">
+						<input type="checkbox" id="check_01">
+						<label for="check_01" class="flg_1 point_02">
+							위 내용을 읽고, 정보제공에 동의합니다.
+						</label>
+					</li>
+				</ul>
+				
+				<div class="btn_area padding pt0">
+					<button type="button" class="f_blue btn pri" onclick="agreeIndirectAgent();">확인</button>
+				</div>
+			</section>
+			<!-- // agreement 영역 -->
+		</form>
+		<!-- // section 영역 -->
+		
+		<button class="icon_poff" onclick="popup('', '계좌개설을 중단하시겠습니까?', 'closeWindow', 'returnFunc')">닫기</button>
+		
+		<!-- 팝업 영역 -->
+		<script type="text/javascript">
+function confirm(title, content, callback1) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	
+	// 확인버튼 콜백함수 유무
+	if (callback1) {
+		$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+	} else {
+		$('#btnConfirm').attr('onclick', 'popupHide();');
+	}
+	
+	// 취소버튼
+	$('#btnCancel').show();
+	$('#btnCancel').attr('onclick', 'popupHide();');
+}
+
+
+function popup(title, content, callback1, callback2) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	
+	$('#btnConfirm').text("확인");
+	$('#btnCancel').text("취소");
+	if(title != ''){
+		$('#title').show();	
+	}else{
+		$('#title').hide();	
+	}
+	
+	// 확인버튼 콜백함수 유무
+	if (callback1) {
+		$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+	} else {
+		$('#btnConfirm').attr('onclick', 'popupHide();');
+	}
+	
+	// 취소버튼 콜백함수 유무
+	if (callback2) {
+		$('#btnCancel').show();
+		$('#btnCancel').attr('onclick', 'popupHide(' + callback2 + ');');
+	} else {
+		$('#btnCancel').hide();
+		$('#btnCancel').attr('onclick', 'popupHide();');
+	}
+}
+
+//버튼명 설정함수
+function popupBtnTxt(title, content, btnTxt1, btnTxt2, callback1, callback2) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	$('#title').show();	
+	$('#btnConfirm').text(btnTxt1);
+	
+	if(btnTxt2 != ''){
+		if (typeof(btnTxt2) == 'function') {
+			$('#btnConfirm').attr('onclick', 'popupHide(' + btnTxt2 + ');');
+		}else{
+			$('#btnCancel').text(btnTxt2);
+		}
+	}
+	
+	// 확인버튼 콜백함수 유무
+	if(typeof(btnTxt2) != 'function'){
+		if (callback1) {
+			$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+		} else {
+			$('#btnConfirm').attr('onclick', 'popupHide();');
+		}
+	}
+	
+	// 취소버튼 콜백함수 유무
+	if (callback2) {
+		$('#btnCancel').show();
+		$('#btnCancel').attr('onclick', 'popupHide(' + callback2 + ');');
+	} else {
+		$('#btnCancel').hide();
+		$('#btnCancel').attr('onclick', 'popupHide();');
+	}
+
+}
+
+function popupHide(callback) {
+	$('#title').text('');
+	$('#content').text('');
+	$('#popup').hide();
+	
+	if (typeof(callback) == 'function') {
+		callback();
+	}
+}
+
+function returnFunc() {
+	return;
+}
+
+function closeWindow() {
+	var memno = 'null';
+	
+	if (memno != undefined && memno != '' && memno != 'null')  {	// 유치자 개설 
+		window.close();
+	} else {	
+		location.href = 'new-account.jsp'
+	}
+}
+
+function closeFunc() {
+	location.href = 'new-account.jsp';
+	return;
+}
+</script>
+
+<div id="popup" class="popup" style="display:none">
+	<section id="secPop">
+		<h1 class="hidden"></h1>
+		<div class="cont">
+			<div class="pop_tit" id="title" style="display: none;" ></div>
+			<div id="content" class="text type_01"></div>
+			<!-- <p class="tac mt10"></p> -->
+		</div>
+		<div class="btn_area">
+			<button class="popBtn_no" id="btnCancel">취소</button>
+			<button class="popBtn_yes" id="btnConfirm">확인</button>
+		</div>
+	</section>
+</div><!--// 팝업 영역 -->
+		
+		<!-- loading -->
+		<script type="text/javascript">
+function loading(loadingText) {
+	$('#loadingText').text(loadingText);
+	$('#loading').show();
+}
+
+function loadingHide() {
+	$('#loading').hide();
+}
+
+function startLoading(msg, callback, param){
+	loading(msg);
+	
+	if (typeof(callback) == 'function') {
+		setTimeout(function() {
+			//loadingHide();
+			callback(param);
+		},1000);
+	}
+}
+</script>
+
+<div id="loading" class="loading_box" style="display:none">
+	<div class="loading">
+		<img src="../static/resources/images/accouts_loading.gif" alt="하단내용참조" />
+		<!-- <p><span class="c_blue">신분증 심사</span>가 진행중입니다.</p> -->
+		<p id="loadingText"></p>
+	</div>
+</div><!-- //loading -->
+				
+		<!-- footer 영역 -->
+		<footer>
+			<div class="copy">
+				<p>신한투자증권 고객지원센터  1588-0365</p>
+				<p><span class="footer_symbol"></span></p>
+			</div>
+		</footer>
+		<!-- // footer 영역 -->
+	</div>
+	
+	</body>
+</html>

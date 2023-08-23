@@ -1,0 +1,816 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- 문서 제목 -->
+<title>신한투자증권 모바일 웹사이트</title>
+<!-- SEO: 검색 엔진 최적화 -->
+<meta name="description" content="">
+<meta name="keywords" content="신한투자증권, 펀드, 적립식펀드, 적립식펀드수익률, 적립식펀드추천, 펀드추천, 펀드비교 펀드투자, 주식, 증권, 증시, 자산관리, CMA, 퇴직연금, 채권">
+<meta name="author" content="신한투자증권">
+<!-- 모바일 -->
+<meta name="viewport" content="width=360">
+<link rel="stylesheet" href="../static/resources/css/style.css?ver=202308230215">
+<script type="text/javascript" src="../static/resources/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../static/resources/js/select.js"></script>
+<script type="text/javascript" src="https://open.shinhansec.com/phone/common/js/common_airbridge.js"></script>
+<script type="text/javascript" src="../js/account/common.js?ver=202308230215"></script>
+<script type="text/javascript" src="../js/account/new-account04.js?ver=202308230215"></script>
+<!-- 가상키보드 -->
+<link type="text/css" rel="stylesheet" href="/raon/transkey_mobile/transkey.css" />
+<script src="/raon/transkey_mobile/transkey.js"></script>
+<script type="text/javascript">
+	var transkey_surl ="/transkeyServlet";
+</script>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-104543332-1', 'auto');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WVFVQC2');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body>
+	<div class="wrap newAccount">
+		<!-- 팝업 -->
+		<div id="popupTransfer" class="popup animation-popup-overlay" style="display:none">
+			<section>
+				<h1 class="h1">인증번호 오류</h1>
+				<button type="button" class="popup_close" onclick="$('#popupTransfer').hide();">닫기</button>
+				<div class="cont padding">
+					<div class="tac">
+						인증번호를 다시 확인후 입력해주세요. <br><em class="c_blue">(오류<span id="transferCnt">1</span>회)</em>
+					</div>
+				</div>
+				<!-- 
+				<div class="btn_area">
+					<button type="button" onclick="$('#popupTransfer').hide();">확인</button>
+				</div> 
+				-->
+			</section>
+		</div>
+		<!--// 팝업 -->
+
+		<!-- header 영역 -->
+		<header class="gnb_nav_title1">
+			<div class="rflex home main3">
+				<h1 class="ord2 flg_1 url">
+					<!-- <img src="../static/resources/images/logo01.png" alt="신한투자증권"> -->
+                    <strong class="title">계좌개설</strong>
+				</h1>
+				<button class="ord1 befo" id="btnPrev" style="display:none"> 이전화면</button>
+			</div>
+		</header>
+		<!-- // header 영역 -->
+
+		<!-- section 영역 -->
+		<form name="form" id="form" method="post" action="">
+			<input type="hidden" name="type" id="type">
+			<!-- 임시고객번호 -->
+			<input type="hidden" name="acctTpCode" id="acctTpCode" value="">			<!-- 계좌구분코드 -->
+			<input type="hidden" name="acctNm" id="acctNm" value="">						<!-- 고객명 -->
+			<input type="hidden" name="acctNo" id="acctNo" value="">								<!-- 계좌번호 -->
+			<input type="hidden" name="retryFlag" id="retryFlag" value="">
+			<input type="hidden" name="trnsYn" id="trnsYn" value="">
+
+			<input type="hidden" name="yn21" id="yn21" value="">
+			<input type="hidden" name="mkTm" id="mkTm" value="">
+			<input type="hidden" name="mkSms" id="mkSms" value="">
+			<input type="hidden" name="mkEmail" id="mkEmail" value="">
+			<input type="hidden" name="mkSmsNight" id="mkSmsNight" value="">
+			<input type="hidden" name="yn22" id="yn22" value="">
+			<input type="hidden" name="yn23" id="yn23" value="">
+			<input type="hidden" name="yn24" id="yn24" value="">
+
+			<!-- 유치자URL전용 -->
+			<input type="hidden" name="memNo" id="memNo" value="null">
+			<input type="hidden" name="memYn" id="memYn" value=""> <!-- 유치자 정상등록 여부 -->
+
+			<!-- 더모아카드 -->
+			<input type="hidden" name="moaCardYn" id="moaCardYn" value="N">
+
+			<!-- 거래목적확인서 여부 -->
+			<input type="hidden" name="yn1" id="yn1" value="N">
+			<input type="hidden" name="yn2" id="yn2" value="N">
+			
+			<!-- isa계좌정보 -->
+			<input type="hidden" name="isaLamt" id="isaLamt" value="">
+			<input type="hidden" name="isaExprYmd" id="isaExprYmd" value="">
+
+			<!-- step09 영역 -->
+			<section class="bgf" id="secStep09">
+				<div class="cont mt0">
+					<div class="sum_box rflex top">
+						<div class="img_ac2 ac_06"></div>
+						<div class="mt20 flg_1">
+							계좌의<em class="c_blue">비밀번호</em>를 입력하세요.
+						</div>
+					</div>
+				</div>
+				<div class="top_title">
+					<h2 class="h2">비밀번호 입력</h2>
+					<!-- 2018-11-30 추가-->
+					<ul class="stepList02 type2">
+						<li class="prev">1</li>
+						<li class="prev">2</li>
+						<li class="prev">3</li>
+						<li class="recent"><span>현재페이지</span>4</li>
+						<li>5</li>
+					</ul>
+					<!-- //2018-11-30 추가-->
+				</div>
+				<div class="cont padding pb0">
+					<p class="tit_01">비밀번호</p>
+					<div class="input type_02">
+						<input type="password" name="acctPwd" id="acctPwd" title="비밀번호" placeholder="숫자 4자리" maxlength="4" style="ime-mode:disabled" data-tk-kbdType="number" data-tk-maxinput-complete="checkPassword" autocomplete="off" readonly>
+					</div>
+					<!-- <div class="info bgn mt10">
+						숫자 4자리를 입력하세요.
+					</div> -->
+					<p class="tit_01 mt20">비밀번호 확인</p>
+					<div class="input type_02">
+						<input type="password" name="acctPwdChk" id="acctPwdChk" title="비밀번호" placeholder="숫자 4자리"  maxlength="4" style="ime-mode:disabled" data-tk-kbdType="number" data-tk-maxinput-complete="checkPassword" autocomplete="off" readonly>
+					</div>
+					<!-- <div class="info  bgn mt10">
+						다시 한번 입력하세요.
+					</div> -->
+				</div>
+
+				<div id="misuWrap">
+					<div class="top_title">
+						<h2 class="h2">미수 사용 여부</h2>
+					</div>
+					<div class="cont padding">
+						<ul class="cont input_list m0 bt0">
+							<li class="rflex">
+								<input type="radio" id="misu_01" name="chgTpCode" value="1">
+								<label for="misu_01" class="flg_1">미수 사용(최대 매수 가능)</label>
+							</li>
+							<li class="rflex">
+								<input type="radio" id="misu_02" name="chgTpCode" value="2" checked>
+								<label for="misu_02" class="flg_1">미수 미사용(현금 100% 매수 가능)</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="cont padding">
+					<!-- <div id="acctCmaWrap" style="display:none">
+						<p class="tit_01 mt20">CMA계좌선택</p>
+						<div class="select type_02 mt10">
+							<select name="acctCmaTpCode" id="acctCmaTpCode">
+								<option value="">선택</option>
+								<option value="1">RP</option>
+								<option value="3">MMW</option>
+							</select>
+						</div>
+					</div> -->
+
+					<p class="tit_01 mt20">원장통보지</p>
+					<!-- select custom -->
+					<div id="mastInfmCtaddCodeWrap" class="select type_02 mt10" id="mastInfmCtaddCodeWrap">
+						<select name="mastInfmCtaddCode" id="mastInfmCtaddCode">
+							<option value="31">온라인</option>
+							<option value="32">모바일 등기</option>
+							<option value="11">이메일</option>
+						</select>
+					</div>
+					<!--// select custom -->
+					<br>
+                    <ul class="bul_list">
+						<li>모바일등기, 이메일을 선택한 경우 [기본정보]에 입력한 이메일 주소로 발송됩니다.</li>
+						<li class="mt5">모바일등기로 발송 불가한 보고서의 경우 이메일로 발송됩니다.</li>
+					</ul>
+				</div>
+
+				<div class="btn_area padding pt0">
+					<button type="button" id="btnNext" class="f_blue btn pri" style="display:none" onclick="nextStep('11')">다음</button>
+				</div>
+			</section>
+			<!-- // step09 영역 -->
+
+			<!-- step10 영역 / 3단계 약관으로 이동 (2020.10.22)-->
+			<!--
+				<section class="bgf" id="secStep10" style="display:none">
+					<div class="top_title ">
+						<h2 class="h2">개인(신용)정보 제공동의</h2>
+						2018-11-30 추가
+						<ul class="stepList02 type2">
+							<li class="prev">1</li>
+							<li class="prev">2</li>
+							<li class="prev">3</li>
+							<li class="recent"><span>현재페이지</span>4</li>
+							<li>5</li>
+						</ul>
+						//2018-11-30 추가
+					</div>
+					<div class="cont padding">
+						개인정보 취급방침 안내
+						<div class="perinfo_box perinfo_tit">
+							<div class="top_title bt0">
+								<h2 class="h2">
+									<input type="checkbox" name="agr_all" id="agr_all">
+									<strong><label for="agr_all" class="ml10">전체동의</label></strong>
+								</h2>
+							</div>
+							<div class="cont bt0">
+								<div class="p10">
+									개인정보보호법 및 신용정보의 이용 및 보호에 관한 법률이 시행됨에 따라 개인(신용)정보 수집 · 이용 제공에 “동의안함”을 선택하시는 경우 당사 및 그룹사 신규상품(서비스)
+									소개 및 이벤트 안내 등 이용목적에 따른 혜택의 제한이 있을 수 있습니다.
+									<em class="c_blue">당사 및 신한금융그룹사의 신규상품(서비스)소개 및 이벤트 안내 등 다양한 혜택을 받고자 하실 경우 개인정보 활용 동의가 필요합니다.</em>
+								</div>
+								<div class="top_title psr p10">
+									<input type="checkbox" name="agr_form" id="agr_form">
+									<label for="agr_form" class="vam ml10">개인(신용)정보 처리 동의서<br>(부가서비스 제공용)보기</label>
+									<a href="#" class="ico_set" target="_blank" onclick="chkAgrform();return false;"><span>동의서보기</span></a>
+								</div>
+								<div class="p10">
+									<dl class="det_box  mt10">
+										<dt><em class="c_blue">1. 개인(신용)정보 수집 · 이용 선택 사항</em></dt>
+										<dd>
+											<div>
+												<label><input type="radio" name="agr_01" id="radio_agr_01" value="0" onclick="chkAgrAll();"> 동의안함</label>
+												<label><input type="radio" name="agr_01" id="radio_agr_02" value="1" onclick="chkAgrAll();"> 동의함</label>
+											</div>
+										</dd>
+										<ul class="dot_list mt10">
+											<li>상품서비스 안내 등 마케팅을 위한 연락방식</li>
+										</ul>
+										<div class="fieldset_box line_feed column3 mt0">
+											<div>
+												<label><input type="checkbox" name="agr_con_all" id="agr_con_all"> 전체</label>
+												<label><input type="checkbox" name="agr_con_1" id="agr_con_1" onclick="chkAgrCon();"> TM(전화)</label>
+												<label><input type="checkbox" name="agr_con_2" id="agr_con_2" onclick="chkAgrCon();"> 이메일</label>
+											</div>
+										</div>
+										<div class="fieldset_box line_feed column1 mt0">
+											<div>
+												<label class="pb5"><input type="checkbox" name="agr_con_3" id="agr_con_3" onclick="chkAgrCon();"> SMS(문자메시지, 주간 08~21시)</label>
+												<label class="pb5"><input type="checkbox" name="agr_con_4" id="agr_con_4" onclick="chkAgrCon();"> SMS(문자메시지, 야간 21~익일 08시)</label>
+											</div>
+										</div>
+									</dl>
+									<dl class="det_box  mt10">
+										<dt><em class="c_blue">2. 개인(신용)정보의 업무위탁에 관한 사항</em></dt>
+										<dd>
+											<div>
+												<label><input type="radio" name="agr_02" id="" value="0" onclick="chkAgrAll();"> 동의안함</label>
+												<label><input type="radio" name="agr_02" id="" value="1" onclick="chkAgrAll();"> 동의함</label>
+											</div>
+										</dd>
+									</dl>
+									<dl class="det_box  mt10">
+										<dt><em class="c_blue">3. 개인(신용)정보의 제공에 관한 사항</em></dt>
+										<dd>
+											<div>
+												<label><input type="radio" name="agr_03" id="" value="0" onclick="chkAgrAll();"> 동의안함</label>
+												<label><input type="radio" name="agr_03" id="" value="1" onclick="chkAgrAll();"> 동의함</label>
+											</div>
+										</dd>
+									</dl>
+									<dl class="det_box  mt10">
+										<dt><em class="c_blue">4. 고유식별정보의 처리에 관한 사항</em></dt>
+										<dd>
+											<div>
+												<label><input type="radio" name="agr_04" id="" value="0" onclick="chkAgrAll();"> 동의안함</label>
+												<label><input type="radio" name="agr_04" id="" value="1" onclick="chkAgrAll();"> 동의함</label>
+											</div>
+										</dd>
+									</dl>
+	
+									개인신용정보제공동의 변경 (10/28 반영)
+	
+										<dl class="det_box  mt10">
+										<dt><em class="c_blue">4. 광고성 정보 수신에 관한 사항</em></dt>2020-10-12 수정
+										<dd>
+											<div>
+												<label><input type="radio" name="agr_04" id="radio_agr_04" value="0" onclick="chkAgrAll();"> 동의안함</label>
+												<label><input type="radio" name="agr_04" id="radio_agr_05" value="1" onclick="chkAgrAll();"> 동의함</label>
+											</div>
+										</dd>
+										2020-10-12 추가
+										<ul class="dot_list mt10">
+											<li>정보전송 채널 및 연락방식</li>
+										</ul>
+										<div class="fieldset_box line_feed column3 mt0">
+											<div>
+												<label><input type="checkbox" name="agr_con2_all" id="agr_con2_all"> 전체</label>
+												<label><input type="checkbox" name="agr_con2_1" id="agr_con2_1" onclick="chkAgrCon();"> TM(전화)</label>
+												<label><input type="checkbox" name="agr_con2_2" id="agr_con2_2" onclick="chkAgrCon();"> 이메일</label>
+											</div>
+										</div>
+										<div class="fieldset_box line_feed column1 mt0">
+											<div>
+												<label class="pb5"><input type="checkbox" name="agr_con2_3" id="agr_con2_3" onclick="chkAgrCon();"> SMS(문자메시지, 주간 08~21시)</label>
+												<label class="pb5"><input type="checkbox" name="agr_con2_4" id="agr_con2_4" onclick="chkAgrCon();"> SMS(문자메시지, 야간 21~익일 08시)</label>
+											</div>
+										</div>
+										//2020-10-12 추가
+									</dl>
+								</div>
+								<div class="top_title rflex imp">
+									<p class="h2 flg_1">꼭! 확인하세요.</p>
+									<span class="btn_more on">-</span>
+								</div>
+								<div class="p10">
+									<dl class="det_box  mt10">
+										<dt>개인(신용)정보 선택동의서</dt>
+										<dd>
+											<ul class="dot_list mt10">
+												<li>귀하는 개인(신용)정보의 선택적인 수집·이용 제공에
+													대한 <em class="c_blue">동의를 거부할 수 있습니다.</em> 다만, 거부하시는
+													경우에는 편의제공(사은품, 할인쿠폰 등), 신상품
+													(서비스) 소개, 사은행사, 안내, Tops가족합산 등
+													이용목적에 따른 혜택이 제한이 있을 수 있습니다.
+													<em class="c_blue">또한, 동의하시더라도 당사 홈페이지 및 가까운
+													지점이나 관리지점(내방이나 팩스처리)를 통해 철회
+													하실 수 있습니다.</em>
+												</li>
+												<li>선택동의서 중 개인(신용)정보 수집 · 이용에 관한 사항
+													혹은 개인(신용)정보 제공에 관한 사항을 동의할 경우
+													고유식별정보의 처리에 관한 사항은 필수로 같이 동의
+													되어야 합니다.</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="btn_area p0 mt20">
+								<button type="button" class="f_blue" onclick="nextStep('11');">확인</button>
+						</div>
+					</div>
+				</section>
+			-->
+			<!-- // step10 영역 -->
+
+			<!-- step11 영역 -->
+			<section class="bgf" id="secStep11" style="display:none">
+				<div class="cont mt0">
+					<div class="sum_box rflex top">
+						<div class="img_ac2 ac_07"></div>
+						<div class="mt10 flg_1">
+							계좌내역을 확인할 수있는 <em class="c_blue">본인명의</em>의 계좌를 등록하세요.
+						</div>
+					</div>
+				</div>
+				<div class="top_title">
+					<h2 class="h2">금융기관명</h2>
+					<!-- 2018-11-30 추가-->
+					<ul class="stepList02 type2">
+						<li class="prev">1</li>
+						<li class="prev">2</li>
+						<li class="prev">3</li>
+						<li class="prev">4</li>
+						<li class="recent"><span>현재페이지</span>5</li>
+					</ul>
+					<!-- //2018-11-30 추가-->
+				</div>
+				<div class="cont padding">
+					<!-- select custom -->
+					<div class="select type_02 mt10">
+						<select name="estForgCode" id="estForgCode">
+							<option value="">선택</option>
+						</select>
+					</div>
+					<!--// select custom -->
+				</div>
+                
+				<div class="cont padding">
+                    <p class="tit_01">계좌번호</p>
+					<div class="input type_02">
+						<input type="tel" name="bankAcctNo" id="bankAcctNo" title="계좌번호" maxlength="20">
+					</div>
+				</div>
+				<div class="cont padding">
+					<h3 class="title">계좌 인증 유의사항</h3>
+					<ul class="bul_list">
+						<li>반드시 출금 및 거래 내역을 확인할 수 있는 계좌를 등록하세요.</li>
+						<li>등록한 계좌 외에 타 계좌로 출금하시려면 신한 알파에서 모바일 OTP를 발급하시거나 타기관 OTP 등록을 해주세요.</li>
+						<li>은행 공동망 점검시간은 인증을 진행할 수 없습니다. 점검시간 이후에 시도해주시기 바랍니다.</li>
+					</ul>
+				</div>
+
+				<div class="btn_area pt0  padding">
+					<button type="button" id="btnFocus" class="f_blue btn pri" onclick="nextStep('12');">다음</button>
+				</div>
+			</section>
+			<!-- step11 영역 -->
+			
+			<!-- step12 영역 -->
+			<section class="bgf" id="secStep12" style="display:none">
+			<div class="cont mt0">
+				<div class="sum_box rflex top">
+					<div class="img_ac2 ac_07"></div>
+					<div class="mt10 flg_1">
+						<em class="point_02"><span id="bankNmText"></span>(<span id="bankNoText"></span>)</em>로 <em class="c_blue">1원</em>을 보냈습니다.
+					</div>
+				</div>
+			</div>
+			<div class="top_title">
+				<h2 class="h2">인증번호 입력 </h2>
+				<!-- 2018-11-30 추가-->
+				<ul class="stepList02 type2">
+					<li class="prev">1</li>
+					<li class="prev">2</li>
+					<li class="prev">3</li>
+					<li class="prev">4</li>
+					<li class="recent"><span>현재페이지</span>5</li>
+				</ul>
+				<!-- //2018-11-30 추가-->
+			</div>
+			<div class="cont padding">
+				<p class="para_01">
+					입금자명에 표시된 인증번호 <em class="c_blue">숫자 3자리</em>를 입력해주세요.
+				</p>
+                <div class="tableWrap col mt20">
+                    <table>
+                        <colgroup>
+                            <col width="60%">
+                            <col width="*">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>입금자명</th>
+                                <th>입금액</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tac">
+                                    <div class="codeBox">
+                                        <strong class="tit">신한</strong>
+                                        <span class="acnum_box"><em>*</em></span>
+                                        <span class="acnum_box"><em>*</em></span> 
+                                        <span class="acnum_box"><em>*</em></span>  
+                                    </div>  
+                                </td>
+                                <td class="tac"><strong class="tit">1원</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+				<!-- <div class="acc_confirm_box mt20">
+					<div class="confbox_row bgf7">
+						<div class="accon_col"><strong>입금자명</strong></div>
+						<div class="accon_col"><strong>입금액</strong></div>
+					</div>
+					<div class="confbox_row">
+						<div class="accon_col"><span class="acnum_box ml5">*</span><span class="acnum_box ml5">*</span><span class="acnum_box ml5">*</span><strong>신한계좌개설</strong></div>
+						<div class="accon_col"><strong>1원</strong></div>
+					</div>
+				</div> -->
+				<p class="tit_01 mt20">인증번호</p>
+				<div class="fieldset_box  rflex">
+					<div class="flg_1 input type_02">
+						<input type="tel" name="nffRvtrVrfyKeyValu" id="nffRvtrVrfyKeyValu" placeholder="숫자 3자리" title="" maxlength="3">
+					</div>
+					<!-- <button type="button" class="src_det">확인</button> -->
+				</div>
+				<div class="mt10"><a href="#none" class="ico_set b_blue" id="changeAcctBtn">계좌변경</a></div><!-- 2021-07-06 추가 -->
+				<!--
+				<div class="link_box_01 mt10">
+					<a class="ico_set b_blue">1원을 받지 못하셨어요?</a>
+				</div>
+				 -->
+			</div>
+
+			<div class="btn_area pt0  padding">
+				<button type="button" class="f_blue btn pri" onclick="nextStep('confirm');">다음</button>
+			</div>
+		</section>
+		<!-- // step12 영역 -->
+		
+		<!-- confirm 영역 -->
+        <section class="bgf lh_15" id="secConfirm" style="display:none">
+            <div class="cont mt0">
+                <div class="sum_box rflex top">
+                    <div class="img_ac3"></div>
+                    <div class="flg_3 pt3">
+                        전기통신금융사기 피해예방을 위해 금융거래개설 목적을 확인하오니 아래 사항을 기재하여 주시기 바랍니다.
+                    </div>
+                </div>
+                <div class="info2">
+                    <div class="inner">
+                        <span class="c_blue2">‘금융사기예방’ 조치를 위하여 계좌개설일로부터 30일 동안 이체가 제한됩니다.</span><br>(이체 제한 해제는 영업점에서 가능합니다.)
+                    </div>
+                </div>
+            </div>
+
+            <div class="cont padding">
+                <p class="tit_01">금융거래목적</p>
+                <!-- select custom -->
+                <div id="acctEstObjCodeWrap" class="select type_02 mt10">
+                    <select name="acctEstObjCode" id="acctEstObjCode">
+                        <option value="1">급여 및 생활비</option>
+                        <option value="2">저축 및 투자</option>
+                        <option value="3">사업상거래</option>
+                        <option value="4">공과금등 결제</option>
+                        <option value="5">상속 등</option>
+                        <option value="6">기타</option>
+                    </select>
+                </div>
+                <!--// select custom -->
+                <!-- 기타 선택시 보이기 -->
+                <div class="input type_02 mt10">
+                    <input type="text" id="rmk1" name="rmk1" title="기타 목적 직접입력" disabled placeholder="기타 목적 직접입력">
+                </div>
+                <!-- //기타 선택시 보이기 -->
+            </div>
+
+            <div class="cont padding">
+                <!-- <ul class="dot_list point_02">
+                    <li>아래 해당되는 항목에 예/아니오로 선택하시기 바랍니다.</li>
+                </ul> -->
+                <div class="acc_confirm_box">
+                    <div class="">
+                        <p class="txt_nom">타인으로부터 통장/현금카드를 포함한 접근매체 대여 요청을 받은 사실이 있습니까?<br  /> <em class="c_red">* 통장/현금카드 등을 타인에게 양도하여, 범죄에 이용되는 경우 미성년자여부와 상관없이 민.형사상책임을 질 수 있습니다.</em></p>
+                        <div class="btn_area p0 mt15">
+                            <button type="button" class="yn1 b_gray chk">예</button>
+                            <button type="button" class="yn1 b_black chk">아니요</button>
+                        </div>
+                    </div>
+                    <div class="">
+                        <p class="txt_nom">타인으로부터 대출, 신용등급상향, 취업 등의 목적으로 통장개설을 요청받은 사실이 있습니까?</p>
+                        <div class="btn_area p0 mt15">
+                            <button type="button" class="yn2 b_gray chk">예</button>
+                            <button type="button" class="yn2 b_black chk">아니요</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <ul class="bul_list">
+                    <li>위 기재사항에 따라 고객님의 보이스피싱 피해예방을 위하여 증빙자료 요청, 비대면 출금(고)거래 또는 계좌개설 제한이 될 수 있습니다.</li>
+                    <li class="mt5">전기통신금융사기(보이스피싱) 이용계좌로 등록된 적이 있는 경우 객관적인 증빙자료를 제출하여 개설목적이 명확하다고 당사가 인정한 경우만 신규개설이 가능합니다.</li>
+                </ul>
+                
+                <ul class="input_list p010">
+                    <li class="rflex">
+                        <input type="checkbox" id="check_01">
+                        <label for="check_01" class="flg_1 point_02 mr0">
+                            본 확인서 내용을 충분히 이해하고 틀림없이 기재하였습니다.
+                        </label>
+                    </li>
+                </ul>
+
+                <!-- <ul class="dot_list mt20">
+                    <li><em class="c_red">금융거래목적확인서</em>는 2014.10.31 기준으로 전기관에서 단기간(20일) 다수계좌(2개이상)가 개설될 경우, <em class="c_red">거래목적에 대해 확인을 합니다.</em></li>
+                    <li class="mt5">고객 기재사항에 따라 증빙자료를 요청 할 수 있어, 비대면 계좌 개설이 불가능하고, 지점방문 계좌개설만 가능할 수 있습니다.</li>
+                    <li class="mt5">전기통신금융사기 이용계좌로 등록된 적이 있는 고객의 경우 객관적인 증빙자료를 제출하여 개설목적이 명확하다고 당사가 인정한 경우만 신규가 가능함으로 비대면 계좌개설은 불가능합니다.</li>
+                    <li class="mt5  c_red">계좌개설 시 금융감독원 지침에 따라 은행연합회에 바로 통보되어 20일 이내 타금융기관 신규계좌 신청 시 단기다수 계좌 명의인으로 계좌개설이 거부될 수 있습니다.</li>
+                </ul> -->
+            </div>
+
+            <div class="btn_area group padding">
+                <button type="button" class="btn sec b_blue" onclick="nextStep('00');">취소</button>
+                <button type="button" class="btn pri f_blue" onclick="nextStep('02');">확인</button>
+            </div>
+        </section>
+        <!-- // confirm 영역 -->
+			
+			<!-- ISA만기설정 영역 -->
+			<section class="bgf" id="secStepISA" style="display:none">
+				<div class="cont mt0">
+					<div class="sum_box rflex top">
+						<div class="img_ac2 ac_07"></div>
+						<div class="mt10 flg_1">
+							ISA의 <em class="c_blue">만기설정</em> 및 <em class="c_blue">계좌납입한도</em>를<br>확인합니다.
+						</div>
+					</div>
+				</div>
+				<div class="top_title">
+					<h2 class="h2">만기설정</h2>
+					<ul class="stepList02 type2">
+						<li class="prev">1</li>
+						<li class="prev">2</li>
+						<li class="prev">3</li>
+						<li class="recent"><span>현재페이지</span>4</li>
+						<li>5</li>
+					</ul>
+				</div>
+				<div class="cont padding">
+					<p class="tit_01">ISA유형</p>
+					<div class="input type_02 disabled">
+						<input type="text" title="ISA유형" value="중개형" disabled="disabled">
+					</div>
+					<p class="tit_01 mt20">납입한도</p>
+					<div class="input type_02 disabled">
+						<input type="text" title="납입한도" value="2,000만원" disabled="disabled" class="tar">
+					</div>
+				</div>
+	
+	
+				<div class="cont padding">
+					<p class="tit_01">만기일 지정</p>
+					<div class="input type_02 calendar">
+						<input type="date" id="isaExprYmdInput" value="2026-08-23" placeholder="" style="padding-right:30px !important;-webkit-appearance:none;">
+					</div>
+				</div>
+	
+				<div class="btn_area padding pt0">
+					<button type="button" class="f_blue" onclick="nextStep('11');">다음</button>
+				</div>
+			</section>
+			<!-- //ISA만기설정 영역 -->
+			
+		</form>
+		<!-- // section 영역 -->
+
+		<button class="icon_poff" onclick="popup('', '계좌개설을 중단하시겠습니까?', 'closeWindow', 'returnFunc')">닫기</button>
+
+		<!-- 팝업 영역 -->
+		<script type="text/javascript">
+function confirm(title, content, callback1) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	
+	// 확인버튼 콜백함수 유무
+	if (callback1) {
+		$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+	} else {
+		$('#btnConfirm').attr('onclick', 'popupHide();');
+	}
+	
+	// 취소버튼
+	$('#btnCancel').show();
+	$('#btnCancel').attr('onclick', 'popupHide();');
+}
+
+
+function popup(title, content, callback1, callback2) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	
+	$('#btnConfirm').text("확인");
+	$('#btnCancel').text("취소");
+	if(title != ''){
+		$('#title').show();	
+	}else{
+		$('#title').hide();	
+	}
+	
+	// 확인버튼 콜백함수 유무
+	if (callback1) {
+		$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+	} else {
+		$('#btnConfirm').attr('onclick', 'popupHide();');
+	}
+	
+	// 취소버튼 콜백함수 유무
+	if (callback2) {
+		$('#btnCancel').show();
+		$('#btnCancel').attr('onclick', 'popupHide(' + callback2 + ');');
+	} else {
+		$('#btnCancel').hide();
+		$('#btnCancel').attr('onclick', 'popupHide();');
+	}
+}
+
+//버튼명 설정함수
+function popupBtnTxt(title, content, btnTxt1, btnTxt2, callback1, callback2) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	$('#title').show();	
+	$('#btnConfirm').text(btnTxt1);
+	
+	if(btnTxt2 != ''){
+		if (typeof(btnTxt2) == 'function') {
+			$('#btnConfirm').attr('onclick', 'popupHide(' + btnTxt2 + ');');
+		}else{
+			$('#btnCancel').text(btnTxt2);
+		}
+	}
+	
+	// 확인버튼 콜백함수 유무
+	if(typeof(btnTxt2) != 'function'){
+		if (callback1) {
+			$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+		} else {
+			$('#btnConfirm').attr('onclick', 'popupHide();');
+		}
+	}
+	
+	// 취소버튼 콜백함수 유무
+	if (callback2) {
+		$('#btnCancel').show();
+		$('#btnCancel').attr('onclick', 'popupHide(' + callback2 + ');');
+	} else {
+		$('#btnCancel').hide();
+		$('#btnCancel').attr('onclick', 'popupHide();');
+	}
+
+}
+
+function popupHide(callback) {
+	$('#title').text('');
+	$('#content').text('');
+	$('#popup').hide();
+	
+	if (typeof(callback) == 'function') {
+		callback();
+	}
+}
+
+function returnFunc() {
+	return;
+}
+
+function closeWindow() {
+	var memno = 'null';
+	
+	if (memno != undefined && memno != '' && memno != 'null')  {	// 유치자 개설 
+		window.close();
+	} else {	
+		location.href = 'new-account.jsp'
+	}
+}
+
+function closeFunc() {
+	location.href = 'new-account.jsp';
+	return;
+}
+</script>
+
+<div id="popup" class="popup" style="display:none">
+	<section id="secPop">
+		<h1 class="hidden"></h1>
+		<div class="cont">
+			<div class="pop_tit" id="title" style="display: none;" ></div>
+			<div id="content" class="text type_01"></div>
+			<!-- <p class="tac mt10"></p> -->
+		</div>
+		<div class="btn_area">
+			<button class="popBtn_no" id="btnCancel">취소</button>
+			<button class="popBtn_yes" id="btnConfirm">확인</button>
+		</div>
+	</section>
+</div><!--// 팝업 영역 -->
+
+		<!-- loading -->
+		<script type="text/javascript">
+function loading(loadingText) {
+	$('#loadingText').text(loadingText);
+	$('#loading').show();
+}
+
+function loadingHide() {
+	$('#loading').hide();
+}
+
+function startLoading(msg, callback, param){
+	loading(msg);
+	
+	if (typeof(callback) == 'function') {
+		setTimeout(function() {
+			//loadingHide();
+			callback(param);
+		},1000);
+	}
+}
+</script>
+
+<div id="loading" class="loading_box" style="display:none">
+	<div class="loading">
+		<img src="../static/resources/images/accouts_loading.gif" alt="하단내용참조" />
+		<!-- <p><span class="c_blue">신분증 심사</span>가 진행중입니다.</p> -->
+		<p id="loadingText"></p>
+	</div>
+</div><!-- //loading -->
+
+		<!-- footer 영역 -->
+		<footer>
+			<div class="copy">
+				<p>신한투자증권 고객지원센터  1588-0365</p>
+				<p><span class="footer_symbol"></span></p>
+			</div>
+		</footer>
+		<!-- // footer 영역 -->
+	</div>
+
+	<script type="text/javascript">
+	var stepCode = '';
+	var bankCode = '';
+	var bankAcctNo = '';
+	
+	var isaOtherBank = 'null';
+	</script>
+
+	<script type="text/javascript">
+	
+				popup("", "계좌타입을 다시 선택해주세요.", "closeFunc");
+	</script>
+</body>
+</html>
