@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	deviceChk();
-
 	asideMenu();
+	Accordion();
 	
     //layerPopClose
 	$('.btnClose').click(function(){
@@ -43,7 +43,7 @@ $(document).ready(function(){
 			
 		menuSelect.closest('li').siblings().removeClass('active');
 		menuSelect.closest('li').addClass('active');
-		menuSelect.closest('li').parents('.subTabMenu').next().children().eq($(this).closest('li').index()).show().siblings().hide();
+		//menuSelect.closest('li').parents('.subTabMenu').next().children().eq($(this).closest('li').index()).show().siblings().hide();
 		var left = $('.subTabMenu .tabMenuList li.active').offset().left - 18,
 			curLeft = $('.subTabMenu').scrollLeft();
 
@@ -70,20 +70,23 @@ $(document).ready(function(){
 			curLeft = $('.tabMenu').scrollLeft();
 
 		$('.tabMenu').animate({scrollLeft : curLeft+left}, 400);
-  	});
-
-
-  	
+  	});	
 });
 
 $(window).resize(function() {
 	asideMenu();
-
 	//page contents scroll
 	$('.scroll.contDetail').each(function(){
 		var height = $('.contentsDetailWrap').height() - $('.contHeader').height() - 20;
 		$(this).css('height', height);
 	});
+	// //Accrdion
+	var windowWidth = $(window).width();
+	if(windowWidth < 900) {
+		$('.stockDetail').hide();
+	} else {
+		$('.stockDetail').show();
+	}
  });
 
 $(window).on('load', function(){
@@ -338,4 +341,20 @@ function asideMenu(){
 		});
 	}
 	
+}
+
+function Accordion(){
+
+	var windowWidth = $(window).width();
+	if(windowWidth < 900) {
+		$('.stockDetail').hide();
+		$('.accordionList_box li a').on('click',function(){
+			$(this).closest('li').toggleClass('active');
+			$(this).next('.stockDetail').slideToggle();
+
+		});
+	} else {
+		$('.stockDetail').show();
+		$('.accordionList_box li a').off('click');
+	}
 }

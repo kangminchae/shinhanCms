@@ -32,7 +32,7 @@
         <!--//header-->
 
         <!--container-->
-        <div id="container" class="bg"><!--[D]Card 및 Box Type List 형태시 class=bg 추가 -->
+        <div id="container"><!--[D]Card 및 Box Type List 형태시 class=bg 추가 -->
             <div class="tabWrap">
                 <div class="tabMenu">
                     <ul class="tabMenuList">
@@ -45,105 +45,112 @@
                 <div class="tabContainer">
                     <!-- tabcontents : tab1 -->
                     <div class="tabcontents" id="tab1">
+                        <!--subTab-->
+                        <div class="subTabMenu">
+                            <ul class="tabMenuList">
+                                <li class="active"><a role="tablist">국내지수</a></li>
+                                <li><a role="tablist">미국지수</a></li>
+                                <li><a role="tablist">아시아지수</a></li>
+                                <li><a role="tablist">유럽/북남비 지수</a></li>
+                            </ul>
+                        </div>
+                        <!--//subTab-->
                         <div class="section">
                             <div class="sectionHeader">
-                                <div class="selectListWrap">
-                                    <select name="select2" class="selectBox_list" tabindex="-1" id="select2">
-                                        <option value="menu1" selected>국내지수</option>
-                                        <option value="menu2">미국지수</option>
-                                        <option value="menu2">아시아지수</option>
-                                        <option value="menu2">유럽/북남비 지수</option>
-                                    </select>
-                                </div>
-                                <button type="button" class="btnInfo" title="시세안내팝업"><span>시세안내</span></button>
+                                <h3 class="title">국내지수</h3>
+                                <button type="button" class="btnInfo" title="시세안내팝업" onclick="fnShowPop('pop_price')"><span>시세안내</span></button>
                             </div>
                             <!--boxAccordion-->
-                            <ul class="accordionList_box">
+                            <ul class="accordionList_box stockList">
                                 <li class="list">
                                     <a href="#">
-                                        <strong class="stockName">코스피</strong>
                                         <div class="stockInfo">
                                             <dl>
-                                                <dt class="stockCode">종합주가지수(KOSPI)</dt>
-                                                <dd class="stockPrice">2,616.47</dd>
+                                                <dt class="stockName">코스피</dt>
+                                                <dd class="stockCode">종합주가지수(KOSPI)</dd>
                                             </dl>
                                             <div class="stockGap fall">
-                                                <span class="gap">2.6161.47</span>
-                                                <span class="num"><em class="bul">-</em>1.90</span>
+                                                <strong class="stockPrice">2.6161.47</strong>
+                                                <div class="stockGapInfo">
+                                                    <span class="gap">12.60</span>
+                                                    <span class="num"><em class="bul">-</em>1.90</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </a>
                                     <div class="stockDetail">
-                                        <div class="stockDetailInner">
-                                            <ul class="stockInfoList">
-                                                <li>
-                                                    <span class="key">시가</span>
-                                                    <span class="value">2,580.60</span>
-                                                </li>
-                                                <li>
-                                                    <span class="key">고가</span>
-                                                    <span class="value">2,602.35</span>
-                                                </li>
-                                                <li>
-                                                    <span class="key">저가</span>
-                                                    <span class="value">2,576.21</span>
-                                                </li>
-                                                <li>
-                                                    <span class="key">거래량(천)</span>
-                                                    <span class="value">263,799</span>
-                                                </li>
-                                            </ul>
-                                            <div class="graphArea">
-                                                그래프영역
-                                            </div>
+                                        <ul class="stockInfoList">
+                                            <li>
+                                                <span class="key">시가</span>
+                                                <span class="value grow">2,580.60</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">고가</span>
+                                                <span class="value grow">2,602.35</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">저가</span>
+                                                <span class="value fall">2,576.21</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">거래량(천)</span>
+                                                <span class="value">263,799</span>
+                                            </li>
+                                            <li>
+                                                <span class="time">14:30:59</span>
+                                            </li>
+                                        </ul>
+                                        <div class="graphArea">
+                                            그래프영역
                                         </div>
-                                        <button type="button" class="btn sm line"><span>지수비교</span></button>
                                     </div>
                                 </li>
                                 <li class="list">
                                     <a href="#">
-                                        <strong class="stockName">코스닥</strong>
                                         <div class="stockInfo">
                                             <dl>
-                                                <dt class="stockCode">종합주가지수(KOSDAQ)</dt>
-                                                <dd class="stockPrice">895.60</dd>
+                                                <dt class="stockName">코스닥</dt>
+                                                <dd class="stockCode">종합주가지수(KOSDAQ)</dd>
                                             </dl>
                                             <div class="stockGap grow">
-                                                <span class="gap">50.60</span>
-                                                <span class="num"><em class="bul">+</em>3.18</span>
+                                                <strong class="stockPrice">505.87</strong>
+                                                <div class="stockGapInfo">
+                                                    <span class="gap">50.60</span>
+                                                    <span class="num"><em class="bul">+</em>3.18</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </a>
                                     <div class="stockDetail">
-                                        <div class="stockDetailInner">
-                                            <ul class="stockInfoList">
-                                                <li>
-                                                    <span class="key">시가</span>
-                                                    <span class="value">901.76</span>
-                                                </li>
-                                                <li>
-                                                    <span class="key">고가</span>
-                                                    <span class="value">903.78</span>
-                                                </li>
-                                                <li>
-                                                    <span class="key">저가</span>
-                                                    <span class="value">889.84</span>
-                                                </li>
-                                                <li>
-                                                    <span class="key">거래량(천)</span>
-                                                    <span class="value">171.164</span>
-                                                </li>
-                                            </ul>
-                                            <div class="graphArea">
-                                                그래프영역
-                                            </div>
+                                        <ul class="stockInfoList">
+                                            <li>
+                                                <span class="key">시가</span>
+                                                <span class="value grow">901.76</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">고가</span>
+                                                <span class="value grow">903.78</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">저가</span>
+                                                <span class="value fall">889.84</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">거래량(천)</span>
+                                                <span class="value">999,263,799</span>
+                                            </li>
+                                            <li>
+                                                <span class="time">14:30:59</span>
+                                            </li>
+                                        </ul>
+                                        <div class="graphArea">
+                                            그래프영역
                                         </div>
-                                        <button type="button" class="btn sm line"><span>지수비교</span></button>
                                     </div>
-                                    
                                 </li>
                             </ul>
                             <!--//boxAccordion-->
+                            <button type="button" class="btn sm line"><span>알파 앱에서 자세히보기</span></button>
                         </div>
 
                         <div class="section">
@@ -151,7 +158,7 @@
                             <div class="sortingWrap">
                                 <div class="tabRadioBox">
                                     <span class="tabRadio">
-                                        <input type="radio" name="period" id="today">
+                                        <input type="radio" name="period" id="today" checked>
                                         <label for="today">당일</label>
                                     </span>
                                     <span class="tabRadio">
@@ -167,110 +174,220 @@
                                         <label for="3month">3개월</label>
                                     </span>
                                 </div>
-                                <div class="tabRadioBox">
-                                    <span class="tabRadio_text">
-                                        <input type="radio" name="stockName" id="kospi">
+                                <div class="tabRadioText">
+                                    <span class="tabRadio">
+                                        <input type="radio" name="stockName" id="kospi" checked>
                                         <label for="kospi">코스피</label>
                                     </span>
-                                    <span class="tabRadio_text">
+                                    <span class="tabRadio">
                                         <input type="radio" name="stockName" id="kosdaq">
                                         <label for="kosdaq">코스탁</label>
                                     </span>
                                 </div>
                             </div>
                             <!--boxAccordion-->
-                            <ul class="accordionList_box">
+                            <ul class="accordionList_box stockList">
                                 <li class="list">
                                     <a href="#">
-                                        <strong class="stockName">코스피</strong>
                                         <div class="stockInfo">
                                             <dl>
-                                                <dt class="stockCode">종합주가지수(KOSPI)</dt>
-                                                <dd class="stockPrice">2,616.47</dd>
+                                                <dt class="stockName">종합주가지수</dt>
                                             </dl>
                                             <div class="stockGap fall">
-                                                <span class="gap">50.60</span>
-                                                <span class="num"><em class="bul">-</em>1.90</span>
+                                                <strong class="stockPrice">2.6161.47</strong>
+                                                <div class="stockGapInfo">
+                                                    <span class="gap">12.60</span>
+                                                    <span class="num"><em class="bul">-</em>1.90</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </a>
                                     <div class="stockDetail">
-                                        <div class="stockDetailInner">
-                                            <ul class="stockInfoList">
-                                                <li>
-                                                    <span class="key">시가</span>
-                                                    <span class="value">2,580.60</span>
-                                                </li>
-                                                <li>
-                                                    <span class="key">고가</span>
-                                                    <span class="value">2,602.35</span>
-                                                </li>
-                                                <li>
-                                                    <span class="key">저가</span>
-                                                    <span class="value">2,576.21</span>
-                                                </li>
-                                                <li>
-                                                    <span class="key">거래량(천)</span>
-                                                    <span class="value">263,799</span>
-                                                </li>
-                                            </ul>
-                                            <div class="graphArea">
-                                                그래프영역
-                                            </div>
+                                        <ul class="stockInfoList">
+                                            <li>
+                                                <span class="key">시가</span>
+                                                <span class="value grow">2,580.60</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">고가</span>
+                                                <span class="value grow">2,602.35</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">저가</span>
+                                                <span class="value fall">2,576.21</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">거래량(천)</span>
+                                                <span class="value">263,799</span>
+                                            </li>
+                                            <li>
+                                                <span class="time">14:30:59</span>
+                                            </li>
+                                        </ul>
+                                        <div class="graphArea">
+                                            그래프영역
                                         </div>
-                                        <button type="button" class="btn sm line"><span>지수비교</span></button>
                                     </div>
                                 </li>
                                 <li class="list">
                                     <a href="#">
-                                        <strong class="stockName">코스닥</strong>
                                         <div class="stockInfo">
                                             <dl>
-                                                <dt class="stockCode">종합주가지수(KOSDAQ)</dt>
-                                                <dd class="stockPrice">895.60</dd>
+                                                <dt class="stockName">대형주</dt>
                                             </dl>
                                             <div class="stockGap grow">
-                                                <span class="gap">50.60</span>
-                                                <span class="num"><em class="bul">+</em>1.90</span>
+                                                <strong class="stockPrice">505.87</strong>
+                                                <div class="stockGapInfo">
+                                                    <span class="gap">50.60</span>
+                                                    <span class="num"><em class="bul">+</em>3.18</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </a>
                                     <div class="stockDetail">
-                                        <div class="stockDetailInner">
-                                            <ul class="stockInfoList">
-                                                <li>
-                                                    <span class="key">시가</span>
-                                                    <span class="value">901.76</span>
-                                                </li>
-                                                <li>
-                                                    <span class="key">고가</span>
-                                                    <span class="value">903.78</span>
-                                                </li>
-                                                <li>
-                                                    <span class="key">저가</span>
-                                                    <span class="value">889.84</span>
-                                                </li>
-                                                <li>
-                                                    <span class="key">거래량(천)</span>
-                                                    <span class="value">171.164</span>
-                                                </li>
-                                            </ul>
-                                            <div class="graphArea">
-                                                그래프영역
-                                            </div>
+                                        <ul class="stockInfoList">
+                                            <li>
+                                                <span class="key">시가</span>
+                                                <span class="value grow">901.76</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">고가</span>
+                                                <span class="value grow">903.78</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">저가</span>
+                                                <span class="value fall">889.84</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">거래량(천)</span>
+                                                <span class="value">999,263,799</span>
+                                            </li>
+                                            <li>
+                                                <span class="time">14:30:59</span>
+                                            </li>
+                                        </ul>
+                                        <div class="graphArea">
+                                            그래프영역
                                         </div>
-                                        <button type="button" class="btn sm line"><span>지수비교</span></button>
                                     </div>
-                                    
                                 </li>
                             </ul>
                             <!--//boxAccordion-->
                         </div>
                     </div>
                     <!-- //tabcontents : tab1 -->
+
+                    <!--환율-->
                     <div class="tabcontents">
-                        tab2
+                        <!--subTab-->
+                        <div class="subTabMenu">
+                            <ul class="tabMenuList">
+                                <li class="active"><a role="tablist">원화</a></li>
+                                <li><a role="tablist">달러화</a></li>
+                            </ul>
+                        </div>
+                        <!--//subTab-->
+                        <div class="section">
+                            <div class="sectionHeader">
+                                <h3 class="title">원화</h3>
+                            </div>
+                            <!--boxAccordion-->
+                            <ul class="accordionList_box stockList">
+                                <li class="list">
+                                    <a href="#">
+                                        <div class="stockInfo">
+                                            <div class="naFlag"><img src="../../asset/images/thumb/img_naFlag01.png" alt="미국"></div>
+                                            <dl>
+                                                <dt class="stockName">미국</dt>
+                                                <dd class="stockCode date">실시간</dd>
+                                            </dl>
+                                            <div class="stockGap fall">
+                                                <strong class="stockPrice">2.6161.47</strong>
+                                                <div class="stockGapInfo">
+                                                    <span class="gap">12.60</span>
+                                                    <span class="num"><em class="bul">-</em>1.90</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="stockDetail">
+                                        <ul class="stockInfoList">
+                                            <li>
+                                                <span class="key">시가</span>
+                                                <span class="value grow">2,580.60</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">고가</span>
+                                                <span class="value grow">2,602.35</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">저가</span>
+                                                <span class="value fall">2,576.21</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">거래량(천)</span>
+                                                <span class="value">263,799</span>
+                                            </li>
+                                            <li>
+                                                <span class="time">2023.08.22 14:30:59</span>
+                                            </li>
+                                        </ul>
+                                        <div class="graphArea">
+                                            그래프영역
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list">
+                                    <a href="#">
+                                        <div class="stockInfo">
+                                            <div class="naFlag"><img src="../../asset/images/thumb/img_naFlag01.png" alt="미국"></div>
+                                            <dl>
+                                                <dt class="stockName">달러 인덱스</dt>
+                                                <dd class="stockCode">2023.08.22</dd>
+                                            </dl>
+                                            <div class="stockGap grow">
+                                                <strong class="stockPrice">505.87</strong>
+                                                <div class="stockGapInfo">
+                                                    <span class="gap">50.60</span>
+                                                    <span class="num"><em class="bul">+</em>3.18</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="stockDetail">
+                                        <ul class="stockInfoList">
+                                            <li>
+                                                <span class="key">시가</span>
+                                                <span class="value grow">901.76</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">고가</span>
+                                                <span class="value grow">903.78</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">저가</span>
+                                                <span class="value fall">889.84</span>
+                                            </li>
+                                            <li>
+                                                <span class="key">거래량(천)</span>
+                                                <span class="value">999,263,799</span>
+                                            </li>
+                                            <li>
+                                                <span class="time">2023.08.22 14:30:59</span>
+                                            </li>
+                                        </ul>
+                                        <div class="graphArea">
+                                            그래프영역
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!--//boxAccordion-->
+                            <button type="button" class="btn sm line"><span>알파 앱에서 자세히보기</span></button>
+                        </div>
                     </div>
+                    <!--//환율-->
+
                     <div class="tabcontents">
                         tab3
                     </div>
@@ -283,7 +400,7 @@
         <!--//container-->
 
         <!--footer-->
-        <footer id="footerWrap">
+        <!-- <footer id="footerWrap">
             <div class="footInfoArea">
                 <div class="corpArea">
                     <a href="#" title=""><span>회사소개</span></a>
@@ -316,8 +433,121 @@
                 <span class="copyright">&copy;2023 SHINHAN SECURITIES CO.,LTD.</span>
                 <i class="icon_shinhan"><em class="blind">원신한</em></i>
             </div>
-        </footer>
+        </footer> -->
         <!--//footer-->
     </div>
+    <!--[팝업 : 시세안내팝업]-->
+    <div class="popWrap popFull" id="pop_price">
+        <div class="popInner">
+            <div class="popHeader">
+                <h2 class="popTitle">시세안내</h2>
+            </div>
+            <div class="popContent">
+                <div class="priceInfoBox">
+                    <ul>
+                        <li>
+                            <strong class="tit">세계지수</strong>
+                            <span class="txt">15분~20분 지연</span>
+                        </li>
+                        <li>
+                            <strong class="tit">다우지수</strong>
+                            <span class="txt">종가</span>
+                        </li>
+                        <li>
+                            <strong class="tit">나스닥거래소</strong>
+                            <span class="txt">15분 지연</span>
+                        </li>
+                        <li>
+                            <strong class="tit">S&P</strong>
+                            <span class="txt">종가</span>
+                        </li>
+                        <li>
+                            <strong class="tit">CME 거래소</strong>
+                            <span class="txt">10분 지연</span>
+                        </li>
+                        <li>
+                            <strong class="tit">CBOT 거래소</strong>
+                            <span class="txt">종가</span>
+                        </li>
+                        <li>
+                            <strong class="tit">나이스 거래소</strong>
+                            <span class="txt">15분 지연</span>
+                        </li>
+                        <li>
+                            <strong class="tit">아멕스 거래소</strong>
+                            <span class="txt">15분 지연</span>
+                        </li>
+                        <li>
+                            <strong class="tit">런던 거래소</strong>
+                            <span class="txt">15분 지연</span>
+                        </li>
+                        <li>
+                            <strong class="tit">독일 XETRA</strong>
+                            <span class="txt">15분 지연</span>
+                        </li>
+                        <li>
+                            <strong class="tit">파리 거래소</strong>
+                            <span class="txt">15분 지연</span>
+                        </li>
+                        <li>
+                            <strong class="tit">도쿄 거래소</strong>
+                            <span class="txt">20분 지연</span>
+                        </li>
+                        <li>
+                            <strong class="tit">중국 상해 거래소</strong>
+                            <span class="txt">15분 지연</span>
+                        </li>
+                        <li>
+                            <strong class="tit">중국 심천 거래소</strong>
+                            <span class="txt">15분 지연</span>
+                        </li>
+                        <li>
+                            <strong class="tit">대만 거래소</strong>
+                            <span class="txt">15분 지연</span>
+                        </li>
+                        <li>
+                            <strong class="tit">홍콩 거래소</strong>
+                            <span class="txt">15분 지연</span>
+                        </li>
+                        <li>
+                            <strong class="tit">대만반도체</strong>
+                            <span class="txt">종가</span>
+                        </li>
+                        <li>
+                            <strong class="tit">발틱지수</strong>
+                            <span class="txt">종가</span>
+                        </li>
+                        <li>
+                            <strong class="tit">유가선물</strong>
+                            <span class="txt">종가</span>
+                        </li>
+                        <li>
+                            <strong class="tit">금속선물</strong>
+                            <span class="txt">종가</span>
+                        </li>
+                        <li>
+                            <strong class="tit">곡물선물</strong>
+                            <span class="txt">종가</span>
+                        </li>
+                        <li>
+                            <strong class="tit">Forex Cross</strong>
+                            <span class="txt">실시간</span>
+                        </li>
+                        <li>
+                            <strong class="tit">MSCI</strong>
+                            <span class="txt">종가</span>
+                        </li>
+                        
+                        <li>
+                            <strong class="tit">GDR</strong>
+                            <span class="txt">종가</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="btn_popBottomClose"><i class="blind">팝업닫기</i></button>
+        </div>
+    </div>
+    <!--//[팝업 : 시세안내팝업]-->
 </body>
 </html>
