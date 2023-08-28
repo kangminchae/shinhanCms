@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- 문서 제목 -->
+<title>신한투자증권 모바일 웹사이트</title>
+<!-- SEO: 검색 엔진 최적화 -->
+<meta name="description" content="">
+<meta name="keywords" content="신한투자증권, 펀드, 적립식펀드, 적립식펀드수익률, 적립식펀드추천, 펀드추천, 펀드비교 펀드투자, 주식, 증권, 증시, 자산관리, CMA, 퇴직연금, 채권">
+<meta name="author" content="신한투자증권">
+<!-- 모바일 -->
+<meta name="viewport" content="width=360">
+<link rel="stylesheet" href="../static/resources/css/style.css">
+<script type="text/javascript" src="../static/resources/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../static/resources/js/select.js"></script>
+<script type="text/javascript" src="https://open.shinhansec.com/phone/common/js/common_airbridge.js"></script>
+<script type="text/javascript" src="../js/account/common.js"></script>
+<script type="text/javascript" src="../js/account/new-account01.js"></script>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-104543332-1', 'auto');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WVFVQC2');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body>
+	<div class="wrap">
+		<!-- header 영역 -->
+		<header>
+			<div class="rflex">
+				<h1 class="ord2 flg_1">
+					<span class="symbol"></span>&nbsp;계좌선택
+				</h1>
+			</div>
+		</header>
+		<!-- // header 영역 -->
+
+		<form name="form" id="form" method="post" action="">
+			<input type="hidden" name="acctTpCode" id="acctTpCode" value="">
+		</form>
+
+		<!-- section 영역 -->
+		<section class="acc_section">
+            <div class="new_contAccType">
+                
+            </div>
+			<div class="cont_acc_type">
+				<div class="acc_body">
+				<!-- 2020-07-27 수정 -->
+					<p class="tit"><span class="line">주식계좌</span></p>
+					<p class="tag">#CMA #주식 #해외주식<br />#펀드 #신용 #선물·옵션</p>
+					<div class="acc_info">
+						<div>
+							<a href="https://open.shinhansec.com/m/event2/220101_t_feeEvent/event.html">온라인 국내주식 수수료 평생혜택<span>이벤트</span></a>
+						</div>
+						(신규고객 대상)
+					</div>
+					<a href="#none" class="acc_btn" onclick="move('3');">계좌만들기</a>
+				</div>
+				<div class="link_box">
+					<h4 class="box_tit">다른 계좌도 만나보세요!</h4>
+					<ul class="box_link">
+						<li>
+							<a href="#none" onclick="move('1');">0.013% 가벼운 주식 수수료 <span>#S-Lite+</span></a>
+						</li>
+						<li>
+							<a href="#none" onclick="move('2');">PB의 자산관리가 필요하다면 <span>#증권종합</span></a>
+						</li>
+						<li>
+							<a href="#none" onclick="move('4');">상품투자와 절세혜택을 동시에 <span>#중개형ISA</span></a>
+						</li>
+					</ul>
+				</div>
+				<!-- //2020-07-27 수정 -->
+			</div>
+		</section>
+		<!-- // section 영역 -->
+		<a href="https://open.shinhansec.com/phone/"><button class="icon_poff">닫기</button></a>
+
+		<!-- 팝업 영역 -->
+		<script type="text/javascript">
+function confirm(title, content, callback1) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	
+	// 확인버튼 콜백함수 유무
+	if (callback1) {
+		$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+	} else {
+		$('#btnConfirm').attr('onclick', 'popupHide();');
+	}
+	
+	// 취소버튼
+	$('#btnCancel').show();
+	$('#btnCancel').attr('onclick', 'popupHide();');
+}
+
+
+function popup(title, content, callback1, callback2) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	
+	$('#btnConfirm').text("확인");
+	$('#btnCancel').text("취소");
+	if(title != ''){
+		$('#title').show();	
+	}else{
+		$('#title').hide();	
+	}
+	
+	// 확인버튼 콜백함수 유무
+	if (callback1) {
+		$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+	} else {
+		$('#btnConfirm').attr('onclick', 'popupHide();');
+	}
+	
+	// 취소버튼 콜백함수 유무
+	if (callback2) {
+		$('#btnCancel').show();
+		$('#btnCancel').attr('onclick', 'popupHide(' + callback2 + ');');
+	} else {
+		$('#btnCancel').hide();
+		$('#btnCancel').attr('onclick', 'popupHide();');
+	}
+}
+
+//버튼명 설정함수
+function popupBtnTxt(title, content, btnTxt1, btnTxt2, callback1, callback2) {
+	$('#title').text(title);
+	$('#content').html(content);
+	$('#popup').show();
+	$('#title').show();	
+	$('#btnConfirm').text(btnTxt1);
+	
+	if(btnTxt2 != ''){
+		if (typeof(btnTxt2) == 'function') {
+			$('#btnConfirm').attr('onclick', 'popupHide(' + btnTxt2 + ');');
+		}else{
+			$('#btnCancel').text(btnTxt2);
+		}
+	}
+	
+	// 확인버튼 콜백함수 유무
+	if(typeof(btnTxt2) != 'function'){
+		if (callback1) {
+			$('#btnConfirm').attr('onclick', 'popupHide(' + callback1 + ');');
+		} else {
+			$('#btnConfirm').attr('onclick', 'popupHide();');
+		}
+	}
+	
+	// 취소버튼 콜백함수 유무
+	if (callback2) {
+		$('#btnCancel').show();
+		$('#btnCancel').attr('onclick', 'popupHide(' + callback2 + ');');
+	} else {
+		$('#btnCancel').hide();
+		$('#btnCancel').attr('onclick', 'popupHide();');
+	}
+
+}
+
+function popupHide(callback) {
+	$('#title').text('');
+	$('#content').text('');
+	$('#popup').hide();
+	
+	if (typeof(callback) == 'function') {
+		callback();
+	}
+}
+
+function returnFunc() {
+	return;
+}
+
+function closeWindow() {
+	var memno = 'null';
+	
+	if (memno != undefined && memno != '' && memno != 'null')  {	// 유치자 개설 
+		window.close();
+	} else {	
+		location.href = 'new-account.jsp'
+	}
+}
+
+function closeFunc() {
+	location.href = 'new-account.jsp';
+	return;
+}
+</script>
+
+<div id="popup" class="popup" style="display:none">
+	<section id="secPop">
+		<h1 class="hidden"></h1>
+		<div class="cont">
+			<div class="pop_tit" id="title" style="display: none;" ></div>
+			<div id="content" class="text type_01"></div>
+			<!-- <p class="tac mt10"></p> -->
+		</div>
+		<div class="btn_area">
+			<button class="popBtn_no" id="btnCancel">취소</button>
+			<button class="popBtn_yes" id="btnConfirm">확인</button>
+		</div>
+	</section>
+</div><!--// 팝업 영역 -->
+
+	</div>
+
+</body>
+</html>

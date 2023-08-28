@@ -3,7 +3,7 @@
 :root {
     --bg_dim:rgba(0,0,0,0.5);
 
-    --color_sh_blue:#2A3FEC;
+    --SH_blue:#2A3FEC;
     --SH_Gr_01:#111;
     --SH_Gr_02:#3B3B41;
     --SH_Gr_03:#474759;
@@ -236,6 +236,8 @@ i.icon_hot {color:#FF0A0A;}
 .file.active + .fileArea {display:flex;}
 .contentsDetailWrap .contDetail {display:flex;flex-direction:column;padding:3.2rem 1.8rem 9.5rem;}
 .contentsDetailWrap .contDetail .text {margin-bottom:2.4rem;font-size:1.6rem;line-height:1.5}
+.contDetail .img {margin-bottom:2.4rem;}
+.point {color:var(--SH_blue);}
 
 /*=====================================================================================================================================================================================*/
 
@@ -250,7 +252,7 @@ select {display:none}
 .dropdown-container.active {display:block;}
 .dropdown-select-ul {width:100%;max-height:50%;background-color:#fff;overflow-y:auto;}
 .active .dropdown-select-ul {display:block;}
-.dropdown-select-ul li.selected {color:var(--color_sh_blue);}
+.dropdown-select-ul li.selected {color:var(--SH_blue);}
 
 .dim {position:fixed;left:0;top:0;width:100%;height:100%;background-color:var(--bg_dim);z-index:-1;opacity:0;visibility:hidden;transition:all 0.5s ease-in-out;}
 .active .dim {opacity:1;visibility:visible;}
@@ -305,7 +307,7 @@ select {display:none}
 .subTabMenu .tabMenuList li {height:3.2rem;margin-left:8px;padding:0;}
 .subTabMenu .tabMenuList li:first-child {margin-left:0;}
 .subTabMenu .tabMenuList li a {align-items:center;border:1px #D6DBE8 solid;border-radius:1.6rem;padding:0 1.6rem;background-color:#fff;font-size:1.5rem;font-weight:500;}
-.subTabMenu .tabMenuList li.active a {background-color:var(--color_sh_blue);color:#fff;border-color:var(--color_sh_blue);}
+.subTabMenu .tabMenuList li.active a {background-color:var(--SH_blue);color:#fff;border-color:var(--SH_blue);}
 .subTabMenu .tabMenuList li a::after,
 .subTabMenu .tabMenuList li.active a::after {display:none;}
 
@@ -325,7 +327,7 @@ select {display:none}
 .btn {display:flex;width:100%;height:4.8rem;padding:0 1.6rem;align-items:center;justify-content:center;font-size:1.6rem;font-weight:700;color:#3B3B41;border-radius:8px;}
 .btn.mi {height:4.2rem;font-size:1.4rem;}
 .btn.sm {height:3.6rem;font-size:1.3rem;}
-.btn.pri {background-color:var(--color_sh_blue);color:#fff}
+.btn.pri {background-color:var(--SH_blue);color:#fff}
 .btn.sec {background-color:#D2D4E1;}
 .btn.line {background-color:#fff;border:1px #8C949E solid;border-radius:8px;}
 .btn.line.sm {border-radius:6px;}
