@@ -34,12 +34,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body>
-	<div class="wrap">
+	<div class="wrap newAccount">
 		<!-- header 영역 -->
 		<header>
 			<div class="rflex">
 				<h1 class="ord2 flg_1">
-					<span class="symbol"></span>&nbsp;계좌선택
+					<!-- <span class="symbol"></span>&nbsp; -->
+                    <strong class="title">계좌선택</strong>
 				</h1>
 			</div>
 		</header>
@@ -52,11 +53,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<!-- section 영역 -->
 		<section class="acc_section">
             <div class="new_contAccType">
-                
+                <div class="accHeader">
+                    <strong class="title">
+                        주식과 금융 상품을<br>
+                        하나의 계좌로 투자하세요!
+                    </strong>
+                    <dl class="contBox">
+                        <dt class="subtit">이런 투자를 할 수 있어요!</dt>
+                        <dd>국내/해외주식 거래</dd>
+                        <dd>선물옵션 / K-OTC / KONEX / 금현물 거래</dd>
+                        <dd>금융상품(펀드 / 채권 / 연금 / ELS / 외화 RP)거래</dd>
+                    </dl>
+                    <button type="button" class="btnAcc" onclick="move('3');"><span>증권종합 계좌개설하기</span></button>
+                </div>
+                <div class="accConts">
+                    <ul class="linkBox">
+                        <li class="list1" onclick="move('1');">
+                            <a href="#">
+                                <div class="textBox">
+                                    <strong class="tit">CMA</strong>
+                                    <span class="txt">하루만 맡겨도 정해진 수익률 지급</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list2" onclick="move('2');">
+                            <a href="#">
+                                <div class="textBox">
+                                    <strong class="tit">S-Lite+</strong>
+                                    <span class="txt">0.013% 가벼운 주식 수수료</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list3"onclick="move('4');">
+                            <a href="#">
+                                <div class="textBox">
+                                    <strong class="tit">중계형 ISA</strong>
+                                    <span class="txt">상품투자와 절세혜택을 동시에</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list4">
+                            <span class="txt">자녀의 미래를 위한<br>투자 알파에서 시작하세요!</span>
+                            <button type="button" class="btnAlpha"><span>알파로 이동</span></button>
+                        </li>
+                    </ul>
+                </div>
             </div>
-			<div class="cont_acc_type">
+			<!-- <div class="cont_acc_type">
 				<div class="acc_body">
-				<!-- 2020-07-27 수정 -->
 					<p class="tit"><span class="line">주식계좌</span></p>
 					<p class="tag">#CMA #주식 #해외주식<br />#펀드 #신용 #선물·옵션</p>
 					<div class="acc_info">
@@ -81,8 +125,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						</li>
 					</ul>
 				</div>
-				<!-- //2020-07-27 수정 -->
-			</div>
+			</div> -->
 		</section>
 		<!-- // section 영역 -->
 		<a href="https://open.shinhansec.com/phone/"><button class="icon_poff">닫기</button></a>

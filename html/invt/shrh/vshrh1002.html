@@ -5,11 +5,11 @@
 	<title>모바일웹,콘텐츠관리시스템(CMS)</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="../../asset/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../asset/css/swiper.css">
-    <script src="../../asset/js/jquery-3.7.0.min.js"></script>
-    <script src="../../asset/js/swiper.min.js"></script>
-    <script src="../../asset/js/common_ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../asset/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/css/swiper.css">
+    <script src="../../../asset/js/jquery-3.7.0.min.js"></script>
+    <script src="../../../asset/js/swiper.min.js"></script>
+    <script src="../../../asset/js/common_ui.js"></script>
 </head>
 <body>
     <div class="skipNav">
@@ -18,7 +18,7 @@
     <div id="wrap">
         <!--header-->
         <header id="header">
-            <h2 class="title">공지사항</h2>
+            <h2 class="title"></h2><!--[D]상세페이지 타일틀 없을 경우 : 영역은 확보해 두어야함-->
             <div class="rightBox">
                 <button type="button" class="btn_share"><i class="blind">공유하기</i></button>
                 <button type="button" class="btn_iconMenu"><i class="blind">메뉴보기</i></button>
@@ -27,28 +27,30 @@
         <!--//header-->
         <!--container-->
         <div id="container">
-            <div class="contentsDetailWrap">
+            <div class="contentsDetailWrap scroll">
                 <div class="listArea contHeader">
+                    <span class="flag bond">채권</span>
                     <dl class="listInner">
-                        <dt class="title">[금융감독원 소비자경보]고수익보장, 특별저가매수기회 등 투자자 현혹하는 투자사기 주의</dt>
+                        <dt class="title">셀시어스(CELH.US)</dt>
+                        <dd class="text">놀라운 성장, 유통망 확보 효과</dd>
                         <dd class="add">
                             <div class="info">
                                 <span class="date">2023.08.01</span>
+                                <span class="name">임하연</span>
                             </div>
-                            <button type="button" class="file arrow"><span>첨부파일</span></button>
-                            <div class="layerPop fileArea">
-                                <div class="fileList">
-                                    <a href="#" class="ellipsis">신한 Econ Check-UP.PDF</a>
-                                    <a href="#" class="ellipsis">의결권행사일정통지조회 - 20230821.xls</a>
-                                </div>
-                                <button class="btnClose"><span class="blind">첨부파일닫기</span></button>
+                            <div class="btnWrap">
+                                <button type="button" class="btn xsm line" onclick="fnShowPop('vshrh1003')"><span>자세히보기</span></button>
                             </div>
                         </dd>
                     </dl>
                 </div>
                 <div class="contDetail scroll">
+                    <strong class="text point">
+                        펩시 유동 파트너십의 효과<br>
+                        북미의 빠른 점유율 확대 + 이제 시작인 글로벌 시장 초기단계
+                    </strong>
                     <strong class="text">
-                        2023 잠정 영업손실 126억원 기대치 부합 주요 영업지표 개선 중, 방향성에 대한 의구심 제한적 목표 주가 64,000원, 투자의견 ‘매수’ 유지
+                        펩시 유동 파트너십의 효과
                     </strong>
                     <span class="text">
                         2023 잠정 연결 매출액 1,489억원(+5.2%, 이하) 영업손실 126억원으로 당사 추정치(영업손실 122억원)에 부합하는 양호한 실적을 기록했다. 2023 잠정 연결 매출액 1,489억원(+5.2%, 이하) 영업손실 126억원으로 당사 추정치(영업손실 122억원)에 부합하는 양호한 실적을 기록했다.
@@ -67,5 +69,20 @@
         </div>
         <!--//container-->
     </div>
+    <!--[Full 팝업]자세히보기-->
+    <div class="popWrap popFull" id="vshrh1003">
+        <div class="popInner">
+            <div class="popHeader">
+                <h2 class="popTitle">PDF 자료보기</h2>
+            </div>
+            <div class="popContent">
+                <div class="img">
+                    <img src="../../../asset/images/thumb/img_thumb02.jpg" alt="이미지">
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn_popBottomClose"><i class="blind">팝업닫기</i></button>
+    </div>
+    <!--//[Full 팝업]자세히보기-->
 </body>
 </html>

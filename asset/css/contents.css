@@ -9,6 +9,9 @@
 .newS {display:flex;align-items:center;}
 .newA::after {content:'N';display:flex;width:16px;height:16px;background-color:#D6EBFF;border-radius:50%;font-size:1rem;color:#2A3FEC;justify-content:center;margin-left:4px;flex-shrink:0;}
 .newS::after {content:'N';display:flex;width:16px;height:16px;background-color:#D6EBFF;border-radius:4px;font-size:1rem;color:#2A3FEC;justify-content:center;margin-left:4px;flex-shrink:0;}
+/*증시/환율*/
+.alphaLogo {display:flex;align-items:center;}
+.alphaLogo::before {content:'';width:2rem;height:2rem;background:url(../images/common/icon_alpha_logo.svg) no-repeat 0 0;background-size:100%;margin-right:0.6rem;}
 
 /*시세안내팝업*/
 .priceInfoBox ul {display:flex;flex-flow:wrap;border-top:1px var(--SH_Gr_08) solid;}
@@ -16,6 +19,8 @@
 .priceInfoBox ul li:nth-child(3n + 1) {border-left:0;}
 .priceInfoBox li .tit {color:var(--SH_Gr_02);font-weight:700;}
 .priceInfoBox li .txt {display:flex;color:var(--SH_Gr_04);margin-top:0.4rem;}
+
+/**/
 
 /* 테블릿 가로 (해상도 900px이상)*/
 @media all and (min-width:900px){ 

@@ -1,0 +1,26 @@
+<svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 1413990">
+<path id="Rectangle 156463" d="M0 16.6162C0 16.0639 0.447715 15.6162 1 15.6162H17.0688C17.6211 15.6162 18.0688 16.0639 18.0688 16.6162V18.7332C18.0688 19.2854 17.6211 19.7332 17.0688 19.7332H1C0.447716 19.7332 0 19.2854 0 18.7332V16.6162Z" fill="url(#paint0_linear_1397_2082)"/>
+<path id="Rectangle 158243" d="M0 21.1338C0 20.5815 0.447715 20.1338 1 20.1338H17.0688C17.6211 20.1338 18.0688 20.5815 18.0688 21.1338V23.2507C18.0688 23.803 17.6211 24.2507 17.0688 24.2507H1C0.447716 24.2507 0 23.803 0 23.2507V21.1338Z" fill="url(#paint1_linear_1397_2082)"/>
+<g id="icon">
+<g id="won" opacity="0.9">
+<g id="Group 1413991">
+<ellipse id="Ellipse 1267" cx="8.98243" cy="8.73438" rx="7.98438" ry="7.98438" fill="#2A3FEC"/>
+<path id="Stroke-1" d="M6 6.73828L7.38157 10.7303L8.99872 6.75826L10.6039 10.7303L11.9895 6.73828" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Stroke-3" d="M12.9732 8.50293H11.376" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Stroke-5" d="M6.58742 8.50293H4.99023" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1397_2082" x1="9.48122" y1="19.5852" x2="9.48122" y2="15.8934" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B1C1F6"/>
+<stop offset="1" stop-color="#F0F0F1"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1397_2082" x1="9.48122" y1="24.1027" x2="9.48122" y2="20.411" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B1C1F6"/>
+<stop offset="1" stop-color="#F0F0F1"/>
+</linearGradient>
+</defs>
+</svg>

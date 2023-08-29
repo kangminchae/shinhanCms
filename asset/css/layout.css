@@ -76,13 +76,16 @@ body {height:100vh}
 .depth3List li a {color:#474759;font-size:1.5rem;padding:0 1rem}
 .depth2Area li.selected a {color:#2A3FEC !important;}
 
-.searchWrap {display:none;position:absolute;top:0;left:0;width:100%;padding:2.4rem 2.2rem;background-color:#fff;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.06);align-items:center;justify-content:center;}
-.searchWrap .searchForm {display:flex;width:36.2rem;height:4.5rem;border:1px #474759 solid;border-radius:2.25rem;align-items:center;justify-content:center;padding:1rem 2.4rem;}
+.searchWrap {display:flex;}
+.searchWrap .searchForm {display:flex;width:100%;height:4.5rem;border:1px #474759 solid;border-radius:4px;align-items:center;justify-content:center;padding:1rem 2.4rem;}
 .searchForm .btn_iconSearch {margin-left:1.6rem;flex-shrink:0;}
+
+.naviArea .searchWrap {display:none;position:absolute;top:0;left:0;width:100%;padding:2.4rem 2.2rem;background-color:#fff;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.06);align-items:center;justify-content:center;}
+.naviArea .searchWrap .searchForm {width:36.2rem;}
 
 /*header*/
 #header .subMenuWrap {flex:1;}
-#header h2.title {font-size:2rem;color:#111}
+#header h2.title {font-size:2rem;color:#111;font-weight:500}
 #header .rightBox {display:flex;flex-shrink:0;}
 #header .rightBox button {padding:2rem;background-size:2.4rem 2.4rem;background-position:50%;background-repeat:no-repeat;}
 .btn_iconMenu {background-image:url(../images/common/icon_menu.svg)}
@@ -142,8 +145,9 @@ h3.title {font-size:1.8rem;color:var(--SH_Gr_02);}
 .stockDetail .stockInfoList li {display:flex;align-items:center;justify-content:space-between;margin-top:0.5rem;font-size:1.3rem;}
 .stockInfoList li .key {width:6rem;color:var(--SH_Gr_04)}
 .stockInfoList li .value {color:var(--SH_Gr_02);text-align:right;}
-.stockInfoList li .time {width:100%;color:var(--SH_Gr_06);}
-.stockDetail .graphArea {display:flex;width:14rem;flex-shrink:0;margin-left:1.2rem;align-items:center;justify-content:center;}
+.stockDetail .graphArea {display:flex;width:14rem;flex-shrink:0;margin-left:1.2rem;flex-direction:column;}
+.graphArea .graphBox {display:flex;align-items:center;justify-content:center;min-height:7rem;}
+.graphArea .time {display:flex;color:var(--SH_Gr_06);justify-content:flex-end;margin-top:0.4rem}
 
 .sortingWrap {display:flex;align-items:center;justify-content:space-between;margin-top:1rem}
 
@@ -188,7 +192,7 @@ h3.title {font-size:1.8rem;color:var(--SH_Gr_02);}
 .listArea .listInner {display:flex;flex-direction:column;line-height:1.5;}
 .listArea .listInner .title {color:#3B3B41;font-size:1.8rem;font-weight:500;word-break:keep-all;}
 .listArea .listInner .text {font-size:1.5rem;color:#6D6D73;margin:0.6rem 0;}
-.listArea .listInner .add {display:flex;align-items:center;margin-top:0.6rem;}
+.listArea .listInner .add {display:flex;align-items:center;margin-top:0.8rem;}
 .listInner .info {display:flex;color:#B5B5BC;font-size:1.3rem;align-items:center;}
 .listInner .info span {display:flex;align-items:center;}
 .listInner .info .date + span {margin-left:0.8rem;}
@@ -221,10 +225,13 @@ i.icon_hot {color:#FF0A0A;}
 .flag.industry {background-color:#32CFF1;}/*국내업종*/
 .flag.foreign {background-color:#F57230;}/*해외*/
 
+/*목록 없을 경우*/
+.nonTextBox {display:flex;flex-direction:column;}
+
 /*상세*/
 .contentsDetailWrap {display:flex;flex-direction:column;overflow:hidden;}
-.contentsDetailWrap .contHeader.listArea {background-color:#F6F6F9;padding:3.2rem 1.8rem;}
-.contentsDetailWrap .contHeader.listArea .listInner .text {margin:1.6rem 0;}
+.contentsDetailWrap .contHeader.listArea {display:block;background-color:#F6F6F9;padding:3.2rem 1.8rem;}
+.contentsDetailWrap .contHeader.listArea .listInner .text {margin:0.8rem 0 0;}
 .contentsDetailWrap .listInner .add {position:relative;justify-content:space-between;}
 .contentsDetailWrap .listInner .add .info {color:#6D6D73;}
 .contentsDetailWrap .listInner .file::before {display:none;}
@@ -283,6 +290,9 @@ select {display:none}
 .tabMenuList li a:after {content:'';position:absolute;bottom:0;left:0;width:0;height:2px;border-radius:1px;background-color:#000;transition:all 0.3s ease-in-out;}
 .tabMenuList li.active a:after {width:100%;}
 
+.double li {width:50%}
+.double li a {justify-content:center;}
+
 /*scrolltab : 메뉴전체보기*/
 .tabWrap.active .tabMenu {right:0;padding:2rem 1.8rem;transition:none;z-index:3;}
 .tabWrap.active .menuFullArea {display:flex;align-items:center;}
@@ -327,6 +337,7 @@ select {display:none}
 .btn {display:flex;width:100%;height:4.8rem;padding:0 1.6rem;align-items:center;justify-content:center;font-size:1.6rem;font-weight:700;color:#3B3B41;border-radius:8px;}
 .btn.mi {height:4.2rem;font-size:1.4rem;}
 .btn.sm {height:3.6rem;font-size:1.3rem;}
+.btn.xsm {height:3.2rem;font-size:1.3rem;border-radius:4px !important;}
 .btn.pri {background-color:var(--SH_blue);color:#fff}
 .btn.sec {background-color:#D2D4E1;}
 .btn.line {background-color:#fff;border:1px #8C949E solid;border-radius:8px;}
